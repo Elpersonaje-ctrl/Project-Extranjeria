@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Special+Elite&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Carga de estilos de Raíz -->
-    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
 </head>
 <body>
 
@@ -38,7 +38,7 @@
     <!-- HEADER (NAVBAR) -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="{{ '/' | relative_url }}" class="logo">
+            <a href="{{ site.baseurl }}/" class="logo">
                 <span class="logo-seal" aria-hidden="true">
                     <svg viewBox="0 0 60 60" width="40" height="40">
                         <circle cx="30" cy="30" r="27" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
@@ -50,10 +50,10 @@
                 <span class="logo-subtext">Asesores en Extranjería</span>
             </a>
             <nav class="nav-links">
-                <a href="{{ '/' | relative_url }}#servicios">Servicios</a>
-                <a href="{{ '/' | relative_url }}#metodologia">Cómo Trabajamos</a>
-                <a href="{{ '/blog.html' | relative_url }}">Blog</a>
-                <a href="{{ '/' | relative_url }}#contacto" class="btn-primary">Consulta Gratis</a>
+                <a href="{{ site.baseurl }}/#servicios">Servicios</a>
+                <a href="{{ site.baseurl }}/#metodologia">Cómo Trabajamos</a>
+                <a href="{{ site.baseurl }}/blog.html">Blog</a>
+                <a href="{{ site.baseurl }}/#contacto" class="btn-primary">Consulta Gratis</a>
             </nav>
         </div>
     </header>
@@ -72,9 +72,9 @@
             </div>
             <div class="footer-links">
                 <h4>Navegación</h4>
-                <a href="{{ '/' | relative_url }}#servicios">Servicios</a>
-                <a href="{{ '/' | relative_url }}#metodologia">Cómo Trabajamos</a>
-                <a href="{{ '/blog.html' | relative_url }}">Blog</a>
+                <a href="{{ site.baseurl }}/#servicios">Servicios</a>
+                <a href="{{ site.baseurl }}/#metodologia">Cómo Trabajamos</a>
+                <a href="{{ site.baseurl }}/blog.html">Blog</a>
             </div>
             <div class="footer-links">
                 <h4>Legal</h4>
@@ -83,7 +83,7 @@
                 <a href="#">Términos y Condiciones</a>
             </div>
             <div class="footer-disclaimer">
-                <p><strong>Disclaimer Legal:</strong> "Raíz Asesores" es una agencia de representación administrativa y gestión documental (Ley 39/2015). No somos un despacho de abogados colegiados en España, por lo que no realizamos representación en recursos judiciales contencioso-administrativos.</p>
+                <p><strong>Disclaimer Legal:</strong> "Raíz Asesores" es una agencia de representación administrativa y gestión documental (Ley 39/2015). No somos un despacho de abogados colegiados en España, por lo que no realizamos representation en recursos judiciales contencioso-administrativos.</p>
             </div>
         </div>
         <div class="footer-bottom text-center">
@@ -92,6 +92,6 @@
     </footer>
 
     <!-- Scripts de la web -->
-    <script src="{{ '/script.js' | relative_url }}"></script>
+    <script src="{{ site.baseurl }}/script.js"></script>
 </body>
 </html>

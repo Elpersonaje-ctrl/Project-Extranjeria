@@ -3,11 +3,8 @@ description: "Agencia especializada en trámites de extranjería, arraigo y naci
 url: "https://elpersonaje-ctrl.github.io"
 baseurl: "/Project-Extranjeria"
 
-# Desactivar temas por defecto de Jekyll para usar nuestro diseño HTML/CSS puro
+# Mantener la compilación limpia y sin dependencias externas
 theme: null
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
 
 exclude:
   - Gemfile
@@ -19,5 +16,4 @@ exclude:
   - PLAN_OPERATIVO_ETAPAS.md
   - TIKTOK_STRATEGY.md
   - files.zip
-  - unzipped_claude
-  - unzipped_design_system
+  - files.zip:Zone.Identifier
