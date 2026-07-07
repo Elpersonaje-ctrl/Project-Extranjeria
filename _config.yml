@@ -1,0 +1,23 @@
+title: "Raíz - Asesores Expertos en Extranjería"
+description: "Agencia especializada en trámites de extranjería, arraigo y nacionalidad en Vigo. Radicación telemática rápida y sin citas. 0% rechazos."
+url: "https://elpersonaje-ctrl.github.io"
+baseurl: "/Project-Extranjeria"
+
+# Desactivar temas por defecto de Jekyll para usar nuestro diseño HTML/CSS puro
+theme: null
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - Raíz Design System
+  - BRAND_MANUAL.md
+  - BUSINESS_MODEL_CANVAS.md
+  - PLAN_OPERATIVO_ETAPAS.md
+  - TIKTOK_STRATEGY.md
+  - files.zip
+  - unzipped_claude
+  - unzipped_design_system

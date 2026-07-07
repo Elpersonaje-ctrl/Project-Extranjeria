@@ -1,156 +1,25 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Raíz - Asesores en Extranjería</title>
-    <meta name="description" content="Guías claras sobre arraigo, nacionalidad española y trámites de extranjería en Galicia.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Special+Elite&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <span class="logo-seal" aria-hidden="true">
-                    <svg viewBox="0 0 60 60" width="40" height="40">
-                        <circle cx="30" cy="30" r="27" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
-                        <circle cx="30" cy="30" r="21" fill="none" stroke="currentColor" stroke-width="1"/>
-                        <text x="30" y="34" text-anchor="middle" font-family="'Special Elite', monospace" font-size="14" fill="currentColor">R</text>
-                    </svg>
-                </span>
-                <span class="logo-text">RAÍZ</span>
-                <span class="logo-subtext">Asesores en Extranjería</span>
-            </div>
-            <nav class="nav-links">
-                <a href="index.html#servicios">Servicios</a>
-                <a href="index.html#metodologia">Cómo Trabajamos</a>
-                <a href="blog.html">Blog</a>
-                <a href="index.html#contacto" class="btn-primary">Consulta Gratis</a>
-            </nav>
+---
+layout: default
+title: "Blog - Raíz Asesores de Extranjería"
+---
+
+<section class="section-padding bg-light">
+    <div class="container">
+        <header style="text-align: center; margin-bottom: 60px;">
+            <span class="eyebrow">Recursos y Guías</span>
+            <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 16px;">El Blog de Raíz</h1>
+            <p class="section-lead" style="margin: 0 auto;">Información clara, veraz y de actualidad para tu regularización en España sin tecnicismos.</p>
+        </header>
+
+        <div class="grid-3 blog-grid">
+            {% for post in site.posts %}
+            <a class="blog-card" href="{{ post.url | relative_url }}">
+                <span class="blog-date">{{ post.date | date: "%d %b %Y" }}</span>
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.excerpt }}</p>
+                <span class="blog-link">Leer artículo →</span>
+            </a>
+            {% endfor %}
         </div>
-    </header>
-
-    <section class="blog-hero container">
-        <span class="eyebrow eyebrow-dark">Recursos</span>
-        <h1>El Blog de Raíz</h1>
-        <p class="section-lead">Guías claras, sin jerga legal, escritas por nuestro equipo de asesores en extranjería.</p>
-    </section>
-
-    <section class="container section-padding" style="padding-top: 20px;">
-        <div class="post-list">
-
-            <details class="post-entry" id="post-arraigo">
-                <summary>
-                    <div>
-                        <p class="post-title">Arraigo social vs. arraigo laboral: cuál te conviene en 2026</p>
-                        <p class="post-excerpt">Las diferencias reales de tiempo, requisitos y contrato que marcan qué vía es más rápida para tu caso.</p>
-                        <span class="post-toggle">Leer artículo completo ↓</span>
-                    </div>
-                    <span class="post-meta">07 JUL 2026</span>
-                </summary>
-                <div class="post-body">
-                    <p>Cada año llegan a nuestra oficina en Vigo decenas de personas convencidas de que solo existe "el arraigo", como si fuera un único trámite. En realidad hay varias vías, y elegir la correcta desde el primer día es lo que separa un expediente resuelto en meses de uno atascado durante años.</p>
-                    <h3>Arraigo social</h3>
-                    <p>Pensado para quienes llevan al menos tres años de permanencia continuada en España y cuentan con un contrato de trabajo de al menos un año, o con un informe de arraigo emitido por la comunidad autónoma que acredite integración social. Es la vía más habitual porque no exige que el vínculo laboral sea previo a la solicitud.</p>
-                    <h3>Arraigo laboral</h3>
-                    <p>Requiere solo dos años de permanencia, un año menos que el social, pero a cambio exige poder demostrar una relación laboral previa, normalmente mediante una resolución judicial o un acta de la Inspección de Trabajo. Es más rápido en plazos de residencia exigida, pero más difícil de acreditar si nunca se denunció la situación laboral irregular.</p>
-                    <h3>¿Cuál elegir?</h3>
-                    <p>La respuesta depende de tu historial laboral y de si puedes conseguir una oferta de contrato sólida. En la consulta inicial revisamos tu situación concreta, tus documentos de entrada y salida del país, y tu vínculo laboral actual antes de recomendarte una vía. Presentar por la vía equivocada es una de las causas más comunes de rechazo.</p>
-                </div>
-            </details>
-
-            <details class="post-entry" id="post-nietos">
-                <summary>
-                    <div>
-                        <p class="post-title">Ley de Nietos: quién puede pedir la nacionalidad por memoria democrática</p>
-                        <p class="post-excerpt">Requisitos de ascendencia, documentación en origen y plazos del procedimiento que menos se conoce.</p>
-                        <span class="post-toggle">Leer artículo completo ↓</span>
-                    </div>
-                    <span class="post-meta">28 JUN 2026</span>
-                </summary>
-                <div class="post-body">
-                    <p>La conocida como "Ley de Nietos" amplió el acceso a la nacionalidad española a los descendientes de quienes perdieron o tuvieron que renunciar a su nacionalidad de origen por el exilio durante la Guerra Civil y la dictadura. A diferencia de la nacionalidad por residencia, aquí no hace falta vivir en España para solicitarla.</p>
-                    <h3>Quién puede solicitarla</h3>
-                    <p>Hijos e hijas de españolas o españoles de origen, y nietos y nietas cuyo abuelo o abuela perdió o tuvo que renunciar a la nacionalidad española por las circunstancias históricas recogidas en la ley. También se contempla el caso de mujeres que perdieron su nacionalidad por casarse con un extranjero antes de la Constitución de 1978.</p>
-                    <h3>La documentación, el verdadero reto</h3>
-                    <p>El cuello de botella no suele ser el derecho en sí, sino reunir las partidas de nacimiento, matrimonio y defunción de varias generaciones, muchas veces emitidas en registros civiles de otros países y con apostilla de La Haya. Un solo documento caducado o mal apostillado puede paralizar el expediente durante meses.</p>
-                    <h3>Plazos</h3>
-                    <p>El procedimiento se resuelve por el Registro Civil correspondiente al último domicilio conocido del ascendiente en España, o de forma consular si se solicita desde el extranjero. Los plazos varían según el registro, por eso conviene tener el expediente documental completo y bien auditado antes de radicar la solicitud.</p>
-                </div>
-            </details>
-
-            <details class="post-entry" id="post-apostilla">
-                <summary>
-                    <div>
-                        <p class="post-title">Cómo evitar el rechazo por errores en la apostilla</p>
-                        <p class="post-excerpt">Los tres fallos documentales más comunes que retrasan un expediente meses, y cómo revisarlos antes.</p>
-                        <span class="post-toggle">Leer artículo completo ↓</span>
-                    </div>
-                    <span class="post-meta">14 JUN 2026</span>
-                </summary>
-                <div class="post-body">
-                    <p>La apostilla de La Haya certifica que un documento público extranjero es válido para usarse en España, pero es también el punto donde más expedientes se rechazan por detalles que parecen menores y no lo son.</p>
-                    <h3>1. Caducidad del documento base</h3>
-                    <p>Certificados de antecedentes penales, partidas de nacimiento o certificados de estado civil suelen tener una validez limitada, normalmente de tres a seis meses, antes de necesitar renovarse. Presentar un documento apostillado pero vencido es motivo automático de subsanación o rechazo.</p>
-                    <h3>2. Apostilla sobre copia, no sobre original</h3>
-                    <p>En varios países la apostilla debe colocarse sobre el documento original emitido por la autoridad competente, no sobre una fotocopia, aunque esté compulsada. Este error es especialmente frecuente en documentos tramitados de forma remota por un familiar en el país de origen.</p>
-                    <h3>3. Traducción jurada incompleta</h3>
-                    <p>Un documento correctamente apostillado pero traducido por un traductor no jurado, o traducido sin incluir el propio sello de apostilla en la traducción, puede ser rechazado igualmente. La traducción tiene que reflejar el documento completo, apostilla incluida.</p>
-                    <p>En Raíz auditamos cada documento contra estos tres puntos antes de radicar el expediente, precisamente para no perder meses por errores que se pueden corregir antes de presentar.</p>
-                </div>
-            </details>
-
-            <details class="post-entry" id="post-estudiante">
-                <summary>
-                    <div>
-                        <p class="post-title">De estudiante a residente: qué hacer al terminar tus estudios en Vigo</p>
-                        <p class="post-excerpt">Los pasos y plazos para pasar de visado de estudios a permiso de residencia y trabajo sin perder tu situación legal.</p>
-                        <span class="post-toggle">Leer artículo completo ↓</span>
-                    </div>
-                    <span class="post-meta">02 JUN 2026</span>
-                </summary>
-                <div class="post-body">
-                    <p>Cada junio, decenas de graduados de la Universidade de Vigo y de escuelas de negocio de la ciudad se enfrentan a la misma pregunta: ¿qué pasa con mi situación legal cuando termina el curso académico?</p>
-                    <h3>La modificación de estancia por estudios a residencia</h3>
-                    <p>La autorización de estancia por estudios se puede modificar a una autorización de residencia y trabajo por cuenta ajena o propia, siempre que se solicite antes de que caduque la autorización de estudios vigente y se cuente con una oferta de trabajo o un proyecto de actividad económica viable.</p>
-                    <h3>El margen de tiempo importa</h3>
-                    <p>Conviene iniciar el trámite entre 60 días antes y 90 días después de la finalización de los estudios, según el caso. Dejar pasar este margen sin presentar la modificación puede obligar a iniciar un procedimiento distinto, normalmente más largo.</p>
-                    <h3>Qué preparar con antelación</h3>
-                    <p>Un contrato de trabajo o precontrato, certificado de finalización o próxima finalización de estudios, y prueba de medios de vida durante el proceso. Cuanto antes empecemos a preparar esta documentación, con más margen se presenta el expediente y menor es el riesgo de quedarte en situación irregular entre un permiso y otro.</p>
-                </div>
-            </details>
-
-        </div>
-    </section>
-
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <span class="logo-text">RAÍZ</span>
-                <p>Asesoría Migratoria Digital en Galicia.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Navegación</h4>
-                <a href="index.html#servicios">Servicios</a>
-                <a href="index.html#metodologia">Cómo Trabajamos</a>
-                <a href="blog.html">Blog</a>
-            </div>
-            <div class="footer-links">
-                <h4>Legal</h4>
-                <a href="#">Aviso Legal</a>
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Términos y Condiciones</a>
-            </div>
-            <div class="footer-disclaimer">
-                <p><strong>Disclaimer Legal:</strong> "Raíz Asesores" es una agencia de representación administrativa y gestión documental (Ley 39/2015). No somos un despacho de abogados colegiados en España.</p>
-            </div>
-        </div>
-        <div class="footer-bottom text-center">
-            <p>&copy; 2026 Raíz - Asesores Expertos en Extranjería. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-</body>
-</html>
+    </div>
+</section>
