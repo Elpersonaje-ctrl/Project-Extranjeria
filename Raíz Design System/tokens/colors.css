@@ -1,0 +1,58 @@
+/* ==========================================================================
+   RAÍZ — Color tokens
+   Source of truth: style.css from Elpersonaje-ctrl/Project-Extranjeria
+   Palette: rooted forest green + brass/gold seal + oxblood & olive stamp
+   accents on warm aged paper. Deliberately avoids "cold lawyer blue".
+   ========================================================================== */
+
+:root {
+  /* ---- Base palette (raw values, from source repo) ---- */
+  --raiz-paper: #F1EBD8;        /* aged paper background */
+  --raiz-paper-card: #FBF8EF;   /* lighter card surface */
+  --raiz-ink: #211B14;          /* near-black warm ink (body text) */
+  --raiz-ink-soft: #4A4032;     /* softened ink (secondary text) */
+  --raiz-forest: #1C3B30;       /* primary brand color */
+  --raiz-forest-light: #2F5C4C; /* hover / lighter forest */
+  --raiz-forest-pale: #E7EEE8;  /* pale forest tint for section bg */
+  --raiz-gold: #B8874B;         /* brass seal gold */
+  --raiz-gold-light: #D9AE72;   /* lighter gold, for dark backgrounds */
+  --raiz-red-stamp: #9C2B2B;    /* oxblood "REJECTED" stamp ink */
+  --raiz-green-stamp: #2B6E4E;  /* olive "APPROVED" stamp ink / WhatsApp cta */
+  --raiz-rule: #C7B78E;         /* hairline rules, dashed dividers, borders */
+  --raiz-shadow: rgba(28, 22, 12, 0.14);
+
+  /* Extra neutrals used in dark footer / methodology sections (from source) */
+  --raiz-footer-bg: #211B14;         /* footer background = --raiz-ink */
+  --raiz-footer-text: #d8d2c2;
+  --raiz-footer-muted: #a89f8b;
+  --raiz-footer-link: #b8b09b;
+  --raiz-footer-rule: #3a3226;
+  --raiz-footer-fine: #8f8770;
+  --raiz-methodology-lead: #cfe0d6; /* body copy on dark forest bg */
+
+  /* ---- Semantic aliases ---- */
+  --color-bg-page: var(--raiz-paper);
+  --color-bg-surface: var(--raiz-paper-card);
+  --color-bg-section-tint: var(--raiz-forest-pale);
+  --color-bg-inverse: var(--raiz-forest);
+  --color-bg-footer: var(--raiz-footer-bg);
+
+  --color-text-primary: var(--raiz-ink);
+  --color-text-secondary: var(--raiz-ink-soft);
+  --color-text-on-inverse: #ffffff;
+  --color-text-brand: var(--raiz-forest);
+
+  --color-brand-primary: var(--raiz-forest);
+  --color-brand-primary-hover: var(--raiz-forest-light);
+  --color-brand-accent: var(--raiz-gold);
+  --color-brand-accent-light: var(--raiz-gold-light);
+
+  --color-status-success: var(--raiz-green-stamp);
+  --color-status-danger: var(--raiz-red-stamp);
+
+  --color-border: var(--raiz-rule);
+  --color-shadow: var(--raiz-shadow);
+
+  --color-link: var(--raiz-forest);
+  --color-link-hover: var(--raiz-forest-light);
+}

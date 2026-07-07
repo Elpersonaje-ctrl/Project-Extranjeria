@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="40" height="40">
+  <circle cx="30" cy="30" r="27" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"></circle>
+  <circle cx="30" cy="30" r="21" fill="none" stroke="currentColor" stroke-width="1"></circle>
+  <text x="30" y="34" text-anchor="middle" font-family="&#39;Special Elite&#39;, monospace" font-size="14" fill="currentColor">R</text>
+</svg>

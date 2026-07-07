@@ -1,0 +1,25 @@
+/* ==========================================================================
+   RAÍZ — Web fonts
+   The source repo (Elpersonaje-ctrl/Project-Extranjeria) links these three
+   families directly from Google Fonts — no font binaries are checked into
+   the repo. We do the same here (an @import that itself resolves to the
+   real @font-face rules), rather than substitute different faces.
+   Fraunces  — display / headings (serif, legal authority + warmth)
+   Inter     — body copy (sans, high screen legibility)
+   Special Elite — stamps, eyebrows, dates, utility labels (typewriter nod
+                   to the paper forms this agency replaces)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Special+Elite&family=Yellowtail&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-stamp: 'Special Elite', monospace;
+
+  /* Kept from a brief experiment (Inter-only utility text + a script accent);
+     reverted to the original Special Elite treatment per feedback, but the
+     variables stay defined in case they're wanted again later. */
+  --font-utility: 'Inter', sans-serif;
+  --font-script: 'Yellowtail', cursive;
+}

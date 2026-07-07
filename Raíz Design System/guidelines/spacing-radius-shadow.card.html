@@ -1,0 +1,12 @@
+<!-- @dsCard group="Spacing" viewport="700x200" name="Radius & Shadow" subtitle="6px base radius; torn-edge case files use 2px" -->
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-body);background:var(--color-bg-section-tint);padding:20px;display:flex;gap:16px;}
+  .box{width:120px;height:120px;background:var(--color-bg-surface);border:1px solid var(--raiz-rule);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--raiz-ink-soft);}
+</style></head>
+<body>
+  <div class="box" style="border-radius:var(--radius-base);box-shadow:var(--shadow-card);">radius-base 6px + shadow-card</div>
+  <div class="box" style="border-radius:var(--radius-sm);">radius-sm 2px (file cards)</div>
+  <div class="box" style="border-radius:var(--radius-md);">radius-md 4px (inputs)</div>
+</body></html>

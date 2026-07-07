@@ -1,0 +1,43 @@
+/* ==========================================================================
+   RAÍZ — Type scale
+   ========================================================================== */
+
+:root {
+  /* Weights actually loaded (see fonts.css) */
+  --weight-display-light: 300;
+  --weight-display-medium: 500;
+  --weight-display-semibold: 600;
+  --weight-display-bold: 700;
+  --weight-body-regular: 400;
+  --weight-body-medium: 500;
+  --weight-body-semibold: 600;
+  --weight-body-bold: 700;
+
+  /* Fluid display sizes (clamp values lifted verbatim from source CSS) */
+  --text-hero: clamp(2.3rem, 4.4vw, 3.6rem);       /* hero h1 */
+  --text-section-title: clamp(1.9rem, 3vw, 2.6rem); /* section h2 */
+  --text-contact-title: clamp(1.6rem, 2.6vw, 2.1rem);
+  --text-blog-hero: clamp(2rem, 3.6vw, 2.8rem);
+
+  /* Fixed sizes used throughout the source stylesheet */
+  --text-logo: 1.5rem;
+  --text-card-title: 1.2rem;
+  --text-service-title: 1.15rem;
+  --text-body: 1rem;              /* 16px, body line-height 1.6 */
+  --text-body-lead: 1.05rem;
+  --text-hero-lead: 1.12rem;
+  --text-small: 0.95rem;
+  --text-fine: 0.9rem;
+  --text-caption: 0.85rem;
+  --text-micro: 0.82rem;
+  --text-eyebrow: 0.78rem;
+  --text-stamp-label: 0.75rem;
+  --text-legal-fine: 0.78rem;
+
+  --leading-body: 1.6;
+  --leading-heading: 1.15;
+
+  --tracking-eyebrow: 0.14em;   /* uppercase eyebrow labels, set in Inter */
+  --tracking-stamp: 0.08em;     /* status tags (legacy name, no longer stamp-styled) */
+  --tracking-wide: 0.05em;
+}
