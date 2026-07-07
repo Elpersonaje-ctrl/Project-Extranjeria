@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+    <!-- Fondo Verde Olivo Oscuro de la marca -->
+    <rect width="100%" height="100%" fill="#2D4A22" rx="16"/>
+
+    <defs>
+        <!-- Trazado circular para el texto curvo superior e inferior -->
+        <path id="circle-text-path" d="M 250, 75 A 175,175 0 1,1 249.9, 75" fill="none" />
+        
+        <!-- Sutil sombra para dar profundidad de sello de caucho -->
+        <filter id="gentle-shadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#152610" flood-opacity="0.3"/>
+        </filter>
+    </defs>
+
+    <!-- Grupo Principal del Sello con sombra -->
+    <g filter="url(#gentle-shadow)">
+        <!-- Círculo Exterior (Beige Arena) -->
+        <circle cx="250" cy="250" r="215" fill="none" stroke="#F7F4F0" stroke-width="5" />
+        
+        <!-- Círculo Medio Dentado/Punteado (Terracota) -->
+        <circle cx="250" cy="250" r="195" fill="none" stroke="#C86B4F" stroke-width="2" stroke-dasharray="8 6" />
+        
+        <!-- Círculo Interior Fino (Beige Arena) -->
+        <circle cx="250" cy="250" r="145" fill="none" stroke="#F7F4F0" stroke-width="1.5" />
+
+        <!-- Texto Circular de la Marca -->
+        <text font-family="'Inter', 'Roboto', 'Helvetica', sans-serif" font-size="12.5" font-weight="700" letter-spacing="4" fill="#F7F4F0">
+            <textPath href="#circle-text-path" startOffset="0%">· RAÍZ · ASESORÍA MIGRATORIA · VIGO · GALICIA · EST. 2026</textPath>
+        </text>
+
+        <!-- Monograma Central: Letra "R" de Raíz (Estilo Editorial Serif) -->
+        <text x="250" y="275" font-family="'Fraunces', 'Playfair Display', 'Georgia', serif" font-size="155" font-weight="700" fill="#F7F4F0" text-anchor="middle">R</text>
+
+        <!-- Raíces Orgánicas emergiendo de la base de la "R" (Terracota) -->
+        <g stroke="#C86B4F" stroke-width="4.5" stroke-linecap="round" fill="none">
+            <!-- Raíz Izquierda -->
+            <path d="M 215,275 C 210,310 175,325 155,345 C 145,355 130,360 120,360" />
+            
+            <!-- Raíz Central Izquierda -->
+            <path d="M 235,285 C 235,325 210,345 200,380 C 195,400 205,415 195,430" />
+            
+            <!-- Raíz Central Derecha -->
+            <path d="M 265,285 C 270,325 255,355 260,390 C 263,410 278,420 285,435" />
+            
+            <!-- Raíz Derecha -->
+            <path d="M 285,275 C 290,310 325,325 345,345 C 355,355 370,360 380,360" />
+            
+            <!-- Pequeños brotes orgánicos auxiliares -->
+            <path d="M 185,320 C 175,335 170,350 175,365" stroke-width="3" />
+            <path d="M 315,320 C 325,335 330,350 325,365" stroke-width="3" />
+        </g>
+    </g>
+</svg>
