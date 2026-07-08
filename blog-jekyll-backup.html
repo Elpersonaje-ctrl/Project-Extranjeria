@@ -1,0 +1,25 @@
+---
+layout: default
+title: "Blog - Raíz Asesores de Extranjería"
+---
+
+<section class="section-padding bg-light">
+    <div class="container">
+        <header style="text-align: center; margin-bottom: 60px;">
+            <span class="eyebrow">Recursos y Guías</span>
+            <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 16px;">El Blog de Raíz</h1>
+            <p class="section-lead" style="margin: 0 auto;">Información clara, veraz y de actualidad para tu regularización en España sin tecnicismos.</p>
+        </header>
+
+        <div class="grid-3 blog-grid">
+            {% for post in site.posts %}
+            <a class="blog-card" href="{{ post.url | prepend: site.baseurl }}">
+                <span class="blog-date">{{ post.date | date: "%d %b %Y" }}</span>
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.excerpt }}</p>
+                <span class="blog-link">Leer artículo →</span>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
