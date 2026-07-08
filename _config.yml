@@ -10,7 +10,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - Raíz Design System
   - BRAND_MANUAL.md
   - BUSINESS_MODEL_CANVAS.md
   - PLAN_OPERATIVO_ETAPAS.md
