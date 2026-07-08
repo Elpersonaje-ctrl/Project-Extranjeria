@@ -23,6 +23,77 @@
   <div id="__bundler_loading">Unpacking...</div>
 
   <script>
+    // ============================================================
+    // CONFIGURACIÓN DEL FORMULARIO DE CONTACTO (GOOGLE SHEETS)
+    // Pega aquí la URL de tu Google Apps Script Web App desplegada
+    // ============================================================
+    window.GOOGLE_SCRIPT_URL = "PEGA_AQUI_TU_URL_DE_APPS_SCRIPT";
+
+    // Interceptor global de envío del formulario
+    window.addEventListener("submit", async (e) => {
+      const form = e.target;
+      if (form && (form.id === "contact-form" || form.className.includes("contact-form") || form.querySelector('select[name="situacion"]'))) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const nombre = form.nombre.value.trim();
+        const telefono = form.telefono.value.trim();
+        const email = form.email.value.trim();
+        const situacion = form.situacion.value;
+        const mensaje = form.mensaje ? form.mensaje.value.trim() : "";
+
+        let statusEl = form.querySelector("#native-status");
+        if (!statusEl) {
+          statusEl = document.createElement("p");
+          statusEl.id = "native-status";
+          statusEl.style.marginTop = "12px";
+          statusEl.style.fontSize = "0.9rem";
+          statusEl.style.fontWeight = "600";
+          
+          // Insertar antes del disclaimer o del botón
+          const disclaimer = form.querySelector(".form-disclaimer") || form.querySelector("p:last-of-type");
+          if (disclaimer) {
+            disclaimer.parentNode.insertBefore(statusEl, disclaimer);
+          } else {
+            form.appendChild(statusEl);
+          }
+        }
+
+        if (!nombre || !telefono || !email || !situacion) {
+          statusEl.textContent = "Por favor, completa los campos obligatorios.";
+          statusEl.style.color = "#9C2B2B"; // --color-status-danger
+          return;
+        }
+
+        if (window.GOOGLE_SCRIPT_URL.includes("PEGA_AQUI")) {
+          statusEl.textContent = "El formulario aún no está conectado. Configura tu URL de Google Sheets en blog.html.";
+          statusEl.style.color = "#9C2B2B";
+          return;
+        }
+
+        const submitBtn = form.querySelector("button[type='submit']");
+        if (submitBtn) submitBtn.disabled = true;
+        statusEl.textContent = "Enviando...";
+        statusEl.style.color = "#211B14";
+
+        try {
+          await fetch(window.GOOGLE_SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            body: JSON.stringify({ nombre, telefono, email, situacion, mensaje })
+          });
+
+          form.reset();
+          statusEl.textContent = "¡Gracias! Hemos recibido tus datos, te contactaremos en menos de 2 horas hábiles.";
+          statusEl.style.color = "#2B6E4E"; // --color-status-success
+        } catch (err) {
+          statusEl.textContent = "Hubo un problema al enviar. Escríbenos directamente por WhatsApp.";
+          statusEl.style.color = "#9C2B2B";
+        } finally {
+          if (submitBtn) submitBtn.disabled = false;
+        }
+      }
+    }, true); // useCapture = true para interceptar antes de React
     
 document.addEventListener('DOMContentLoaded', async function() {
   const loading = document.getElementById('__bundler_loading');
