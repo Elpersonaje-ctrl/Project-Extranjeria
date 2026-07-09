@@ -188,44 +188,387 @@ layout: default
         </div>
 
         <form id="contact-form" class="contact-form" novalidate>
-            <h3>O déjanos tus datos y te llamamos</h3>
-            <div class="form-row">
-                <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" required autocomplete="name">
+            <h3>Triaje Inteligente de Viabilidad</h3>
+            <p style="font-size: 0.85rem; color: var(--ink-soft); margin-bottom: 20px; line-height: 1.4;">
+                Completa este diagnóstico rápido para determinar la viabilidad de tu residencia o nacionalidad en Vigo.
+            </p>
+
+            <!-- BARRA DE PROGRESO -->
+            <div class="progress-container" style="margin-bottom: 20px;">
+                <div class="progress-text" style="font-family: var(--font-utility, monospace); font-size: 11px; color: var(--ink-soft); display: flex; justify-content: space-between; margin-bottom: 6px;">
+                    <span id="progress-step-label">Paso 1 de 4</span>
+                    <span id="progress-percent">25%</span>
+                </div>
+                <div class="progress-bar-bg" style="height: 4px; background-color: rgba(199, 183, 142, 0.3); border-radius: 2px; overflow: hidden;">
+                    <div id="progress-bar" class="progress-bar-fill" style="height: 100%; background-color: var(--forest); width: 25%; transition: width 0.4s ease;"></div>
+                </div>
             </div>
-            <div class="form-row form-row-split">
-                <div>
+
+            <!-- PASO 1: DATOS BÁSICOS -->
+            <div id="step-1" class="step active">
+                <div class="form-row">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required autocomplete="name" placeholder="Escribe tu nombre">
+                </div>
+                <div class="form-row">
                     <label for="telefono">Teléfono / WhatsApp</label>
-                    <input type="tel" id="telefono" name="telefono" required autocomplete="tel">
+                    <input type="tel" id="telefono" name="telefono" required autocomplete="tel" placeholder="Ej: +34 600 000 000">
                 </div>
-                <div>
+                <div class="form-row">
                     <label for="email">Correo electrónico</label>
-                    <input type="email" id="email" name="email" required autocomplete="email">
+                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="tu@email.com">
                 </div>
             </div>
-            <div class="form-row">
-                <label for="situacion">Tu situación</label>
-                <select id="situacion" name="situacion" required>
-                    <option value="" disabled selected>Selecciona una opción</option>
-                    <option value="Arraigo social">Arraigo social</option>
-                    <option value="Arraigo laboral">Arraigo laboral</option>
-                    <option value="Arraigo para la formación">Arraigo para la formación</option>
-                    <option value="Nacionalidad española">Nacionalidad española</option>
-                    <option value="Ley de Nietos">Ley de Nietos</option>
-                    <option value="Modificación de estancia">Modificación de estancia</option>
-                    <option value="Renovación de permiso">Renovación de permiso</option>
-                    <option value="Otro">Otro</option>
-                </select>
+
+            <!-- PASO 2: ORIGEN Y ESTANCIA -->
+            <div id="step-2" class="step" style="display: none;">
+                <div class="form-row">
+                    <label for="origen">¿Cuál es tu país de origen?</label>
+                    <select id="origen" name="origen" class="text-input" style="width:100%; padding: 10px; border: 1px solid var(--rule); border-radius: 4px; background: #fff;">
+                        <option value="" disabled selected>Selecciona tu país...</option>
+                        <option value="colombia">Colombia</option>
+                        <option value="venezuela">Venezuela</option>
+                        <option value="peru">Perú</option>
+                        <option value="honduras">Honduras</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="cuba">Cuba</option>
+                        <option value="ecuador">Ecuador</option>
+                        <option value="portugal">Portugal / Andorra / Filipinas</option>
+                        <option value="marruecos">Marruecos</option>
+                        <option value="rumania">Rumanía / Europa</option>
+                        <option value="otros">Cualquier otro país</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>¿Cuánto tiempo llevas en España?</label>
+                    <div class="option-grid" style="display: grid; grid-template-cols: 1fr; gap: 8px; margin-top: 8px;">
+                        <label style="display: flex; align-items: flex-start; gap: 10px; border: 1px solid var(--rule); padding: 10px; border-radius: 4px; background: #fff; cursor: pointer; font-weight: normal; font-size: 0.9rem;">
+                            <input type="radio" name="estancia" value="menos_1" style="width: auto; margin-top: 3px;">
+                            <div>
+                                <strong style="display:block; color: var(--forest); font-size: 0.85rem;">Menos de 1 año</strong>
+                                <span style="font-size: 0.75rem; color: var(--ink-soft);">Acabas de llegar o estás de turista.</span>
+                            </div>
+                        </label>
+                        <label style="display: flex; align-items: flex-start; gap: 10px; border: 1px solid var(--rule); padding: 10px; border-radius: 4px; background: #fff; cursor: pointer; font-weight: normal; font-size: 0.9rem;">
+                            <input type="radio" name="estancia" value="entre_1_2" style="width: auto; margin-top: 3px;">
+                            <div>
+                                <strong style="display:block; color: var(--forest); font-size: 0.85rem;">Entre 1 y 2 años</strong>
+                                <span style="font-size: 0.75rem; color: var(--ink-soft);">Ideal para prórrogas o FP.</span>
+                            </div>
+                        </label>
+                        <label style="display: flex; align-items: flex-start; gap: 10px; border: 1px solid var(--rule); padding: 10px; border-radius: 4px; background: #fff; cursor: pointer; font-weight: normal; font-size: 0.9rem;">
+                            <input type="radio" name="estancia" value="exacto_2" style="width: auto; margin-top: 3px;">
+                            <div>
+                                <strong style="display:block; color: var(--forest); font-size: 0.85rem;">2 años o más</strong>
+                                <span style="font-size: 0.75rem; color: var(--ink-soft);">Plazo para arraigo laboral/formación.</span>
+                            </div>
+                        </label>
+                        <label style="display: flex; align-items: flex-start; gap: 10px; border: 1px solid var(--rule); padding: 10px; border-radius: 4px; background: #fff; cursor: pointer; font-weight: normal; font-size: 0.9rem;">
+                            <input type="radio" name="estancia" value="mas_3" style="width: auto; margin-top: 3px;">
+                            <div>
+                                <strong style="display:block; color: var(--forest); font-size: 0.85rem;">3 años o más</strong>
+                                <span style="font-size: 0.75rem; color: var(--ink-soft);">Plazo para arraigo social estándar.</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
             </div>
-            <div class="form-row">
-                <label for="mensaje">Cuéntanos brevemente tu caso (opcional)</label>
-                <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+
+            <!-- PASO 3: ANTECEDENTES Y MEDIOS -->
+            <div id="step-3" class="step" style="display: none;">
+                <div class="form-row">
+                    <label>¿Tienes antecedentes penales?</label>
+                    <div class="option-grid" style="display: grid; grid-template-cols: 1fr; gap: 8px; margin-top: 4px;">
+                        <label style="display: flex; align-items: center; gap: 10px; border: 1px solid var(--rule); padding: 10px; border-radius: 4px; background: #fff; cursor: pointer; font-weight: normal; font-size: 0.85rem;">
+                            <input type="radio" name="penales" value="sin_penales" style="width: auto;">
+                            <span>Totalmente limpio</span>
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 10px; border: 1px solid var(--rule); padding: 10px; border-radius: 4px; background: #fff; cursor: pointer; font-weight: normal; font-size: 0.85rem;">
+                            <input type="radio" name="penales" value="con_penales" style="width: auto;">
+                            <span>Tengo antecedentes (penales o policiales)</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row" style="margin-top: 12px;">
+                    <label>¿De qué medios o vínculos dispones?</label>
+                    <div class="option-grid" style="display: grid; grid-template-cols: 1fr; gap: 8px; margin-top: 4px;">
+                        <label style="display: flex; align-items: center; gap: 10px; border: 1px solid var(--rule); padding: 8px; border-radius: 4px; background: #fff; cursor: pointer; font-weight: normal; font-size: 0.85rem;">
+                            <input type="radio" name="medios" value="precontrato" style="width: auto;">
+                            <span>Tengo precontrato de trabajo</span>
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 10px; border: 1px solid var(--rule); padding: 8px; border-radius: 4px; background: #fff; cursor: pointer; font-weight: normal; font-size: 0.85rem;">
+                            <input type="radio" name="medios" value="estudio" style="width: auto;">
+                            <span>Quiero matricularme en FP / Curso</span>
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 10px; border: 1px solid var(--rule); padding: 8px; border-radius: 4px; background: #fff; cursor: pointer; font-weight: normal; font-size: 0.85rem;">
+                            <input type="radio" name="medios" value="familiar" style="width: auto;">
+                            <span>Tengo familiar legal directo</span>
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 10px; border: 1px solid var(--rule); padding: 8px; border-radius: 4px; background: #fff; cursor: pointer; font-weight: normal; font-size: 0.85rem;">
+                            <input type="radio" name="medios" value="ninguno" style="width: auto;">
+                            <span>Ninguno de los anteriores</span>
+                        </label>
+                    </div>
+                </div>
             </div>
-            <button type="submit" class="btn-primary btn-full">
-                <span class="btn-label">Enviar y reservar mi evaluación</span>
-            </button>
+
+            <!-- PASO 4: RESULTADO / DIAGNÓSTICO -->
+            <div id="step-4" class="step" style="display: none;">
+                <div class="result-specimen" style="background: #fff; border: 1px dashed var(--rule); padding: 18px; border-radius: 4px; position: relative; margin-bottom: 12px;">
+                    <div class="result-header" style="display: flex; justify-content: space-between; font-family: var(--font-stamp, monospace); font-size: 10px; color: var(--gold); border-bottom: 1px solid var(--rule); padding-bottom: 4px; margin-bottom: 8px;">
+                        <span>EXPEDIENTE: #RAIZ-2026-DIAG</span>
+                        <span>VIGO (PONTEVEDRA)</span>
+                    </div>
+                    <div class="result-title" id="web-result-title" style="font-family: var(--font-display, serif); font-size: 1.1rem; font-weight: 600; color: var(--forest); margin-bottom: 6px;"></div>
+                    <div class="result-text" id="web-result-explanation" style="font-size: 0.8rem; color: var(--ink-soft); line-height: 1.4; margin-bottom: 8px;"></div>
+                    <ul class="bullet-list" id="web-result-bullets" style="list-style-type: none; padding-left: 0; margin-bottom: 0;"></ul>
+                    <div id="web-rubber-stamp" style="font-family: var(--font-stamp, monospace); font-size: 12px; font-weight: bold; text-transform: uppercase; border: 2px double currentColor; padding: 4px 8px; border-radius: 4px; display: inline-block; transform: rotate(-8deg); opacity: 0.85; position: absolute; right: 12px; top: 32px; letter-spacing: 0.05em; filter: url('#stamp-texture-web');"></div>
+                </div>
+
+                <!-- CAMPOS OCULTOS PARA INTERCEPTAR EN EL BACKEND (GOOGLE SHEETS) -->
+                <input type="hidden" id="situacion" name="situacion">
+                <input type="hidden" id="mensaje" name="mensaje">
+
+                <button type="submit" class="btn-primary btn-full">
+                    <span class="btn-label">Enviar mi Diagnóstico y Reservar Evaluación</span>
+                </button>
+            </div>
+
+            <!-- BOTONES DE NAVEGACIÓN -->
+            <div class="button-group" id="web-nav-buttons" style="display: flex; justify-content: space-between; gap: 12px; margin-top: 16px;">
+                <button type="button" id="web-btn-prev" class="btn-secondary" style="width: 48%; padding: 10px; border: 1px solid var(--rule); border-radius: 4px; font-size: 0.85rem; font-weight: 600; cursor: pointer; background: transparent;" onclick="navigateWebStep(-1)">Atrás</button>
+                <button type="button" id="web-btn-next" class="btn-primary" style="width: 48%; padding: 10px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: none;" onclick="navigateWebStep(1)">Siguiente</button>
+            </div>
+
             <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-            <p class="form-disclaimer">Tus datos se guardan de forma segura y solo se usan para contactarte sobre tu consulta.</p>
+            <p class="form-disclaimer">Tus datos se guardan de forma segura y se usarán para contactarte. Al enviar se registrará tu triaje.</p>
         </form>
+
+        <!-- SVG Filter definitions inside body so they are available -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+            <defs>
+                <filter id="stamp-texture-web" x="0%" y="0%" width="100%" height="100%">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise" />
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+                </filter>
+            </defs>
+        </svg>
+
+        <script>
+            let currentWebStep = 1;
+            const totalWebSteps = 4;
+
+            const webAnswers = {
+                nombre: '',
+                telefono: '',
+                email: '',
+                origen: '',
+                estancia: '',
+                penales: '',
+                medios: ''
+            };
+
+            function validateWebStep(step) {
+                const nextBtn = document.getElementById('web-btn-next');
+                let isValid = false;
+
+                if (step === 1) {
+                    const nombre = document.getElementById('nombre').value.trim();
+                    const telefono = document.getElementById('telefono').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    if (nombre && telefono && email) {
+                        webAnswers.nombre = nombre;
+                        webAnswers.telefono = telefono;
+                        webAnswers.email = email;
+                        isValid = true;
+                    }
+                } else if (step === 2) {
+                    const origenVal = document.getElementById('origen').value;
+                    const estanciaVal = document.querySelector('input[name="estancia"]:checked');
+                    if (origenVal && estanciaVal) {
+                        webAnswers.origen = origenVal;
+                        webAnswers.estancia = estanciaVal.value;
+                        isValid = true;
+                    }
+                } else if (step === 3) {
+                    const penalesVal = document.querySelector('input[name="penales"]:checked');
+                    const mediosVal = document.querySelector('input[name="medios"]:checked');
+                    if (penalesVal && mediosVal) {
+                        webAnswers.penales = penalesVal.value;
+                        webAnswers.medios = mediosVal.value;
+                        isValid = true;
+                    }
+                } else if (step === 4) {
+                    isValid = true;
+                }
+
+                if (isValid) {
+                    nextBtn.removeAttribute('disabled');
+                    nextBtn.style.opacity = '1';
+                    nextBtn.style.cursor = 'pointer';
+                } else {
+                    nextBtn.setAttribute('disabled', 'true');
+                    nextBtn.style.opacity = '0.5';
+                    nextBtn.style.cursor = 'not-allowed';
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const fields = ['nombre', 'telefono', 'email'];
+                fields.forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) {
+                        el.addEventListener('input', () => validateWebStep(1));
+                    }
+                });
+
+                const origenEl = document.getElementById('origen');
+                if (origenEl) {
+                    origenEl.addEventListener('change', () => validateWebStep(2));
+                }
+
+                document.querySelectorAll('input[name="estancia"]').forEach(el => {
+                    el.addEventListener('change', () => validateWebStep(2));
+                });
+
+                document.querySelectorAll('input[name="penales"]').forEach(el => {
+                    el.addEventListener('change', () => validateWebStep(3));
+                });
+
+                document.querySelectorAll('input[name="medios"]').forEach(el => {
+                    el.addEventListener('change', () => validateWebStep(3));
+                });
+
+                validateWebStep(1);
+            });
+
+            function navigateWebStep(direction) {
+                if (direction === 1 && document.getElementById('web-btn-next').hasAttribute('disabled')) {
+                    return;
+                }
+
+                document.getElementById(`step-${currentWebStep}`).style.display = 'none';
+
+                currentWebStep += direction;
+
+                if (currentWebStep <= totalWebSteps) {
+                    document.getElementById(`step-${currentWebStep}`).style.display = 'block';
+
+                    const progressPercent = (currentWebStep / totalWebSteps) * 100;
+                    document.getElementById('progress-bar').style.width = `${progressPercent}%`;
+                    document.getElementById('progress-step-label').textContent = `Paso ${currentWebStep} de 4`;
+                    document.getElementById('progress-percent').textContent = `${Math.round(progressPercent)}%`;
+
+                    const prevBtn = document.getElementById('web-btn-prev');
+                    const nextBtn = document.getElementById('web-btn-next');
+
+                    if (currentWebStep > 1) {
+                        prevBtn.style.visibility = 'visible';
+                    } else {
+                        prevBtn.style.visibility = 'hidden';
+                    }
+
+                    if (currentWebStep === totalWebSteps) {
+                        nextBtn.style.display = 'none';
+                        calculateWebDiagnostic();
+                    } else {
+                        nextBtn.style.display = 'block';
+                        validateWebStep(currentWebStep);
+                    }
+                }
+            }
+
+            function calculateWebDiagnostic() {
+                const titleEl = document.getElementById('web-result-title');
+                const explanationEl = document.getElementById('web-result-explanation');
+                const bulletsEl = document.getElementById('web-result-bullets');
+                const stampEl = document.getElementById('web-rubber-stamp');
+                const situacionInput = document.getElementById('situacion');
+                const mensajeInput = document.getElementById('mensaje');
+
+                bulletsEl.innerHTML = '';
+
+                let situacion = 'Otro';
+                let diagnostico = '';
+
+                if (webAnswers.penales === 'con_penales') {
+                    titleEl.textContent = "Alerta: Se detectan Antecedentes";
+                    explanationEl.textContent = "La Oficina de Extranjería de Pontevedra deniega de forma automática expedientes con antecedentes sin cancelar.";
+                    stampEl.textContent = "REVISIÓN MANUAL";
+                    stampEl.className = "";
+                    stampEl.style.color = "var(--red-stamp)";
+                    stampEl.style.borderColor = "var(--red-stamp)";
+
+                    bulletsEl.innerHTML += `<li style="font-size: 0.75rem; color: var(--ink-soft); margin-bottom: 4px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; color: var(--red-stamp);">✗</span> Es obligatorio cancelar antecedentes en España o en origen antes de radicar.</li>`;
+                    bulletsEl.innerHTML += `<li style="font-size: 0.75rem; color: var(--ink-soft); margin-bottom: 4px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; color: var(--red-stamp);">✗</span> No recomendamos la radicación inmediata en Mercurio para evitar sellos desfavorables.</li>`;
+
+                    situacion = 'Otro';
+                    diagnostico = 'Alerta Antecedentes';
+                } else if (webAnswers.estancia === 'mas_3' && webAnswers.medios === 'precontrato') {
+                    titleEl.textContent = "¡Apto para Arraigo Social Vigo!";
+                    explanationEl.textContent = "Cumples con los 3 años requeridos y dispones de una vía económica compatible.";
+                    stampEl.textContent = "VIABLE: APROBADO";
+                    stampEl.className = "";
+                    stampEl.style.color = "var(--green-stamp)";
+                    stampEl.style.borderColor = "var(--green-stamp)";
+
+                    bulletsEl.innerHTML += `<li style="font-size: 0.75rem; color: var(--ink-soft); margin-bottom: 4px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; color: var(--green-stamp);">✓</span> Doble nacionalidad reducida de LatAm en 2 años una vez regularizado.</li>`;
+                    bulletsEl.innerHTML += `<li style="font-size: 0.75rem; color: var(--ink-soft); margin-bottom: 4px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; color: var(--green-stamp);">✓</span> Presentación 100% telemática vía Mercurio sin cita previa.</li>`;
+
+                    situacion = 'Arraigo social';
+                    diagnostico = 'Arraigo Social Viable';
+                } else if (webAnswers.estancia === 'exacto_2' && webAnswers.medios === 'estudio') {
+                    titleEl.textContent = "¡Apto para Arraigo de Formación!";
+                    explanationEl.textContent = "Tienes los 2 años necesarios y la intención de matricularte en FP oficial en Vigo.";
+                    stampEl.textContent = "VIABLE: FP";
+                    stampEl.className = "";
+                    stampEl.style.color = "var(--green-stamp)";
+                    stampEl.style.borderColor = "var(--green-stamp)";
+
+                    bulletsEl.innerHTML += `<li style="font-size: 0.75rem; color: var(--ink-soft); margin-bottom: 4px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; color: var(--green-stamp);">✓</span> Cumples los 24 meses de permanencia continua demostrable en Galicia.</li>`;
+                    bulletsEl.innerHTML += `<li style="font-size: 0.75rem; color: var(--ink-soft); margin-bottom: 4px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; color: var(--green-stamp);">✓</span> Te asistimos con cursos aprobados de la Xunta para evitar inadmisiones.</li>`;
+
+                    situacion = 'Arraigo para la formación';
+                    diagnostico = 'Arraigo Formación Viable';
+                } else if (webAnswers.medios === 'familiar') {
+                    titleEl.textContent = "¡Apto para Arraigo Familiar!";
+                    explanationEl.textContent = "Tener lazos familiares directos te faculta para regularizarte sin importar tu estancia.";
+                    stampEl.textContent = "CÓDIGO: FAMILIAR";
+                    stampEl.className = "";
+                    stampEl.style.color = "var(--green-stamp)";
+                    stampEl.style.borderColor = "var(--green-stamp)";
+
+                    bulletsEl.innerHTML += `<li style="font-size: 0.75rem; color: var(--ink-soft); margin-bottom: 4px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; color: var(--green-stamp);">✓</span> Residencia y derecho al trabajo por 5 años.</li>`;
+                    bulletsEl.innerHTML += `<li style="font-size: 0.75rem; color: var(--ink-soft); margin-bottom: 4px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; color: var(--green-stamp);">✓</span> Proceso ágil en Pontevedra con resolución en &lt; 45 días.</li>`;
+
+                    situacion = 'Arraigo laboral';
+                    diagnostico = 'Arraigo Familiar Viable';
+                } else {
+                    titleEl.textContent = "Consulta de Viabilidad Necesaria";
+                    explanationEl.textContent = "No cumples plazos directos de arraigo estándar, pero existen vías alternativas de estudio o nacionalidad.";
+                    stampEl.textContent = "REVISIÓN";
+                    stampEl.className = "";
+                    stampEl.style.color = "var(--red-stamp)";
+                    stampEl.style.borderColor = "var(--red-stamp)";
+
+                    bulletsEl.innerHTML += `<li style="font-size: 0.75rem; color: var(--ink-soft); margin-bottom: 4px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold);">ℹ</span> Evaluación de Ley de Nietos si tienes abuelos de origen gallego.</li>`;
+                    bulletsEl.innerHTML += `<li style="font-size: 0.75rem; color: var(--ink-soft); margin-bottom: 4px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold);">ℹ</span> Análisis personalizado para evitar vacíos padronales de 120 días.</li>`;
+
+                    situacion = 'Otro';
+                    diagnostico = 'Revisión Necesaria';
+                }
+
+                const randomRotation = (Math.random() * 12 - 6).toFixed(1);
+                stampEl.style.transform = `rotate(${randomRotation}deg)`;
+
+                situacionInput.value = situacion;
+                mensajeInput.value = `DIAGNÓSTICO TRIAJE AUTOMÁTICO:\n` +
+                  `- Origen: ${webAnswers.origen}\n` +
+                  `- Estancia en España: ${webAnswers.estancia}\n` +
+                  `- Antecedentes: ${webAnswers.penales}\n` +
+                  `- Medios/Plan: ${webAnswers.medios}\n` +
+                  `- Viabilidad: ${diagnostico}`;
+            }
+        </script>
     </div>
 </section>

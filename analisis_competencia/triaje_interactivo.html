@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triaje Inteligente de Viabilidad | Raíz - Asesores Expertos</title>
+  
+  <!-- Tipografías de la Marca (Raíz Design System) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=Special+Elite&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       CSS VARIABLES & BRAND TOKENS (Verbatim from Raíz Design System)
+       ========================================================================== */
+    :root {
+      --paper: #F1EBD8;          /* Fondo papel envejecido general */
+      --paper-card: #FBF8EF;     /* Fondo de las fichas/tarjetas */
+      --ink: #211B14;            /* Texto principal negro tinta */
+      --ink-soft: #4A4032;       /* Texto secundario */
+      --forest: #1C3B30;         /* Verde marca principal */
+      --forest-light: #2F5C4C;   /* Hover de botones */
+      --forest-pale: #E7EEE8;    /* Fondos claros */
+      --gold: #B8874B;           /* Dorado lacre/sello */
+      --gold-light: #D9AE72;     /* Dorado para fondos oscuros */
+      --red-stamp: #9C2B2B;      /* Rojo tinta rechazo */
+      --green-stamp: #2B6E4E;    /* Verde tinta aprobado / whatsapp */
+      --rule: #C7B78E;           /* Bordes y líneas divisorias */
+      --shadow: rgba(28, 22, 12, 0.08);
+      
+      --font-display: 'Fraunces', serif;
+      --font-body: 'Inter', sans-serif;
+      --font-utility: 'Special Elite', monospace;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      padding: 40px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ==========================================================================
+       LAYOUT & CONTAINERS
+       ========================================================================== */
+    .container {
+      max-width: 680px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .brand-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .brand-seal {
+      width: 54px;
+      height: 54px;
+      margin: 0 auto 12px;
+      border: 2px dashed var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--forest);
+      text-transform: uppercase;
+    }
+
+    .brand-tagline {
+      font-family: var(--font-utility);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* ==========================================================================
+       THE CARD (FILE SPECIMEN VIBE)
+       ========================================================================== */
+    .card {
+      background-color: var(--paper-card);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      box-shadow: 0 10px 30px var(--shadow);
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Efecto de borde rasgado superior característico de la marca */
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: repeating-linear-gradient(90deg, var(--gold) 0, var(--gold) 10px, transparent 10px, transparent 15px);
+    }
+
+    .eyebrow {
+      font-family: var(--font-utility);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--forest);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    p.lead {
+      color: var(--ink-soft);
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+
+    /* DIVISOR */
+    .divider {
+      height: 1px;
+      border-top: 1px dashed var(--rule);
+      margin: 24px 0;
+    }
+
+    /* ==========================================================================
+       PROGRESS BAR (Special Elite Style)
+       ========================================================================== */
+    .progress-container {
+      margin-bottom: 32px;
+    }
+    .progress-text {
+      font-family: var(--font-utility);
+      font-size: 11px;
+      color: var(--ink-soft);
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .progress-bar-bg {
+      height: 4px;
+      background-color: rgba(199, 183, 142, 0.3);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background-color: var(--forest);
+      width: 25%;
+      transition: width 0.4s ease;
+    }
+
+    /* ==========================================================================
+       STEPS & FORM FIELDS
+       ========================================================================== */
+    .step {
+      display: none;
+    }
+    .step.active {
+      display: block;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-label {
+      font-family: var(--font-utility);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    /* SELECTS Y BOTONES DE OPCIONES */
+    .option-grid {
+      display: grid;
+      grid-template-cols: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 480px) {
+      .option-grid {
+        grid-template-cols: 1fr 1fr;
+      }
+    }
+
+    .option-card {
+      border: 1px solid var(--rule);
+      background-color: var(--paper-card);
+      padding: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .option-card:hover {
+      border-color: var(--forest);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px var(--shadow);
+    }
+    .option-card.selected {
+      border-color: var(--forest);
+      background-color: var(--forest-pale);
+    }
+    .option-card input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+    }
+    .option-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--forest);
+      margin-bottom: 4px;
+    }
+    .option-desc {
+      font-size: 12px;
+      color: var(--ink-soft);
+    }
+
+    /* INPUTS TRADICIONALES */
+    .text-input {
+      width: 100%;
+      border: 1px solid var(--rule);
+      background-color: #FFF;
+      padding: 12px 16px;
+      border-radius: 4px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+    .text-input:focus {
+      border-color: var(--forest);
+    }
+
+    select.text-input {
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23211B14' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      background-size: 14px;
+      padding-right: 40px;
+    }
+
+    /* ==========================================================================
+       BUTTONS
+       ========================================================================== */
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-decoration: none;
+      text-align: center;
+      border: 1px solid transparent;
+      outline: none;
+    }
+
+    .btn-primary {
+      background-color: var(--forest);
+      color: var(--paper-card);
+    }
+    .btn-primary:hover {
+      background-color: var(--forest-light);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      border-color: var(--rule);
+      color: var(--ink);
+    }
+    .btn-secondary:hover {
+      background-color: rgba(199, 183, 142, 0.15);
+    }
+
+    .btn-whatsapp {
+      background-color: var(--green-stamp);
+      color: #FFF;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .btn-whatsapp:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .btn-disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    /* ==========================================================================
+       RESULT SCREEN (STAMPS & DIAGNOSTICS)
+       ========================================================================== */
+    .result-specimen {
+      background: #FFF;
+      border: 1px solid var(--rule);
+      padding: 24px;
+      border-radius: 4px;
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .result-header {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-utility);
+      font-size: 11px;
+      color: var(--gold);
+      border-b: 1px solid var(--rule);
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+
+    .result-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--forest);
+      margin-bottom: 12px;
+    }
+
+    .result-text {
+      font-size: 13px;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+
+    .bullet-list {
+      list-style-type: none;
+      margin-bottom: 16px;
+    }
+    .bullet-list li {
+      font-size: 13px;
+      color: var(--ink-soft);
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 6px;
+    }
+    .bullet-list li::before {
+      content: "✓";
+      color: var(--green-stamp);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    /* EL Sello de Lacre / Sello de Tinta (Stamp Motif) */
+    .stamp {
+      font-family: var(--font-utility);
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: 3px double currentColor;
+      padding: 8px 16px;
+      border-radius: 4px;
+      display: inline-block;
+      transform: rotate(-8deg);
+      opacity: 0.85;
+      user-select: none;
+      position: absolute;
+      right: 24px;
+      top: 50px;
+      letter-spacing: 0.1em;
+      
+      /* Filtro SVG que simula la distorsión de la tinta real al presionarse */
+      filter: url('#stamp-texture');
+    }
+    .stamp-approved {
+      color: var(--green-stamp);
+    }
+    .stamp-review {
+      color: var(--red-stamp);
+    }
+
+    /* ==========================================================================
+       CHECKOUT MODAL / POPUP (STRIPE SIMULATION)
+       ========================================================================== */
+    .checkout-box {
+      border: 1px solid var(--rule);
+      background-color: var(--paper-card);
+      border-radius: 4px;
+      padding: 20px;
+      margin-top: 24px;
+    }
+    .checkout-title {
+      font-family: var(--font-utility);
+      font-size: 11px;
+      color: var(--gold);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .payment-row {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    /* SVG Filter definitions container */
+    .filters-container {
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="container">
+
+    <!-- CABECERA DE MARCA -->
+    <header class="brand-header">
+      <div class="brand-seal">R</div>
+      <h1 class="brand-name">Raíz</h1>
+      <p class="brand-tagline">Asesores Expertos en Extranjería</p>
+    </header>
+
+    <!-- TARJETA DEL TRIAJE -->
+    <main class="card">
+      <span class="eyebrow">Diagnóstico de Viabilidad Telemática</span>
+      <h2 id="card-heading">Triaje Inteligente de Extranjería</h2>
+      <p id="card-subheading" class="lead">Completa estas 4 preguntas rápidas para determinar la viabilidad de tu residencia o nacionalidad en Vigo en menos de 2 minutos.</p>
+
+      <!-- BARRA DE PROGRESO -->
+      <div class="progress-container">
+        <div class="progress-text">
+          <span id="progress-step-label">Paso 1 de 4</span>
+          <span id="progress-percent">25% Completado</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div id="progress-bar" class="progress-bar-fill"></div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- FORMULARIO DE PASOS -->
+      <form id="triaje-form" onsubmit="event.preventDefault();">
+
+        <!-- PASO 1: NACIONALIDAD -->
+        <div id="step-1" class="step active">
+          <div class="form-group">
+            <label class="form-label">¿Cuál es tu país de origen?</label>
+            <p class="lead" style="font-size: 13px; margin-top: -6px; margin-bottom: 16px;">Esto determina si puedes beneficiarte del acuerdo de doble nacionalidad o plazos reducidos en España.</p>
+            <select id="origen" class="text-input" onchange="validateStep(1)">
+              <option value="" disabled selected>Selecciona tu país...</option>
+              <optgroup label="Iberoamérica (Plazo Reducido de Nacionalidad: 2 Años)">
+                <option value="colombia">Colombia</option>
+                <option value="venezuela">Venezuela</option>
+                <option value="peru">Perú</option>
+                <option value="honduras">Honduras</option>
+                <option value="argentina">Argentina</option>
+                <option value="cuba">Cuba</option>
+                <option value="ecuador">Ecuador</option>
+                <option value="otros_latam">Otro país de LatAm</option>
+              </optgroup>
+              <optgroup label="Otros Países">
+                <option value="portugal">Portugal / Andorra / Filipinas</option>
+                <option value="marruecos">Marruecos</option>
+                <option value="rumania">Rumanía / Europa</option>
+                <option value="otros">Cualquier otro país</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+
+        <!-- PASO 2: TIEMPO EN ESPAÑA -->
+        <div id="step-2" class="step">
+          <div class="form-group">
+            <label class="form-label">¿Cuánto tiempo llevas residiendo de forma continuada en España?</label>
+            <p class="lead" style="font-size: 13px; margin-top: -6px; margin-bottom: 16px;">La permanencia demostrable es vital para los procesos de Arraigo.</p>
+            <div class="option-grid">
+              <div class="option-card" onclick="selectRadio('estancia', 'menos_1')">
+                <input type="radio" name="estancia" id="estancia-menos_1" value="menos_1" onchange="validateStep(2)">
+                <span class="option-title">Menos de 1 año</span>
+                <span class="option-desc">Acabas de llegar o estás como turista o estudiante.</span>
+              </div>
+              <div class="option-card" onclick="selectRadio('estancia', 'entre_1_2')">
+                <input type="radio" name="estancia" id="estancia-entre_1_2" value="entre_1_2" onchange="validateStep(2)">
+                <span class="option-title">Entre 1 y 2 años</span>
+                <span class="option-desc">Ideal para prórrogas o arraigo para la formación inicial.</span>
+              </div>
+              <div class="option-card" onclick="selectRadio('estancia', 'exacto_2')">
+                <input type="radio" name="estancia" id="estancia-exacto_2" value="exacto_2" onchange="validateStep(2)">
+                <span class="option-title">2 años exactos o más</span>
+                <span class="option-desc">Apto para Arraigo para la Formación o Arraigo Laboral.</span>
+              </div>
+              <div class="option-card" onclick="selectRadio('estancia', 'mas_3')">
+                <input type="radio" name="estancia" id="estancia-mas_3" value="mas_3" onchange="validateStep(2)">
+                <span class="option-title">3 años o más</span>
+                <span class="option-desc">Plazo estándar idóneo para el Arraigo Social clásico en Vigo.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PASO 3: ANTECEDENTES PENALES -->
+        <div id="step-3" class="step">
+          <div class="form-group">
+            <label class="form-label">¿Tienes antecedentes penales en tu país de origen o en España?</label>
+            <p class="lead" style="font-size: 13px; margin-top: -6px; margin-bottom: 16px;">La Oficina de Extranjería de Pontevedra es estricta con este requisito.</p>
+            <div class="option-grid">
+              <div class="option-card" onclick="selectRadio('penales', 'sin_penales')">
+                <input type="radio" name="penales" id="penales-sin_penales" value="sin_penales" onchange="validateStep(3)">
+                <span class="option-title">Totalmente Limpio</span>
+                <span class="option-desc">No tengo ningún tipo de antecedente ni detenciones.</span>
+              </div>
+              <div class="option-card" onclick="selectRadio('penales', 'con_penales')">
+                <input type="radio" name="penales" id="penales-con_penales" value="con_penales" onchange="validateStep(3)">
+                <span class="option-title">Tengo Antecedentes</span>
+                <span class="option-desc">Tengo antecedentes penales o policiales sin cancelar.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PASO 4: FORMACIÓN O TRABAJO -->
+        <div id="step-4" class="step">
+          <div class="form-group">
+            <label class="form-label">¿De qué medios dispones para regularizarte?</label>
+            <p class="lead" style="font-size: 13px; margin-top: -6px; margin-bottom: 16px;">Selecciona el plan que mejor se adapte a tu situación actual en Vigo.</p>
+            <div class="option-grid">
+              <div class="option-card" onclick="selectRadio('medios', 'precontrato')">
+                <input type="radio" name="medios" id="medios-precontrato" value="precontrato" onchange="validateStep(4)">
+                <span class="option-title">Precontrato de Trabajo</span>
+                <span class="option-desc">Un empleador en Galicia está dispuesto a contratarme (30h/sem).</span>
+              </div>
+              <div class="option-card" onclick="selectRadio('medios', 'estudio')">
+                <input type="radio" name="medios" id="medios-estudio" value="estudio" onchange="validateStep(4)">
+                <span class="option-title">Compromiso de FP / Curso</span>
+                <span class="option-desc">Deseo matricularme en un curso oficial de la Xunta de Galicia.</span>
+              </div>
+              <div class="option-card" onclick="selectRadio('medios', 'familiar')">
+                <input type="radio" name="medios" id="medios-familiar" value="familiar" onchange="validateStep(4)">
+                <span class="option-title">Vínculo Familiar Directo</span>
+                <span class="option-desc">Tengo un familiar directo con residencia legal o nacionalidad.</span>
+              </div>
+              <div class="option-card" onclick="selectRadio('medios', 'ninguno')">
+                <input type="radio" name="medios" id="medios-ninguno" value="ninguno" onchange="validateStep(4)">
+                <span class="option-title">Ninguno de los anteriores</span>
+                <span class="option-desc">No tengo familia legal ni ofertas de empleo vigentes.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANTALLA 5: RESULTADO -->
+        <div id="step-result" class="step">
+          
+          <!-- Expediente de Diagnóstico Físico -->
+          <div class="result-specimen">
+            <div class="result-header">
+              <span>EXPEDIENTE: #RAIZ-2026-TMP</span>
+              <span>LUGAR: VIGO (PONTEVEDRA)</span>
+            </div>
+            
+            <div class="result-title" id="result-title">Evaluando expediente...</div>
+            <div class="result-text" id="result-explanation">Analizando tus respuestas para calcular la vía más rápida telemática...</div>
+            
+            <ul class="bullet-list" id="result-bullets">
+              <!-- Cargados dinámicamente -->
+            </ul>
+
+            <!-- Sello Físico Distorsionado -->
+            <div id="rubber-stamp" class="stamp">VIABLE</div>
+          </div>
+
+          <div class="divider"></div>
+
+          <!-- RESERVA DE CITA DE PAGO (COMO VENTURA PERO INTEGRADO PARA RAÍZ) -->
+          <div id="checkout-block" class="checkout-box" style="display:none;">
+            <div class="checkout-title">Reserva de Asesoría de Viabilidad Definitiva</div>
+            <p class="lead" style="font-size:12px; margin-bottom:12px;">Para formalizar tu expediente y emitir tu <strong>Informe Jurídico de Viabilidad Firmado</strong> (que garantiza un 0% de rechazos en Vigo), reserva una videollamada de 30 minutos con nuestro asesor.</p>
+            
+            <div class="payment-row">
+              <span>Honorarios Asesoría (Reembolsable):</span>
+              <span style="color:var(--forest);">50,00 €</span>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" style="font-size:10px;">Nombre Completo</label>
+              <input type="text" id="checkout-name" placeholder="Escribe tu nombre" class="text-input" style="padding: 8px 12px; margin-bottom:12px;">
+              
+              <label class="form-label" style="font-size:10px;">Número de Tarjeta (Simulación segura)</label>
+              <input type="text" placeholder="•••• •••• •••• ••••" class="text-input" style="padding: 8px 12px; font-family:monospace;">
+            </div>
+
+            <button type="button" class="btn btn-primary" style="width:100%;" onclick="simulatePayment()">
+              Pagar 50,00 € y Reservar por Videollamada
+            </button>
+          </div>
+
+          <!-- BOTÓN DIRECTO DE WHATSAPP (ALTERNATIVA) -->
+          <div class="form-group" style="margin-top: 24px; text-align: center;">
+            <p class="lead" style="font-size:12px; margin-bottom:12px;">O si lo prefieres, envía este diagnóstico directamente a nuestro WhatsApp para atención prioritaria:</p>
+            <a id="whatsapp-link" href="#" target="_blank" class="btn btn-whatsapp" style="width:100%;">
+              💬 Enviar Diagnóstico por WhatsApp
+            </a>
+          </div>
+
+        </div>
+
+        <!-- GRUPO DE BOTONES DE NAVEGACIÓN -->
+        <div class="button-group" id="nav-buttons">
+          <button type="button" id="btn-prev" class="btn btn-secondary btn-disabled" onclick="navigateStep(-1)">Atrás</button>
+          <button type="button" id="btn-next" class="btn btn-primary btn-disabled" onclick="navigateStep(1)">Siguiente</button>
+        </div>
+
+      </form>
+    </main>
+
+  </div>
+
+  <!-- TEXTURE FILTER DEFINITIONS FOR THE INK RUBBER STAMP EFFECT -->
+  <div class="filters-container">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Filtro fractal que distorsiona los bordes simulando la tinta sobre papel poroso -->
+        <filter id="stamp-texture" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- LÓGICA DE CONTROL DEL TRIAJE -->
+  <script>
+    let currentStep = 1;
+    const totalSteps = 4;
+    
+    // Almacenamiento temporal de respuestas
+    const answers = {
+      origen: '',
+      estancia: '',
+      penales: '',
+      medios: ''
+    };
+
+    // Función para manejar la selección visual de las tarjetas de radio
+    function selectRadio(name, value) {
+      // Desmarcar otras opciones del mismo grupo
+      const cards = document.querySelectorAll(`input[name="${name}"]`);
+      cards.forEach(card => {
+        card.parentNode.classList.remove('selected');
+        card.checked = false;
+      });
+
+      // Seleccionar la correcta
+      const selectedCard = document.getElementById(`${name}-${value}`);
+      if (selectedCard) {
+        selectedCard.checked = true;
+        selectedCard.parentNode.classList.add('selected');
+        answers[name] = value;
+        validateStep(currentStep);
+      }
+    }
+
+    // Validador de botones activos
+    function validateStep(step) {
+      const nextBtn = document.getElementById('btn-next');
+      let isValid = false;
+
+      if (step === 1) {
+        const origenVal = document.getElementById('origen').value;
+        if (origenVal) {
+          answers.origen = origenVal;
+          isValid = true;
+        }
+      } else if (step === 2) {
+        if (answers.estancia) isValid = true;
+      } else if (step === 3) {
+        if (answers.penales) isValid = true;
+      } else if (step === 4) {
+        if (answers.medios) isValid = true;
+      }
+
+      if (isValid) {
+        nextBtn.classList.remove('btn-disabled');
+      } else {
+        nextBtn.classList.add('btn-disabled');
+      }
+    }
+
+    // Navegación entre pasos
+    function navigateStep(direction) {
+      if (direction === 1 && document.getElementById('btn-next').classList.contains('btn-disabled')) {
+        return; // Evita avanzar si no está validado
+      }
+
+      // Ocultar paso actual
+      document.getElementById(`step-${currentStep}`).classList.remove('active');
+
+      // Calcular nuevo paso
+      currentStep += direction;
+
+      // Mostrar nuevo paso o calcular resultados
+      if (currentStep <= totalSteps) {
+        document.getElementById(`step-${currentStep}`).classList.add('active');
+        
+        // Actualizar barra de progreso
+        const progressPercent = (currentStep / totalSteps) * 100;
+        document.getElementById('progress-bar').style.width = `${progressPercent}%`;
+        document.getElementById('progress-step-label').textContent = `Paso ${currentStep} de 4`;
+        document.getElementById('progress-percent').textContent = `${Math.round(progressPercent)}% Completado`;
+
+        // Controlar botón de atrás
+        const prevBtn = document.getElementById('btn-prev');
+        if (currentStep > 1) {
+          prevBtn.classList.remove('btn-disabled');
+        } else {
+          prevBtn.classList.add('btn-disabled');
+        }
+
+        // Validar el paso al que entramos
+        validateStep(currentStep);
+      } else {
+        // Ejecutar algoritmo de diagnóstico y mostrar resultado
+        showDiagnosticResult();
+      }
+    }
+
+    // Evento para el selector de origen tradicional
+    document.getElementById('origen').addEventListener('change', () => {
+      validateStep(1);
+    });
+
+    // ==========================================================================
+    // ALGORITMO DE DIAGNÓSTICO JURÍDICO DE RAÍZ
+    // ==========================================================================
+    function showDiagnosticResult() {
+      // Ocultar barra de progreso y botones de navegación
+      document.querySelector('.progress-container').style.display = 'none';
+      document.getElementById('nav-buttons').style.display = 'none';
+      document.getElementById('card-heading').textContent = "Tu Diagnóstico de Viabilidad";
+      document.getElementById('card-subheading').textContent = "Nuestro sistema ha verificado los requisitos de extranjería aplicados en la provincia de Pontevedra.";
+
+      const resultStep = document.getElementById('step-result');
+      resultStep.classList.add('active');
+
+      const titleEl = document.getElementById('result-title');
+      const explanationEl = document.getElementById('result-explanation');
+      const bulletsEl = document.getElementById('result-bullets');
+      const stampEl = document.getElementById('rubber-stamp');
+      const checkoutEl = document.getElementById('checkout-block');
+
+      bulletsEl.innerHTML = '';
+
+      // Lista de países de Iberoamérica para la doble nacionalidad abreviada
+      const iberoamericanos = ['colombia', 'venezuela', 'peru', 'honduras', 'argentina', 'cuba', 'ecuador', 'otros_latam'];
+      const isIbero = iberoamericanos.includes(answers.origen);
+
+      // CASO 1: ANTECEDENTES PENALES ACTIVO (MOTIVO DE DENEGACIÓN AUTOMÁTICA)
+      if (answers.penales === 'con_penales') {
+        titleEl.textContent = "Alerta: Se detectan Antecedentes Penales";
+        explanationEl.textContent = "La Oficina de Extranjería de Pontevedra rechaza de forma automática más del 98% de solicitudes con antecedentes sin cancelar.";
+        
+        stampEl.textContent = "REVISIÓN MANUAL";
+        stampEl.className = "stamp stamp-review";
+
+        bulletsEl.innerHTML += `<li>Es obligatorio iniciar un proceso previo de cancelación de antecedentes penales o policiales en España o tu país de origen.</li>`;
+        bulletsEl.innerHTML += `<li>Debemos estudiar la fecha exacta de cumplimiento de la pena para solicitar la baja en el Ministerio de Justicia.</li>`;
+        bulletsEl.innerHTML += `<li>No te recomendamos radicar en la plataforma Mercurio de forma inmediata para evitar un sello desfavorable.</li>`;
+
+        // En caso de antecedentes penales, no habilitamos checkout inmediato, redirigimos a revisión manual por WhatsApp
+        checkoutEl.style.display = 'none';
+      }
+      
+      // CASO 2: ARRAIGO SOCIAL (3+ Años y contrato)
+      else if (answers.estancia === 'mas_3' && answers.medios === 'precontrato') {
+        titleEl.textContent = "¡Apto para Arraigo Social Vigo!";
+        explanationEl.textContent = "Cumples con el plazo de permanencia continuada (3 años) y dispones de una vía económica compatible.";
+
+        stampEl.textContent = "VIABLE: APROBADO";
+        stampEl.className = "stamp stamp-approved";
+
+        bulletsEl.innerHTML += `<li><strong>Doble Beneficio de Nacionalidad:</strong> Al ser ciudadano de origen iberoamericano, podrás solicitar la Nacionalidad Española por residencia en solo 2 años una vez que consigas el Arraigo.</li>`;
+        bulletsEl.innerHTML += `<li>Podemos presentar tu expediente de forma telemática 100% digital a través de Mercurio sin pedir cita presencial.</li>`;
+        bulletsEl.innerHTML += `<li>Requisitos locales de Vigo: Validar que el empleador esté al corriente con la Seguridad Social y Hacienda de Galicia.</li>`;
+
+        checkoutEl.style.display = 'block';
+      }
+
+      // CASO 3: ARRAIGO PARA LA FORMACIÓN (2+ Años y compromiso de estudio)
+      else if (answers.estancia === 'exacto_2' && answers.medios === 'estudio') {
+        titleEl.textContent = "¡Apto para Arraigo para la Formación!";
+        explanationEl.textContent = "Tienes los 2 años requeridos y la intención de matricularte en una formación regulada de la Xunta de Galicia.";
+
+        stampEl.textContent = "VIABLE: FP";
+        stampEl.className = "stamp stamp-approved";
+
+        bulletsEl.innerHTML += `<li>Cumples con los 24 meses continuados demostrables por padrón o historial médico en Galicia.</li>`;
+        bulletsEl.innerHTML += `<li><strong>Novedad 2026:</strong> Te ayudamos a seleccionar del catálogo oficial de formación de la Universidad de Vigo o centros habilitados para asegurar la aprobación.</li>`;
+        bulletsEl.innerHTML += `<li>Este trámite se presenta con declaración responsable de matrícula y se concede por 12 meses renovables.</li>`;
+
+        checkoutEl.style.display = 'block';
+      }
+
+      // CASO 4: VÍNCULO FAMILIAR (Cualquier estancia + Familiar directo)
+      else if (answers.medios === 'familiar') {
+        titleEl.textContent = "¡Apto para Arraigo Familiar / Tarjeta Comunitaria!";
+        explanationEl.textContent = "Tener vínculos familiares directos con españoles o residentes en Vigo te permite regularizarte sin importar tu permanencia.";
+
+        stampEl.textContent = "CÓDIGO: FAMILIAR";
+        stampEl.className = "stamp stamp-approved";
+
+        bulletsEl.innerHTML += `<li>Permite residencia y trabajo en España por cuenta ajena y propia durante 5 años.</li>`;
+        bulletsEl.innerHTML += `<li>Evitas tener que esperar los 2 o 3 años exigidos por otros tipos de arraigos.</li>`;
+        bulletsEl.innerHTML += `<li>Presentación telemática urgente con respuesta habitual en menos de 45 días hábiles en Pontevedra.</li>`;
+
+        checkoutEl.style.display = 'block';
+      }
+
+      // CASO 5: NO ALCANZA EL TIEMPO SUFICIENTE (Menos de 1 o 2 años sin medios)
+      else {
+        titleEl.textContent = "Consulta de Viabilidad Requerida";
+        explanationEl.textContent = "Actualmente no cumples con los plazos automáticos para arraigos estándar en Galicia, pero existen alternativas de visados de estudio o nómada digital.";
+
+        stampEl.textContent = "REVISIÓN";
+        stampEl.className = "stamp stamp-review";
+
+        bulletsEl.innerHTML += `<li>Recomendamos explorar modificaciones de estancia de estudios a autorización de residencia si cuentas con matrícula previa.</li>`;
+        bulletsEl.innerHTML += `<li>Estudiar la Ley de Nietos (LMD) si tienes ascendientes directos nacidos en Galicia.</li>`;
+        bulletsEl.innerHTML += `<li>Análisis personalizado para evitar vacíos del padrón superiores a 120 días en Vigo.</li>`;
+
+        checkoutEl.style.display = 'block';
+      }
+
+      // Añadir inclinación aleatoria al sello simulando la imperfección humana del estampado
+      const randomRotation = (Math.random() * 12 - 6).toFixed(1); // Entre -6 y +6 grados
+      stampEl.style.transform = `rotate(${randomRotation}deg)`;
+
+      // Configurar enlace dinámico de WhatsApp para mandar el diagnóstico rellenado
+      configureWhatsAppLink();
+    }
+
+    // Configuración del enlace dinámico de WhatsApp
+    function configureWhatsAppLink() {
+      const waLink = document.getElementById('whatsapp-link');
+      const originName = document.getElementById('origen').options[document.getElementById('origen').selectedIndex].text;
+      
+      let estanciaTxt = "";
+      if (answers.estancia === "menos_1") estanciaTxt = "menos de 1 año";
+      else if (answers.estancia === "entre_1_2") estanciaTxt = "entre 1 y 2 años";
+      else if (answers.estancia === "exacto_2") estanciaTxt = "2 años o más";
+      else if (answers.estancia === "mas_3") estanciaTxt = "3 años o más";
+
+      const penalesTxt = answers.penales === "sin_penales" ? "Sin antecedentes" : "Con antecedentes";
+      
+      let mediosTxt = "";
+      if (answers.medios === "precontrato") mediosTxt = "Tengo oferta de contrato";
+      else if (answers.medios === "estudio") mediosTxt = "Quiero estudiar FP";
+      else if (answers.medios === "familiar") mediosTxt = "Tengo familiar legal";
+      else mediosTxt = "Sin medios/vínculos";
+
+      const text = `Hola Raíz. He completado vuestro Triaje de Viabilidad. Diagnóstico:\n- Origen: ${originName}\n- Estancia: ${estanciaTxt}\n- Penales: ${penalesTxt}\n- Plan: ${mediosTxt}\n¿Cuál es el siguiente paso para radicar mi caso?`;
+      
+      waLink.href = `https://wa.me/34000000000?text=${encodeURIComponent(text)}`;
+    }
+
+    // Simulación del pago interactivo estilo Stripe
+    function simulatePayment() {
+      const name = document.getElementById('checkout-name').value.trim();
+      if (!name) {
+        alert("Por favor, introduce tu nombre completo para formalizar la reserva.");
+        return;
+      }
+      alert(`¡Gracias ${name}! Tu pago de 50,00 € ha sido procesado de forma segura.\nHemos enviado la confirmación y el enlace de Zoom/Google Meet para tu videollamada de viabilidad a tu correo.`);
+    }
+  </script>
+</body>
+</html>
