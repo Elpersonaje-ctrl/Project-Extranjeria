@@ -2,7 +2,7 @@
 // CONFIGURACIÓN DEL FORMULARIO DE CONTACTO
 // ------------------------------------------------------------
 // Pega aquí la URL de tu Google Apps Script Web App una vez
-// desplegada (ver instrucciones en SETUP-FORMULARIO.md).
+// desplegada (ver instrucciones en Documentos-Internos/SETUP-FORMULARIO.md).
 // Ejemplo: "https://script.google.com/macros/s/AKfycb.../exec"
 // ============================================================
 const GOOGLE_SCRIPT_URL = "PEGA_AQUI_TU_URL_DE_APPS_SCRIPT";
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (GOOGLE_SCRIPT_URL.includes("PEGA_AQUI")) {
             setStatus(
-                "El formulario aún no está conectado. Sigue las instrucciones de SETUP-FORMULARIO.md para activarlo.",
+                "El formulario aún no está conectado. Sigue las instrucciones de Documentos-Internos/SETUP-FORMULARIO.md para activarlo.",
                 "error"
             );
             return;
