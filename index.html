@@ -755,6 +755,16 @@
     </svg>
 
     <script>
+        // ============================================================
+        // CONFIGURACIÓN DE RESERVA DE CITA + PAGO
+        // ------------------------------------------------------------
+        // Pega aquí el enlace del flujo Stripe -> Cal.com/Calendly una
+        // vez configurado (ver Documentos-Internos/CRONOGRAMA_LANZAMIENTO.md,
+        // Semana 1-2). Mientras esté con el valor placeholder, el botón de
+        // reserva no se muestra y solo aparece el CTA de WhatsApp.
+        // ============================================================
+        const BOOKING_URL = "PEGA_AQUI_TU_LINK_DE_RESERVA_Y_PAGO";
+
         // === Base de Datos de Artículos de Extranjería (Completa y legible) ===
         const articlesDB = [
             {
@@ -1200,7 +1210,14 @@
 Diagnóstico de viabilidad sugerido: *${diagnosis}*
 ¿Podrían ayudarme a revisar este expediente?`;
 
+            const bookingButtonHtml = BOOKING_URL.includes("PEGA_AQUI") ? "" : `
+                <a href="${BOOKING_URL}" target="_blank" class="w-full bg-[#1c352d] text-white py-4 rounded-lg text-sm font-bold tracking-wide transition-all uppercase flex items-center justify-center gap-2 mb-2">
+                    <i class="fa-solid fa-calendar-check text-lg"></i> Reservar Cita y Pagar Consulta (50 €)
+                </a>
+            `;
+
             waActionContainer.innerHTML = `
+                ${bookingButtonHtml}
                 <a href="https://wa.me/34600000000?text=${encodeURIComponent(waMsg)}" target="_blank" class="w-full bg-[#25d366] text-white py-4 rounded-lg text-sm font-bold tracking-wide transition-all uppercase flex items-center justify-center gap-2 mb-2">
                     <i class="fab fa-whatsapp text-lg"></i> Enviar Triaje por WhatsApp al Asesor
                 </a>
