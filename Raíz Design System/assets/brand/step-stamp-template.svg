@@ -1,4 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="72" height="72">
-  <circle cx="40" cy="40" r="36" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"></circle>
-  <text x="40" y="49" text-anchor="middle" font-family="&#39;Special Elite&#39;, monospace" font-size="26" fill="currentColor">{{n}}</text>
-</svg>
