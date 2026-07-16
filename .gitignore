@@ -9,3 +9,21 @@ tmp/
 .gemini/
 .cache/
 node_modules/
+
+# Documentos internos y archivos de referencia: se quedan solo en esta
+# computadora, no se suben al repositorio público de GitHub.
+CLAUDE.md
+Documentos-Internos/
+Raíz Design System/
+analisis_competencia/
+_layouts/
+_posts/
+index-jekyll-backup.html
+blog-jekyll-backup.html
+style.css
+script.js
+logo-raiz-dark.svg
+logo-raiz-light.svg
+google-apps-script.gs
+raizlaunchplan.bundle
+raizlaunchplan.bundle:Zone.Identifier
