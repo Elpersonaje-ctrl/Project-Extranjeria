@@ -187,8 +187,8 @@
             
             <!-- HERO SECTION -->
             <section id="inicio" class="relative bg-[#f3efe6] py-16 md:py-28 overflow-hidden border-b border-[#ded9cd]">
-                <div class="max-w-6xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    <div class="lg:col-span-8 space-y-6">
+                <div class="max-w-6xl mx-auto px-6 relative z-10 grid grid-cols-1 items-center">
+                    <div class="space-y-6 max-w-3xl">
                         <span class="font-stamp text-xs text-[#bca374] uppercase tracking-[0.2em] block">Asesoría migratoria · España</span>
                         <h1 class="font-serif-editorial text-4xl md:text-6xl text-[#1c352d] leading-[1.1] font-bold">
                             Haz lo mejor que puedas, <br>
@@ -208,30 +208,6 @@
                         <p class="text-xs text-[#5c6460] font-medium flex items-center gap-1.5 pt-2">
                             <i class="fa-solid fa-circle-check text-[#2d6a4f]"></i> Estudio previo de viabilidad sin compromiso
                         </p>
-                    </div>
-
-                    <!-- Ficha Editorial Estática en la Hero (Sustituye al logo giratorio) -->
-                    <div class="lg:col-span-4 flex justify-center lg:justify-end">
-                        <div class="bg-white border border-[#ded9cd] p-6 rounded-xl shadow-sm w-full max-w-[320px] relative font-mono text-[11px] text-[#5c6460] space-y-3">
-                            <div class="flex justify-between border-b border-[#ded9cd] pb-2 text-[#1c352d] font-bold">
-                                <span>DOCUMENTO INF-2026</span>
-                                <span>ESPAÑA</span>
-                            </div>
-                            <div class="space-y-1">
-                                <span class="block font-bold text-[#1c352d]">ESTADO DEL TRÁMITE</span>
-                                <span class="block">Análisis técnico de viabilidad</span>
-                            </div>
-                            <div class="h-px bg-[#ded9cd]"></div>
-                            <div class="space-y-1">
-                                <span class="block font-bold text-[#1c352d]">MÉTODO</span>
-                                <span>Presentación telemática por canal Mercurio</span>
-                            </div>
-                            <div class="h-px bg-[#ded9cd]"></div>
-                            <div class="flex justify-between items-center pt-2">
-                                <span class="bg-[#e6ddc4] text-[#1c352d] px-2 py-0.5 rounded font-sans font-bold">ACTIVO</span>
-                                <span class="text-[9px] text-[#bca374]">RAÍZ ASESORÍA</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -301,7 +277,7 @@
                             <h2 class="font-serif-editorial text-3xl md:text-5xl text-[#1c352d] font-bold">Trámites Especializados</h2>
                         </div>
                         <p class="text-[#5c6460] max-w-md text-sm md:text-base leading-relaxed">
-                            Nuestra especialidad es resolver de forma telemática casos residenciales y de nacionalidad en España de manera clara y estructurada.
+                            Nuestra especialidad es resolver de forma telemática casos de residencia y de nacionalidad en España de manera clara y estructurada.
                         </p>
                     </div>
 
@@ -320,7 +296,7 @@
                             <span class="font-serif-editorial text-3xl text-[#bca374] block mb-4">§</span>
                             <h3 class="font-serif-editorial text-xl font-bold text-[#1c352d] mb-3">Nacionalidad</h3>
                             <p class="text-xs text-[#5c6460] leading-relaxed">
-                                Solicitudes de nacionalidad española por residencia para ciudadanos iberoamericanos y expedientes bajo la Ley de Memoria Democrática.
+                                Solicitudes de nacionalidad española por residencia para ciudadanos iberoamericanos.
                             </p>
                         </div>
 
@@ -765,79 +741,67 @@
         // ============================================================
         const BOOKING_URL = "PEGA_AQUI_TU_LINK_DE_RESERVA_Y_PAGO";
 
-        // === Base de Datos de Artículos de Extranjería (Completa y legible) ===
-        const articlesDB = [
-            {
-                id: 1,
-                tag: 'arraigo',
-                tagLabel: 'Arraigo Social',
-                date: '9 JUL 2026',
-                title: 'Cómo tramitar el Arraigo Social en 2026: Guía completa',
-                excerpt: 'Una explicación detallada y paso a paso sobre cómo cumplir los requisitos de permanencia de 3 años, arraigo e informe de integración en España.',
-                content: `
-                    <p class="font-bold">El Arraigo Social sigue siendo la vía principal de regularización para los ciudadanos extranjeros que se encuentran en España sin un visado formal.</p>
-                    <p>En este artículo analizamos cómo preparar un expediente sólido para la Oficina de Extranjería competente, evitando los desajustes habituales que demoran las resoluciones.</p>
-                    <h4 class="font-bold text-[#1c352d] mt-4">1. El Padrón Histórico: La base de tu tiempo</h4>
-                    <p>Es indispensable demostrar una permanencia continuada de <strong>3 años en territorio español</strong>. Para ello, el Padrón Municipal de tu localidad es el documento prioritario. No obstante, si tienes vacíos en el padrón, podemos intentar acreditarlos con facturas médicas de atención en la red pública, envíos de dinero históricos o extractos bancarios que demuestren fehacientemente tu presencia física en el país.</p>
-                    <h4 class="font-bold text-[#1c352d] mt-4">2. Requisitos de Contrato</h4>
-                    <p>El contrato debe garantizar al menos el Salario Mínimo Interprofesional (SMI) vigente en 2026. Además, el empleador no debe registrar deudas pendientes con la Seguridad Social ni con la Agencia Tributaria.</p>
-                    <h4 class="font-bold text-[#1c352d] mt-4">¿Por qué presentarlo de forma telemática?</h4>
-                    <p>La presentación a través del canal Mercurio por un profesional colegiado agiliza la recepción por parte de los funcionarios de Extranjería. En España, las solicitudes presentadas telemáticamente se integran directamente en el sistema de consulta evitando los cuellos de botella de las citas físicas tradicionales.</p>
-                `
-            },
-            {
-                id: 2,
-                tag: 'nacionalidad',
-                tagLabel: 'Nacionalidad',
-                date: '2 JUL 2026',
-                title: 'Ley de Memoria Democrática: Estado de los expedientes',
-                excerpt: 'Respondemos las dudas más frecuentes sobre la Ley de Nietos en España y cómo estructurar adecuadamente tu solicitud de nacionalidad.',
-                content: `
-                    <p class="font-bold">La conocida como "Ley de Nietos" facilita que los descendientes de exiliados o emigrantes españoles puedan optar al derecho a la nacionalidad de origen.</p>
-                    <p>España recibe diariamente un alto volumen de estas solicitudes debido a los lazos históricos y culturales que mantiene con los países de América Latina.</p>
-                    <h4 class="font-bold text-[#1c352d] mt-4">Claves para un Expediente Exitoso</h4>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li><strong>Certificación Literal de Nacimiento del Progenitor o Abuelo Español:</strong> Es el documento más crítico. Debe solicitarse en el Registro Civil de origen en España.</li>
-                        <li><strong>Apostilla Completa:</strong> Toda la cadena de descendencia (nacimiento de tus padres, matrimonio y tu propio nacimiento) debe estar debidamente apostillada y legalizada en origen.</li>
-                    </ul>
-                    <p class="mt-4">Nuestra recomendación es tramitar la recopilación del documento español directamente mediante gestiones de registro locales para agilizar el proceso de validación previa.</p>
-                `
-            },
-            {
-                id: 3,
-                tag: 'estudiantes',
-                tagLabel: 'Estudiantes',
-                date: '25 JUN 2026',
-                title: 'Modificación de Estancia por Estudios a Trabajo',
-                excerpt: 'Si has completado tu carrera o máster recientemente en un centro de estudios de España, te explicamos cómo regularizar tu residencia laboral.',
-                content: `
-                    <p class="font-bold">¿Has concluido tus estudios universitarios en España? No es estrictamente obligatorio retornar a tu país de origen para ejercer tu profesión de forma legal.</p>
-                    <p>La normativa permite la modificación del visado de estudiante a un permiso de residencia y trabajo por cuenta ajena o propia, siempre que se cumplan las condiciones establecidas.</p>
-                    <h4 class="font-bold text-[#1c352d] mt-4">Requisitos Principales</h4>
-                    <p>Debes haber superado con éxito las materias del plan de estudios del centro autorizado. Asimismo, necesitas contar con una oferta de empleo formal que se ajuste a tus competencias profesionales o bien presentar un plan de negocios viable si optas por el autoempleo.</p>
-                    <h4 class="font-bold text-[#1c352d] mt-4">Vías de Emprendimiento</h4>
-                    <p>Existen diferentes programas públicos nacionales y autonómicos que prestan apoyo a jóvenes profesionales extranjeros que deciden iniciar su actividad empresarial en territorio español.</p>
-                `
-            },
-            {
-                id: 4,
-                tag: 'telematico',
-                tagLabel: 'Trámites Telemáticos',
-                date: '15 JUN 2026',
-                title: '¿Citas en Extranjería? Por qué Mercurio es la mejor opción',
-                excerpt: 'Olvídate de las largas esperas e incertidumbres en la web de citas. Explicamos cómo la presentación telemática minimiza incidencias y pérdidas de tiempo.',
-                content: `
-                    <p class="font-bold">Conseguir una cita presencial para tramitar extranjería se ha convertido en una tarea compleja debido al alto volumen de solicitudes.</p>
-                    <p>Ante esta saturación, el Ministerio de Inclusión, Seguridad Social y Migraciones consolida la plataforma <strong>Mercurio</strong> como el canal preferente para los trámites profesionales.</p>
-                    <h4 class="font-bold text-[#1c352d] mt-4">Ventajas de la Radicación Telemática con Raíz</h4>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li><strong>Inmediatez:</strong> No dependemos del sorteo semanal de citas físicas. Tu expediente se envía cuando la documentación técnica está validada y completa.</li>
-                        <li><strong>Acuse de Recibo Formal:</strong> Obtienes un número de expediente oficial al instante, lo que te garantiza soporte legal provisional mientras se resuelve tu solicitud.</li>
-                        <li><strong>Notificaciones Digitales:</strong> Cualquier requerimiento de subsanación se notifica directamente vía firma digital, acortando los plazos de respuesta física.</li>
-                    </ul>
-                `
+        // === Artículos del Blog ===
+        // Los artículos ya NO están escritos aquí. Se cargan automáticamente
+        // desde la carpeta blog-posts/ (ver blog-posts/lista.txt para el orden).
+        // Para publicar un artículo nuevo: crea su archivo en blog-posts/ y añade
+        // su nombre a blog-posts/lista.txt — no hace falta tocar este archivo.
+        let articlesDB = [];
+
+        function parseArticuloTexto(texto) {
+            const partes = texto.split('---CONTENIDO---');
+            const cabecera = partes[0];
+            const cuerpo = partes.slice(1).join('---CONTENIDO---').trim();
+
+            const campos = {};
+            cabecera.trim().split('\n').forEach(linea => {
+                const idx = linea.indexOf(':');
+                if (idx === -1) return;
+                const clave = linea.slice(0, idx).trim().toUpperCase();
+                const valor = linea.slice(idx + 1).trim();
+                campos[clave] = valor;
+            });
+
+            // Los párrafos separados por una línea en blanco se convierten en <p> automáticamente.
+            // Si un bloque ya trae sus propias etiquetas HTML (como en los artículos migrados), se respeta tal cual.
+            const contentHtml = cuerpo.split(/\n\s*\n/)
+                .map(bloque => bloque.trim())
+                .filter(bloque => bloque.length > 0)
+                .map(bloque => bloque.startsWith('<') ? bloque : `<p>${bloque}</p>`)
+                .join('\n');
+
+            return {
+                tag: campos['CATEGORIA'] || 'general',
+                tagLabel: campos['CATEGORIA_VISIBLE'] || 'General',
+                date: campos['FECHA'] || '',
+                title: campos['TITULO'] || 'Sin título',
+                excerpt: campos['RESUMEN'] || '',
+                content: contentHtml
+            };
+        }
+
+        async function cargarArticulosBlog() {
+            try {
+                const respuestaLista = await fetch('blog-posts/lista.txt');
+                const textoLista = await respuestaLista.text();
+                const nombresArchivos = textoLista.split('\n')
+                    .map(linea => linea.trim())
+                    .filter(linea => linea.length > 0 && !linea.startsWith('#'));
+
+                const articulos = await Promise.all(nombresArchivos.map(async (nombreArchivo, index) => {
+                    const respuesta = await fetch(`blog-posts/${nombreArchivo}`);
+                    const texto = await respuesta.text();
+                    return { id: index + 1, ...parseArticuloTexto(texto) };
+                }));
+
+                articlesDB = articulos;
+            } catch (error) {
+                console.warn('No se pudieron cargar los artículos del blog desde blog-posts/. Si abriste index.html con doble clic, usa un servidor local en su lugar (ver CLAUDE.md, sección "Preview locally").', error);
+            } finally {
+                renderBlogPreviews();
+                checkUrlHash();
             }
-        ];
+        }
 
         function navigateTo(viewId, sectionId = null) {
             // Ocultar todas las vistas
@@ -1281,8 +1245,7 @@ Diagnóstico de viabilidad sugerido: *${diagnosis}*
                 origenEl.addEventListener('change', () => validateStep(2));
             }
 
-            renderBlogPreviews();
-            checkUrlHash();
+            cargarArticulosBlog();
             window.addEventListener('hashchange', checkUrlHash);
         });
     </script>

@@ -1,0 +1,17 @@
+TITULO: Modificación de Estancia por Estudios a Trabajo
+CATEGORIA: estudiantes
+CATEGORIA_VISIBLE: Estudiantes
+FECHA: 25 JUN 2026
+RESUMEN: Si has completado tu carrera o máster recientemente en un centro de estudios de España, te explicamos cómo regularizar tu residencia laboral.
+---CONTENIDO---
+<p class="font-bold">¿Has concluido tus estudios universitarios en España? No es estrictamente obligatorio retornar a tu país de origen para ejercer tu profesión de forma legal.</p>
+
+<p>La normativa permite la modificación del visado de estudiante a un permiso de residencia y trabajo por cuenta ajena o propia, siempre que se cumplan las condiciones establecidas.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Requisitos Principales</h4>
+
+<p>Debes haber superado con éxito las materias del plan de estudios del centro autorizado. Asimismo, necesitas contar con una oferta de empleo formal que se ajuste a tus competencias profesionales o bien presentar un plan de negocios viable si optas por el autoempleo.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Vías de Emprendimiento</h4>
+
+<p>Existen diferentes programas públicos nacionales y autonómicos que prestan apoyo a jóvenes profesionales extranjeros que deciden iniciar su actividad empresarial en territorio español.</p>

@@ -1,0 +1,21 @@
+TITULO: Cómo tramitar el Arraigo Social en 2026: Guía completa
+CATEGORIA: arraigo
+CATEGORIA_VISIBLE: Arraigo Social
+FECHA: 9 JUL 2026
+RESUMEN: Una explicación detallada y paso a paso sobre cómo cumplir los requisitos de permanencia de 3 años, arraigo e informe de integración en España.
+---CONTENIDO---
+<p class="font-bold">El Arraigo Social sigue siendo la vía principal de regularización para los ciudadanos extranjeros que se encuentran en España sin un visado formal.</p>
+
+<p>En este artículo analizamos cómo preparar un expediente sólido para la Oficina de Extranjería competente, evitando los desajustes habituales que demoran las resoluciones.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">1. El Padrón Histórico: La base de tu tiempo</h4>
+
+<p>Es indispensable demostrar una permanencia continuada de <strong>3 años en territorio español</strong>. Para ello, el Padrón Municipal de tu localidad es el documento prioritario. No obstante, si tienes vacíos en el padrón, podemos intentar acreditarlos con facturas médicas de atención en la red pública, envíos de dinero históricos o extractos bancarios que demuestren fehacientemente tu presencia física en el país.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">2. Requisitos de Contrato</h4>
+
+<p>El contrato debe garantizar al menos el Salario Mínimo Interprofesional (SMI) vigente en 2026. Además, el empleador no debe registrar deudas pendientes con la Seguridad Social ni con la Agencia Tributaria.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">¿Por qué presentarlo de forma telemática?</h4>
+
+<p>La presentación a través del canal Mercurio por un profesional colegiado agiliza la recepción por parte de los funcionarios de Extranjería. En España, las solicitudes presentadas telemáticamente se integran directamente en el sistema de consulta evitando los cuellos de botella de las citas físicas tradicionales.</p>

@@ -1,0 +1,18 @@
+TITULO: Ley de Memoria Democrática: Estado de los expedientes
+CATEGORIA: nacionalidad
+CATEGORIA_VISIBLE: Nacionalidad
+FECHA: 2 JUL 2026
+RESUMEN: Respondemos las dudas más frecuentes sobre la Ley de Nietos en España y cómo estructurar adecuadamente tu solicitud de nacionalidad.
+---CONTENIDO---
+<p class="font-bold">La conocida como "Ley de Nietos" facilita que los descendientes de exiliados o emigrantes españoles puedan optar al derecho a la nacionalidad de origen.</p>
+
+<p>España recibe diariamente un alto volumen de estas solicitudes debido a los lazos históricos y culturales que mantiene con los países de América Latina.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Claves para un Expediente Exitoso</h4>
+
+<ul class="list-disc pl-5 space-y-2">
+<li><strong>Certificación Literal de Nacimiento del Progenitor o Abuelo Español:</strong> Es el documento más crítico. Debe solicitarse en el Registro Civil de origen en España.</li>
+<li><strong>Apostilla Completa:</strong> Toda la cadena de descendencia (nacimiento de tus padres, matrimonio y tu propio nacimiento) debe estar debidamente apostillada y legalizada en origen.</li>
+</ul>
+
+<p class="mt-4">Nuestra recomendación es tramitar la recopilación del documento español directamente mediante gestiones de registro locales para agilizar el proceso de validación previa.</p>
