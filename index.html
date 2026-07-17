@@ -1303,7 +1303,15 @@ ${resumenHallazgos}`;
                 await fetch(GOOGLE_SCRIPT_URL, {
                     method: "POST",
                     mode: "no-cors",
-                    body: JSON.stringify({ nombre, telefono, email, situacion, mensaje })
+                    body: JSON.stringify({
+                        tipo: "lead",
+                        nombre, telefono, email, situacion, mensaje,
+                        origen: formAnswers.origen,
+                        estancia: formAnswers.estancia,
+                        residencia_legal: formAnswers.residencia_legal,
+                        penales: formAnswers.penales,
+                        medios: formAnswers.medios
+                    })
                 });
 
                 statusEl.textContent = "✓ ¡Diagnóstico registrado con éxito! Usa el botón de arriba para reservar tu cita y avanzar con tu caso.";
