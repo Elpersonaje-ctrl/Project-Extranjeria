@@ -151,8 +151,8 @@
                 <a href="#contacto" onclick="navigateTo('home', 'contacto'); return false;" class="border border-[#1c352d] text-[#1c352d] hover:bg-[#1c352d] hover:text-[#fbfaf7] px-4 py-2 rounded text-xs font-semibold uppercase tracking-wider transition-all">
                     Autodiagnóstico
                 </a>
-                <a href="https://wa.me/34600000000?text=Hola,%20me%20gustar%C3%ADa%20evaluar%20mi%20caso%20de%20extranjer%C3%ADa" target="_blank" class="bg-[#1c352d] text-[#fbfaf7] hover:bg-[#2c4c41] px-4 py-2 rounded text-xs font-semibold uppercase tracking-wider transition-all flex items-center gap-1.5">
-                    <i class="fab fa-whatsapp"></i> Consultar
+                <a href="#" id="cta-reservar-header" target="_blank" class="bg-[#1c352d] text-[#fbfaf7] hover:bg-[#2c4c41] px-4 py-2 rounded text-xs font-semibold uppercase tracking-wider transition-all flex items-center gap-1.5">
+                    <i class="fa-solid fa-calendar-check"></i> Reservar Cita
                 </a>
             </div>
 
@@ -173,8 +173,8 @@
                 </a>
                 <a href="#contacto" onclick="toggleMobileMenu(); navigateTo('home', 'contacto'); return false;" class="text-base font-semibold text-[#bca374]">Iniciar Autodiagnóstico</a>
                 <div class="h-px bg-[#ded9cd] my-2"></div>
-                <a href="https://wa.me/34600000000?text=Hola,%20me%20gustar%C3%ADa%20evaluar%20mi%20caso%20de%20extranjer%C3%ADa" target="_blank" class="w-full bg-[#25d366] text-white py-3 rounded-lg text-center font-bold flex items-center justify-center gap-2">
-                    <i class="fab fa-whatsapp text-lg"></i> Contactar por WhatsApp
+                <a href="#" id="cta-reservar-mobile" target="_blank" class="w-full bg-[#1c352d] text-white py-3 rounded-lg text-center font-bold flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-calendar-check text-lg"></i> Reservar Cita
                 </a>
             </nav>
         </div>
@@ -201,8 +201,8 @@
                             <a href="#contacto" onclick="scrollToSection('contacto'); return false;" class="w-full sm:w-auto bg-[#1c352d] text-[#fbfaf7] hover:bg-[#2c4c41] px-8 py-4 rounded-lg font-bold text-center transition-all shadow-md">
                                 Evaluar mi caso gratis
                             </a>
-                            <a href="https://wa.me/34600000000?text=Hola,%20quiero%20hacer%20una%20consulta" target="_blank" class="w-full sm:w-auto border border-[#ded9cd] hover:border-[#1c352d] hover:bg-white text-[#1c352d] px-8 py-4 rounded-lg font-bold text-center transition-all flex items-center justify-center gap-2">
-                                <i class="fab fa-whatsapp text-lg text-[#25d366]"></i> Chatear con un Asesor
+                            <a href="#" id="cta-reservar-hero" target="_blank" class="w-full sm:w-auto border border-[#ded9cd] hover:border-[#1c352d] hover:bg-white text-[#1c352d] px-8 py-4 rounded-lg font-bold text-center transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-calendar-check text-lg text-[#bca374]"></i> Reservar Cita
                             </a>
                         </div>
                         <p class="text-xs text-[#5c6460] font-medium flex items-center gap-1.5 pt-2">
@@ -396,11 +396,11 @@
                         </p>
                         <div class="p-6 bg-[#fcfbf9] border border-[#ded9cd] rounded-xl flex items-center gap-4">
                             <div class="w-12 h-12 rounded-full bg-[#1c352d]/10 flex items-center justify-center text-[#1c352d] shrink-0 text-xl">
-                                <i class="fab fa-whatsapp"></i>
+                                <i class="fa-solid fa-video"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-sm text-[#1c352d]">Atención prioritaria</h4>
-                                <p class="text-xs text-[#5c6460]">Respondemos tus consultas iniciales en horas hábiles.</p>
+                                <h4 class="font-bold text-sm text-[#1c352d]">Atención por videollamada</h4>
+                                <p class="text-xs text-[#5c6460]">Confirmamos tu cita por Google Meet, previa reserva.</p>
                             </div>
                         </div>
                     </div>
@@ -430,8 +430,9 @@
                                     <input type="text" id="nombre" name="nombre" required class="triaje-input w-full p-3.5 rounded-lg text-sm" placeholder="Escribe tu nombre y apellidos">
                                 </div>
                                 <div class="space-y-1">
-                                    <label for="telefono" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">Teléfono / WhatsApp</label>
+                                    <label for="telefono" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">Teléfono</label>
                                     <input type="tel" id="telefono" name="telefono" required class="triaje-input w-full p-3.5 rounded-lg text-sm" placeholder="Ej: +34 600 000 000">
+                                    <p class="text-[10px] text-[#5c6460]">Lo usamos solo si tienes problemas para entrar a la videollamada el día de tu cita.</p>
                                 </div>
                                 <div class="space-y-1">
                                     <label for="email" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">Correo electrónico</label>
@@ -489,6 +490,36 @@
                                         </label>
                                     </div>
                                 </div>
+                                <div class="space-y-2 pt-2">
+                                    <label class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">¿Cuántos años llevas con una autorización de residencia vigente?</label>
+                                    <p class="text-[10px] text-[#5c6460] -mt-1 mb-1">No es lo mismo que la pregunta anterior: aquí solo cuenta el tiempo con una autorización de residencia en regla, no el tiempo total en España. Es la pregunta clave para saber si aplica a la Nacionalidad Española.</p>
+                                    <div class="grid grid-cols-1 gap-2">
+                                        <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this)">
+                                            <input type="radio" name="residencia_legal" value="sin_autorizacion" class="accent-[#1c352d]">
+                                            <div class="text-left">
+                                                <strong class="text-xs text-[#1c352d] block">Aún no tengo autorización de residencia</strong>
+                                            </div>
+                                        </label>
+                                        <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this)">
+                                            <input type="radio" name="residencia_legal" value="menos_2" class="accent-[#1c352d]">
+                                            <div class="text-left">
+                                                <strong class="text-xs text-[#1c352d] block">Menos de 2 años con autorización</strong>
+                                            </div>
+                                        </label>
+                                        <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this)">
+                                            <input type="radio" name="residencia_legal" value="dos_a_nueve" class="accent-[#1c352d]">
+                                            <div class="text-left">
+                                                <strong class="text-xs text-[#1c352d] block">Entre 2 y 9 años con autorización</strong>
+                                            </div>
+                                        </label>
+                                        <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this)">
+                                            <input type="radio" name="residencia_legal" value="diez_mas" class="accent-[#1c352d]">
+                                            <div class="text-left">
+                                                <strong class="text-xs text-[#1c352d] block">10 años o más con autorización</strong>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- PASO 3: ANTECEDENTES Y RECURSOS -->
@@ -528,10 +559,17 @@
                                             </div>
                                         </label>
                                         <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this)">
-                                            <input type="radio" name="medios" value="familiar" class="accent-[#1c352d]">
+                                            <input type="radio" name="medios" value="progenitor_menor_ue" class="accent-[#1c352d]">
                                             <div class="text-left">
-                                                <strong class="text-xs text-[#1c352d] block">Familiar de ciudadano español o residente</strong>
-                                                <span class="text-[10px] text-[#5c6460]">Cónyuge, pareja de hecho, padre, madre o hijo legal.</span>
+                                                <strong class="text-xs text-[#1c352d] block">Progenitor/tutor o cuidador de un menor o persona con discapacidad de la UE</strong>
+                                                <span class="text-[10px] text-[#5c6460]">De nacionalidad UE/EEE/Suiza, con quien convives.</span>
+                                            </div>
+                                        </label>
+                                        <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this)">
+                                            <input type="radio" name="medios" value="familiar_residente" class="accent-[#1c352d]">
+                                            <div class="text-left">
+                                                <strong class="text-xs text-[#1c352d] block">Familiar ya regularizado en España que podría reagruparte</strong>
+                                                <span class="text-[10px] text-[#5c6460]">Cónyuge, pareja de hecho, padre, madre o hijo con autorización de residencia vigente.</span>
                                             </div>
                                         </label>
                                         <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this)">
@@ -558,6 +596,11 @@
                                         <!-- Viñetas dinámicas -->
                                     </ul>
 
+                                    <p class="text-[11px] text-[#5c6460] bg-[#f3efe6] border border-[#ded9cd] rounded-lg p-3 leading-relaxed">
+                                        <i class="fa-solid fa-circle-info text-[#bca374]"></i>
+                                        Este es un primer diagnóstico automático y orientativo, no una resolución legal. La viabilidad final de cualquier trámite depende siempre de la revisión de un profesional de Raíz sobre tu caso concreto.
+                                    </p>
+
                                     <div id="result-rubber-stamp" class="absolute top-4 right-4 rubber-stamp px-3 py-1 text-xs font-bold rotate-[-12deg] tracking-wider select-none">
                                         Paso 4
                                     </div>
@@ -566,7 +609,7 @@
                                 <input type="hidden" id="situacion" name="situacion">
                                 <input type="hidden" id="mensaje" name="mensaje">
 
-                                <!-- Contenedor para la acción directa de WhatsApp -->
+                                <!-- Contenedor para el botón de reserva de cita -->
                                 <div id="wa-action-container"></div>
 
                                 <button type="submit" class="w-full bg-[#1c352d] hover:bg-[#2c4c41] text-white py-4 rounded-lg text-sm font-bold tracking-wide transition-all uppercase">
@@ -659,8 +702,8 @@
             <div class="mt-12 bg-[#fcfbf9] border border-[#ded9cd] p-6 rounded-xl space-y-4">
                 <h4 class="font-serif-editorial text-lg font-bold text-[#1c352d]">¿Quieres tramitar este expediente en España?</h4>
                 <p class="text-xs text-[#5c6460]">Estudiamos la viabilidad técnica de tu caso de forma telemática e inmediata.</p>
-                <a id="modal-cta-whatsapp" href="#" target="_blank" class="w-full bg-[#1c352d] hover:bg-[#2c4c41] text-[#fbfaf7] py-3 rounded-lg text-center font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2">
-                    <i class="fab fa-whatsapp text-sm"></i> Consultar este trámite por WhatsApp
+                <a id="modal-cta-reservar" href="#" target="_blank" class="w-full bg-[#1c352d] hover:bg-[#2c4c41] text-[#fbfaf7] py-3 rounded-lg text-center font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-calendar-check text-sm"></i> Reservar una consulta sobre este trámite
                 </a>
             </div>
         </div>
@@ -679,7 +722,6 @@
                     Especialistas en trámites administrativos de extranjería telemáticos. Trabajamos bajo el estándar de rigurosidad técnica para una migración ordenada.
                 </p>
                 <div class="flex gap-4 pt-2">
-                    <a href="https://wa.me/34600000000" target="_blank" class="text-gray-300 hover:text-white transition-colors text-lg"><i class="fab fa-whatsapp"></i></a>
                     <a href="#" class="text-gray-300 hover:text-white transition-colors text-lg"><i class="fab fa-instagram"></i></a>
                     <a href="#" class="text-gray-300 hover:text-white transition-colors text-lg"><i class="fab fa-linkedin-in"></i></a>
                 </div>
@@ -708,6 +750,10 @@
                     <li class="flex items-center gap-2">
                         <i class="fa-solid fa-envelope text-[#bca374]"></i>
                         <span>consulta@raizmigratoria.es</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-video text-[#bca374]"></i>
+                        <span>Consultas por videollamada (Google Meet), previa reserva de cita</span>
                     </li>
                     <li class="flex items-center gap-2">
                         <i class="fa-solid fa-clock text-[#bca374]"></i>
@@ -740,9 +786,27 @@
         // Pega aquí el enlace del flujo Stripe -> Cal.com/Calendly una
         // vez configurado (ver Documentos-Internos/CRONOGRAMA_LANZAMIENTO.md,
         // Semana 1-2). Mientras esté con el valor placeholder, el botón de
-        // reserva no se muestra y solo aparece el CTA de WhatsApp.
+        // reserva del diagnóstico no se muestra, y los demás CTAs "Reservar
+        // Cita" del sitio (header, menú móvil, hero, blog) llevan en su lugar
+        // al formulario de diagnóstico en #contacto.
         // ============================================================
         const BOOKING_URL = "https://cal.com/sen-j2f5bj/30min";
+        const BOOKING_READY = !BOOKING_URL.includes("PEGA_AQUI");
+
+        // Todos los botones "Reservar Cita" del sitio (fuera del resultado
+        // del diagnóstico, que arma el suyo dentro de calculateDiagnostic())
+        // apuntan a BOOKING_URL, con fallback al formulario si aún no está listo.
+        ['cta-reservar-header', 'cta-reservar-mobile', 'cta-reservar-hero', 'modal-cta-reservar'].forEach(id => {
+            const el = document.getElementById(id);
+            if (!el) return;
+            if (BOOKING_READY) {
+                el.href = BOOKING_URL;
+            } else {
+                el.href = '#contacto';
+                el.removeAttribute('target');
+                el.addEventListener('click', (e) => { e.preventDefault(); navigateTo('home', 'contacto'); });
+            }
+        });
 
         // === Artículos del Blog ===
         // Los artículos ya NO están escritos aquí. Se cargan automáticamente
@@ -958,9 +1022,6 @@
             document.getElementById('modal-article-title').textContent = post.title;
             document.getElementById('modal-article-content').innerHTML = post.content;
             
-            // Generar enlace de WhatsApp específico para el artículo consultado
-            const waText = `Hola Raíz! Estoy leyendo su artículo sobre "${post.title}" y me gustaría evaluar la viabilidad de mi expediente en España.`;
-            document.getElementById('modal-cta-whatsapp').href = `https://wa.me/34600000000?text=${encodeURIComponent(waText)}`;
 
             const modal = document.getElementById('article-modal');
             const modalBody = document.getElementById('article-modal-body');
@@ -989,6 +1050,7 @@
             email: '',
             origen: '',
             estancia: '',
+            residencia_legal: '',
             penales: '',
             medios: ''
         };
@@ -1028,9 +1090,11 @@
             } else if (step === 2) {
                 const origen = document.getElementById('origen').value;
                 const estancia = document.querySelector('input[name="estancia"]:checked');
-                if (origen && estancia) {
+                const residenciaLegal = document.querySelector('input[name="residencia_legal"]:checked');
+                if (origen && estancia && residenciaLegal) {
                     formAnswers.origen = origen;
                     formAnswers.estancia = estancia.value;
+                    formAnswers.residencia_legal = residenciaLegal.value;
                     isValid = true;
                 }
             } else if (step === 3) {
@@ -1096,7 +1160,7 @@
             const explanationEl = document.getElementById('result-explanation');
             const bulletsEl = document.getElementById('result-bullets');
             const stampEl = document.getElementById('result-rubber-stamp');
-            const waActionContainer = document.getElementById('wa-action-container');
+            const bookingActionContainer = document.getElementById('wa-action-container');
 
             const origenName = document.getElementById('origen').options[document.getElementById('origen').selectedIndex].text;
             let estanciaLabel = '';
@@ -1106,94 +1170,113 @@
                 case 'exacto_2': estanciaLabel = 'dos años o más'; break;
                 case 'mas_3': estanciaLabel = 'tres años o más'; break;
             }
-
-            let diagnosis = '';
-            let textBadge = '';
-            let isViable = true;
-            let stampColor = '#2d6a4f';
+            let residenciaLegalLabel = '';
+            switch(formAnswers.residencia_legal) {
+                case 'sin_autorizacion': residenciaLegalLabel = 'aún sin autorización de residencia'; break;
+                case 'menos_2': residenciaLegalLabel = 'menos de 2 años con autorización'; break;
+                case 'dos_a_nueve': residenciaLegalLabel = 'entre 2 y 9 años con autorización'; break;
+                case 'diez_mas': residenciaLegalLabel = '10 años o más con autorización'; break;
+            }
 
             bulletsEl.innerHTML = '';
 
-            // Lógica técnica de viabilidad (Removida cualquier afirmación de aprobación automática)
+            // Lista de hallazgos independientes: una misma situación puede activar varios a la vez.
+            // Limitado a los trámites que Raíz vende activamente hoy: Arraigo Social, Arraigo para
+            // la Formación, Arraigo Sociolaboral, Arraigo Familiar (menor/discapacitado UE),
+            // Nacionalidad Española por Residencia, y Reagrupación Familiar.
+            const hallazgos = []; // { tipo: 'alerta' | 'positivo' | 'neutro', texto }
+            let hayAlerta = false;
+
             if (formAnswers.penales === 'con_penales') {
-                isViable = false;
-                titleEl.textContent = 'Alerta: Antecedentes Registrados';
-                explanationEl.textContent = 'La Oficina de Extranjería desestima ordinariamente las solicitudes con antecedentes penales o policiales activos. Es imperativo proceder a su cancelación.';
-                textBadge = 'Revisión técnica';
-                stampColor = '#9c3c3c';
-
-                bulletsEl.innerHTML += `<li class="flex items-start gap-2 text-[#9c3c3c]"><i class="fa-solid fa-triangle-exclamation mt-0.5"></i> Es necesario revisar la cancelación de antecedentes en el país de origen.</li>`;
-                bulletsEl.innerHTML += `<li class="flex items-start gap-2"><i class="fa-solid fa-circle-info mt-0.5"></i> Sugerimos detener la radicación telemática de urgencia hasta revisar los plazos de cancelación.</li>`;
-                diagnosis = 'Filtro Antecedentes Penales - Requiere Consulta';
-            } else if (formAnswers.estancia === 'mas_3' && formAnswers.medios === 'precontrato') {
-                titleEl.textContent = 'Viable para Arraigo Social';
-                explanationEl.textContent = 'Tu perfil encaja en la permanencia estándar de 3 años en España y cuentas con el soporte de un precontrato laboral.';
-                textBadge = 'Alta Probabilidad';
-                
-                bulletsEl.innerHTML += `<li class="flex items-start gap-2 text-[#2d6a4f]"><i class="fa-solid fa-circle-check mt-0.5"></i> Acreditación temporal adecuada a través de empadronamiento.</li>`;
-                bulletsEl.innerHTML += `<li class="flex items-start gap-2"><i class="fa-solid fa-circle-check mt-0.5"></i> Presentación telemática sin requerimiento de cita presencial.</li>`;
-                diagnosis = 'Arraigo Social Técnico Viable';
-            } else if (formAnswers.estancia === 'exacto_2' && formAnswers.medios === 'estudio') {
-                titleEl.textContent = 'Viable para Arraigo de Formación';
-                explanationEl.textContent = 'Al haber superado la barrera temporal de 2 años, puedes estudiar opciones de formación reglada del SEPE.';
-                textBadge = 'Trámite Viable';
-                stampColor = '#bca374';
-
-                bulletsEl.innerHTML += `<li class="flex items-start gap-2 text-[#2d6a4f]"><i class="fa-solid fa-circle-check mt-0.5"></i> Selección de ciclos formativos autorizados por la administración pública.</li>`;
-                bulletsEl.innerHTML += `<li class="flex items-start gap-2"><i class="fa-solid fa-circle-check mt-0.5"></i> Autorización de residencia por la duración del curso oficial.</li>`;
-                diagnosis = 'Arraigo para la Formación';
-            } else if (formAnswers.medios === 'familiar') {
-                titleEl.textContent = 'Viable para Arraigo Familiar';
-                explanationEl.textContent = 'El vínculo familiar directo con ciudadanos de nacionalidad española o residentes legales abre un cauce administrativo preferente.';
-                textBadge = 'Vía Preferente';
-
-                bulletsEl.innerHTML += `<li class="flex items-start gap-2 text-[#2d6a4f]"><i class="fa-solid fa-circle-check mt-0.5"></i> Residencia formal con habilitación de trabajo por cuenta propia y ajena.</li>`;
-                bulletsEl.innerHTML += `<li class="flex items-start gap-2"><i class="fa-solid fa-circle-check mt-0.5"></i> Procedimiento ágil mediante radicación digital Mercurio.</li>`;
-                diagnosis = 'Arraigo Familiar';
-            } else {
-                titleEl.textContent = 'Estudio de Casos Alternativos';
-                explanationEl.textContent = 'Tu situación actual presenta singularidades técnicas que merecen un estudio pormenorizado para proponer otras vías de residencia.';
-                textBadge = 'Estudio Manual';
-                stampColor = '#bca374';
-
-                bulletsEl.innerHTML += `<li class="flex items-start gap-2"><i class="fa-solid fa-circle-info mt-0.5"></i> Análisis de vías de excepción por arraigo de segunda generación o vínculos directos.</li>`;
-                bulletsEl.innerHTML += `<li class="flex items-start gap-2"><i class="fa-solid fa-circle-info mt-0.5"></i> Auditoría de vacíos temporales en tu padrón histórico.</li>`;
-                diagnosis = 'Estudio de Vías de Excepción';
+                hayAlerta = true;
+                hallazgos.push({
+                    tipo: 'alerta',
+                    texto: 'Tienes antecedentes penales o policiales activos: la Oficina de Extranjería desestima ordinariamente estas solicitudes. Es imperativo revisar su cancelación antes de avanzar.'
+                });
             }
 
-            // Aplicar estilo al sello visual
-            stampEl.textContent = textBadge;
-            stampEl.style.color = stampColor;
-            stampEl.style.borderColor = stampColor;
+            if (formAnswers.medios === 'progenitor_menor_ue') {
+                hallazgos.push({
+                    tipo: 'positivo',
+                    texto: 'Es probable que haya lugar a un Arraigo Familiar, por ser progenitor/tutor o cuidador de un menor o persona con discapacidad de la UE/EEE/Suiza — sin necesidad de los 2 años de permanencia que exigen los demás arraigos.'
+                });
+            }
 
-            // Enlazar WhatsApp dinámico con reporte
-            const waMsg = `¡Hola Raíz! He completado el triaje automatizado en su web:
+            const permanenciaSuficiente = (formAnswers.estancia === 'exacto_2' || formAnswers.estancia === 'mas_3');
+            if (permanenciaSuficiente && formAnswers.penales !== 'con_penales') {
+                hallazgos.push({
+                    tipo: 'positivo',
+                    texto: 'Es probable que haya lugar a una residencia por arraigo (social, formativo o sociolaboral, según tu contrato o formación concreta).'
+                });
+            }
+
+            if (formAnswers.medios === 'familiar_residente') {
+                hallazgos.push({
+                    tipo: 'positivo',
+                    texto: 'Es probable que haya lugar a una reagrupación familiar, siempre que la persona que te reagrupa cumpla los requisitos de ingresos y vivienda.'
+                });
+            }
+
+            const paisIberoamericano = formAnswers.origen && formAnswers.origen !== 'otros';
+            const residenciaLegalSuficiente = paisIberoamericano
+                ? (formAnswers.residencia_legal === 'dos_a_nueve' || formAnswers.residencia_legal === 'diez_mas')
+                : (formAnswers.residencia_legal === 'diez_mas');
+            if (residenciaLegalSuficiente && formAnswers.penales !== 'con_penales') {
+                hallazgos.push({
+                    tipo: 'positivo',
+                    texto: 'Adicionalmente, tu tiempo de residencia legal podría dar lugar a solicitar la Nacionalidad Española por Residencia.'
+                });
+            }
+
+            if (!hallazgos.some(h => h.tipo === 'positivo')) {
+                hallazgos.push({
+                    tipo: 'neutro',
+                    texto: 'Tu situación actual presenta particularidades que requieren un estudio personalizado para identificar la mejor vía disponible.'
+                });
+            }
+
+            titleEl.textContent = 'Primer Diagnóstico Preliminar';
+            explanationEl.textContent = 'Según tus respuestas, esto es lo que encontramos:';
+
+            const estilosPorTipo = {
+                alerta: { icon: 'fa-triangle-exclamation', color: 'text-[#9c3c3c]' },
+                positivo: { icon: 'fa-circle-check', color: 'text-[#2d6a4f]' },
+                neutro: { icon: 'fa-circle-info', color: '' }
+            };
+            hallazgos.forEach(h => {
+                const e = estilosPorTipo[h.tipo];
+                bulletsEl.innerHTML += `<li class="flex items-start gap-2 ${e.color}"><i class="fa-solid ${e.icon} mt-0.5"></i> ${h.texto}</li>`;
+            });
+
+            // Sello visual neutro — ya no afirma un veredicto sobre un trámite concreto
+            stampEl.textContent = hayAlerta ? 'Requiere Atención' : 'Primer Diagnóstico';
+            stampEl.style.color = hayAlerta ? '#9c3c3c' : '#bca374';
+            stampEl.style.borderColor = hayAlerta ? '#9c3c3c' : '#bca374';
+
+            // Resumen para el equipo comercial (se guarda en Google Sheets, campo "mensaje")
+            const resumenHallazgos = hallazgos.map(h => `- ${h.texto}`).join('\n');
+            const resumen = `Triaje automatizado completado en la web:
 • Nombre: ${formAnswers.nombre}
 • Origen: ${origenName}
-• Estancia: ${estanciaLabel}
+• Permanencia: ${estanciaLabel}
+• Residencia legal: ${residenciaLegalLabel}
 • Antecedentes: ${formAnswers.penales === 'sin_penales' ? 'No' : 'Sí'}
-• Recursos: ${formAnswers.medios}
+• Vínculo/recurso: ${formAnswers.medios}
 
-Diagnóstico de viabilidad sugerido: *${diagnosis}*
-¿Podrían ayudarme a revisar este expediente?`;
+Hallazgos del primer diagnóstico:
+${resumenHallazgos}`;
 
-            const bookingButtonHtml = BOOKING_URL.includes("PEGA_AQUI") ? "" : `
+            const bookingButtonHtml = !BOOKING_READY ? "" : `
                 <a href="${BOOKING_URL}" target="_blank" class="w-full bg-[#1c352d] text-white py-4 rounded-lg text-sm font-bold tracking-wide transition-all uppercase flex items-center justify-center gap-2 mb-2">
                     <i class="fa-solid fa-calendar-check text-lg"></i> Reservar Cita y Pagar Consulta (39 €)
                 </a>
             `;
 
-            waActionContainer.innerHTML = `
-                ${bookingButtonHtml}
-                <a href="https://wa.me/34600000000?text=${encodeURIComponent(waMsg)}" target="_blank" class="w-full bg-[#25d366] text-white py-4 rounded-lg text-sm font-bold tracking-wide transition-all uppercase flex items-center justify-center gap-2 mb-2">
-                    <i class="fab fa-whatsapp text-lg"></i> Enviar Triaje por WhatsApp al Asesor
-                </a>
-                <p class="text-[10px] text-[#5c6460] text-center mb-4">*Recomendado:* Agiliza tu consulta compartiendo estos datos directamente con el asesor legal.</p>
-            `;
+            bookingActionContainer.innerHTML = bookingButtonHtml;
 
             // Rellenar campos ocultos
-            document.getElementById('situacion').value = diagnosis;
-            document.getElementById('mensaje').value = waMsg;
+            document.getElementById('situacion').value = hallazgos.map(h => h.texto).join(' | ');
+            document.getElementById('mensaje').value = resumen;
         }
 
         // Envío formal a CRM / Google Sheets
@@ -1223,11 +1306,11 @@ Diagnóstico de viabilidad sugerido: *${diagnosis}*
                     body: JSON.stringify({ nombre, telefono, email, situacion, mensaje })
                 });
 
-                statusEl.textContent = "✓ ¡Diagnóstico registrado con éxito! Utiliza el enlace de WhatsApp para resolver tus dudas directamente de forma personalizada.";
+                statusEl.textContent = "✓ ¡Diagnóstico registrado con éxito! Usa el botón de arriba para reservar tu cita y avanzar con tu caso.";
                 statusEl.style.color = "var(--green-stamp)";
                 form.reset();
             } catch (err) {
-                statusEl.textContent = "Hubo un problema al registrar en línea. Envía tu diagnóstico por WhatsApp directamente.";
+                statusEl.textContent = "Hubo un problema al registrar en línea, pero puedes reservar tu cita igualmente con el botón de arriba.";
                 statusEl.style.color = "var(--red-stamp)";
             } finally {
                 submitBtn.removeAttribute('disabled');
