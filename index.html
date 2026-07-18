@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raíz | Asesoría Migratoria España</title>
+    <title>Raíz - Asesores Expertos en Extranjería España</title>
     
     <!-- Tailwind CSS para el diseño ágil y responsivo -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -133,7 +133,7 @@
             <!-- Logotipo de Raíz -->
             <a href="#" onclick="navigateTo('home'); return false;" class="flex flex-col">
                 <span class="font-serif-editorial text-2xl font-bold tracking-tight text-[#1c352d]">Raíz</span>
-                <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#bca374] -mt-1">Asesoría Migratoria</span>
+                <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#bca374] -mt-1">Asesores de Extranjería</span>
             </a>
             
             <!-- Navegación de Escritorio -->
@@ -141,6 +141,7 @@
                 <a href="#inicio" onclick="navigateTo('home', 'inicio'); return false;" class="nav-link text-sm font-medium text-[#5c6460] hover:text-[#1c352d] transition-colors">Inicio</a>
                 <a href="#servicios" onclick="navigateTo('home', 'servicios'); return false;" class="nav-link text-sm font-medium text-[#5c6460] hover:text-[#1c352d] transition-colors">Servicios</a>
                 <a href="#metodologia" onclick="navigateTo('home', 'metodologia'); return false;" class="nav-link text-sm font-medium text-[#5c6460] hover:text-[#1c352d] transition-colors">Nuestro Método</a>
+                <a href="#diagnostico-gratis" onclick="navigateTo('home', 'diagnostico-gratis'); return false;" class="nav-link text-sm font-medium text-[#5c6460] hover:text-[#1c352d] transition-colors">Diagnóstico Gratis</a>
                 <a href="#blog" onclick="navigateTo('blog'); return false;" class="nav-link text-sm font-medium text-[#5c6460] hover:text-[#1c352d] transition-colors flex items-center gap-1.5">
                     Blog <span class="bg-[#e6ddc4] text-[#1c352d] font-stamp text-[9px] px-1.5 py-0.5 rounded-full">Recursos</span>
                 </a>
@@ -171,6 +172,7 @@
                 <a href="#blog" onclick="toggleMobileMenu(); navigateTo('blog'); return false;" class="text-base font-semibold text-[#1c352d] flex items-center gap-2">
                     Blog de Extranjería <span class="bg-[#e6ddc4] text-[#1c352d] font-stamp text-[9px] px-2 py-0.5 rounded">RECURSOS</span>
                 </a>
+                <a href="#diagnostico-gratis" onclick="toggleMobileMenu(); navigateTo('home', 'diagnostico-gratis'); return false;" class="text-base font-semibold text-[#1c352d]">Diagnóstico Gratis por Correo</a>
                 <a href="#contacto" onclick="toggleMobileMenu(); navigateTo('home', 'contacto'); return false;" class="text-base font-semibold text-[#bca374]">Iniciar Autodiagnóstico</a>
                 <div class="h-px bg-[#ded9cd] my-2"></div>
                 <a href="#" id="cta-reservar-mobile" target="_blank" class="w-full bg-[#1c352d] text-white py-3 rounded-lg text-center font-bold flex items-center justify-center gap-2">
@@ -380,6 +382,118 @@
                     <!-- Grilla de avances del blog -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="home-blog-container">
                         <!-- Insertado dinámicamente con JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN DIAGNÓSTICO GRATUITO POR CORREO -->
+            <section id="diagnostico-gratis" class="py-20 bg-[#fcfbf9] border-b border-[#ded9cd]">
+                <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+                    <div class="lg:col-span-5 space-y-6">
+                        <span class="font-stamp text-xs text-[#bca374] uppercase tracking-[0.2em] block">Sin coste ni compromiso</span>
+                        <h2 class="font-serif-editorial text-3xl md:text-5xl text-[#1c352d] font-bold leading-tight">Recibe un primer diagnóstico gratuito en tu correo</h2>
+                        <p class="text-sm md:text-base text-[#5c6460] leading-relaxed">
+                            ¿Aún no estás seguro de si tu caso tiene una vía? Responde unas pocas preguntas y te enviaremos por correo electrónico un primer diagnóstico orientativo de las vías de residencia o nacionalidad que podrían aplicar a tu situación. Sin pagos y sin citas.
+                        </p>
+                        <ul class="space-y-3 text-sm text-[#5c6460]">
+                            <li class="flex items-start gap-3">
+                                <span class="font-stamp text-xs text-[#bca374] mt-0.5">01</span>
+                                <span>Completa el formulario con tus datos básicos.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="font-stamp text-xs text-[#bca374] mt-0.5">02</span>
+                                <span>Confirma tu dirección desde el correo que te enviaremos.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="font-stamp text-xs text-[#bca374] mt-0.5">03</span>
+                                <span>Recibe tu diagnóstico orientativo directamente en tu bandeja de entrada.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="lg:col-span-7 bg-white border border-[#ded9cd] p-8 md:p-10 rounded-2xl shadow-sm">
+                        <h3 class="font-serif-editorial text-2xl font-bold text-[#1c352d] mb-1">Diagnóstico Gratuito por Correo</h3>
+                        <p class="text-xs text-[#5c6460] mb-6">Te enviaremos primero un correo para confirmar tu dirección; después recibirás tu diagnóstico.</p>
+
+                        <form id="diagnostico-form" novalidate onsubmit="handleDiagnosticoSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="space-y-1">
+                                    <label for="diag-nombre" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">Nombre completo</label>
+                                    <input type="text" id="diag-nombre" name="diag_nombre" required class="triaje-input w-full p-3.5 rounded-lg text-sm" placeholder="Escribe tu nombre y apellidos">
+                                </div>
+                                <div class="space-y-1">
+                                    <label for="diag-telefono" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">Teléfono</label>
+                                    <input type="tel" id="diag-telefono" name="diag_telefono" required class="triaje-input w-full p-3.5 rounded-lg text-sm" placeholder="Ej: +34 600 000 000">
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <label for="diag-email" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">Correo electrónico</label>
+                                <input type="email" id="diag-email" name="diag_email" required class="triaje-input w-full p-3.5 rounded-lg text-sm" placeholder="tucorreo@ejemplo.com">
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="space-y-1">
+                                    <label for="diag-origen" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">País de origen</label>
+                                    <select id="diag-origen" name="diag_origen" required class="triaje-input w-full p-3.5 rounded-lg text-sm bg-white">
+                                        <option value="" disabled selected>Selecciona tu país</option>
+                                        <option value="colombia">Colombia</option>
+                                        <option value="venezuela">Venezuela</option>
+                                        <option value="peru">Perú</option>
+                                        <option value="honduras">Honduras</option>
+                                        <option value="argentina">Argentina</option>
+                                        <option value="cuba">Cuba</option>
+                                        <option value="ecuador">Ecuador</option>
+                                        <option value="otros_latam">Otro país de Latinoamérica</option>
+                                        <option value="otros">Otro país (fuera de Latinoamérica)</option>
+                                    </select>
+                                </div>
+                                <div class="space-y-1">
+                                    <label for="diag-estancia" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">Tiempo viviendo en España</label>
+                                    <select id="diag-estancia" name="diag_estancia" required class="triaje-input w-full p-3.5 rounded-lg text-sm bg-white">
+                                        <option value="" disabled selected>Selecciona una opción</option>
+                                        <option value="menos_1">Menos de 1 año</option>
+                                        <option value="entre_1_2">Entre 1 y 2 años</option>
+                                        <option value="exacto_2">2 años o más</option>
+                                        <option value="mas_3">3 años o más</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="space-y-1">
+                                    <label for="diag-residencia" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">Años con autorización de residencia</label>
+                                    <select id="diag-residencia" name="diag_residencia_legal" required class="triaje-input w-full p-3.5 rounded-lg text-sm bg-white">
+                                        <option value="" disabled selected>Selecciona una opción</option>
+                                        <option value="sin_autorizacion">Aún no tengo autorización</option>
+                                        <option value="menos_2">Menos de 2 años</option>
+                                        <option value="dos_a_nueve">Entre 2 y 9 años</option>
+                                        <option value="diez_mas">10 años o más</option>
+                                    </select>
+                                </div>
+                                <div class="space-y-1">
+                                    <label for="diag-medios" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">Vínculo o recurso disponible</label>
+                                    <select id="diag-medios" name="diag_medios" required class="triaje-input w-full p-3.5 rounded-lg text-sm bg-white">
+                                        <option value="" disabled selected>Selecciona una opción</option>
+                                        <option value="precontrato">Precontrato u oferta de trabajo</option>
+                                        <option value="estudio">Formación o estudios</option>
+                                        <option value="progenitor_menor_ue">Soy progenitor/tutor de un menor o persona con discapacidad de la UE</option>
+                                        <option value="familiar_residente">Tengo un familiar residente legal en España</option>
+                                        <option value="ninguno">Ninguno de los anteriores</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <label for="diag-consentimiento" class="flex items-start gap-3 p-4 bg-[#fcfbf9] border border-[#ded9cd] rounded-lg cursor-pointer">
+                                <input type="checkbox" id="diag-consentimiento" name="diag_consentimiento" required class="mt-0.5 shrink-0 w-4 h-4 accent-[#1c352d]">
+                                <span class="text-[11px] text-[#5c6460] leading-relaxed">
+                                    He leído y acepto la <a href="politica-privacidad.html" target="_blank" class="underline font-semibold text-[#1c352d]">Política de Privacidad</a> y consiento recibir mi diagnóstico por correo electrónico y que un asesor de Raíz me contacte posteriormente sobre mi caso, incluso por teléfono o WhatsApp.
+                                </span>
+                            </label>
+
+                            <button type="submit" class="w-full bg-[#1c352d] text-white py-4 rounded-lg text-sm font-bold tracking-wide hover:bg-[#2c4c41] transition-all uppercase">
+                                Recibir mi diagnóstico gratuito
+                            </button>
+                            <p id="diagnostico-status" class="text-xs text-center min-h-[1rem]"></p>
+                        </form>
                     </div>
                 </div>
             </section>
@@ -716,7 +830,7 @@
             <div class="md:col-span-4 space-y-4">
                 <a href="#" onclick="navigateTo('home'); return false;" class="flex flex-col w-max">
                     <span class="font-serif-editorial text-2xl font-bold tracking-tight text-white">Raíz</span>
-                    <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#bca374] -mt-1">Asesoría Migratoria</span>
+                    <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#bca374] -mt-1">Asesores de Extranjería</span>
                 </a>
                 <p class="text-xs text-gray-300 leading-relaxed max-w-sm">
                     Especialistas en trámites administrativos de extranjería telemáticos. Trabajamos bajo el estándar de rigurosidad técnica para una migración ordenada.
@@ -735,6 +849,7 @@
                     <li><a href="#servicios" onclick="navigateTo('home', 'servicios'); return false;" class="hover:text-white transition-colors">Trámites de Extranjería</a></li>
                     <li><a href="#metodologia" onclick="navigateTo('home', 'metodologia'); return false;" class="hover:text-white transition-colors">Método de Viabilidad</a></li>
                     <li><a href="#blog" onclick="navigateTo('blog'); return false;" class="hover:text-white transition-colors">Blog de Recursos</a></li>
+                    <li><a href="#diagnostico-gratis" onclick="navigateTo('home', 'diagnostico-gratis'); return false;" class="hover:text-white transition-colors">Diagnóstico Gratis por Correo</a></li>
                     <li><a href="#contacto" onclick="navigateTo('home', 'contacto'); return false;" class="hover:text-white transition-colors">Iniciar Autodiagnóstico</a></li>
                 </ul>
             </div>
@@ -764,7 +879,7 @@
         </div>
 
         <div class="max-w-6xl mx-auto px-6 mt-12 pt-8 border-t border-[#bca374]/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-gray-400">
-            <p>&copy; 2026 Raíz Asesoría Migratoria. Todos los derechos reservados.</p>
+            <p>&copy; 2026 Raíz - Asesores Expertos en Extranjería. Todos los derechos reservados.</p>
             <a href="politica-privacidad.html" class="hover:text-white transition-colors underline">Política de Privacidad</a>
         </div>
     </footer>
@@ -792,6 +907,13 @@
         // ============================================================
         const BOOKING_URL = "https://cal.com/sen-j2f5bj/30min";
         const BOOKING_READY = !BOOKING_URL.includes("PEGA_AQUI");
+
+        // Dirección del sistema de datos (Google Apps Script). La usan tanto el
+        // triaje (#contacto) como el diagnóstico gratuito por correo
+        // (#diagnostico-gratis). Debe coincidir con la implementación activa del
+        // script — si el script se redespliega y la URL cambia, actualizar aquí
+        // y en el webhook de Cal.com.
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwuC0j5gXnEB1DwMJJShUkzRCwVPrRLq-JVhr7aVynq7aUT4WeI6qqkHTJxc6TLjhRK/exec";
 
         // Todos los botones "Reservar Cita" del sitio (fuera del resultado
         // del diagnóstico, que arma el suyo dentro de calculateDiagnostic())
@@ -1268,7 +1390,7 @@ ${resumenHallazgos}`;
 
             const bookingButtonHtml = !BOOKING_READY ? "" : `
                 <a href="${BOOKING_URL}" target="_blank" class="w-full bg-[#1c352d] text-white py-4 rounded-lg text-sm font-bold tracking-wide transition-all uppercase flex items-center justify-center gap-2 mb-2">
-                    <i class="fa-solid fa-calendar-check text-lg"></i> Reservar Cita y Pagar Consulta (39 €)
+                    <i class="fa-solid fa-calendar-check text-lg"></i> Reservar Cita y Pagar Consulta
                 </a>
             `;
 
@@ -1297,8 +1419,6 @@ ${resumenHallazgos}`;
             statusEl.textContent = "Registrando tu diagnóstico de viabilidad...";
             statusEl.style.color = "var(--forest)";
 
-            const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzpG8am-7AN1hnzMFP7IcMVJ6e2xUe2UqIqKg1yyuCONibAh3uDmJIN5-QSZPONR-_x/exec";
-
             try {
                 await fetch(GOOGLE_SCRIPT_URL, {
                     method: "POST",
@@ -1319,6 +1439,62 @@ ${resumenHallazgos}`;
                 form.reset();
             } catch (err) {
                 statusEl.textContent = "Hubo un problema al registrar en línea, pero puedes reservar tu cita igualmente con el botón de arriba.";
+                statusEl.style.color = "var(--red-stamp)";
+            } finally {
+                submitBtn.removeAttribute('disabled');
+            }
+        }
+
+        // Envío del formulario "Diagnóstico gratuito por correo" (#diagnostico-gratis).
+        // El servidor (Apps Script) envía primero un correo de verificación; el
+        // diagnóstico solo se manda cuando la persona confirma su dirección.
+        async function handleDiagnosticoSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const statusEl = document.getElementById('diagnostico-status');
+            const submitBtn = form.querySelector('button[type="submit"]');
+
+            const nombre = form.diag_nombre.value.trim();
+            const telefono = form.diag_telefono.value.trim();
+            const email = form.diag_email.value.trim();
+            const origen = form.diag_origen.value;
+            const estancia = form.diag_estancia.value;
+            const residencia_legal = form.diag_residencia_legal.value;
+            const medios = form.diag_medios.value;
+
+            const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            if (nombre.length < 3 || telefono.length < 7 || !emailValido ||
+                !origen || !estancia || !residencia_legal || !medios) {
+                statusEl.textContent = "Revisa que todos los campos estén completos y el correo sea válido.";
+                statusEl.style.color = "var(--red-stamp)";
+                return;
+            }
+            if (!form.diag_consentimiento.checked) {
+                statusEl.textContent = "Necesitamos tu consentimiento (la casilla) para poder enviarte el diagnóstico.";
+                statusEl.style.color = "var(--red-stamp)";
+                return;
+            }
+
+            submitBtn.setAttribute('disabled', 'true');
+            statusEl.textContent = "Enviando tu solicitud...";
+            statusEl.style.color = "var(--forest)";
+
+            try {
+                await fetch(GOOGLE_SCRIPT_URL, {
+                    method: "POST",
+                    mode: "no-cors",
+                    body: JSON.stringify({
+                        tipo: "diagnostico_email",
+                        nombre, telefono, email,
+                        origen, estancia, residencia_legal, medios
+                    })
+                });
+
+                statusEl.textContent = "✓ ¡Gracias por confiar en nosotros! Te acabamos de enviar un correo para confirmar tu dirección — solo tienes que abrirlo y hacer clic en el enlace. Si no lo ves en unos minutos, echa un vistazo también a la carpeta de spam o correo no deseado.";
+                statusEl.style.color = "var(--green-stamp)";
+                form.reset();
+            } catch (err) {
+                statusEl.textContent = "Hubo un problema al enviar tu solicitud. Inténtalo de nuevo en unos minutos.";
                 statusEl.style.color = "var(--red-stamp)";
             } finally {
                 submitBtn.removeAttribute('disabled');
