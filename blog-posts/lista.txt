@@ -2,6 +2,8 @@
 # El primero de la lista es el más reciente / el que aparece primero.
 # Para publicar un artículo nuevo: 1) crea su archivo de texto en esta misma carpeta,
 # 2) escribe aquí el nombre exacto de ese archivo, en la línea que corresponda a su orden.
+reagrupacion-familiar-requisitos-2026.txt
+arraigo-familiar-menor-discapacidad-ue.txt
 arraigo-social-guia-2026.txt
 ley-memoria-democratica.txt
 modificacion-estudios-trabajo.txt

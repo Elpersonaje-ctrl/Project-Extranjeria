@@ -1,0 +1,40 @@
+TITULO: Arraigo Familiar: la vía para quien cuida a un menor o persona con discapacidad de la UE
+CATEGORIA: arraigo-familiar
+CATEGORIA_VISIBLE: Arraigo Familiar
+FECHA: 19 JUL 2026
+RESUMEN: Si cuidas a un menor o a una persona con discapacidad con nacionalidad de la Unión Europea, puedes optar a la residencia sin esperar los 2 años que exigen los demás arraigos.
+---CONTENIDO---
+<p class="font-bold">Casi todo el mundo que investiga sobre regularización en España da por hecho que hacen falta 2 años de permanencia. Es la regla general de los arraigos — pero no la única.</p>
+
+<p>El Arraigo Familiar es una vía menos conocida, pensada específicamente para quien convive con un menor o una persona con discapacidad que tiene nacionalidad de la Unión Europea, el Espacio Económico Europeo o Suiza, y se ocupa de su cuidado.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">¿A quién va dirigido?</h4>
+
+<p>A progenitores, tutores o cuidadores de un menor, o de una persona con discapacidad, que tenga nacionalidad de la UE/EEE/Suiza y resida en España. Es habitual, por ejemplo, en madres o padres extranjeros de un hijo nacido en España con doble nacionalidad, o en quien tiene a su cargo a un familiar con discapacidad reconocida.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Lo que lo diferencia de los demás arraigos</h4>
+
+<ul class="list-disc pl-5 space-y-2">
+<li><strong>No exige los 2 años de permanencia previa</strong> que sí piden el Arraigo Social, el Arraigo para la Formación o el Arraigo Sociolaboral.</li>
+<li>Su vigencia es de <strong>5 años</strong> — el resto de arraigos conceden autorizaciones de solo 1 año, que hay que renovar con mucha más frecuencia.</li>
+</ul>
+
+<p>Es, en la práctica, el arraigo con menos exigencia de tiempo previo y con la autorización más estable de todo el catálogo.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Qué hay que acreditar</h4>
+
+<p>El requisito central no es el tiempo, es la relación real: hay que demostrar <strong>convivencia efectiva</strong> con el menor o la persona con discapacidad, y el <strong>cumplimiento real de las obligaciones parentales o de cuidado</strong> — no basta con el vínculo legal sobre el papel.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Documentos necesarios</h4>
+
+<ul class="list-disc pl-5 space-y-2">
+<li>Prueba del vínculo familiar o de la relación de cuidado.</li>
+<li>Certificado de nacimiento del menor, o resolución de reconocimiento de discapacidad de la persona a tu cargo.</li>
+<li>Empadronamiento conjunto que acredite la convivencia.</li>
+</ul>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Motivo frecuente de denegación</h4>
+
+<p>El más habitual es no lograr acreditar la convivencia efectiva ni el ejercicio real de la patria potestad o del cuidado — por ejemplo, un empadronamiento conjunto reciente sin más respaldo detrás. Cuanta más prueba consistente de la vida en común (escolarización, citas médicas, gestiones conjuntas), más sólido queda el expediente.</p>
+
+<p>Contenido informativo, no sustituye una asesoría individualizada. Raíz es una agencia de representación administrativa (Ley 39/2015), no un despacho de abogados colegiado. Cada caso es distinto: si cuidas a un menor o persona con discapacidad de la UE, evalúa tu situación concreta con un diagnóstico gratuito.</p>

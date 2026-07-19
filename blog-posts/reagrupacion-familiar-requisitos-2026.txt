@@ -1,0 +1,56 @@
+TITULO: Reagrupación Familiar en 2026: ingresos, vivienda y plazos reales
+CATEGORIA: reagrupacion
+CATEGORIA_VISIBLE: Reagrupación Familiar
+FECHA: 19 JUL 2026
+RESUMEN: Ya tienes residencia legal en España y quieres traer a tu familia. Estos son los 4 requisitos que revisa Extranjería y los plazos reales de resolución.
+---CONTENIDO---
+<p class="font-bold">Si ya conseguiste tu residencia legal en España, el siguiente paso natural suele ser traer a tu familia. La reagrupación familiar no depende de tu situación migratoria — depende de que cumplas cuatro requisitos concretos, y de que los prepares con tiempo.</p>
+
+<p>Aquí explicamos, en cristiano, qué pide Extranjería a quien reagrupa (el "reagrupante") y a quién puedes traer.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">1. Tiempo mínimo de residencia legal</h4>
+
+<p>Necesitas al menos <strong>1 año de residencia legal en España</strong> y una autorización vigente para, al menos, 1 año más. Si tu autorización actual vence antes de ese plazo, conviene resolver primero la renovación.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">2. Ingresos mínimos según el IPREM</h4>
+
+<p>Extranjería exige acreditar medios económicos suficientes, calculados sobre el IPREM (Indicador Público de Renta de Efectos Múltiples):</p>
+
+<ul class="list-disc pl-5 space-y-2">
+<li><strong>150% del IPREM</strong> para el primer familiar que reagrupas, más <strong>50% adicional</strong> por cada familiar más.</li>
+<li>Si entre los familiares hay menores, se puede acreditar en su lugar <strong>110% del IPREM más un 10% adicional del Ingreso Mínimo Vital (IMV)</strong> por cada uno.</li>
+</ul>
+
+<p>Es el requisito donde más casos se frenan: conviene calcularlo con nómina o declaración de la renta reciente antes de presentar la solicitud, no después.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">3. Vivienda adecuada</h4>
+
+<p>Hace falta un <strong>informe de adecuación de vivienda</strong> emitido por los servicios sociales del ayuntamiento, que solo es válido durante <strong>6 meses</strong> — otro motivo habitual de retraso si se solicita demasiado pronto o demasiado tarde respecto al resto del expediente.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">4. Seguro médico</h4>
+
+<p>El reagrupante debe tener seguro médico vigente, propio o de la Seguridad Social. También se exige no tener antecedentes penales relevantes ni compromiso de no retorno pendiente.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">¿A quién puedes reagrupar?</h4>
+
+<ul class="list-disc pl-5 space-y-2">
+<li>Cónyuge o pareja (registrada, o de hecho con al menos 12 meses de convivencia acreditada — salvo si tenéis hijos en común).</li>
+<li>Hijos menores de 18 años, o con discapacidad a cualquier edad.</li>
+<li>Ascendientes (padres, suegros) de 65 años o más a tu cargo — o menores de 65 en supuestos humanitarios concretos.</li>
+<li>Un hijo o hija que sea, a su vez, cuidador de un reagrupante dependiente.</li>
+</ul>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Plazos: más rápido de lo que parece</h4>
+
+<p>Es un trámite de tramitación preferente: la resolución llega en unos <strong>2 meses</strong> (el silencio administrativo, si no hay respuesta, se entiende como negativo — no como aprobado). Una vez concedida, el familiar debe entrar a España dentro del mes siguiente a obtener su visado, así que conviene tener el viaje organizado de antemano.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Motivos frecuentes de denegación</h4>
+
+<ul class="list-disc pl-5 space-y-2">
+<li>Ingresos insuficientes o mal acreditados.</li>
+<li>Informe de vivienda caducado o no presentado a tiempo.</li>
+<li>Matrimonio o pareja que ya no está vigente al momento de resolver.</li>
+<li>Antecedentes penales del familiar valorados como riesgo real.</li>
+</ul>
+
+<p>Contenido informativo, no sustituye una asesoría individualizada. Raíz es una agencia de representación administrativa (Ley 39/2015), no un despacho de abogados colegiado. Cada caso de reagrupación depende de tus ingresos y tu situación familiar concretos: evalúa el tuyo con un diagnóstico gratuito.</p>
