@@ -1,7 +1,7 @@
 title: "Raíz - Asesores Expertos en Extranjería"
 description: "Agencia especializada en trámites de extranjería, arraigo y nacionalidad en Vigo. Radicación telemática rápida y sin citas. 0% rechazos."
-url: "https://elpersonaje-ctrl.github.io"
-baseurl: "/Project-Extranjeria"
+url: "https://raizextranjeria.es"
+baseurl: ""
 
 # Mantener la compilación limpia y sin dependencias externas
 theme: null
