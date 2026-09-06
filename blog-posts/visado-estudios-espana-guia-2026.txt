@@ -1,0 +1,43 @@
+TITULO: Visado de estudios en España 2026: guía completa paso a paso
+CATEGORIA: estudiantes
+CATEGORIA_VISIBLE: Estudiantes
+FECHA: 3 SEP 2026
+RESUMEN: Qué puedes estudiar y dónde, cuánto dinero tienes que demostrar, los plazos legales y el calendario académico, y los errores que hacen que te denieguen el visado de estudiante.
+---CONTENIDO---
+<p class="font-bold">Venir a España a estudiar es una de las vías legales de entrada más utilizadas, y bien planificada abre la puerta a trabajar durante los estudios y a cambiar después a una residencia por trabajo sin volver a tu país. Pero tiene requisitos concretos que conviene conocer antes de mover el primer papel.</p>
+
+<p>Lo que popularmente se llama "visado de estudiante" tiene dos nombres según dónde lo pidas: es un <strong>visado</strong> si lo solicitas desde tu país en el consulado español, y una <strong>autorización de estancia por estudios</strong> si ya te encuentras en España de forma regular. El trámite es el mismo y está regulado en los artículos 52 a 57 del Reglamento de Extranjería (Real Decreto 1155/2024).</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Qué puedes estudiar y en qué centro</h4>
+
+<p>La norma admite educación superior (grado, máster, doctorado), formación profesional de grado medio y superior, bachillerato y secundaria posobligatoria, enseñanzas artísticas y deportivas oficiales, formación sanitaria especializada, cursos de especialización, prácticas no laborales y programas de movilidad. El centro debe estar <strong>oficialmente reconocido en España e inscrito en los registros oficiales</strong>: matricularse en una academia que no figure ahí es el motivo de denegación más frecuente. Además, el programa debe ser a tiempo completo (en la universidad, al menos el 90% de los créditos) y presencial en al menos un 50%.</p>
+
+<p>Atención con los cursos de idioma: la norma solo acepta cursos de castellano o de lenguas cooficiales impartidos en escuelas oficiales o en centros acreditados por el Instituto Cervantes, y no son válidos si el español es tu lengua materna.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Los requisitos, uno por uno</h4>
+
+<p>Necesitas acreditar todo lo siguiente a la vez: carta de admisión del centro; matrícula o reserva de plaza pagada; medios económicos suficientes; seguro médico con cobertura completa en España, sin copagos ni periodos de carencia y con repatriación (un seguro de viaje corriente no sirve); certificado de antecedentes penales de los países donde hayas residido los últimos cinco años, apostillado y traducido por traductor jurado; certificado médico; y pasaporte con vigencia que cubra toda la estancia.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Cuánto dinero hay que demostrar</h4>
+
+<p>El criterio que aplican consulados y oficinas de extranjería es el 100% del IPREM mensual para el propio estudiante. En 2026 el IPREM está en 600 euros al mes, es decir, unos 6.000 euros para un curso de diez meses o 7.200 euros para un año completo. El dinero destinado a pagar la matrícula no se computa dentro de esa cifra. Se puede acreditar con cuenta propia, con el apoyo económico de un familiar directo debidamente legalizado, o con una beca concedida por escrito. Estas cuantías se actualizan y pueden variar según el consulado: conviene confirmarlas antes de presentar.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Plazos legales y calendario académico</h4>
+
+<p>La solicitud del visado o de la autorización se presenta como mínimo dos meses antes del inicio del curso. En la práctica conviene empezar seis meses antes, porque hay que buscar centro, pagar matrícula, homologar el bachillerato y hacer la prueba de acceso si vas a un grado, apostillar documentos y pedir los antecedentes penales con margen para que lleguen vigentes. Como los cursos universitarios empiezan a mediados de septiembre y la preinscripción de grado en la universidad pública suele ser en junio y julio, esa cuenta atrás arranca en primavera.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Trabajar mientras estudias</h4>
+
+<p>La autorización permite trabajar hasta 30 horas semanales, de forma compatible con los estudios. Si cursas estudios superiores, la propia autorización te habilita a trabajar por cuenta ajena y por cuenta propia sin ningún trámite adicional; el empleador solo tiene que darte de alta en la Seguridad Social. En otros tipos de formación, el permiso de trabajo se solicita aparte. El trabajo debe desarrollarse en tu comunidad autónoma o en zonas limítrofes, y superar el límite de 30 horas puede acarrear la extinción de la autorización.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Al llegar a España y qué pasa al terminar</h4>
+
+<p>Nada más llegar debes empadronarte, y si la estancia supera los seis meses tienes que canjear el visado por la Tarjeta de Identidad de Extranjero (TIE) dentro del primer mes. Conserva todos los justificantes de matrícula, pago y asistencia: los necesitarás para las prórrogas y para la futura modificación.</p>
+
+<p>Un matiz importante que conviene planificar desde el principio: el tiempo como estudiante computa como estancia, no como residencia. Para la nacionalidad esos años no suman, y para la residencia de larga duración se computan de forma reducida. Al terminar los estudios puedes modificar tu autorización a una residencia y trabajo, por cuenta ajena o propia, sin volver a tu país, y es entonces cuando empieza a contar de verdad tu tiempo de residencia.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Los errores más frecuentes de denegación</h4>
+
+<p>Centro no reconocido o programa a tiempo parcial; curso de español en la lengua materna del solicitante; medios económicos mal acreditados o que aparecen de golpe poco antes de presentar; antecedentes penales o certificado caducado el día de la resolución; seguro médico con copagos o coberturas parciales; presentar fuera de plazo; y un perfil poco coherente con los estudios declarados.</p>
+
+<p>Este artículo es información general y no sustituye el análisis individual de tu caso. Si quieres saber qué vía encaja con tu situación, puedes solicitar un diagnóstico gratuito. Raíz es una agencia de representación administrativa conforme a la Ley 39/2015; no es un despacho de abogados y no interviene en recursos judiciales.</p>

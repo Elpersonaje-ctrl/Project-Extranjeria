@@ -2,9 +2,14 @@
 # El primero de la lista es el más reciente / el que aparece primero.
 # Para publicar un artículo nuevo: 1) crea su archivo de texto en esta misma carpeta,
 # 2) escribe aquí el nombre exacto de ese archivo, en la línea que corresponda a su orden.
-reagrupacion-familiar-requisitos-2026.txt
-arraigo-familiar-menor-discapacidad-ue.txt
+visado-estudios-espana-guia-2026.txt
 arraigo-social-guia-2026.txt
-ley-memoria-democratica.txt
+arraigo-sociolaboral-guia-2026.txt
+reagrupacion-familiar-requisitos-2026.txt
+residencia-familiar-ciudadano-espanol-2026.txt
+residencia-trabajo-cuenta-ajena-2026.txt
+residencia-trabajo-cuenta-propia-2026.txt
+arraigo-familiar-menor-discapacidad-ue.txt
 modificacion-estudios-trabajo.txt
+ley-memoria-democratica.txt
 mercurio-citas-extranjeria.txt

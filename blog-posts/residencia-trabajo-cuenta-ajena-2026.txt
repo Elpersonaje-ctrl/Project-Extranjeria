@@ -1,0 +1,39 @@
+TITULO: Residencia y trabajo por cuenta ajena en 2026: guía completa
+CATEGORIA: trabajo
+CATEGORIA_VISIBLE: Residencia y Trabajo
+FECHA: 3 SEP 2026
+RESUMEN: La solicitud la presenta el empleador. Cómo se supera la situación nacional de empleo, qué debe cumplir la empresa y el trabajador, los plazos y los límites de la autorización inicial.
+---CONTENIDO---
+<p class="font-bold">La residencia y trabajo por cuenta ajena es la autorización para venir a España a trabajar como empleado de una empresa concreta. Lo primero que conviene saber es que la solicitud la presenta el empleador, no el trabajador.</p>
+
+<p>Está regulada en los artículos 72 a 81 del Reglamento de Extranjería (Real Decreto 1155/2024). La autorización inicial dura hasta un año, o lo que dure el contrato, y está limitada a una comunidad autónoma y a una ocupación; tras la primera renovación pasa a cuatro años sin límites territoriales ni de ocupación.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">La situación nacional de empleo</h4>
+
+<p>Antes de nada, el puesto debe superar la situación nacional de empleo: el principio de que, si hay personas disponibles en España para ese trabajo, tienen prioridad. Hay tres formas de superarla. La primera es que la ocupación figure en el <strong>Catálogo de Ocupaciones de Difícil Cobertura</strong> que el Servicio Público de Empleo Estatal publica cada trimestre por provincias. La segunda es el <strong>certificado de insuficiencia de demandantes</strong>: si la ocupación no está en el catálogo, el empleador presenta la oferta en el servicio público de empleo y, si tras gestionarla no aparecen candidatos adecuados, se emite ese certificado. La tercera son las <strong>excepciones del artículo 73</strong>, que eximen a determinados perfiles y situaciones de este filtro.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Qué debe cumplir el empleador</h4>
+
+<p>Estar al corriente de pagos con Hacienda y la Seguridad Social; disponer de solvencia y actividad reales, con volumen de negocio o patrimonio suficientes para el puesto y el salario pactado; no arrastrar sanciones graves o muy graves en materia laboral o de extranjería; y presentar un contrato firmado que garantice actividad continuada durante la vigencia de la autorización. Una empresa recién constituida o en pérdidas suele ser el punto donde se cae el expediente.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Qué debe cumplir el trabajador</h4>
+
+<p>No ser ciudadano de la Unión Europea; disponer de la titulación, cualificación o habilitación que exija la ocupación, homologada si la profesión está regulada; no tener antecedentes penales en España ni en los países de residencia de los últimos cinco años; no figurar como rechazable en el espacio Schengen; y no encontrarse de forma irregular en España, salvo que se acuda a la vía de la modificación desde otra situación.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">El contrato</h4>
+
+<p>Debe respetar el convenio colectivo del sector y, como mínimo, el salario mínimo interprofesional vigente. Puede ser indefinido o de duración determinada; si es temporal, la autorización durará lo que dure el contrato, con el tope del año inicial. La jornada, las condiciones y el puesto deben coincidir con lo declarado en el expediente.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Plazos</h4>
+
+<p>La resolución tiene un plazo de tres meses y el silencio es negativo. El requerimiento de subsanación da 10 días. Concedida la autorización, el trabajador dispone de un mes para pedir el visado de trabajo en el consulado; una vez en España, el empleador debe darle de alta en la Seguridad Social en un plazo de tres meses desde la entrada, y después hay un mes para expedir la TIE. No cumplir el alta en plazo puede dejar sin efecto la autorización.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Los límites de la autorización inicial</h4>
+
+<p>La primera autorización solo permite trabajar en esa ocupación y en esa comunidad autónoma. Para cambiar de trabajo o de región antes de renovar hace falta una modificación. En la primera renovación la autorización pasa a cuatro años y desaparecen los límites: se puede trabajar en cualquier ocupación y territorio, por cuenta ajena o propia.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Errores frecuentes de denegación</h4>
+
+<p>No superar la situación nacional de empleo; empleador insolvente o con deudas; sanciones previas de la empresa; despido reciente de otro trabajador en el mismo puesto; contrato incoherente con la actividad real; titulación no homologada para una profesión regulada; y antecedentes penales o certificado caducado.</p>
+
+<p>Este artículo es información general y no sustituye el análisis individual de tu caso. Si tienes una oferta de trabajo en España, o eres una empresa que quiere contratar personal extranjero, puedes solicitar un diagnóstico gratuito. Raíz es una agencia de representación administrativa conforme a la Ley 39/2015; no es un despacho de abogados y no interviene en recursos judiciales.</p>

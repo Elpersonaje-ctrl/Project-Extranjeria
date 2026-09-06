@@ -1,21 +1,41 @@
-TITULO: Cómo tramitar el Arraigo Social en 2026: Guía completa
+TITULO: Arraigo Social en 2026: guía completa de requisitos y procedimiento
 CATEGORIA: arraigo
 CATEGORIA_VISIBLE: Arraigo Social
-FECHA: 9 JUL 2026
-RESUMEN: Una explicación detallada y paso a paso sobre cómo cumplir los requisitos de permanencia de 2 años, arraigo e informe de integración en España.
+FECHA: 3 SEP 2026
+RESUMEN: Los 2 años de permanencia, las dos vías (vínculo familiar o Informe de Integración Social), los medios de vida, la documentación y los errores que retrasan o tumban el expediente.
 ---CONTENIDO---
-<p class="font-bold">El Arraigo Social sigue siendo la vía principal de regularización para los ciudadanos extranjeros que se encuentran en España sin un visado formal.</p>
+<p class="font-bold">El Arraigo Social es la vía de regularización pensada para quien ya lleva tiempo viviendo en España de forma irregular y ha echado raíces aquí. Concede una autorización de residencia y trabajo de un año, renovable, y abre el camino a la residencia de larga duración y a la nacionalidad.</p>
 
-<p>En este artículo analizamos cómo preparar un expediente sólido para la Oficina de Extranjería competente, evitando los desajustes habituales que demoran las resoluciones.</p>
+<p>Está regulado en los artículos 124 a 127 del Reglamento de Extranjería (Real Decreto 1155/2024), en vigor desde mayo de 2025. Conviene aclarar de entrada una duda muy habitual: solicitar el arraigo cumpliendo los requisitos no desencadena una orden de expulsión. La gran mayoría de las denegaciones se deben a errores del expediente, no al hecho de "hacerse visible" ante la Administración.</p>
 
-<h4 class="font-bold text-[#1c352d] mt-4">1. El Padrón Histórico: La base de tu tiempo</h4>
+<h4 class="font-bold text-[#1c352d] mt-4">Los dos años de permanencia continuada</h4>
 
-<p>Es indispensable demostrar una permanencia continuada de <strong>2 años en territorio español</strong>. Para ello, el Padrón Municipal de tu localidad es el documento prioritario. No obstante, si tienes vacíos en el padrón, podemos intentar acreditarlos con facturas médicas de atención en la red pública, envíos de dinero históricos o extractos bancarios que demuestren fehacientemente tu presencia física en el país.</p>
+<p>El primer requisito es acreditar <strong>2 años de permanencia continuada</strong> en España (no 3, como exigía el reglamento anterior). "Continuada" no significa no haber salido nunca, sino no haber tenido ausencias prolongadas que rompan esa continuidad. La prueba principal es el <strong>certificado de empadronamiento histórico</strong>, y se refuerza con todo documento que lleve tu nombre y una fecha: tarjeta sanitaria, informes médicos, matrículas, cursos, recibos. Un vacío de padrón en medio de esos dos años es el problema más frecuente de este trámite, por eso conviene empadronarse desde el primer día y en cada domicilio.</p>
 
-<h4 class="font-bold text-[#1c352d] mt-4">2. Requisitos de Contrato</h4>
+<h4 class="font-bold text-[#1c352d] mt-4">Las dos vías: vínculo familiar o Informe de Integración Social</h4>
 
-<p>El contrato debe garantizar al menos el Salario Mínimo Interprofesional (SMI) vigente en 2026. Además, el empleador no debe registrar deudas pendientes con la Seguridad Social ni con la Agencia Tributaria.</p>
+<p>Además de la permanencia y los medios de vida, hay que acreditar una de estas dos cosas. La <strong>primera vía</strong> es el vínculo familiar: si tienes cónyuge, pareja registrada o un familiar directo de primer grado en línea directa que sea extranjero con residencia legal en España, ese vínculo te exime del informe. Debe ser un familiar extranjero con residencia legal; el vínculo con un ciudadano español corresponde a otra vía distinta.</p>
 
-<h4 class="font-bold text-[#1c352d] mt-4">¿Por qué presentarlo de forma telemática?</h4>
+<p>La <strong>segunda vía</strong>, la que utiliza la mayoría, es el <strong>Informe de Integración Social</strong>, que emite la comunidad autónoma donde resides. En Galicia esta competencia está delegada en los servicios sociales del ayuntamiento. El informe valora el tiempo de permanencia, la vivienda, el conocimiento del idioma (castellano y también gallego en Galicia), la inserción en redes sociales del entorno, la participación en programas de integración y los medios de vida. Desde la reforma de 2026, la Administración dispone de un mes para emitirlo; si transcurre ese plazo sin informe, puedes acreditar la integración por cualquier otro medio de prueba admisible y presentar igualmente el arraigo.</p>
 
-<p>La presentación a través del canal Mercurio agiliza la recepción por parte de los funcionarios de Extranjería. En España, las solicitudes presentadas telemáticamente se integran directamente en el sistema de consulta evitando los cuellos de botella de las citas físicas tradicionales.</p>
+<h4 class="font-bold text-[#1c352d] mt-4">Los medios de vida</h4>
+
+<p>Hay que demostrar medios de vida equivalentes al 100% del IPREM, que en 2026 son 600 euros al mes. A diferencia del Arraigo Sociolaboral, aquí <strong>no es obligatorio un contrato de trabajo</strong>: los medios pueden acreditarse con un contrato, con recursos económicos propios o con el compromiso de un tercero solvente. Si acudes a la vía del vínculo familiar con un extranjero residente, ese familiar debe acreditar su propio 100% del IPREM más otro 100% por ti. Los ingresos deben ser estables y verificables, no un movimiento puntual poco antes de presentar.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Documentación</h4>
+
+<p>Pasaporte completo en vigor; certificado de empadronamiento histórico que cubra los dos años; certificado de antecedentes penales de tu país y de los países donde hayas residido los últimos cinco años, apostillado y traducido por traductor jurado; certificado de antecedentes penales de España; el Informe de Integración Social o la prueba del vínculo familiar junto con la residencia legal de ese familiar; acreditación de medios de vida; fotografía reciente; y justificante del pago de la tasa. Todo documento extranjero debe ir legalizado o apostillado y traducido.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Tramitación y plazos</h4>
+
+<p>El Arraigo Social se presenta cuando tienes toda la documentación lista, sin ventana de fechas, de forma telemática a través de la plataforma Mercurio. Si a Extranjería le falta algún documento, envía un requerimiento de subsanación con un plazo de 10 a 15 días hábiles que no se prorroga: dejarlo pasar es la causa más evitable de pérdida del expediente. Concedida la autorización, dispones de un mes para pedir cita y expedir la TIE.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Qué viene después</h4>
+
+<p>La autorización dura un año. Antes de que caduque se renueva o, más habitualmente, se modifica a una residencia y trabajo ordinaria de cuatro años. A los cinco años de residencia legal continuada puedes solicitar la residencia de larga duración. Y si eres nacional de un país iberoamericano, Andorra, Filipinas, Guinea Ecuatorial o Portugal, o acreditas origen sefardí, a los dos años de residencia legal puedes pedir la nacionalidad española.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Errores frecuentes de denegación</h4>
+
+<p>Vacíos de empadronamiento o padrón incoherente con el domicilio real; certificado de antecedentes penales caducado o sin apostillar; medios de vida insuficientes o mal acreditados; Informe de Integración desfavorable; documentos extranjeros sin legalizar ni traducir; y elegir mal la vía cuando el caso encajaba mejor en el Arraigo Sociolaboral o en el Arraigo Familiar.</p>
+
+<p>Este artículo es información general y no sustituye el análisis individual de tu caso. Si llevas dos años o más en España y quieres saber si tu expediente está listo, puedes solicitar un diagnóstico gratuito. Raíz es una agencia de representación administrativa conforme a la Ley 39/2015; no es un despacho de abogados y no interviene en recursos judiciales.</p>

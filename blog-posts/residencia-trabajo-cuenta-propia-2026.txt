@@ -1,0 +1,35 @@
+TITULO: Residencia y trabajo por cuenta propia en 2026: montar tu negocio en España
+CATEGORIA: trabajo
+CATEGORIA_VISIBLE: Residencia y Trabajo
+FECHA: 3 SEP 2026
+RESUMEN: Los cuatro requisitos, qué tiene que demostrar el plan de negocio, la inversión, el alta en autónomos y los plazos de la autorización de residencia por cuenta propia.
+---CONTENIDO---
+<p class="font-bold">La residencia y trabajo por cuenta propia es la autorización para venir a España a desarrollar tu propia actividad económica: abrir un negocio, ejercer una profesión como autónomo o trabajar como freelance.</p>
+
+<p>Está regulada en los artículos 82 a 87 del Reglamento de Extranjería (Real Decreto 1155/2024). La autorización inicial dura un año, limitada a una comunidad autónoma y a un sector o actividad; tras la primera renovación pasa a cuatro años sin límites, y puede compatibilizarse con el trabajo por cuenta ajena.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Los cuatro requisitos</h4>
+
+<p><strong>Normativa del sector:</strong> si la actividad necesita licencia de apertura, inscripción en un registro, o si la profesión exige colegiación, hay que acreditar que se cumple o que se está en condiciones de cumplir. <strong>Cualificación o experiencia</strong> suficiente para la actividad. <strong>Inversión suficiente y proyecto viable</strong>, que es el núcleo del trámite. Y <strong>alta en el régimen especial de trabajadores autónomos</strong> dentro de los tres meses siguientes a la entrada en España.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">El plan de negocio</h4>
+
+<p>El plan de negocio es lo que se valora. Debe demostrar, con números, qué actividad se va a desarrollar y dónde; cuánta inversión necesita el proyecto y de dónde sale el dinero, con la financiación acreditada y no simplemente prometida; la viabilidad económica, con previsión de ingresos y gastos, punto de equilibrio y rentabilidad esperada; y el empleo que el proyecto pueda crear o mantener, empezando por el del propio solicitante. En la práctica, la Administración suele pedir o valorar muy positivamente un informe de viabilidad emitido por una organización profesional de trabajadores autónomos. Un plan genérico, sin cifras reales del sector y la ciudad, es el principal motivo de denegación.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">La inversión</h4>
+
+<p>No hay una cifra fija en la ley: depende del tipo de proyecto. Lo común es que la inversión sea coherente con el proyecto y que el dinero esté disponible y justificado, mediante extractos, un préstamo concedido o la aportación formalizada de socios.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Documentación</h4>
+
+<p>Pasaporte completo; plan de negocio con su informe de viabilidad; acreditación de la inversión y de su origen; titulación o experiencia, homologadas si la actividad lo exige; licencias o solicitudes de licencia; colegiación o requisitos previos si la profesión está regulada; antecedentes penales de tu país y de los de residencia de los últimos cinco años, apostillados y traducidos; y certificado médico. Todo documento extranjero, legalizado o apostillado y traducido.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Plazos</h4>
+
+<p>La resolución tiene un plazo de tres meses y el silencio es negativo. Concedida la autorización, un mes para pedir el visado en el consulado; y en los tres meses siguientes a la entrada hay que darse de alta en autónomos y empezar la actividad. Después, un mes para la TIE. No darse de alta ni arrancar en plazo puede extinguir la autorización.</p>
+
+<h4 class="font-bold text-[#1c352d] mt-4">Errores frecuentes de denegación</h4>
+
+<p>Plan de negocio genérico o sin cifras reales; inversión insuficiente o sin origen justificado; actividad no viable según el informe; falta de cualificación o de colegiación exigida por la profesión; no darse de alta en autónomos ni iniciar la actividad en los tres meses; y antecedentes o certificados caducados.</p>
+
+<p>Este artículo es información general y no sustituye el análisis individual de tu caso. Si tienes un proyecto y quieres saber si es viable a efectos del trámite, puedes solicitar un diagnóstico gratuito. Raíz es una agencia de representación administrativa conforme a la Ley 39/2015; no es un despacho de abogados y no interviene en recursos judiciales.</p>
