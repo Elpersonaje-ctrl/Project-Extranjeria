@@ -177,8 +177,11 @@
                     <i class="fa-regular fa-folder-open text-[#bca374]"></i> Área de clientes
                 </a>
                 <div class="h-px bg-[#ded9cd] my-2"></div>
-                <a href="#" id="cta-reservar-mobile" target="_blank" class="w-full bg-[#1c352d] text-white py-3 rounded-lg text-center font-bold flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-calendar-check text-lg"></i> Reservar Cita
+                <a href="#diagnostico-gratis" id="cta-diagnostico-mobile" onclick="toggleMobileMenu(); navigateTo('home', 'diagnostico-gratis'); return false;" class="w-full bg-[#1c352d] text-white py-3 rounded-lg text-center font-bold flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-wand-magic-sparkles text-lg"></i> Evaluar mi caso gratis
+                </a>
+                <a href="#" id="cta-reservar-mobile" target="_blank" class="w-full border border-[#ded9cd] text-[#1c352d] py-3 rounded-lg text-center font-semibold text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-comments text-[#bca374]"></i> Prefiero hablar con un experto
                 </a>
             </nav>
         </div>
@@ -199,14 +202,14 @@
                             <span class="italic font-normal text-[#bca374]">que de los papeles nos encargamos nosotros.</span>
                         </h1>
                         <p class="text-base md:text-xl text-[#5c6460] leading-relaxed max-w-2xl">
-                            Trámites de extranjería en España <strong>online y sin citas previas</strong>. Evaluamos técnicamente tu viabilidad y radicamos tu expediente con rigurosidad para evitar demoras.
+                            Trámites de extranjería en España, <strong>100% online y sin citas previas</strong>. Nuestro sistema analiza tu caso frente a las 17 vías del Reglamento vigente, y nuestro equipo prepara y radica tu expediente con rigor para evitar demoras.
                         </p>
                         <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4">
                             <a href="#diagnostico-gratis" onclick="scrollToSection('diagnostico-gratis'); return false;" class="w-full sm:w-auto bg-[#1c352d] text-[#fbfaf7] hover:bg-[#2c4c41] px-8 py-4 rounded-lg font-bold text-center transition-all shadow-md">
                                 Evaluar mi caso gratis
                             </a>
                             <a href="#" id="cta-reservar-hero" target="_blank" class="w-full sm:w-auto border border-[#ded9cd] hover:border-[#1c352d] hover:bg-white text-[#1c352d] px-8 py-4 rounded-lg font-bold text-center transition-all flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-calendar-check text-lg text-[#bca374]"></i> Reservar Cita
+                                <i class="fa-solid fa-comments text-lg text-[#bca374]"></i> Prefiero hablar con un experto
                             </a>
                         </div>
                         <p class="text-xs text-[#5c6460] font-medium flex items-center gap-1.5 pt-2">
@@ -1035,9 +1038,9 @@
             <!-- Footer del Lector con CTA -->
             <div class="mt-12 bg-[#fcfbf9] border border-[#ded9cd] p-6 rounded-xl space-y-4">
                 <h4 class="font-serif-editorial text-lg font-bold text-[#1c352d]">¿Quieres tramitar este expediente en España?</h4>
-                <p class="text-xs text-[#5c6460]">Estudiamos la viabilidad técnica de tu caso de forma telemática e inmediata.</p>
-                <a id="modal-cta-reservar" href="#" target="_blank" class="w-full bg-[#1c352d] hover:bg-[#2c4c41] text-[#fbfaf7] py-3 rounded-lg text-center font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-calendar-check text-sm"></i> Reservar una consulta sobre este trámite
+                <p class="text-xs text-[#5c6460]">Nuestro sistema analiza tu caso gratis y, si decides avanzar, nos encargamos del expediente completo.</p>
+                <a id="modal-cta-reservar" href="#diagnostico-gratis" onclick="closeArticle(); navigateTo('home', 'diagnostico-gratis'); return false;" class="w-full bg-[#1c352d] hover:bg-[#2c4c41] text-[#fbfaf7] py-3 rounded-lg text-center font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-wand-magic-sparkles text-sm"></i> Evaluar mi caso gratis
                 </a>
             </div>
         </div>
@@ -1086,8 +1089,8 @@
                         <span>contacto@raizextranjeria.es</span>
                     </li>
                     <li class="flex items-center gap-2">
-                        <i class="fa-solid fa-video text-[#bca374]"></i>
-                        <span>Consultas por videollamada (Google Meet), previa reserva de cita</span>
+                        <i class="fa-solid fa-wand-magic-sparkles text-[#bca374]"></i>
+                        <span>Diagnóstico automático gratuito y seguimiento de tu expediente online</span>
                     </li>
                     <li class="flex items-center gap-2">
                         <i class="fa-solid fa-clock text-[#bca374]"></i>
@@ -1115,14 +1118,15 @@
 
     <script>
         // ============================================================
-        // CONFIGURACIÓN DE RESERVA DE CITA + PAGO
+        // CONFIGURACIÓN DE LA VIDEOLLAMADA CON UN EXPERTO (producto aparte)
         // ------------------------------------------------------------
-        // Pega aquí el enlace del flujo Stripe -> Cal.com/Calendly una
-        // vez configurado (ver Documentos-Internos/CRONOGRAMA_LANZAMIENTO.md,
-        // Semana 1-2). Mientras esté con el valor placeholder, el botón de
-        // reserva del diagnóstico no se muestra, y los demás CTAs "Reservar
-        // Cita" del sitio (header, menú móvil, hero, blog) llevan en su lugar
-        // al formulario de diagnóstico gratuito en #diagnostico-gratis.
+        // La asesoría por videollamada con una persona es un producto
+        // SECUNDARIO y opcional, no el camino por defecto del sitio. El CTA
+        // principal en toda la web es el diagnóstico automático gratuito
+        // (#diagnostico-gratis) y, tras él, "que Raíz lleve tu expediente".
+        // Solo los botones "Prefiero hablar con un experto" (menú móvil y
+        // hero) usan este enlace de Cal.com/Stripe. Mientras esté con el
+        // valor placeholder, esos botones llevan al diagnóstico gratuito.
         // ============================================================
         const BOOKING_URL = "https://cal.com/sen-j2f5bj/30min";
         const BOOKING_READY = !BOOKING_URL.includes("PEGA_AQUI");
@@ -1133,9 +1137,9 @@
         // y la URL cambia, actualizar aquí y en el webhook de Cal.com.
         const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyyKEjJafA1bN6M5UsMQ69DdbQAZ5Tdp7SsclvQr79RqrHc3Iegqpv7agL0A2tHbbJQ/exec";
 
-        // Todos los botones "Reservar Cita" del sitio apuntan a BOOKING_URL,
+        // Los botones "Prefiero hablar con un experto" apuntan a BOOKING_URL,
         // con fallback al formulario de diagnóstico gratuito si aún no está listo.
-        ['cta-reservar-mobile', 'cta-reservar-hero', 'modal-cta-reservar'].forEach(id => {
+        ['cta-reservar-mobile', 'cta-reservar-hero'].forEach(id => {
             const el = document.getElementById(id);
             if (!el) return;
             if (BOOKING_READY) {
@@ -1721,9 +1725,11 @@
             stampEl.style.borderColor = hayUrgente ? '#9c3c3c' : '#bca374';
 
             const bookingButtonHtml = !BOOKING_READY ? "" : `
-                <a href="${BOOKING_URL}" target="_blank" class="w-full bg-[#1c352d] text-white py-4 rounded-lg text-sm font-bold tracking-wide transition-all uppercase flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-calendar-check text-lg"></i> Reservar Cita y Pagar Consulta
-                </a>
+                <p class="text-[11px] text-[#5c6460] leading-relaxed text-center px-2">
+                    Recibe primero tu diagnóstico gratuito. Si prefieres revisar tu caso a fondo con una persona antes de decidir, la
+                    <a href="${BOOKING_URL}" target="_blank" class="underline font-semibold text-[#1c352d]">videollamada con un experto (39 €)</a>
+                    es un servicio aparte y opcional.
+                </p>
             `;
             bookingActionContainer.innerHTML = bookingButtonHtml;
         }
