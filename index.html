@@ -1131,7 +1131,7 @@
         // diagnóstico gratuito por correo (#diagnostico-gratis). Debe coincidir
         // con la implementación activa del script — si el script se redespliega
         // y la URL cambia, actualizar aquí y en el webhook de Cal.com.
-        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx72iXMe8SaCJqfZyuYC81BF_xWWsYXh54ZiCFnNZ6yd3BswWLw9HmfvnKDm4xZouwm/exec";
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyyKEjJafA1bN6M5UsMQ69DdbQAZ5Tdp7SsclvQr79RqrHc3Iegqpv7agL0A2tHbbJQ/exec";
 
         // Todos los botones "Reservar Cita" del sitio apuntan a BOOKING_URL,
         // con fallback al formulario de diagnóstico gratuito si aún no está listo.
@@ -1601,6 +1601,10 @@
               evaluar: (a) => a.solicitudPrevia === 'denegada' ? 'urgente' : null,
               motivo: () => 'Nos indicas que te denegaron una solicitud de residencia. Contra esa resolución cabe recurso de reposición (1 mes desde la notificación) o alzada — el plazo es corto y se pierde el derecho a recurrir si se deja pasar.',
               siguiente: () => 'Contacta cuanto antes: si ya pasó más de un mes desde la notificación, este camino puede haberse cerrado y hay que revisar alternativas.' },
+            { id: 'solicitud_en_tramite', nombre: 'Ya tienes una solicitud de residencia en trámite', base: 'Art. 54 y normas de procedimiento del RD 1155/2024 · Ley 39/2015',
+              evaluar: (a) => a.solicitudPrevia === 'en_tramite' ? 'posible' : null,
+              motivo: () => 'Nos dices que ya tienes una solicitud presentada y todavía sin resolver. Como regla general, una solicitud inicial presentada estando en situación regular y dentro de plazo prorroga tu situación legal en España hasta que haya resolución: no tienes que salir del país solo porque se cumplan tus 90 días de estancia o venza tu visado mientras esperas. Lleva siempre contigo el resguardo de presentación. Si la presentaste fuera de plazo o ya estando en situación irregular, esa prórroga puede no aplicarse y conviene revisarlo.',
+              siguiente: () => 'Confirmar con un asesor la fecha exacta en que se presentó y si fue en plazo. Recomendación general: no salgas de España hasta tener la tarjeta, porque volver a entrar solo con el resguardo puede dar problemas en frontera.' },
             { id: 'violencia_genero_trata', nombre: 'Autorización para víctimas de violencia de género o trata', base: 'Arts. 133-136 RD 1155/2024 · L.O. 1/2004',
               evaluar: (a) => a.cViolenciaGenero ? 'urgente' : null,
               motivo: () => 'Esta vía da una autorización provisional de oficio, casi inmediata, independientemente de tu situación migratoria actual — no hace falta esperar ningún plazo de años.',
