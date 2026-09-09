@@ -2,7 +2,7 @@ TITULO: Residencia de familiar de ciudadano español en 2026: el nuevo régimen
 CATEGORIA: familiar-espanol
 CATEGORIA_VISIBLE: Familiar de Español
 FECHA: 3 SEP 2026
-RESUMEN: Desde 2025 los familiares de españoles tienen un régimen propio, distinto del comunitario: autorización de 5 años y trabajo automático, pero con un requisito de medios económicos y dependencia que conviene entender bien.
+RESUMEN: Desde 2025 los familiares de españoles tienen un régimen propio, distinto del comunitario: autorización de 5 años y trabajo automático, pero con un requisito de dependencia económica para ascendientes e hijos mayores de 26 que conviene entender bien.
 ---CONTENIDO---
 <p class="font-bold">Hasta 2025, el familiar extranjero de un español se tramitaba como si fuera familiar de cualquier ciudadano de la Unión Europea. El nuevo Reglamento de Extranjería creó un régimen propio y separado para los familiares de españoles, con ventajas claras pero también con requisitos económicos nuevos.</p>
 
@@ -14,9 +14,11 @@ RESUMEN: Desde 2025 los familiares de españoles tienen un régimen propio, dist
 
 <h4 class="font-bold text-[#1c352d] mt-4">El requisito económico y la dependencia</h4>
 
-<p>Esta es la principal diferencia con el antiguo régimen comunitario. Ahora el ciudadano español debe acreditar medios económicos suficientes para sostener a la familia. Para ascendientes y para descendientes mayores de 26 años, además, hay que probar una dependencia económica real. Según la Instrucción de la Secretaría de Estado de Migraciones 2/2025, esa dependencia se acredita mediante envíos de dinero del español al familiar durante el último año, por un importe equivalente al menos al 51% del PIB per cápita del país de origen del familiar.</p>
+<p>Esta es la principal diferencia con el antiguo régimen comunitario. Para los <strong>ascendientes</strong> (padres o abuelos del español o de su cónyuge) y para los <strong>hijos mayores de 26 años</strong>, hay que probar que están "a cargo" del ciudadano español, es decir, que existe una dependencia económica real. El criterio no lo fija una instrucción interna, sino el propio Reglamento: el <strong>artículo 196 del Real Decreto 1155/2024</strong> establece una <strong>presunción</strong> de que el familiar está a cargo cuando, durante al menos el año anterior a la solicitud, ha recibido del español dinero por un importe equivalente como mínimo al 51% del PIB per cápita del país de origen del familiar, según datos del Banco Mundial.</p>
 
-<p>Conviene saber que este requisito de dependencia por remesas es objeto de recursos ante los tribunales, porque una parte de la doctrina considera que va más allá de lo que permite la ley. Para cónyuge, pareja e hijos menores de 26 años el criterio es más flexible: basta con acreditar que el español dispone de medios para mantener a la unidad familiar.</p>
+<p>Conviene entender bien qué es ese 51%: es una <strong>presunción, no un mínimo infranqueable</strong>. Quedarse por debajo no cierra la puerta; la oficina debe valorar además la situación personal, familiar y económica del familiar en su país. Y este criterio de las remesas está siendo recurrido ante los tribunales, porque una parte de la doctrina considera que va más allá de lo que permite la ley.</p>
+
+<p>Para el <strong>cónyuge, la pareja y los hijos menores de 26 años</strong>, en cambio, el Reglamento <strong>no exige</strong> acreditar medios económicos del ciudadano español ni probar dependencia. Basta el vínculo familiar y la convivencia, o la intención de convivir. Es una ventaja clara frente a la reagrupación familiar ordinaria, que sí impone un umbral de ingresos.</p>
 
 <h4 class="font-bold text-[#1c352d] mt-4">Convivencia y mantenimiento de la relación</h4>
 
@@ -24,7 +26,7 @@ RESUMEN: Desde 2025 los familiares de españoles tienen un régimen propio, dist
 
 <h4 class="font-bold text-[#1c352d] mt-4">Documentación</h4>
 
-<p>DNI del español y pasaporte del familiar; documento del vínculo (certificado de matrimonio, de pareja registrada, partida de nacimiento, libro de familia); para ascendientes y descendientes mayores de 26, los justificantes de las remesas del último año y la declaración de dependencia; acreditación de los medios del español; y prueba de la convivencia o de la relación. Todo documento extranjero, legalizado o apostillado y traducido por traductor jurado.</p>
+<p>DNI del español y pasaporte del familiar; documento del vínculo (certificado de matrimonio, de pareja registrada, partida de nacimiento, libro de familia); para ascendientes e hijos mayores de 26 años, los justificantes de las remesas del último año y la acreditación de la dependencia económica; y prueba de la convivencia o de la relación. Todo documento extranjero, legalizado o apostillado y traducido por traductor jurado.</p>
 
 <h4 class="font-bold text-[#1c352d] mt-4">Tiempos, coste y procedimiento</h4>
 
