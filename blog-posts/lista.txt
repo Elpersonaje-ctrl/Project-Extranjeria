@@ -11,5 +11,4 @@ residencia-trabajo-cuenta-ajena-2026.txt
 residencia-trabajo-cuenta-propia-2026.txt
 arraigo-familiar-menor-discapacidad-ue.txt
 modificacion-estudios-trabajo.txt
-ley-memoria-democratica.txt
 mercurio-citas-extranjeria.txt
