@@ -7,25 +7,25 @@
     
     <!-- Tailwind CSS para el diseño ágil y responsivo -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Fuentes de Google: Playfair Display (Serif Editorial), Inter (Legibilidad), Special Elite (Sello Retro) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+    <!-- Fuentes de Google: Fraunces (Serif Editorial), Inter (Legibilidad), Special Elite (Sello Retro) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Special+Elite&display=swap" rel="stylesheet">
     <!-- FontAwesome para iconos limpios de interfaz -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --forest: #1c352d;
-            --forest-light: #2c4c41;
-            --gold: #bca374;
-            --gold-light: #e6ddc4;
+            --forest: #1C3B30;
+            --forest-light: #2F5C4C;
+            --gold: #B8874B;
+            --gold-light: #D9AE72;
             --sand: #fbfaf7;
             --sand-dark: #f3efe6;
-            --ink: #1e2522;
-            --ink-soft: #5c6460;
-            --rule: #ded9cd;
-            --red-stamp: #9c3c3c;
-            --green-stamp: #2d6a4f;
-            --font-display: 'Playfair Display', Georgia, serif;
+            --ink: #211B14;
+            --ink-soft: #4A4032;
+            --rule: #C7B78E;
+            --red-stamp: #9C2B2B;
+            --green-stamp: #2B6E4E;
+            --font-display: 'Fraunces', Georgia, serif;
             --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
             --font-utility: 'Special Elite', 'Space Mono', monospace;
         }
@@ -128,60 +128,60 @@
 </head>
 <body class="grain-bg flex flex-col min-h-screen">
 
-    <header class="sticky top-0 z-40 bg-[#fbfaf7]/90 backdrop-blur-md border-b border-[#ded9cd]">
+    <header class="sticky top-0 z-40 bg-[#fbfaf7]/90 backdrop-blur-md border-b border-[#C7B78E]">
         <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
             <!-- Logotipo de Raíz -->
             <a href="#" onclick="navigateTo('home'); return false;" class="flex flex-col">
-                <span class="font-serif-editorial text-2xl font-bold tracking-tight text-[#1c352d]">Raíz</span>
-                <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#bca374] -mt-1">Asesores de Extranjería</span>
+                <span class="font-serif-editorial text-2xl font-bold tracking-tight text-[#1C3B30]">Raíz</span>
+                <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#B8874B] -mt-1">Asesores de Extranjería</span>
             </a>
             
             <!-- Navegación de Escritorio -->
             <nav class="hidden md:flex items-center gap-8">
-                <a href="#inicio" onclick="navigateTo('home', 'inicio'); return false;" class="nav-link text-sm font-medium text-[#5c6460] hover:text-[#1c352d] transition-colors">Inicio</a>
-                <a href="#servicios" onclick="navigateTo('home', 'servicios'); return false;" class="nav-link text-sm font-medium text-[#5c6460] hover:text-[#1c352d] transition-colors">Servicios</a>
-                <a href="#metodologia" onclick="navigateTo('home', 'metodologia'); return false;" class="nav-link text-sm font-medium text-[#5c6460] hover:text-[#1c352d] transition-colors">Nuestro Método</a>
-                <a href="#diagnostico-gratis" onclick="navigateTo('home', 'diagnostico-gratis'); return false;" class="nav-link text-sm font-medium text-[#5c6460] hover:text-[#1c352d] transition-colors">Diagnóstico Gratis</a>
-                <a href="#blog" onclick="navigateTo('blog'); return false;" class="nav-link text-sm font-medium text-[#5c6460] hover:text-[#1c352d] transition-colors flex items-center gap-1.5">
-                    Blog <span class="bg-[#e6ddc4] text-[#1c352d] font-stamp text-[9px] px-1.5 py-0.5 rounded-full">Recursos</span>
+                <a href="#inicio" onclick="navigateTo('home', 'inicio'); return false;" class="nav-link text-sm font-medium text-[#4A4032] hover:text-[#1C3B30] transition-colors">Inicio</a>
+                <a href="#servicios" onclick="navigateTo('home', 'servicios'); return false;" class="nav-link text-sm font-medium text-[#4A4032] hover:text-[#1C3B30] transition-colors">Servicios</a>
+                <a href="#metodologia" onclick="navigateTo('home', 'metodologia'); return false;" class="nav-link text-sm font-medium text-[#4A4032] hover:text-[#1C3B30] transition-colors">Nuestro Método</a>
+                <a href="#diagnostico-gratis" onclick="navigateTo('home', 'diagnostico-gratis'); return false;" class="nav-link text-sm font-medium text-[#4A4032] hover:text-[#1C3B30] transition-colors">Diagnóstico Gratis</a>
+                <a href="#blog" onclick="navigateTo('blog'); return false;" class="nav-link text-sm font-medium text-[#4A4032] hover:text-[#1C3B30] transition-colors flex items-center gap-1.5">
+                    Blog <span class="bg-[#D9AE72] text-[#1C3B30] font-stamp text-[9px] px-1.5 py-0.5 rounded-full">Recursos</span>
                 </a>
             </nav>
 
             <!-- Acciones Primarias -->
             <div class="hidden md:flex items-center gap-4">
-                <a href="https://app.raizextranjeria.es" class="text-xs font-semibold uppercase tracking-wider text-[#5c6460] hover:text-[#1c352d] transition-colors flex items-center gap-1.5">
+                <a href="https://app.raizextranjeria.es" class="text-xs font-semibold uppercase tracking-wider text-[#4A4032] hover:text-[#1C3B30] transition-colors flex items-center gap-1.5">
                     <i class="fa-regular fa-folder-open"></i> Área de clientes
                 </a>
-                <a href="#diagnostico-gratis" onclick="navigateTo('home', 'diagnostico-gratis'); return false;" class="border border-[#1c352d] text-[#1c352d] hover:bg-[#1c352d] hover:text-[#fbfaf7] px-4 py-2 rounded text-xs font-semibold uppercase tracking-wider transition-all">
+                <a href="#diagnostico-gratis" onclick="navigateTo('home', 'diagnostico-gratis'); return false;" class="border border-[#1C3B30] text-[#1C3B30] hover:bg-[#1C3B30] hover:text-[#fbfaf7] px-4 py-2 rounded text-xs font-semibold uppercase tracking-wider transition-all">
                     Diagnóstico Gratis
                 </a>
             </div>
 
             <!-- Botón de Menú Móvil -->
-            <button onclick="toggleMobileMenu()" class="md:hidden text-[#1c352d] focus:outline-none" aria-label="Abrir Menú">
+            <button onclick="toggleMobileMenu()" class="md:hidden text-[#1C3B30] focus:outline-none" aria-label="Abrir Menú">
                 <i class="fa-solid fa-bars-staggered text-2xl"></i>
             </button>
         </div>
 
         <!-- Menú Móvil Desplegable -->
-        <div id="mobile-menu" class="hidden md:hidden bg-[#f3efe6] border-b border-[#ded9cd] px-6 py-6 transition-all">
+        <div id="mobile-menu" class="hidden md:hidden bg-[#f3efe6] border-b border-[#C7B78E] px-6 py-6 transition-all">
             <nav class="flex flex-col gap-4">
-                <a href="#inicio" onclick="toggleMobileMenu(); navigateTo('home', 'inicio'); return false;" class="text-base font-semibold text-[#1c352d]">Inicio</a>
-                <a href="#servicios" onclick="toggleMobileMenu(); navigateTo('home', 'servicios'); return false;" class="text-base font-semibold text-[#1c352d]">Servicios</a>
-                <a href="#metodologia" onclick="toggleMobileMenu(); navigateTo('home', 'metodologia'); return false;" class="text-base font-semibold text-[#1c352d]">Nuestro Método</a>
-                <a href="#blog" onclick="toggleMobileMenu(); navigateTo('blog'); return false;" class="text-base font-semibold text-[#1c352d] flex items-center gap-2">
-                    Blog de Extranjería <span class="bg-[#e6ddc4] text-[#1c352d] font-stamp text-[9px] px-2 py-0.5 rounded">RECURSOS</span>
+                <a href="#inicio" onclick="toggleMobileMenu(); navigateTo('home', 'inicio'); return false;" class="text-base font-semibold text-[#1C3B30]">Inicio</a>
+                <a href="#servicios" onclick="toggleMobileMenu(); navigateTo('home', 'servicios'); return false;" class="text-base font-semibold text-[#1C3B30]">Servicios</a>
+                <a href="#metodologia" onclick="toggleMobileMenu(); navigateTo('home', 'metodologia'); return false;" class="text-base font-semibold text-[#1C3B30]">Nuestro Método</a>
+                <a href="#blog" onclick="toggleMobileMenu(); navigateTo('blog'); return false;" class="text-base font-semibold text-[#1C3B30] flex items-center gap-2">
+                    Blog de Extranjería <span class="bg-[#D9AE72] text-[#1C3B30] font-stamp text-[9px] px-2 py-0.5 rounded">RECURSOS</span>
                 </a>
-                <a href="#diagnostico-gratis" onclick="toggleMobileMenu(); navigateTo('home', 'diagnostico-gratis'); return false;" class="text-base font-semibold text-[#bca374]">Diagnóstico Gratis por Correo</a>
-                <a href="https://app.raizextranjeria.es" class="text-base font-semibold text-[#1c352d] flex items-center gap-2">
-                    <i class="fa-regular fa-folder-open text-[#bca374]"></i> Área de clientes
+                <a href="#diagnostico-gratis" onclick="toggleMobileMenu(); navigateTo('home', 'diagnostico-gratis'); return false;" class="text-base font-semibold text-[#B8874B]">Diagnóstico Gratis por Correo</a>
+                <a href="https://app.raizextranjeria.es" class="text-base font-semibold text-[#1C3B30] flex items-center gap-2">
+                    <i class="fa-regular fa-folder-open text-[#B8874B]"></i> Área de clientes
                 </a>
-                <div class="h-px bg-[#ded9cd] my-2"></div>
-                <a href="#diagnostico-gratis" id="cta-diagnostico-mobile" onclick="toggleMobileMenu(); navigateTo('home', 'diagnostico-gratis'); return false;" class="w-full bg-[#1c352d] text-white py-3 rounded-lg text-center font-bold flex items-center justify-center gap-2">
+                <div class="h-px bg-[#C7B78E] my-2"></div>
+                <a href="#diagnostico-gratis" id="cta-diagnostico-mobile" onclick="toggleMobileMenu(); navigateTo('home', 'diagnostico-gratis'); return false;" class="w-full bg-[#1C3B30] text-white py-3 rounded-lg text-center font-bold flex items-center justify-center gap-2">
                     <i class="fa-solid fa-wand-magic-sparkles text-lg"></i> Evaluar mi caso gratis
                 </a>
-                <a href="#" id="cta-reservar-mobile" target="_blank" class="w-full border border-[#ded9cd] text-[#1c352d] py-3 rounded-lg text-center font-semibold text-sm flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-comments text-[#bca374]"></i> Prefiero hablar con un experto
+                <a href="#" id="cta-reservar-mobile" target="_blank" class="w-full border border-[#C7B78E] text-[#1C3B30] py-3 rounded-lg text-center font-semibold text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-comments text-[#B8874B]"></i> Prefiero hablar con un experto
                 </a>
             </nav>
         </div>
@@ -193,27 +193,27 @@
         <div id="home-view" class="page-view">
             
             <!-- HERO SECTION -->
-            <section id="inicio" class="relative bg-[#f3efe6] py-16 md:py-28 overflow-hidden border-b border-[#ded9cd]">
+            <section id="inicio" class="relative bg-[#f3efe6] py-16 md:py-28 overflow-hidden border-b border-[#C7B78E]">
                 <div class="max-w-6xl mx-auto px-6 relative z-10 grid grid-cols-1 items-center">
                     <div class="space-y-6 max-w-3xl mx-auto">
-                        <span class="font-stamp text-xs text-[#bca374] uppercase tracking-[0.2em] block">Asesoría migratoria · España</span>
-                        <h1 class="font-serif-editorial text-4xl md:text-6xl text-[#1c352d] leading-[1.1] font-bold">
+                        <span class="font-stamp text-xs text-[#B8874B] uppercase tracking-[0.2em] block">Asesoría migratoria · España</span>
+                        <h1 class="font-serif-editorial text-4xl md:text-6xl text-[#1C3B30] leading-[1.1] font-bold">
                             Haz lo mejor que puedas, <br>
-                            <span class="italic font-normal text-[#bca374]">que de los papeles nos encargamos nosotros.</span>
+                            <span class="italic font-normal text-[#B8874B]">que de los papeles nos encargamos nosotros.</span>
                         </h1>
-                        <p class="text-base md:text-xl text-[#5c6460] leading-relaxed max-w-2xl">
+                        <p class="text-base md:text-xl text-[#4A4032] leading-relaxed max-w-2xl">
                             Trámites de extranjería en España, <strong>100% online y sin citas previas</strong>. Nuestro sistema analiza tu caso frente a las 17 vías del Reglamento vigente, y nuestro equipo prepara y radica tu expediente con rigor para evitar demoras.
                         </p>
                         <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4">
-                            <a href="#diagnostico-gratis" onclick="scrollToSection('diagnostico-gratis'); return false;" class="w-full sm:w-auto bg-[#1c352d] text-[#fbfaf7] hover:bg-[#2c4c41] px-8 py-4 rounded-lg font-bold text-center transition-all shadow-md">
+                            <a href="#diagnostico-gratis" onclick="scrollToSection('diagnostico-gratis'); return false;" class="w-full sm:w-auto bg-[#1C3B30] text-[#fbfaf7] hover:bg-[#2F5C4C] px-8 py-4 rounded-lg font-bold text-center transition-all shadow-md">
                                 Evaluar mi caso gratis
                             </a>
-                            <a href="#" id="cta-reservar-hero" target="_blank" class="w-full sm:w-auto border border-[#ded9cd] hover:border-[#1c352d] hover:bg-white text-[#1c352d] px-8 py-4 rounded-lg font-bold text-center transition-all flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-comments text-lg text-[#bca374]"></i> Prefiero hablar con un experto
+                            <a href="#" id="cta-reservar-hero" target="_blank" class="w-full sm:w-auto border border-[#C7B78E] hover:border-[#1C3B30] hover:bg-white text-[#1C3B30] px-8 py-4 rounded-lg font-bold text-center transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-comments text-lg text-[#B8874B]"></i> Prefiero hablar con un experto
                             </a>
                         </div>
-                        <p class="text-xs text-[#5c6460] font-medium flex items-center gap-1.5 pt-2">
-                            <i class="fa-solid fa-circle-check text-[#2d6a4f]"></i> Estudio previo de viabilidad sin compromiso
+                        <p class="text-xs text-[#4A4032] font-medium flex items-center gap-1.5 pt-2">
+                            <i class="fa-solid fa-circle-check text-[#2B6E4E]"></i> Estudio previo de viabilidad sin compromiso
                         </p>
                     </div>
                 </div>
@@ -222,53 +222,53 @@
             <!-- PROBLEMA / SOLUCIÓN -->
             <section class="py-20 bg-white">
                 <div class="max-w-6xl mx-auto px-6">
-                    <span class="font-stamp text-xs text-[#bca374] uppercase tracking-[0.2em] block mb-2">Tu expediente, hoy</span>
-                    <h2 class="font-serif-editorial text-3xl md:text-5xl text-[#1c352d] font-bold leading-tight">¿Cansado de la burocracia y las esperas?</h2>
-                    <p class="text-[#5c6460] mt-2 mb-12 max-w-xl text-base md:text-lg">Así es como se siente tramitar de forma presencial. Así es como lo resolvemos nosotros de forma ágil.</p>
+                    <span class="font-stamp text-xs text-[#B8874B] uppercase tracking-[0.2em] block mb-2">Tu expediente, hoy</span>
+                    <h2 class="font-serif-editorial text-3xl md:text-5xl text-[#1C3B30] font-bold leading-tight">¿Cansado de la burocracia y las esperas?</h2>
+                    <p class="text-[#4A4032] mt-2 mb-12 max-w-xl text-base md:text-lg">Así es como se siente tramitar de forma presencial. Así es como lo resolvemos nosotros de forma ágil.</p>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <!-- Tarjeta 1 -->
-                        <div class="border border-[#ded9cd] rounded-xl flex flex-col justify-between overflow-hidden bg-white shadow-sm hover:shadow-md transition-all duration-300">
+                        <div class="border border-[#C7B78E] rounded-xl flex flex-col justify-between overflow-hidden bg-white shadow-sm hover:shadow-md transition-all duration-300">
                             <div class="p-8 relative">
-                                <span class="font-stamp text-[10px] text-[#bca374] block mb-3">EXPEDIENTE 01</span>
-                                <h3 class="font-serif-editorial text-xl font-bold text-[#1c352d] mb-3">Citas Imposibles</h3>
-                                <p class="text-sm text-[#5c6460] leading-relaxed">Conseguir cita previa presencial en las Oficinas de Extranjería es sumamente complejo. Semanas de incertidumbre para una gestión.</p>
-                                <span class="absolute top-4 right-4 rubber-stamp text-[9px] text-[#9c3c3c] border-[#9c3c3c] px-1.5 py-0.5 opacity-25 rotate-[-8deg] font-bold">Demorado</span>
+                                <span class="font-stamp text-[10px] text-[#B8874B] block mb-3">EXPEDIENTE 01</span>
+                                <h3 class="font-serif-editorial text-xl font-bold text-[#1C3B30] mb-3">Citas Imposibles</h3>
+                                <p class="text-sm text-[#4A4032] leading-relaxed">Conseguir cita previa presencial en las Oficinas de Extranjería es sumamente complejo. Semanas de incertidumbre para una gestión.</p>
+                                <span class="absolute top-4 right-4 rubber-stamp text-[9px] text-[#9C2B2B] border-[#9C2B2B] px-1.5 py-0.5 opacity-80 rotate-[-8deg] font-bold">Demorado</span>
                             </div>
-                            <div class="bg-[#fcfbf9] border-t border-[#ded9cd] p-8 relative">
-                                <span class="font-stamp text-[9px] text-[#bca374] uppercase tracking-wider block mb-2">Solución Raíz</span>
-                                <p class="text-sm text-[#1c352d] font-medium leading-relaxed">Radicamos al instante por el canal telemático profesional Mercurio. Sin esperas absurdas.</p>
-                                <span class="absolute top-4 right-4 rubber-stamp text-[9px] text-[#2d6a4f] border-[#2d6a4f] px-1.5 py-0.5 opacity-40 rotate-[6deg] font-bold">Radicado</span>
+                            <div class="bg-[#fcfbf9] border-t border-[#C7B78E] p-8 relative">
+                                <span class="font-stamp text-[9px] text-[#B8874B] uppercase tracking-wider block mb-2">Solución Raíz</span>
+                                <p class="text-sm text-[#1C3B30] font-medium leading-relaxed">Radicamos al instante por el canal telemático profesional Mercurio. Sin esperas absurdas.</p>
+                                <span class="absolute top-4 right-4 rubber-stamp text-[9px] text-[#2B6E4E] border-[#2B6E4E] px-1.5 py-0.5 opacity-85 rotate-[6deg] font-bold">Radicado</span>
                             </div>
                         </div>
 
                         <!-- Tarjeta 2 -->
-                        <div class="border border-[#ded9cd] rounded-xl flex flex-col justify-between overflow-hidden bg-white shadow-sm hover:shadow-md transition-all duration-300">
+                        <div class="border border-[#C7B78E] rounded-xl flex flex-col justify-between overflow-hidden bg-white shadow-sm hover:shadow-md transition-all duration-300">
                             <div class="p-8 relative">
-                                <span class="font-stamp text-[10px] text-[#bca374] block mb-3">EXPEDIENTE 02</span>
-                                <h3 class="font-serif-editorial text-xl font-bold text-[#1c352d] mb-3">Riesgo de Errores</h3>
-                                <p class="text-sm text-[#5c6460] leading-relaxed">Un documento mal traducido, una apostilla vencida o un formulario incorrecto detiene tu trámite y alarga tu tiempo de espera.</p>
-                                <span class="absolute top-4 right-4 rubber-stamp text-[9px] text-[#9c3c3c] border-[#9c3c3c] px-1.5 py-0.5 opacity-25 rotate-[-8deg] font-bold">Faltantes</span>
+                                <span class="font-stamp text-[10px] text-[#B8874B] block mb-3">EXPEDIENTE 02</span>
+                                <h3 class="font-serif-editorial text-xl font-bold text-[#1C3B30] mb-3">Riesgo de Errores</h3>
+                                <p class="text-sm text-[#4A4032] leading-relaxed">Un documento mal traducido, una apostilla vencida o un formulario incorrecto detiene tu trámite y alarga tu tiempo de espera.</p>
+                                <span class="absolute top-4 right-4 rubber-stamp text-[9px] text-[#9C2B2B] border-[#9C2B2B] px-1.5 py-0.5 opacity-80 rotate-[-8deg] font-bold">Faltantes</span>
                             </div>
-                            <div class="bg-[#fcfbf9] border-t border-[#ded9cd] p-8 relative">
-                                <span class="font-stamp text-[9px] text-[#bca374] uppercase tracking-wider block mb-2">Solución Raíz</span>
-                                <p class="text-sm text-[#1c352d] font-medium leading-relaxed">Doble auditoría legal de tu documentación antes de su envío telemático para corregir desajustes.</p>
-                                <span class="absolute top-4 right-4 rubber-stamp text-[9px] text-[#2d6a4f] border-[#2d6a4f] px-1.5 py-0.5 opacity-40 rotate-[6deg] font-bold">Revisado</span>
+                            <div class="bg-[#fcfbf9] border-t border-[#C7B78E] p-8 relative">
+                                <span class="font-stamp text-[9px] text-[#B8874B] uppercase tracking-wider block mb-2">Solución Raíz</span>
+                                <p class="text-sm text-[#1C3B30] font-medium leading-relaxed">Doble auditoría legal de tu documentación antes de su envío telemático para corregir desajustes.</p>
+                                <span class="absolute top-4 right-4 rubber-stamp text-[9px] text-[#2B6E4E] border-[#2B6E4E] px-1.5 py-0.5 opacity-85 rotate-[6deg] font-bold">Revisado</span>
                             </div>
                         </div>
 
                         <!-- Tarjeta 3 -->
-                        <div class="border border-[#ded9cd] rounded-xl flex flex-col justify-between overflow-hidden bg-white shadow-sm hover:shadow-md transition-all duration-300">
+                        <div class="border border-[#C7B78E] rounded-xl flex flex-col justify-between overflow-hidden bg-white shadow-sm hover:shadow-md transition-all duration-300">
                             <div class="p-8 relative">
-                                <span class="font-stamp text-[10px] text-[#bca374] block mb-3">EXPEDIENTE 03</span>
-                                <h3 class="font-serif-editorial text-xl font-bold text-[#1c352d] mb-3">Presupuestos Opacos</h3>
-                                <p class="text-sm text-[#5c6460] leading-relaxed">Costes imprevistos, contratos con letra pequeña y total desinformación sobre el estado real de tu solicitud.</p>
-                                <span class="absolute top-4 right-4 rubber-stamp text-[9px] text-[#9c3c3c] border-[#9c3c3c] px-1.5 py-0.5 opacity-25 rotate-[-8deg] font-bold">Confusión</span>
+                                <span class="font-stamp text-[10px] text-[#B8874B] block mb-3">EXPEDIENTE 03</span>
+                                <h3 class="font-serif-editorial text-xl font-bold text-[#1C3B30] mb-3">Presupuestos Opacos</h3>
+                                <p class="text-sm text-[#4A4032] leading-relaxed">Costes imprevistos, contratos con letra pequeña y total desinformación sobre el estado real de tu solicitud.</p>
+                                <span class="absolute top-4 right-4 rubber-stamp text-[9px] text-[#9C2B2B] border-[#9C2B2B] px-1.5 py-0.5 opacity-80 rotate-[-8deg] font-bold">Confusión</span>
                             </div>
-                            <div class="bg-[#fcfbf9] border-t border-[#ded9cd] p-8 relative">
-                                <span class="font-stamp text-[9px] text-[#bca374] uppercase tracking-wider block mb-2">Solución Raíz</span>
-                                <p class="text-sm text-[#1c352d] font-medium leading-relaxed">Presupuesto cerrado con hitos claros según avanza la preparación de tu expediente.</p>
-                                <span class="absolute top-4 right-4 rubber-stamp text-[9px] text-[#2d6a4f] border-[#2d6a4f] px-1.5 py-0.5 opacity-40 rotate-[6deg] font-bold">Transparente</span>
+                            <div class="bg-[#fcfbf9] border-t border-[#C7B78E] p-8 relative">
+                                <span class="font-stamp text-[9px] text-[#B8874B] uppercase tracking-wider block mb-2">Solución Raíz</span>
+                                <p class="text-sm text-[#1C3B30] font-medium leading-relaxed">Presupuesto cerrado con hitos claros según avanza la preparación de tu expediente.</p>
+                                <span class="absolute top-4 right-4 rubber-stamp text-[9px] text-[#2B6E4E] border-[#2B6E4E] px-1.5 py-0.5 opacity-85 rotate-[6deg] font-bold">Transparente</span>
                             </div>
                         </div>
                     </div>
@@ -276,64 +276,64 @@
             </section>
 
             <!-- SERVICIOS -->
-            <section id="servicios" class="py-20 bg-[#fbfaf7] border-t border-b border-[#ded9cd]">
+            <section id="servicios" class="py-20 bg-[#fbfaf7] border-t border-b border-[#C7B78E]">
                 <div class="max-w-6xl mx-auto px-6">
                     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
                         <div>
-                            <span class="font-stamp text-xs text-[#bca374] uppercase tracking-[0.2em] block mb-2">Qué tramitamos</span>
-                            <h2 class="font-serif-editorial text-3xl md:text-5xl text-[#1c352d] font-bold">Trámites Especializados</h2>
+                            <span class="font-stamp text-xs text-[#B8874B] uppercase tracking-[0.2em] block mb-2">Qué tramitamos</span>
+                            <h2 class="font-serif-editorial text-3xl md:text-5xl text-[#1C3B30] font-bold">Trámites Especializados</h2>
                         </div>
-                        <p class="text-[#5c6460] max-w-md text-sm md:text-base leading-relaxed">
+                        <p class="text-[#4A4032] max-w-md text-sm md:text-base leading-relaxed">
                             Nuestra especialidad es resolver de forma telemática casos de residencia y de nacionalidad en España de manera clara y estructurada.
                         </p>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <!-- Arraigos -->
-                        <div class="bg-white border border-[#ded9cd] p-8 rounded-xl relative hover:border-[#bca374] transition-all">
-                            <svg class="w-10 h-10 text-[#bca374] mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <div class="bg-white border border-[#C7B78E] p-8 rounded-xl relative hover:border-[#B8874B] transition-all">
+                            <svg class="w-10 h-10 text-[#B8874B] mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M12 3c3.2 2.4 5 6.4 5 10 0 3.6-2.2 7-5 8-2.8-1-5-4.4-5-8 0-3.6 1.8-7.6 5-10z" fill="currentColor" fill-opacity="0.15"/>
                                 <path d="M12 6v14" stroke-width="0.8" opacity="0.5"/>
                             </svg>
-                            <h3 class="font-serif-editorial text-xl font-bold text-[#1c352d] mb-3">Arraigos</h3>
-                            <p class="text-xs text-[#5c6460] leading-relaxed">
+                            <h3 class="font-serif-editorial text-xl font-bold text-[#1C3B30] mb-3">Arraigos</h3>
+                            <p class="text-xs text-[#4A4032] leading-relaxed">
                                 Tramitamos Arraigo Social, Laboral, Familiar o para la Formación. Estudiamos la vía óptima según tu tiempo y la legislación de extranjería.
                             </p>
                         </div>
 
                         <!-- Nacionalidad -->
-                        <div class="bg-white border border-[#ded9cd] p-8 rounded-xl relative hover:border-[#bca374] transition-all">
-                            <svg class="w-10 h-10 text-[#bca374] mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <div class="bg-white border border-[#C7B78E] p-8 rounded-xl relative hover:border-[#B8874B] transition-all">
+                            <svg class="w-10 h-10 text-[#B8874B] mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M7 8.5c0-2.5 2.3-4.5 5-4.5s5 2 5 4.5c-1.6 1-3.2 1.4-5 1.4s-3.4-.4-5-1.4z" fill="currentColor" fill-opacity="0.15"/>
                                 <path d="M8.5 9.6c-.8 3.6.2 8.4 3.5 11.4 3.3-3 4.3-7.8 3.5-11.4"/>
                                 <path d="M9 6.7c1.9-1 4.1-1 6 0" stroke-width="0.8" opacity="0.5"/>
                             </svg>
-                            <h3 class="font-serif-editorial text-xl font-bold text-[#1c352d] mb-3">Nacionalidad</h3>
-                            <p class="text-xs text-[#5c6460] leading-relaxed">
+                            <h3 class="font-serif-editorial text-xl font-bold text-[#1C3B30] mb-3">Nacionalidad</h3>
+                            <p class="text-xs text-[#4A4032] leading-relaxed">
                                 Solicitudes de nacionalidad española por residencia para ciudadanos iberoamericanos.
                             </p>
                         </div>
 
                         <!-- Modificación -->
-                        <div class="bg-white border border-[#ded9cd] p-8 rounded-xl relative hover:border-[#bca374] transition-all">
-                            <svg class="w-10 h-10 text-[#bca374] mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <div class="bg-white border border-[#C7B78E] p-8 rounded-xl relative hover:border-[#B8874B] transition-all">
+                            <svg class="w-10 h-10 text-[#B8874B] mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <ellipse cx="12" cy="12" rx="8.5" ry="4.5" transform="rotate(-25 12 12)" fill="currentColor" fill-opacity="0.15"/>
                                 <circle cx="9" cy="13.5" r="1.8" fill="currentColor" stroke="none"/>
                             </svg>
-                            <h3 class="font-serif-editorial text-xl font-bold text-[#1c352d] mb-3">Estudiantes</h3>
-                            <p class="text-xs text-[#5c6460] leading-relaxed">
+                            <h3 class="font-serif-editorial text-xl font-bold text-[#1C3B30] mb-3">Estudiantes</h3>
+                            <p class="text-xs text-[#4A4032] leading-relaxed">
                                 Modificación de estancia por estudios a autorización de residencia y trabajo por cuenta ajena o propia para egresados de universidades españolas.
                             </p>
                         </div>
 
                         <!-- Renovaciones -->
-                        <div class="bg-white border border-[#ded9cd] p-8 rounded-xl relative hover:border-[#bca374] transition-all">
-                            <svg class="w-10 h-10 text-[#bca374] mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <div class="bg-white border border-[#C7B78E] p-8 rounded-xl relative hover:border-[#B8874B] transition-all">
+                            <svg class="w-10 h-10 text-[#B8874B] mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M4.5 15.5c1-6.5 6.5-10.5 14-9.5-1.8 7.2-8 12.5-14.5 12-.2-.9-.1-1.7.5-2.5z" fill="currentColor" fill-opacity="0.15"/>
                                 <path d="M6.5 14c2-4.3 5.8-7.3 9.5-8.3" stroke-width="0.8" opacity="0.5"/>
                             </svg>
-                            <h3 class="font-serif-editorial text-xl font-bold text-[#1c352d] mb-3">Renovaciones</h3>
-                            <p class="text-xs text-[#5c6460] leading-relaxed">
+                            <h3 class="font-serif-editorial text-xl font-bold text-[#1C3B30] mb-3">Renovaciones</h3>
+                            <p class="text-xs text-[#4A4032] leading-relaxed">
                                 Presentación telemática ágil de prórrogas y modificaciones para evitar caer en situación de irregularidad sobrevenida.
                             </p>
                         </div>
@@ -342,15 +342,15 @@
             </section>
 
             <!-- METODOLOGÍA -->
-            <section id="metodologia" class="py-20 bg-[#1c352d] text-[#fbfaf7]">
+            <section id="metodologia" class="py-20 bg-[#1C3B30] text-[#fbfaf7]">
                 <div class="max-w-6xl mx-auto px-6 text-center">
-                    <span class="font-stamp text-xs text-[#bca374] uppercase tracking-[0.2em] block mb-2">Cómo trabajamos</span>
+                    <span class="font-stamp text-xs text-[#B8874B] uppercase tracking-[0.2em] block mb-2">Cómo trabajamos</span>
                     <h2 class="font-serif-editorial text-3xl md:text-5xl text-white font-bold mb-16">Método de Viabilidad Rigurosa</h2>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
                         <!-- Paso 1 -->
                         <div class="space-y-4">
-                            <div class="w-16 h-16 rounded-full border border-dashed border-[#bca374] flex items-center justify-center mx-auto text-[#bca374]">
+                            <div class="w-16 h-16 rounded-full border border-dashed border-[#B8874B] flex items-center justify-center mx-auto text-[#B8874B]">
                                 <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                     <path d="M12 4.5c2.8 2.3 4.3 5.6 4.3 8.5 0 3.1-1.9 5.9-4.3 6.8-2.4-.9-4.3-3.7-4.3-6.8 0-2.9 1.5-6.2 4.3-8.5z" fill="currentColor" fill-opacity="0.2"/>
                                 </svg>
@@ -363,7 +363,7 @@
 
                         <!-- Paso 2 -->
                         <div class="space-y-4">
-                            <div class="w-16 h-16 rounded-full border border-dashed border-[#bca374] flex items-center justify-center mx-auto text-[#bca374]">
+                            <div class="w-16 h-16 rounded-full border border-dashed border-[#B8874B] flex items-center justify-center mx-auto text-[#B8874B]">
                                 <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                     <path d="M12 2.8c2.2 1.7 3.4 4.3 3.4 6.5 0 2.3-1.5 4.4-3.4 5.1-1.9-.7-3.4-2.8-3.4-5.1 0-2.2 1.2-4.8 3.4-6.5z" fill="currentColor" fill-opacity="0.2"/>
                                     <path d="M12 14.4v1.8" stroke-width="1"/>
@@ -378,7 +378,7 @@
 
                         <!-- Paso 3 -->
                         <div class="space-y-4">
-                            <div class="w-16 h-16 rounded-full border border-dashed border-[#bca374] flex items-center justify-center mx-auto text-[#bca374]">
+                            <div class="w-16 h-16 rounded-full border border-dashed border-[#B8874B] flex items-center justify-center mx-auto text-[#B8874B]">
                                 <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                     <path d="M12 20.5V11" stroke-width="1.3"/>
                                     <path d="M12 12.5c2.6-.3 4.5-2.3 4.6-5.3-3 .2-5 2.3-5.1 5.1" fill="currentColor" fill-opacity="0.2"/>
@@ -396,14 +396,14 @@
             </section>
 
             <!-- PREVIEW BLOG EN HOME -->
-            <section class="py-20 bg-[#f3efe6] border-b border-[#ded9cd]">
+            <section class="py-20 bg-[#f3efe6] border-b border-[#C7B78E]">
                 <div class="max-w-6xl mx-auto px-6">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
                         <div>
-                            <span class="font-stamp text-xs text-[#bca374] uppercase tracking-[0.2em] block mb-2">Recursos Informativos</span>
-                            <h2 class="font-serif-editorial text-3xl md:text-5xl text-[#1c352d] font-bold">Lecturas de Interés</h2>
+                            <span class="font-stamp text-xs text-[#B8874B] uppercase tracking-[0.2em] block mb-2">Recursos Informativos</span>
+                            <h2 class="font-serif-editorial text-3xl md:text-5xl text-[#1C3B30] font-bold">Lecturas de Interés</h2>
                         </div>
-                        <button onclick="navigateTo('blog')" class="text-sm font-bold text-[#1c352d] border-b-2 border-[#bca374] hover:text-[#bca374] transition-all pb-1">
+                        <button onclick="navigateTo('blog')" class="text-sm font-bold text-[#1C3B30] border-b-2 border-[#B8874B] hover:text-[#B8874B] transition-all pb-1">
                             Ir al blog de extranjería →
                         </button>
                     </div>
@@ -416,46 +416,46 @@
             </section>
 
             <!-- SECCIÓN DIAGNÓSTICO GRATUITO POR CORREO -->
-            <section id="diagnostico-gratis" class="py-20 bg-[#fcfbf9] border-b border-[#ded9cd]">
+            <section id="diagnostico-gratis" class="py-20 bg-[#fcfbf9] border-b border-[#C7B78E]">
                 <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
                     <div class="lg:col-span-5 space-y-6">
-                        <span class="font-stamp text-xs text-[#bca374] uppercase tracking-[0.2em] block">Sin coste ni compromiso</span>
+                        <span class="font-stamp text-xs text-[#B8874B] uppercase tracking-[0.2em] block">Sin coste ni compromiso</span>
                         <div class="space-y-2">
-                            <h2 class="font-serif-editorial text-3xl md:text-5xl text-[#1c352d] font-bold leading-tight">Estudiamos la viabilidad de tu caso y evaluamos en qué te podemos ayudar</h2>
-                            <p class="text-sm md:text-base text-[#bca374] font-medium">Recibe un primer diagnóstico gratuito en tu correo</p>
+                            <h2 class="font-serif-editorial text-3xl md:text-5xl text-[#1C3B30] font-bold leading-tight">Estudiamos la viabilidad de tu caso y evaluamos en qué te podemos ayudar</h2>
+                            <p class="text-sm md:text-base text-[#B8874B] font-medium">Recibe un primer diagnóstico gratuito en tu correo</p>
                         </div>
-                        <p class="text-sm md:text-base text-[#5c6460] leading-relaxed">
+                        <p class="text-sm md:text-base text-[#4A4032] leading-relaxed">
                             ¿Aún no estás seguro de si tu caso tiene una vía? Responde unas pocas preguntas y te enviaremos por correo electrónico un primer diagnóstico orientativo de las vías de residencia o nacionalidad que podrían aplicar a tu situación. Sin pagos y sin citas.
                         </p>
-                        <ul class="space-y-3 text-sm text-[#5c6460]">
+                        <ul class="space-y-3 text-sm text-[#4A4032]">
                             <li class="flex items-start gap-3">
-                                <span class="font-stamp text-xs text-[#bca374] mt-0.5">01</span>
+                                <span class="font-stamp text-xs text-[#B8874B] mt-0.5">01</span>
                                 <span>Completa el formulario con tus datos básicos.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="font-stamp text-xs text-[#bca374] mt-0.5">02</span>
+                                <span class="font-stamp text-xs text-[#B8874B] mt-0.5">02</span>
                                 <span>Confirma tu dirección desde el correo que te enviaremos.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span class="font-stamp text-xs text-[#bca374] mt-0.5">03</span>
+                                <span class="font-stamp text-xs text-[#B8874B] mt-0.5">03</span>
                                 <span>Recibe tu diagnóstico orientativo directamente en tu bandeja de entrada.</span>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="lg:col-span-7 bg-white border border-[#ded9cd] p-8 md:p-10 rounded-2xl shadow-sm">
-                        <h3 class="font-serif-editorial text-2xl font-bold text-[#1c352d] mb-1">Diagnóstico - Te ayudamos a saber por dónde empezar</h3>
-                        <p class="text-xs text-[#5c6460] mb-6">Responde este formulario para que podamos ver, con detalle, qué caminos migratorios podrían aplicarte. Te enviaremos primero un correo para confirmar tu dirección; después recibirás tu diagnóstico.</p>
+                    <div class="lg:col-span-7 bg-white border border-[#C7B78E] p-8 md:p-10 rounded-2xl shadow-sm">
+                        <h3 class="font-serif-editorial text-2xl font-bold text-[#1C3B30] mb-1">Diagnóstico - Te ayudamos a saber por dónde empezar</h3>
+                        <p class="text-xs text-[#4A4032] mb-6">Responde este formulario para que podamos ver, con detalle, qué caminos migratorios podrían aplicarte. Te enviaremos primero un correo para confirmar tu dirección; después recibirás tu diagnóstico.</p>
 
                         <!-- BARRA DE PROGRESO -->
                         <div class="mb-8">
-                            <div class="flex justify-between items-center text-[10px] font-stamp text-[#bca374] mb-2">
+                            <div class="flex justify-between items-center text-[10px] font-stamp text-[#B8874B] mb-2">
                                 <span id="diag-progress-step-label">Paso 1 de 6</span>
                                 <span id="diag-progress-percent">17%</span>
                             </div>
                             <div class="h-1.5 bg-[#f3efe6] rounded-full overflow-hidden">
-                                <div id="diag-progress-bar" class="h-full bg-[#1c352d] transition-all duration-300" style="width: 17%"></div>
+                                <div id="diag-progress-bar" class="h-full bg-[#1C3B30] transition-all duration-300" style="width: 17%"></div>
                             </div>
                         </div>
 
@@ -465,16 +465,16 @@
                             <div id="diag-step-1" class="diag-step active space-y-4">
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div class="space-y-1">
-                                        <label for="diag-nombre" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">Nombre completo</label>
+                                        <label for="diag-nombre" class="text-xs font-bold text-[#1C3B30] uppercase tracking-wider block">Nombre completo</label>
                                         <input type="text" id="diag-nombre" name="diag_nombre" required class="triaje-input w-full p-3.5 rounded-lg text-sm" placeholder="Escribe tu nombre y apellidos" oninput="validateDiagStep(1)">
                                     </div>
                                     <div class="space-y-1">
-                                        <label for="diag-telefono" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">Teléfono</label>
+                                        <label for="diag-telefono" class="text-xs font-bold text-[#1C3B30] uppercase tracking-wider block">Teléfono</label>
                                         <input type="tel" id="diag-telefono" name="diag_telefono" required class="triaje-input w-full p-3.5 rounded-lg text-sm" placeholder="Ej: +34 600 000 000" oninput="validateDiagStep(1)">
                                     </div>
                                 </div>
                                 <div class="space-y-1">
-                                    <label for="diag-email" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">Correo electrónico</label>
+                                    <label for="diag-email" class="text-xs font-bold text-[#1C3B30] uppercase tracking-wider block">Correo electrónico</label>
                                     <input type="email" id="diag-email" name="diag_email" required class="triaje-input w-full p-3.5 rounded-lg text-sm" placeholder="tucorreo@ejemplo.com" oninput="validateDiagStep(1)">
                                 </div>
                             </div>
@@ -482,99 +482,99 @@
                             <!-- PASO 2: TU SITUACIÓN EN ESPAÑA -->
                             <div id="diag-step-2" class="diag-step hidden space-y-4">
                                 <div class="space-y-1">
-                                    <label for="diag-fecha-llegada" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">¿Cuándo llegaste a España, para quedarte?</label>
+                                    <label for="diag-fecha-llegada" class="text-xs font-bold text-[#1C3B30] uppercase tracking-wider block">¿Cuándo llegaste a España, para quedarte?</label>
                                     <input type="date" id="diag-fecha-llegada" name="diag_fecha_llegada" required class="triaje-input w-full p-3.5 rounded-lg text-sm" oninput="validateDiagStep(2)">
-                                    <p class="text-[10px] text-[#5c6460]">Si has entrado y salido varias veces, usa la fecha del viaje con el que empezaste a vivir aquí de forma continuada.</p>
+                                    <p class="text-[10px] text-[#4A4032]">Si has entrado y salido varias veces, usa la fecha del viaje con el que empezaste a vivir aquí de forma continuada.</p>
                                 </div>
                                 <div class="space-y-2">
-                                    <label class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">Desde que llegaste, ¿has salido de España?</label>
+                                    <label class="text-xs font-bold text-[#1C3B30] uppercase tracking-wider block">Desde que llegaste, ¿has salido de España?</label>
                                     <div class="grid grid-cols-1 gap-2">
                                         <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this)">
-                                            <input type="radio" name="diag_ha_salido" value="no" class="accent-[#1c352d]">
-                                            <span class="text-xs text-[#1c352d]">No, no he salido de España desde que llegué.</span>
+                                            <input type="radio" name="diag_ha_salido" value="no" class="accent-[#1C3B30]">
+                                            <span class="text-xs text-[#1C3B30]">No, no he salido de España desde que llegué.</span>
                                         </label>
                                         <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this)">
-                                            <input type="radio" name="diag_ha_salido" value="si_cortas" class="accent-[#1c352d]">
-                                            <span class="text-xs text-[#1c352d]">Sí, pero solo viajes cortos (siempre menos de 6 meses seguidos).</span>
+                                            <input type="radio" name="diag_ha_salido" value="si_cortas" class="accent-[#1C3B30]">
+                                            <span class="text-xs text-[#1C3B30]">Sí, pero solo viajes cortos (siempre menos de 6 meses seguidos).</span>
                                         </label>
                                         <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this)">
-                                            <input type="radio" name="diag_ha_salido" value="si_largas" class="accent-[#1c352d]">
-                                            <span class="text-xs text-[#1c352d]">Sí, una o más veces por 6 meses seguidos o más.</span>
+                                            <input type="radio" name="diag_ha_salido" value="si_largas" class="accent-[#1C3B30]">
+                                            <span class="text-xs text-[#1C3B30]">Sí, una o más veces por 6 meses seguidos o más.</span>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="space-y-2">
-                                    <label class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">¿Cuál es tu situación migratoria actual?</label>
+                                    <label class="text-xs font-bold text-[#1C3B30] uppercase tracking-wider block">¿Cuál es tu situación migratoria actual?</label>
                                     <div class="grid grid-cols-1 gap-2">
                                         <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this); toggleCondVencimiento();">
-                                            <input type="radio" name="diag_situacion" value="irregular" class="accent-[#1c352d]">
-                                            <span class="text-xs text-[#1c352d]">Estoy en España sin ningún permiso ni visado vigente.</span>
+                                            <input type="radio" name="diag_situacion" value="irregular" class="accent-[#1C3B30]">
+                                            <span class="text-xs text-[#1C3B30]">Estoy en España sin ningún permiso ni visado vigente.</span>
                                         </label>
                                         <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this); toggleCondVencimiento();">
-                                            <input type="radio" name="diag_situacion" value="estancia_corta" class="accent-[#1c352d]">
-                                            <span class="text-xs text-[#1c352d]">Tengo un visado o estancia de corta duración (turista, gestión).</span>
+                                            <input type="radio" name="diag_situacion" value="estancia_corta" class="accent-[#1C3B30]">
+                                            <span class="text-xs text-[#1C3B30]">Tengo un visado o estancia de corta duración (turista, gestión).</span>
                                         </label>
                                         <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this); toggleCondVencimiento();">
-                                            <input type="radio" name="diag_situacion" value="estancia_estudios_larga" class="accent-[#1c352d]">
-                                            <span class="text-xs text-[#1c352d]">Tengo visado o autorización de estudios de larga duración.</span>
+                                            <input type="radio" name="diag_situacion" value="estancia_estudios_larga" class="accent-[#1C3B30]">
+                                            <span class="text-xs text-[#1C3B30]">Tengo visado o autorización de estudios de larga duración.</span>
                                         </label>
                                         <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this); toggleCondVencimiento();">
-                                            <input type="radio" name="diag_situacion" value="autorizacion_arraigo" class="accent-[#1c352d]">
-                                            <span class="text-xs text-[#1c352d]">Tengo una autorización de residencia por arraigo.</span>
+                                            <input type="radio" name="diag_situacion" value="autorizacion_arraigo" class="accent-[#1C3B30]">
+                                            <span class="text-xs text-[#1C3B30]">Tengo una autorización de residencia por arraigo.</span>
                                         </label>
                                         <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this); toggleCondVencimiento();">
-                                            <input type="radio" name="diag_situacion" value="autorizacion_trabajo" class="accent-[#1c352d]">
-                                            <span class="text-xs text-[#1c352d]">Tengo una autorización de residencia y trabajo.</span>
+                                            <input type="radio" name="diag_situacion" value="autorizacion_trabajo" class="accent-[#1C3B30]">
+                                            <span class="text-xs text-[#1C3B30]">Tengo una autorización de residencia y trabajo.</span>
                                         </label>
                                         <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this); toggleCondVencimiento();">
-                                            <input type="radio" name="diag_situacion" value="autorizacion_familiar" class="accent-[#1c352d]">
-                                            <span class="text-xs text-[#1c352d]">Tengo una autorización como familiar de español o de la UE.</span>
+                                            <input type="radio" name="diag_situacion" value="autorizacion_familiar" class="accent-[#1C3B30]">
+                                            <span class="text-xs text-[#1C3B30]">Tengo una autorización como familiar de español o de la UE.</span>
                                         </label>
                                         <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this); toggleCondVencimiento();">
-                                            <input type="radio" name="diag_situacion" value="larga_duracion" class="accent-[#1c352d]">
-                                            <span class="text-xs text-[#1c352d]">Ya tengo residencia de larga duración.</span>
+                                            <input type="radio" name="diag_situacion" value="larga_duracion" class="accent-[#1C3B30]">
+                                            <span class="text-xs text-[#1C3B30]">Ya tengo residencia de larga duración.</span>
                                         </label>
                                         <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this); toggleCondVencimiento();">
-                                            <input type="radio" name="diag_situacion" value="otra" class="accent-[#1c352d]">
-                                            <span class="text-xs text-[#1c352d]">Otra situación, o no estoy seguro/a.</span>
+                                            <input type="radio" name="diag_situacion" value="otra" class="accent-[#1C3B30]">
+                                            <span class="text-xs text-[#1C3B30]">Otra situación, o no estoy seguro/a.</span>
                                         </label>
                                     </div>
-                                    <div id="diag-cond-vencimiento" class="hidden pt-2 pl-4 border-l-2 border-[#e6ddc4] space-y-1">
-                                        <label for="diag-vencimiento" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">¿Cuándo vence tu autorización o TIE actual? <span class="normal-case font-normal text-[#5c6460]">(si lo sabes)</span></label>
+                                    <div id="diag-cond-vencimiento" class="hidden pt-2 pl-4 border-l-2 border-[#D9AE72] space-y-1">
+                                        <label for="diag-vencimiento" class="text-xs font-bold text-[#1C3B30] uppercase tracking-wider block">¿Cuándo vence tu autorización o TIE actual? <span class="normal-case font-normal text-[#4A4032]">(si lo sabes)</span></label>
                                         <input type="date" id="diag-vencimiento" name="diag_vencimiento" class="triaje-input w-full p-3.5 rounded-lg text-sm">
                                     </div>
                                 </div>
                                 <div class="space-y-2">
-                                    <label class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">¿Has presentado antes alguna solicitud de residencia en España?</label>
+                                    <label class="text-xs font-bold text-[#1C3B30] uppercase tracking-wider block">¿Has presentado antes alguna solicitud de residencia en España?</label>
                                     <div class="grid grid-cols-1 gap-2">
                                         <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this)">
-                                            <input type="radio" name="diag_solicitud_previa" value="no" class="accent-[#1c352d]">
-                                            <span class="text-xs text-[#1c352d]">No, nunca he presentado ninguna.</span>
+                                            <input type="radio" name="diag_solicitud_previa" value="no" class="accent-[#1C3B30]">
+                                            <span class="text-xs text-[#1C3B30]">No, nunca he presentado ninguna.</span>
                                         </label>
                                         <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this)">
-                                            <input type="radio" name="diag_solicitud_previa" value="en_tramite" class="accent-[#1c352d]">
-                                            <span class="text-xs text-[#1c352d]">Sí, tengo una en trámite ahora mismo.</span>
+                                            <input type="radio" name="diag_solicitud_previa" value="en_tramite" class="accent-[#1C3B30]">
+                                            <span class="text-xs text-[#1C3B30]">Sí, tengo una en trámite ahora mismo.</span>
                                         </label>
                                         <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this)">
-                                            <input type="radio" name="diag_solicitud_previa" value="concedida" class="accent-[#1c352d]">
-                                            <span class="text-xs text-[#1c352d]">Sí, y es la que tengo vigente actualmente.</span>
+                                            <input type="radio" name="diag_solicitud_previa" value="concedida" class="accent-[#1C3B30]">
+                                            <span class="text-xs text-[#1C3B30]">Sí, y es la que tengo vigente actualmente.</span>
                                         </label>
                                         <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this)">
-                                            <input type="radio" name="diag_solicitud_previa" value="denegada" class="accent-[#1c352d]">
-                                            <span class="text-xs text-[#1c352d]">Sí, y me la denegaron.</span>
+                                            <input type="radio" name="diag_solicitud_previa" value="denegada" class="accent-[#1C3B30]">
+                                            <span class="text-xs text-[#1C3B30]">Sí, y me la denegaron.</span>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="space-y-2">
-                                    <label class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">¿Estás empadronado/a en algún ayuntamiento de España?</label>
+                                    <label class="text-xs font-bold text-[#1C3B30] uppercase tracking-wider block">¿Estás empadronado/a en algún ayuntamiento de España?</label>
                                     <div class="grid grid-cols-1 gap-2">
                                         <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this);">
-                                            <input type="radio" name="diag_empadronado" value="si" class="accent-[#1c352d]">
-                                            <span class="text-xs text-[#1c352d]">Sí, estoy empadronado/a.</span>
+                                            <input type="radio" name="diag_empadronado" value="si" class="accent-[#1C3B30]">
+                                            <span class="text-xs text-[#1C3B30]">Sí, estoy empadronado/a.</span>
                                         </label>
                                         <label class="card-selector p-4 rounded-lg flex items-center gap-3 cursor-pointer" onclick="selectRadioCard(this)">
-                                            <input type="radio" name="diag_empadronado" value="no" class="accent-[#1c352d]">
-                                            <span class="text-xs text-[#1c352d]">No, todavía no.</span>
+                                            <input type="radio" name="diag_empadronado" value="no" class="accent-[#1C3B30]">
+                                            <span class="text-xs text-[#1C3B30]">No, todavía no.</span>
                                         </label>
                                     </div>
                                 </div>
@@ -583,11 +583,11 @@
                             <!-- PASO 3: DOCUMENTOS Y ORIGEN -->
                             <div id="diag-step-3" class="diag-step hidden space-y-4">
                                 <div class="space-y-1">
-                                    <label for="diag-pasaporte" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">¿Hasta cuándo es válido tu pasaporte actual?</label>
+                                    <label for="diag-pasaporte" class="text-xs font-bold text-[#1C3B30] uppercase tracking-wider block">¿Hasta cuándo es válido tu pasaporte actual?</label>
                                     <input type="date" id="diag-pasaporte" name="diag_pasaporte" required class="triaje-input w-full p-3.5 rounded-lg text-sm" oninput="validateDiagStep(3)">
                                 </div>
                                 <div class="space-y-1">
-                                    <label for="diag-pais-origen" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">¿Cuál es tu país de origen (nacionalidad)?</label>
+                                    <label for="diag-pais-origen" class="text-xs font-bold text-[#1C3B30] uppercase tracking-wider block">¿Cuál es tu país de origen (nacionalidad)?</label>
                                     <input type="text" id="diag-pais-origen" name="diag_pais_origen" required list="diag-lista-paises" class="triaje-input w-full p-3.5 rounded-lg text-sm" placeholder="Ej. Colombia" oninput="validateDiagStep(3)">
                                     <datalist id="diag-lista-paises">
                                         <option value="Argentina"><option value="Bolivia"><option value="Brasil">
@@ -601,13 +601,13 @@
                                     </datalist>
                                 </div>
                                 <div class="space-y-2">
-                                    <label class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">¿Tienes o puedes acreditar origen sefardí (judío sefardí expulsado de España en 1492)?</label>
+                                    <label class="text-xs font-bold text-[#1C3B30] uppercase tracking-wider block">¿Tienes o puedes acreditar origen sefardí (judío sefardí expulsado de España en 1492)?</label>
                                     <div class="grid grid-cols-2 gap-2">
                                         <label class="card-selector p-3 rounded-lg flex items-center gap-2 cursor-pointer" onclick="selectRadioCard(this)">
-                                            <input type="radio" name="diag_sefardi" value="no" class="accent-[#1c352d]"><span class="text-xs text-[#1c352d]">No</span>
+                                            <input type="radio" name="diag_sefardi" value="no" class="accent-[#1C3B30]"><span class="text-xs text-[#1C3B30]">No</span>
                                         </label>
                                         <label class="card-selector p-3 rounded-lg flex items-center gap-2 cursor-pointer" onclick="selectRadioCard(this)">
-                                            <input type="radio" name="diag_sefardi" value="si" class="accent-[#1c352d]"><span class="text-xs text-[#1c352d]">Sí</span>
+                                            <input type="radio" name="diag_sefardi" value="si" class="accent-[#1C3B30]"><span class="text-xs text-[#1C3B30]">Sí</span>
                                         </label>
                                     </div>
                                 </div>
@@ -616,80 +616,80 @@
                             <!-- PASO 4: TU SITUACIÓN PERSONAL (fusiona familia + trabajo/estudios, 2026-09-11: recorte de fricción, ver CLAUDE.md) -->
                             <div id="diag-step-4" class="diag-step hidden space-y-5">
                                 <div class="space-y-2">
-                                    <label class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">¿Alguna de estas situaciones familiares te aplica? Marca todas las que correspondan.</label>
+                                    <label class="text-xs font-bold text-[#1C3B30] uppercase tracking-wider block">¿Alguna de estas situaciones familiares te aplica? Marca todas las que correspondan.</label>
                                     <div class="grid grid-cols-1 gap-2">
                                         <label class="card-selector p-3 rounded-lg flex items-center gap-2 cursor-pointer" onclick="toggleCheckCard(this)">
-                                            <input type="checkbox" name="diag_v_pareja_espanola" value="si" class="accent-[#1c352d]"><span class="text-xs text-[#1c352d]">Tengo cónyuge o pareja de nacionalidad española.</span>
+                                            <input type="checkbox" name="diag_v_pareja_espanola" value="si" class="accent-[#1C3B30]"><span class="text-xs text-[#1C3B30]">Tengo cónyuge o pareja de nacionalidad española.</span>
                                         </label>
                                         <label class="card-selector p-3 rounded-lg flex items-center gap-2 cursor-pointer" onclick="toggleCheckCard(this)">
-                                            <input type="checkbox" name="diag_v_pareja_ue" value="si" class="accent-[#1c352d]"><span class="text-xs text-[#1c352d]">Tengo cónyuge o pareja de otro país de la UE.</span>
+                                            <input type="checkbox" name="diag_v_pareja_ue" value="si" class="accent-[#1C3B30]"><span class="text-xs text-[#1C3B30]">Tengo cónyuge o pareja de otro país de la UE.</span>
                                         </label>
                                         <label class="card-selector p-3 rounded-lg flex items-center gap-2 cursor-pointer" onclick="toggleCheckCard(this)">
-                                            <input type="checkbox" name="diag_v_hijo_espanol" value="si" class="accent-[#1c352d]"><span class="text-xs text-[#1c352d]">Tengo un hijo/a con nacionalidad española.</span>
+                                            <input type="checkbox" name="diag_v_hijo_espanol" value="si" class="accent-[#1C3B30]"><span class="text-xs text-[#1C3B30]">Tengo un hijo/a con nacionalidad española.</span>
                                         </label>
                                         <label class="card-selector p-3 rounded-lg flex items-center gap-2 cursor-pointer" onclick="toggleCheckCard(this)">
-                                            <input type="checkbox" name="diag_v_familiar_espanol" value="si" class="accent-[#1c352d]"><span class="text-xs text-[#1c352d]">Tengo padre, madre o hijo/a español/a (aparte de tu pareja).</span>
+                                            <input type="checkbox" name="diag_v_familiar_espanol" value="si" class="accent-[#1C3B30]"><span class="text-xs text-[#1C3B30]">Tengo padre, madre o hijo/a español/a (aparte de tu pareja).</span>
                                         </label>
                                         <label class="card-selector p-3 rounded-lg flex items-center gap-2 cursor-pointer" onclick="toggleCheckCard(this)">
-                                            <input type="checkbox" name="diag_v_hijos_menores" value="si" class="accent-[#1c352d]"><span class="text-xs text-[#1c352d]">Tengo hijos/as menores de 18 años.</span>
+                                            <input type="checkbox" name="diag_v_hijos_menores" value="si" class="accent-[#1C3B30]"><span class="text-xs text-[#1C3B30]">Tengo hijos/as menores de 18 años.</span>
                                         </label>
                                         <label class="card-selector p-3 rounded-lg flex items-center gap-2 cursor-pointer" onclick="toggleCheckCard(this)">
-                                            <input type="checkbox" name="diag_v_traer_familia" value="si" class="accent-[#1c352d]"><span class="text-xs text-[#1c352d]">Quiero traer a mi familia desde mi país de origen.</span>
+                                            <input type="checkbox" name="diag_v_traer_familia" value="si" class="accent-[#1C3B30]"><span class="text-xs text-[#1C3B30]">Quiero traer a mi familia desde mi país de origen.</span>
                                         </label>
                                         <label class="card-selector p-3 rounded-lg flex items-center gap-2 cursor-pointer" onclick="toggleCheckCard(this)">
-                                            <input type="checkbox" name="diag_v_progenitor_menor_ue" value="si" class="accent-[#1c352d]"><span class="text-xs text-[#1c352d]">Soy padre/madre o cuidador/a de un menor o persona con discapacidad de la UE (que no es hijo/a mío).</span>
+                                            <input type="checkbox" name="diag_v_progenitor_menor_ue" value="si" class="accent-[#1C3B30]"><span class="text-xs text-[#1C3B30]">Soy padre/madre o cuidador/a de un menor o persona con discapacidad de la UE (que no es hijo/a mío).</span>
                                         </label>
                                         <label class="card-selector p-3 rounded-lg flex items-center gap-2 cursor-pointer" onclick="toggleCheckCard(this)">
-                                            <input type="checkbox" name="diag_v_ascendencia_espanola" value="si" class="accent-[#1c352d]"><span class="text-xs text-[#1c352d]">Mis padres o algún abuelo/a fueron españoles de origen.</span>
+                                            <input type="checkbox" name="diag_v_ascendencia_espanola" value="si" class="accent-[#1C3B30]"><span class="text-xs text-[#1C3B30]">Mis padres o algún abuelo/a fueron españoles de origen.</span>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="space-y-2">
-                                    <label class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">¿Y en trabajo o estudios? Marca todas las que correspondan.</label>
+                                    <label class="text-xs font-bold text-[#1C3B30] uppercase tracking-wider block">¿Y en trabajo o estudios? Marca todas las que correspondan.</label>
                                     <div class="grid grid-cols-1 gap-2">
                                         <label class="card-selector p-3 rounded-lg flex items-center gap-2 cursor-pointer" onclick="toggleCheckCard(this)">
-                                            <input type="checkbox" name="diag_v_contrato_formal" value="si" class="accent-[#1c352d]"><span class="text-xs text-[#1c352d]">Tengo contrato de trabajo formal, dado de alta en la Seguridad Social.</span>
+                                            <input type="checkbox" name="diag_v_contrato_formal" value="si" class="accent-[#1C3B30]"><span class="text-xs text-[#1C3B30]">Tengo contrato de trabajo formal, dado de alta en la Seguridad Social.</span>
                                         </label>
                                         <label class="card-selector p-3 rounded-lg flex items-center gap-2 cursor-pointer" onclick="toggleCheckCard(this)">
-                                            <input type="checkbox" name="diag_v_contrato_informal" value="si" class="accent-[#1c352d]"><span class="text-xs text-[#1c352d]">Trabajo, pero sin contrato (informal).</span>
+                                            <input type="checkbox" name="diag_v_contrato_informal" value="si" class="accent-[#1C3B30]"><span class="text-xs text-[#1C3B30]">Trabajo, pero sin contrato (informal).</span>
                                         </label>
                                         <label class="card-selector p-3 rounded-lg flex items-center gap-2 cursor-pointer" onclick="toggleCheckCard(this)">
-                                            <input type="checkbox" name="diag_v_oferta_pendiente" value="si" class="accent-[#1c352d]"><span class="text-xs text-[#1c352d]">Tengo una oferta de trabajo formal, pendiente de tramitar.</span>
+                                            <input type="checkbox" name="diag_v_oferta_pendiente" value="si" class="accent-[#1C3B30]"><span class="text-xs text-[#1C3B30]">Tengo una oferta de trabajo formal, pendiente de tramitar.</span>
                                         </label>
                                         <label class="card-selector p-3 rounded-lg flex items-center gap-2 cursor-pointer" onclick="toggleCheckCard(this)">
-                                            <input type="checkbox" name="diag_v_estudios" value="si" class="accent-[#1c352d]"><span class="text-xs text-[#1c352d]">Estoy cursando o admitido/a en una formación en España.</span>
+                                            <input type="checkbox" name="diag_v_estudios" value="si" class="accent-[#1C3B30]"><span class="text-xs text-[#1C3B30]">Estoy cursando o admitido/a en una formación en España.</span>
                                         </label>
                                         <label class="card-selector p-3 rounded-lg flex items-center gap-2 cursor-pointer" onclick="toggleCheckCard(this)">
-                                            <input type="checkbox" name="diag_v_negocio" value="si" class="accent-[#1c352d]"><span class="text-xs text-[#1c352d]">Tengo o quiero montar un negocio propio.</span>
+                                            <input type="checkbox" name="diag_v_negocio" value="si" class="accent-[#1C3B30]"><span class="text-xs text-[#1C3B30]">Tengo o quiero montar un negocio propio.</span>
                                         </label>
                                     </div>
-                                    <p class="text-[10px] text-[#5c6460]">Nada de esto es obligatorio — marca solo lo que aplica. El resto lo profundizamos contigo al crear tu cuenta.</p>
+                                    <p class="text-[10px] text-[#4A4032]">Nada de esto es obligatorio — marca solo lo que aplica. El resto lo profundizamos contigo al crear tu cuenta.</p>
                                 </div>
                             </div>
 
                             <!-- PASO 5: DIRECCIÓN DE CONTACTO -->
                             <div id="diag-step-5" class="diag-step hidden space-y-4">
                                 <div class="space-y-1">
-                                    <label for="diag-direccion" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">Dirección de residencia <span class="normal-case font-normal text-[#5c6460]">(opcional)</span></label>
+                                    <label for="diag-direccion" class="text-xs font-bold text-[#1C3B30] uppercase tracking-wider block">Dirección de residencia <span class="normal-case font-normal text-[#4A4032]">(opcional)</span></label>
                                     <input type="text" id="diag-direccion" name="diag_direccion" class="triaje-input w-full p-3.5 rounded-lg text-sm" placeholder="Calle, número, piso...">
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div class="space-y-1">
-                                        <label for="diag-ciudad" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">Ciudad</label>
+                                        <label for="diag-ciudad" class="text-xs font-bold text-[#1C3B30] uppercase tracking-wider block">Ciudad</label>
                                         <input type="text" id="diag-ciudad" name="diag_ciudad" required class="triaje-input w-full p-3.5 rounded-lg text-sm" placeholder="Ej: Vigo" oninput="validateDiagStep(5)">
                                     </div>
                                     <div class="space-y-1">
-                                        <label for="diag-cp" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">Código postal</label>
+                                        <label for="diag-cp" class="text-xs font-bold text-[#1C3B30] uppercase tracking-wider block">Código postal</label>
                                         <input type="text" id="diag-cp" name="diag_codigo_postal" required class="triaje-input w-full p-3.5 rounded-lg text-sm" placeholder="Ej: 36201" oninput="validateDiagStep(5)">
                                     </div>
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div class="space-y-1">
-                                        <label for="diag-provincia" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">Provincia/Estado</label>
+                                        <label for="diag-provincia" class="text-xs font-bold text-[#1C3B30] uppercase tracking-wider block">Provincia/Estado</label>
                                         <input type="text" id="diag-provincia" name="diag_provincia" required class="triaje-input w-full p-3.5 rounded-lg text-sm" placeholder="Ej: Pontevedra" oninput="validateDiagStep(5)">
                                     </div>
                                     <div class="space-y-1">
-                                        <label for="diag-pais" class="text-xs font-bold text-[#1c352d] uppercase tracking-wider block">País</label>
+                                        <label for="diag-pais" class="text-xs font-bold text-[#1C3B30] uppercase tracking-wider block">País</label>
                                         <input type="text" id="diag-pais" name="diag_pais" required class="triaje-input w-full p-3.5 rounded-lg text-sm" placeholder="Ej: España" oninput="validateDiagStep(5)">
                                     </div>
                                 </div>
@@ -697,20 +697,20 @@
 
                             <!-- PASO 6: RESULTADO DIAGNÓSTICO -->
                             <div id="diag-step-6" class="diag-step hidden space-y-4">
-                                <div class="border border-[#ded9cd] p-6 rounded-xl bg-[#fcfbf9] relative overflow-hidden shadow-inner">
-                                    <div class="flex justify-between items-center text-[9px] font-stamp text-[#bca374] border-b border-[#ded9cd] pb-2 mb-4">
+                                <div class="border border-[#C7B78E] p-6 rounded-xl bg-[#fcfbf9] relative overflow-hidden shadow-inner">
+                                    <div class="flex justify-between items-center text-[9px] font-stamp text-[#B8874B] border-b border-[#C7B78E] pb-2 mb-4">
                                         <span>DIAGNÓSTICO PREVIO: #RAIZ-2026</span>
                                         <span>ESPAÑA</span>
                                     </div>
-                                    <h4 id="diag-result-title" class="font-serif-editorial text-xl font-bold text-[#1c352d] mb-2">Procesando diagnóstico...</h4>
-                                    <p id="diag-result-explanation" class="text-xs text-[#5c6460] leading-relaxed mb-4"></p>
+                                    <h4 id="diag-result-title" class="font-serif-editorial text-xl font-bold text-[#1C3B30] mb-2">Procesando diagnóstico...</h4>
+                                    <p id="diag-result-explanation" class="text-xs text-[#4A4032] leading-relaxed mb-4"></p>
 
-                                    <ul id="diag-result-bullets" class="space-y-2 text-xs text-[#5c6460] mb-6">
+                                    <ul id="diag-result-bullets" class="space-y-2 text-xs text-[#4A4032] mb-6">
                                         <!-- Viñetas dinámicas -->
                                     </ul>
 
-                                    <p class="text-[11px] text-[#5c6460] bg-[#f3efe6] border border-[#ded9cd] rounded-lg p-3 leading-relaxed">
-                                        <i class="fa-solid fa-circle-info text-[#bca374]"></i>
+                                    <p class="text-[11px] text-[#4A4032] bg-[#f3efe6] border border-[#C7B78E] rounded-lg p-3 leading-relaxed">
+                                        <i class="fa-solid fa-circle-info text-[#B8874B]"></i>
                                         Este es un primer diagnóstico automático y orientativo, no una resolución legal. La viabilidad final de cualquier trámite depende siempre de la revisión de un profesional de Raíz sobre tu caso concreto. Te lo enviaremos también por correo en cuanto confirmes tu dirección.
                                     </p>
 
@@ -721,25 +721,25 @@
 
                                 <div id="diag-booking-action"></div>
 
-                                <label for="diag-consentimiento" class="flex items-start gap-3 p-4 bg-[#fcfbf9] border border-[#ded9cd] rounded-lg cursor-pointer">
-                                    <input type="checkbox" id="diag-consentimiento" name="diag_consentimiento" required class="mt-0.5 shrink-0 w-4 h-4 accent-[#1c352d]">
-                                    <span class="text-[11px] text-[#5c6460] leading-relaxed">
-                                        He leído y acepto la <a href="politica-privacidad.html" target="_blank" class="underline font-semibold text-[#1c352d]">Política de Privacidad</a> y consiento recibir mi diagnóstico por correo electrónico y que un asesor de Raíz me contacte posteriormente sobre mi caso, incluso por teléfono o WhatsApp.
+                                <label for="diag-consentimiento" class="flex items-start gap-3 p-4 bg-[#fcfbf9] border border-[#C7B78E] rounded-lg cursor-pointer">
+                                    <input type="checkbox" id="diag-consentimiento" name="diag_consentimiento" required class="mt-0.5 shrink-0 w-4 h-4 accent-[#1C3B30]">
+                                    <span class="text-[11px] text-[#4A4032] leading-relaxed">
+                                        He leído y acepto la <a href="politica-privacidad.html" target="_blank" class="underline font-semibold text-[#1C3B30]">Política de Privacidad</a> y consiento recibir mi diagnóstico por correo electrónico y que un asesor de Raíz me contacte posteriormente sobre mi caso, incluso por teléfono o WhatsApp.
                                     </span>
                                 </label>
 
-                                <button type="submit" class="w-full bg-[#1c352d] text-white py-4 rounded-lg text-sm font-bold tracking-wide hover:bg-[#2c4c41] transition-all uppercase">
+                                <button type="submit" class="w-full bg-[#1C3B30] text-white py-4 rounded-lg text-sm font-bold tracking-wide hover:bg-[#2F5C4C] transition-all uppercase">
                                     Recibir mi diagnóstico gratuito
                                 </button>
                                 <p id="diagnostico-status" class="text-xs text-center min-h-[1rem]"></p>
                             </div>
 
                             <!-- BOTONES DE NAVEGACIÓN -->
-                            <div id="diag-nav-buttons" class="flex justify-between gap-4 pt-4 border-t border-[#ded9cd]">
-                                <button type="button" id="diag-btn-prev" onclick="navigateDiagStep(-1)" class="w-1/2 border border-[#ded9cd] text-[#5c6460] hover:text-[#1c352d] hover:bg-[#f3efe6] py-3 rounded-lg text-xs font-bold tracking-wider uppercase transition-all invisible">
+                            <div id="diag-nav-buttons" class="flex justify-between gap-4 pt-4 border-t border-[#C7B78E]">
+                                <button type="button" id="diag-btn-prev" onclick="navigateDiagStep(-1)" class="w-1/2 border border-[#C7B78E] text-[#4A4032] hover:text-[#1C3B30] hover:bg-[#f3efe6] py-3 rounded-lg text-xs font-bold tracking-wider uppercase transition-all invisible">
                                     Atrás
                                 </button>
-                                <button type="button" id="diag-btn-next" onclick="navigateDiagStep(1)" class="w-1/2 bg-[#1c352d] text-white hover:bg-[#2c4c41] py-3 rounded-lg text-xs font-bold tracking-wider uppercase transition-all" disabled>
+                                <button type="button" id="diag-btn-next" onclick="navigateDiagStep(1)" class="w-1/2 bg-[#1C3B30] text-white hover:bg-[#2F5C4C] py-3 rounded-lg text-xs font-bold tracking-wider uppercase transition-all" disabled>
                                     Siguiente
                                 </button>
                             </div>
@@ -755,25 +755,25 @@
                 
                 <!-- Cabecera del Blog -->
                 <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
-                    <span class="font-stamp text-xs text-[#bca374] uppercase tracking-[0.2em]">Recursos Legales e Informativos</span>
-                    <h1 class="font-serif-editorial text-4xl md:text-6xl font-bold text-[#1c352d]">Artículos de Extranjería</h1>
-                    <p class="text-[#5c6460] leading-relaxed text-sm md:text-base">
+                    <span class="font-stamp text-xs text-[#B8874B] uppercase tracking-[0.2em]">Recursos Legales e Informativos</span>
+                    <h1 class="font-serif-editorial text-4xl md:text-6xl font-bold text-[#1C3B30]">Artículos de Extranjería</h1>
+                    <p class="text-[#4A4032] leading-relaxed text-sm md:text-base">
                         Guías explicadas en un lenguaje claro, diseñadas para ayudarte a entender la normativa migratoria de España con total seguridad.
                     </p>
                 </div>
 
                 <!-- Barra de búsqueda y categorías -->
-                <div class="flex flex-col md:flex-row gap-6 justify-between items-center mb-12 pb-6 border-b border-[#ded9cd]">
+                <div class="flex flex-col md:flex-row gap-6 justify-between items-center mb-12 pb-6 border-b border-[#C7B78E]">
                     <div class="flex flex-wrap gap-2 justify-center md:justify-start" id="blog-filters">
-                        <button onclick="filterBlog('all')" class="bg-[#1c352d] text-white px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide border border-transparent transition-all filter-btn active">Todos</button>
-                        <button onclick="filterBlog('arraigo')" class="bg-white text-[#5c6460] hover:text-[#1c352d] border border-[#ded9cd] px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all filter-btn">Arraigos</button>
-                        <button onclick="filterBlog('nacionalidad')" class="bg-white text-[#5c6460] hover:text-[#1c352d] border border-[#ded9cd] px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all filter-btn">Nacionalidad</button>
-                        <button onclick="filterBlog('estudiantes')" class="bg-white text-[#5c6460] hover:text-[#1c352d] border border-[#ded9cd] px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all filter-btn">Estudiantes</button>
-                        <button onclick="filterBlog('telematico')" class="bg-white text-[#5c6460] hover:text-[#1c352d] border border-[#ded9cd] px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all filter-btn">Telemático</button>
+                        <button onclick="filterBlog('all')" class="bg-[#1C3B30] text-white px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide border border-transparent transition-all filter-btn active">Todos</button>
+                        <button onclick="filterBlog('arraigo')" class="bg-white text-[#4A4032] hover:text-[#1C3B30] border border-[#C7B78E] px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all filter-btn">Arraigos</button>
+                        <button onclick="filterBlog('nacionalidad')" class="bg-white text-[#4A4032] hover:text-[#1C3B30] border border-[#C7B78E] px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all filter-btn">Nacionalidad</button>
+                        <button onclick="filterBlog('estudiantes')" class="bg-white text-[#4A4032] hover:text-[#1C3B30] border border-[#C7B78E] px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all filter-btn">Estudiantes</button>
+                        <button onclick="filterBlog('telematico')" class="bg-white text-[#4A4032] hover:text-[#1C3B30] border border-[#C7B78E] px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all filter-btn">Telemático</button>
                     </div>
                     <div class="relative w-full md:w-72">
                         <input type="text" id="blog-search" oninput="searchBlog()" class="triaje-input w-full pl-10 pr-4 py-2.5 text-xs rounded-full" placeholder="Buscar guías o trámites...">
-                        <span class="absolute left-3.5 top-3 text-[#5c6460] text-xs"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <span class="absolute left-3.5 top-3 text-[#4A4032] text-xs"><i class="fa-solid fa-magnifying-glass"></i></span>
                     </div>
                 </div>
 
@@ -791,30 +791,30 @@
         <div class="w-full max-w-2xl bg-white h-full overflow-y-auto shadow-2xl p-6 md:p-10 transform translate-x-full transition-transform duration-300 flex flex-col justify-between" id="article-modal-body">
             
             <div class="space-y-6">
-                <div class="flex justify-between items-center border-b border-[#ded9cd] pb-4">
-                    <span id="modal-article-tag" class="font-stamp text-[10px] text-[#bca374] uppercase tracking-wider">Categoría</span>
-                    <button onclick="closeArticle()" class="text-2xl text-[#1c352d] hover:text-[#bca374] transition-colors">
+                <div class="flex justify-between items-center border-b border-[#C7B78E] pb-4">
+                    <span id="modal-article-tag" class="font-stamp text-[10px] text-[#B8874B] uppercase tracking-wider">Categoría</span>
+                    <button onclick="closeArticle()" class="text-2xl text-[#1C3B30] hover:text-[#B8874B] transition-colors">
                         <i class="fa-solid fa-times"></i>
                     </button>
                 </div>
                 
-                <span id="modal-article-date" class="text-xs font-medium text-[#5c6460]">Fecha de publicación</span>
-                <h2 id="modal-article-title" class="font-serif-editorial text-3xl md:text-4xl text-[#1c352d] font-bold leading-tight">Título del artículo</h2>
+                <span id="modal-article-date" class="text-xs font-medium text-[#4A4032]">Fecha de publicación</span>
+                <h2 id="modal-article-title" class="font-serif-editorial text-3xl md:text-4xl text-[#1C3B30] font-bold leading-tight">Título del artículo</h2>
                 
                 <!-- Separador ornamental -->
-                <div class="h-0.5 bg-[#bca374]/30"></div>
+                <div class="h-0.5 bg-[#B8874B]/30"></div>
 
                 <!-- Contenido Principal -->
-                <div id="modal-article-content" class="text-sm md:text-base text-[#1c352d] leading-relaxed space-y-4 font-sans">
+                <div id="modal-article-content" class="text-sm md:text-base text-[#1C3B30] leading-relaxed space-y-4 font-sans">
                     <!-- Contenido enriquecido -->
                 </div>
             </div>
 
             <!-- Footer del Lector con CTA -->
-            <div class="mt-12 bg-[#fcfbf9] border border-[#ded9cd] p-6 rounded-xl space-y-4">
-                <h4 class="font-serif-editorial text-lg font-bold text-[#1c352d]">¿Quieres tramitar este expediente en España?</h4>
-                <p class="text-xs text-[#5c6460]">Nuestro sistema analiza tu caso gratis y, si decides avanzar, nos encargamos del expediente completo.</p>
-                <a id="modal-cta-reservar" href="#diagnostico-gratis" onclick="closeArticle(); navigateTo('home', 'diagnostico-gratis'); return false;" class="w-full bg-[#1c352d] hover:bg-[#2c4c41] text-[#fbfaf7] py-3 rounded-lg text-center font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+            <div class="mt-12 bg-[#fcfbf9] border border-[#C7B78E] p-6 rounded-xl space-y-4">
+                <h4 class="font-serif-editorial text-lg font-bold text-[#1C3B30]">¿Quieres tramitar este expediente en España?</h4>
+                <p class="text-xs text-[#4A4032]">Nuestro sistema analiza tu caso gratis y, si decides avanzar, nos encargamos del expediente completo.</p>
+                <a id="modal-cta-reservar" href="#diagnostico-gratis" onclick="closeArticle(); navigateTo('home', 'diagnostico-gratis'); return false;" class="w-full bg-[#1C3B30] hover:bg-[#2F5C4C] text-[#fbfaf7] py-3 rounded-lg text-center font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2">
                     <i class="fa-solid fa-wand-magic-sparkles text-sm"></i> Evaluar mi caso gratis
                 </a>
             </div>
@@ -822,13 +822,13 @@
     </div>
 
     <!-- PIE DE PÁGINA -->
-    <footer class="bg-[#1c352d] text-[#fbfaf7] border-t border-[#bca374]/20 py-16">
+    <footer class="bg-[#1C3B30] text-[#fbfaf7] border-t border-[#B8874B]/20 py-16">
         <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12">
             <!-- Columna 1: Firma -->
             <div class="md:col-span-4 space-y-4">
                 <a href="#" onclick="navigateTo('home'); return false;" class="flex flex-col w-max">
                     <span class="font-serif-editorial text-2xl font-bold tracking-tight text-white">Raíz</span>
-                    <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#bca374] -mt-1">Asesores de Extranjería</span>
+                    <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#B8874B] -mt-1">Asesores de Extranjería</span>
                 </a>
                 <p class="text-xs text-gray-300 leading-relaxed max-w-sm">
                     Especialistas en trámites administrativos de extranjería telemáticos. Trabajamos bajo el estándar de rigurosidad técnica para una migración ordenada.
@@ -842,7 +842,7 @@
 
             <!-- Columna 2: Enlaces Rápidos -->
             <div class="md:col-span-4 space-y-4">
-                <h4 class="font-serif-editorial text-lg text-[#bca374] font-semibold">Secciones</h4>
+                <h4 class="font-serif-editorial text-lg text-[#B8874B] font-semibold">Secciones</h4>
                 <ul class="space-y-2 text-xs text-gray-300">
                     <li><a href="#inicio" onclick="navigateTo('home', 'inicio'); return false;" class="hover:text-white transition-colors">Inicio</a></li>
                     <li><a href="#servicios" onclick="navigateTo('home', 'servicios'); return false;" class="hover:text-white transition-colors">Trámites de Extranjería</a></li>
@@ -854,33 +854,33 @@
 
             <!-- Columna 3: Sede & Contacto -->
             <div class="md:col-span-4 space-y-4">
-                <h4 class="font-serif-editorial text-lg text-[#bca374] font-semibold">Contacto</h4>
+                <h4 class="font-serif-editorial text-lg text-[#B8874B] font-semibold">Contacto</h4>
                 <ul class="space-y-3 text-xs text-gray-300">
                     <li class="flex items-start gap-2">
-                        <i class="fa-solid fa-map-location-dot mt-0.5 text-[#bca374]"></i>
+                        <i class="fa-solid fa-map-location-dot mt-0.5 text-[#B8874B]"></i>
                         <span>Trámites telemáticos en toda España con soporte digital ágil.</span>
                     </li>
                     <li class="flex items-center gap-2">
-                        <i class="fa-solid fa-envelope text-[#bca374]"></i>
+                        <i class="fa-solid fa-envelope text-[#B8874B]"></i>
                         <span>contacto@raizextranjeria.es</span>
                     </li>
                     <li id="footer-whatsapp-contacto" class="flex items-center gap-2" hidden>
-                        <i class="fa-brands fa-whatsapp text-[#bca374]"></i>
+                        <i class="fa-brands fa-whatsapp text-[#B8874B]"></i>
                         <a href="#" id="footer-whatsapp-link" target="_blank" rel="noopener" class="hover:text-white transition-colors">Escríbenos por WhatsApp</a>
                     </li>
                     <li class="flex items-center gap-2">
-                        <i class="fa-solid fa-wand-magic-sparkles text-[#bca374]"></i>
+                        <i class="fa-solid fa-wand-magic-sparkles text-[#B8874B]"></i>
                         <span>Diagnóstico automático gratuito y seguimiento de tu expediente online</span>
                     </li>
                     <li class="flex items-center gap-2">
-                        <i class="fa-solid fa-clock text-[#bca374]"></i>
+                        <i class="fa-solid fa-clock text-[#B8874B]"></i>
                         <span>Lunes a Viernes · 09:00 - 18:00 (hábiles)</span>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <div class="max-w-6xl mx-auto px-6 mt-12 pt-8 border-t border-[#bca374]/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-gray-400">
+        <div class="max-w-6xl mx-auto px-6 mt-12 pt-8 border-t border-[#B8874B]/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-gray-400">
             <p>&copy; 2026 Raíz - Asesores Expertos en Extranjería. Todos los derechos reservados.</p>
             <a href="politica-privacidad.html" class="hover:text-white transition-colors underline">Política de Privacidad</a>
         </div>
@@ -1025,8 +1025,8 @@
 
             // Actualizar estado del menú activo en navegación
             document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('text-[#1c352d]', 'border-b-2', 'border-[#bca374]');
-                link.classList.add('text-[#5c6460]');
+                link.classList.remove('text-[#1C3B30]', 'border-b-2', 'border-[#B8874B]');
+                link.classList.add('text-[#4A4032]');
             });
 
             // Si hay sección específica, hacer scroll
@@ -1084,13 +1084,13 @@
             const homeContainer = document.getElementById('home-blog-container');
             if (homeContainer) {
                 homeContainer.innerHTML = articlesDB.slice(0, 3).map(post => `
-                    <article class="bg-white border border-[#ded9cd] p-8 rounded-xl flex flex-col justify-between hover:border-[#bca374] transition-all">
+                    <article class="bg-white border border-[#C7B78E] p-8 rounded-xl flex flex-col justify-between hover:border-[#B8874B] transition-all">
                         <div class="space-y-4">
-                            <span class="font-stamp text-[10px] text-[#bca374] uppercase tracking-wider">${post.tagLabel}</span>
-                            <h3 class="font-serif-editorial text-xl font-bold text-[#1c352d] leading-tight">${post.title}</h3>
-                            <p class="text-xs text-[#5c6460] leading-relaxed">${post.excerpt}</p>
+                            <span class="font-stamp text-[10px] text-[#B8874B] uppercase tracking-wider">${post.tagLabel}</span>
+                            <h3 class="font-serif-editorial text-xl font-bold text-[#1C3B30] leading-tight">${post.title}</h3>
+                            <p class="text-xs text-[#4A4032] leading-relaxed">${post.excerpt}</p>
                         </div>
-                        <button onclick="openArticle(${post.id})" class="text-xs font-bold text-[#1c352d] hover:text-[#bca374] text-left mt-6 pt-4 border-t border-[#ded9cd]/50 flex items-center gap-1.5 w-full">
+                        <button onclick="openArticle(${post.id})" class="text-xs font-bold text-[#1C3B30] hover:text-[#B8874B] text-left mt-6 pt-4 border-t border-[#C7B78E]/50 flex items-center gap-1.5 w-full">
                             Leer artículo completo →
                         </button>
                     </article>
@@ -1101,16 +1101,16 @@
             const gridContainer = document.getElementById('blog-grid-container');
             if (gridContainer) {
                 gridContainer.innerHTML = articlesDB.map(post => `
-                    <article class="bg-white border border-[#ded9cd] p-8 rounded-xl flex flex-col justify-between hover:shadow-sm transition-all post-card-item" data-tag="${post.tag}" data-title="${post.title.toLowerCase()}" data-excerpt="${post.excerpt.toLowerCase()}">
+                    <article class="bg-white border border-[#C7B78E] p-8 rounded-xl flex flex-col justify-between hover:shadow-sm transition-all post-card-item" data-tag="${post.tag}" data-title="${post.title.toLowerCase()}" data-excerpt="${post.excerpt.toLowerCase()}">
                         <div class="space-y-4">
-                            <div class="flex justify-between items-center text-[10px] font-stamp text-[#bca374]">
+                            <div class="flex justify-between items-center text-[10px] font-stamp text-[#B8874B]">
                                 <span class="uppercase tracking-wider">${post.tagLabel}</span>
                                 <span>${post.date}</span>
                             </div>
-                            <h3 class="font-serif-editorial text-xl font-bold text-[#1c352d] leading-tight">${post.title}</h3>
-                            <p class="text-xs text-[#5c6460] leading-relaxed">${post.excerpt}</p>
+                            <h3 class="font-serif-editorial text-xl font-bold text-[#1C3B30] leading-tight">${post.title}</h3>
+                            <p class="text-xs text-[#4A4032] leading-relaxed">${post.excerpt}</p>
                         </div>
-                        <button onclick="openArticle(${post.id})" class="text-xs font-bold text-[#1c352d] hover:text-[#bca374] text-left mt-6 pt-4 border-t border-[#ded9cd]/50 flex items-center gap-1.5 w-full">
+                        <button onclick="openArticle(${post.id})" class="text-xs font-bold text-[#1C3B30] hover:text-[#B8874B] text-left mt-6 pt-4 border-t border-[#C7B78E]/50 flex items-center gap-1.5 w-full">
                             Leer artículo completo →
                         </button>
                     </article>
@@ -1121,14 +1121,14 @@
         // Lógica de filtrado en el Blog
         function filterBlog(tag) {
             document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('bg-[#1c352d]', 'text-white');
-                btn.classList.add('bg-white', 'text-[#5c6460]', 'border-[#ded9cd]');
+                btn.classList.remove('bg-[#1C3B30]', 'text-white');
+                btn.classList.add('bg-white', 'text-[#4A4032]', 'border-[#C7B78E]');
             });
 
             const activeBtn = event ? event.target : null;
             if (activeBtn) {
-                activeBtn.classList.remove('bg-white', 'text-[#5c6460]', 'border-[#ded9cd]');
-                activeBtn.classList.add('bg-[#1c352d]', 'text-white');
+                activeBtn.classList.remove('bg-white', 'text-[#4A4032]', 'border-[#C7B78E]');
+                activeBtn.classList.add('bg-[#1C3B30]', 'text-white');
             }
 
             document.querySelectorAll('.post-card-item').forEach(card => {
@@ -1506,13 +1506,13 @@
             bulletsEl.innerHTML = '';
 
             const estilosPorTier = {
-                urgente: { icon: 'fa-triangle-exclamation', color: 'text-[#9c3c3c]', etiqueta: 'Atención urgente' },
-                posible: { icon: 'fa-circle-check', color: 'text-[#2d6a4f]', etiqueta: 'Posible vía' },
-                confirmar: { icon: 'fa-circle-question', color: 'text-[#bca374]', etiqueta: 'A confirmar' }
+                urgente: { icon: 'fa-triangle-exclamation', color: 'text-[#9C2B2B]', etiqueta: 'Atención urgente' },
+                posible: { icon: 'fa-circle-check', color: 'text-[#2B6E4E]', etiqueta: 'Posible vía' },
+                confirmar: { icon: 'fa-circle-question', color: 'text-[#B8874B]', etiqueta: 'A confirmar' }
             };
 
             if (hallazgos.length === 0) {
-                bulletsEl.innerHTML = '<li class="flex items-start gap-2"><i class="fa-solid fa-circle-info text-[#bca374] mt-0.5"></i> Con los datos que nos diste, no identificamos todavía una vía clara de forma automática — eso no significa que no exista una. Un asesor de Raíz debería revisar tu caso con más detalle.</li>';
+                bulletsEl.innerHTML = '<li class="flex items-start gap-2"><i class="fa-solid fa-circle-info text-[#B8874B] mt-0.5"></i> Con los datos que nos diste, no identificamos todavía una vía clara de forma automática — eso no significa que no exista una. Un asesor de Raíz debería revisar tu caso con más detalle.</li>';
             } else {
                 hallazgos.forEach(h => {
                     const e = estilosPorTier[h.tier];
@@ -1531,18 +1531,18 @@
                     : 'Según tus respuestas, esto es lo que encontramos:';
 
             stampEl.textContent = 'Vista Previa';
-            stampEl.style.color = hayUrgente ? '#9c3c3c' : '#bca374';
-            stampEl.style.borderColor = hayUrgente ? '#9c3c3c' : '#bca374';
+            stampEl.style.color = hayUrgente ? '#9C2B2B' : '#B8874B';
+            stampEl.style.borderColor = hayUrgente ? '#9C2B2B' : '#B8874B';
 
             const whatsappLineHtml = !WHATSAPP_READY ? "" : `
-                <a href="${urlWhatsapp('Hola, vengo de la web de Raíz y quiero información sobre mi caso.')}" target="_blank" class="underline font-semibold text-[#1c352d]">¿Dudas rápidas? Escríbenos por WhatsApp</a> ·
+                <a href="${urlWhatsapp('Hola, vengo de la web de Raíz y quiero información sobre mi caso.')}" target="_blank" class="underline font-semibold text-[#1C3B30]">¿Dudas rápidas? Escríbenos por WhatsApp</a> ·
             `;
             const bookingButtonHtml = `
-                <p class="text-[11px] text-[#5c6460] leading-relaxed text-center px-2">
+                <p class="text-[11px] text-[#4A4032] leading-relaxed text-center px-2">
                     Recibe primero tu diagnóstico gratuito por correo. Ahí podrás crear tu cuenta gratis para empezar tu expediente.
                     ${whatsappLineHtml}
                     ${BOOKING_READY ? `Si prefieres revisar tu caso a fondo con una persona antes de decidir, la
-                    <a href="${BOOKING_URL}" target="_blank" class="underline font-semibold text-[#1c352d]">videollamada con un experto (39 €)</a>
+                    <a href="${BOOKING_URL}" target="_blank" class="underline font-semibold text-[#1C3B30]">videollamada con un experto (39 €)</a>
                     es un servicio aparte y opcional.` : ""}
                 </p>
             `;
