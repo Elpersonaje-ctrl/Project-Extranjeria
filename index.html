@@ -129,6 +129,22 @@
         .btn-cuenta:hover { background: var(--forest-light); }
         .comp-caja .env:disabled { opacity: .5; cursor: default; }
 
+
+        /* ---- Precios ---- */
+        .bloque-precios { padding: 3.2rem 1rem; background: var(--sand-dark); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+        .precios-in { max-width: 960px; margin: 0 auto; }
+        .etiqueta { font-family: var(--font-utility); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: .4rem; }
+        .bloque-precios h2 { font-size: 1.75rem; font-weight: 700; color: var(--forest); margin: 0 0 .6rem; }
+        .precios-intro { color: var(--ink-soft); max-width: 44rem; margin: 0 0 1.6rem; line-height: 1.6; }
+        .precios-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+        .precio { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 1.4rem; }
+        .precio .cifra { font-family: var(--font-display); font-size: 2.6rem; font-weight: 700; color: var(--forest); line-height: 1; }
+        .precio h3 { font-size: 1.1rem; font-weight: 700; color: var(--forest); margin: .6rem 0 .3rem; }
+        .precio p { margin: 0; font-size: .9rem; line-height: 1.55; color: var(--ink-soft); }
+        .precios-notas { list-style: none; margin: 1.6rem 0 0; padding: 0; display: flex; flex-direction: column; gap: .7rem; font-size: .92rem; line-height: 1.6; color: var(--ink-soft); }
+        .precios-notas b { color: var(--forest); }
+        @media (max-width: 720px) { .precios-grid { grid-template-columns: 1fr; } }
+
         /* ---- Franja "quiénes somos" ---- */
         .franja { border-top: 1px solid var(--rule-soft); padding: 3rem 1rem; background: var(--surface); }
         .franja-in { max-width: 960px; margin: 0 auto; }
@@ -151,6 +167,7 @@
                 <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#B8874B] -mt-1">Asesores de Extranjería</span>
             </a>
             <nav class="top-nav" aria-label="Principal">
+                <a href="#precios" onclick="navigateTo('home', 'precios'); return false;" class="nav-link">Precios</a>
                 <a href="#blog" onclick="navigateTo('blog'); return false;" class="nav-link">Blog</a>
                 <a href="https://app.raizextranjeria.es" class="btn-area">Área de clientes</a>
             </nav>
@@ -202,6 +219,32 @@
                         <a href="https://app.raizextranjeria.es/?crear=1" class="enlace-sec">Crear cuenta gratis</a>
                     </div>
                     <p class="aviso-legal">Raíz es una agencia de representación administrativa (Ley 39/2015). No somos un despacho de abogados colegiados ni gestionamos recursos judiciales.</p>
+                </div>
+            </section>
+
+            <section id="precios" class="bloque-precios">
+                <div class="precios-in">
+                    <span class="etiqueta">Cuánto cuesta</span>
+                    <h2>Honorarios claros, antes de contratar</h2>
+                    <p class="precios-intro">Preguntarle a la IA es gratis. Si quieres que Raíz lleve tu expediente de principio a fin, estos son los honorarios:</p>
+                    <div class="precios-grid">
+                        <div class="precio">
+                            <div class="cifra">250 €</div>
+                            <h3>Arraigos y nacionalidad</h3>
+                            <p>Arraigo Social, Arraigo para la Formación, Arraigo Sociolaboral, Arraigo Familiar y Nacionalidad española por residencia.</p>
+                        </div>
+                        <div class="precio">
+                            <div class="cifra">350 €</div>
+                            <h3>Resto de trámites</h3>
+                            <p>Reagrupación familiar, renovaciones y modificaciones, familiares de español, residencia de larga duración, residencia y trabajo, estancia por estudios, razones humanitarias, recursos y otros.</p>
+                        </div>
+                    </div>
+                    <ul class="precios-notas">
+                        <li><b>Pago en tres pasos:</b> 50 % al empezar, 30 % al presentar el expediente y 20 % cuando llega la resolución.</li>
+                        <li><b>Incluye:</b> preparación completa del expediente, informe de viabilidad por escrito, doble revisión de cada documento, presentación, representación y seguimiento hasta la resolución, y acceso a tu Área de clientes.</li>
+                        <li><b>No incluye:</b> las tasas oficiales (se pagan aparte a la Administración), traducciones y apostillas, certificados de tu país de origen ni la vía judicial.</li>
+                        <li><b>Videollamada opcional</b> de 30 minutos con un asesor: 39 €.</li>
+                    </ul>
                 </div>
             </section>
 
@@ -276,6 +319,7 @@
                 <h4 class="font-serif-editorial text-base text-[#D9AE72] font-semibold">Enlaces</h4>
                 <ul class="space-y-2 text-xs text-gray-300">
                     <li><a href="#inicio" onclick="navigateTo('home', 'inicio'); return false;" class="hover:text-white transition-colors">Pregúntale a Raíz</a></li>
+                    <li><a href="#precios" onclick="navigateTo('home', 'precios'); return false;" class="hover:text-white transition-colors">Precios</a></li>
                     <li><a href="#blog" onclick="navigateTo('blog'); return false;" class="hover:text-white transition-colors">Blog de extranjería</a></li>
                     <li><a href="https://app.raizextranjeria.es" class="hover:text-white transition-colors">Área de clientes</a></li>
                     <li><a href="politica-privacidad.html" class="hover:text-white transition-colors">Política de privacidad</a></li>
@@ -444,6 +488,8 @@
                 const id = parseInt(hash.replace('#article-', ''));
                 const post = articlesDB.find(p => p.id === id);
                 if (post) window.location.replace('guias/' + post.slug + '.html');
+            } else if (hash === '#precios') {
+                navigateTo('home', 'precios');
             } else if (hash === '#diagnostico-gratis' || hash === '#servicios' || hash === '#metodologia' || hash === '#inicio') {
                 navigateTo('home', 'inicio');
             }
