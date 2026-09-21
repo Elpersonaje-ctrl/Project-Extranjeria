@@ -31,3 +31,6 @@ google-apps-script.gs
 google-apps-script-manifest.json
 raizlaunchplan.bundle
 raizlaunchplan.bundle:Zone.Identifier
+
+# Cuaderno de coordinación entre herramientas (interno)
+COORDINACION.md
