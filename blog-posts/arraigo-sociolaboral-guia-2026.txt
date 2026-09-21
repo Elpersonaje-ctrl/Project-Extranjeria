@@ -30,7 +30,7 @@ RESUMEN: En qué se diferencia del Arraigo Social, cómo tiene que ser el contra
 
 <h4 class="font-bold text-[#1c352d] mt-4">Plazos y qué viene después</h4>
 
-<p>Se presenta de forma telemática por Mercurio cuando la documentación está lista. Los requerimientos de subsanación tienen un plazo de 10 a 15 días hábiles que no se prorroga. Concedida la autorización, un mes para la TIE. Antes de que caduque el año, la autorización suele modificarse a una residencia y trabajo ordinaria de cuatro años; a los cinco años de residencia legal se puede pedir la larga duración, y a los dos años la nacionalidad si eres de país iberoamericano o asimilado.</p>
+<p>Se presenta de forma telemática cuando la documentación está lista. Los requerimientos de subsanación tienen un plazo de 10 a 15 días hábiles que no se prorroga. Concedida la autorización, un mes para la TIE. Antes de que caduque el año, la autorización suele modificarse a una residencia y trabajo ordinaria de cuatro años; a los cinco años de residencia legal se puede pedir la larga duración, y a los dos años la nacionalidad si eres de país iberoamericano o asimilado.</p>
 
 <h4 class="font-bold text-[#1c352d] mt-4">Errores frecuentes de denegación</h4>
 

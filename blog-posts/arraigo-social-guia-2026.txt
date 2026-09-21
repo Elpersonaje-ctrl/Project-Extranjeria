@@ -28,7 +28,7 @@ RESUMEN: Los 2 años de permanencia, las dos vías (vínculo familiar o Informe 
 
 <h4 class="font-bold text-[#1c352d] mt-4">Tramitación y plazos</h4>
 
-<p>El Arraigo Social se presenta cuando tienes toda la documentación lista, sin ventana de fechas, de forma telemática a través de la plataforma Mercurio. Si a Extranjería le falta algún documento, envía un requerimiento de subsanación con un plazo de 10 a 15 días hábiles que no se prorroga: dejarlo pasar es la causa más evitable de pérdida del expediente. Concedida la autorización, dispones de un mes para pedir cita y expedir la TIE.</p>
+<p>El Arraigo Social se presenta cuando tienes toda la documentación lista, sin ventana de fechas, de forma telemática. Si a Extranjería le falta algún documento, envía un requerimiento de subsanación con un plazo de 10 a 15 días hábiles que no se prorroga: dejarlo pasar es la causa más evitable de pérdida del expediente. Concedida la autorización, dispones de un mes para pedir cita y expedir la TIE.</p>
 
 <h4 class="font-bold text-[#1c352d] mt-4">Qué viene después</h4>
 

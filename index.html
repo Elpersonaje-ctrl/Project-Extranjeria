@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raíz - Asesores Expertos en Extranjería España</title>
+    <meta name="description" content="Pregunta tu duda de extranjería y recibe una respuesta con la normativa vigente y su fuente. Raíz prepara y presenta tu expediente de forma telemática.">
+    <link rel="canonical" href="https://raizextranjeria.es/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Raíz - Asesores Expertos en Extranjería">
+    <meta property="og:title" content="Raíz - Asesores Expertos en Extranjería">
+    <meta property="og:description" content="Tu trámite de extranjería, explicado con la fuente delante. Pregúntale a Raíz.">
+    <meta property="og:url" content="https://raizextranjeria.es/">
+    <meta property="og:image" content="https://raizextranjeria.es/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
     
     <!-- Tailwind CSS para el diseño ágil y responsivo -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -24,7 +34,7 @@
             --surface: #ffffff;
             --ink: #211B14;
             --ink-soft: #4A4032;
-            --ink-faint: #8f8770;
+            --ink-faint: #6b6250;
             --rule: #C7B78E;
             --rule-soft: #E4DCC5;
             --shadow-lift: 0 10px 30px -12px rgba(28, 22, 12, 0.22);
@@ -77,7 +87,14 @@
         .comp-caja .env { width: 40px; height: 40px; border-radius: 11px; background: var(--forest); color: #fff; display: grid; place-items: center; border: 0; cursor: pointer; flex: none; }
         .comp-caja .env:hover { background: var(--forest-light); }
         .comp-caja .env svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
-        .hero .mini { margin-top: 1.1rem; font-size: .76rem; color: var(--ink-faint); }
+        .hero .mini { margin-top: 1.1rem; font-size: .82rem; color: var(--ink-faint); }
+        .hero .mini.priv { margin-top: .3rem; } .hero .mini a { color: var(--forest); text-decoration: underline; }
+        .acciones-franja { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; margin-top: 1.8rem; }
+        .btn-cta-web { background: var(--forest); color: #fff; padding: .8rem 1.4rem; border-radius: 8px; font-weight: 600; text-decoration: none; }
+        .btn-cta-web:hover { background: var(--forest-light); }
+        .enlace-sec { font-size: .9rem; font-weight: 600; color: var(--forest); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 1px; }
+        .leyenda { font-size: .82rem; color: var(--ink-soft); padding: .6rem .8rem; border-radius: 10px; background: var(--sand-dark); }
+        .siguiente { font-size: .9rem; color: var(--ink-soft); } .siguiente a { color: var(--forest); font-weight: 600; text-decoration: underline; }
         .hero .otro { display: inline-block; margin-top: .9rem; font-size: .86rem; font-weight: 500; color: var(--forest); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 1px; }
         .hero .otro:hover { color: var(--gold); }
 
@@ -92,13 +109,13 @@
         .msg.ia p { margin: 0; font-size: 1rem; line-height: 1.6; color: var(--ink); }
         .msg.ia ul { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: .3rem; }
         .afirma { padding-left: .9rem; border-left: 2px solid var(--rule); display: flex; flex-direction: column; gap: .25rem; }
-        .afirma .tag { font-family: var(--font-utility); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; display: flex; align-items: center; gap: .4rem; }
+        .afirma .tag { font-family: var(--font-utility); font-size: .76rem; letter-spacing: .08em; text-transform: uppercase; display: flex; align-items: center; gap: .4rem; }
         .afirma .tag i { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
         .afirma.n { border-color: #2B6E4E; } .afirma.n .tag { color: #2B6E4E; }
         .afirma.o { border-color: #8a6420; } .afirma.o .tag { color: #8a6420; }
         .afirma.c { border-color: var(--forest-light); } .afirma.c .tag { color: var(--forest-light); }
         .afirma.v { border-color: #9C2B2B; } .afirma.v .tag { color: #9C2B2B; }
-        .fuente { font-family: var(--font-utility); font-size: .74rem; color: var(--ink-faint); }
+        .fuente { font-family: var(--font-utility); font-size: .8rem; color: var(--ink-soft); }
         .pensando { display: flex; gap: 4px; padding: .4rem 0; }
         .pensando i { width: 7px; height: 7px; border-radius: 50%; background: var(--ink-faint); animation: pens 1s infinite ease-in-out; }
         .pensando i:nth-child(2) { animation-delay: .15s; } .pensando i:nth-child(3) { animation-delay: .3s; }
@@ -166,8 +183,9 @@
                             <button class="env" id="ask-env" type="submit" aria-label="Preguntar a Raíz"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
                         </div>
                     </form>
-                    <p class="mini" id="ask-pie">Tus primeras preguntas son gratis; para seguir, crea una cuenta. Orientación informativa: no sustituye a un abogado.</p>
-                    <a href="#" id="cta-reservar-hero" target="_blank" rel="noopener" class="otro">Prefiero hablar con un experto</a>
+                    <p class="mini" id="ask-pie">5 preguntas gratis, sin cuenta. Después, crea una cuenta para seguir. Orientación informativa: no sustituye a un abogado.</p>
+                    <p class="mini priv">Guardamos tus preguntas para mejorar el servicio. No escribas tu DNI ni datos de salud. <a href="politica-privacidad.html">Política de privacidad</a>.</p>
+                    <a href="#" id="cta-reservar-hero" target="_blank" rel="noopener" class="otro">Prefiero una videollamada con un experto</a>
                 </div>
             </section>
 
@@ -175,9 +193,13 @@
                 <div class="franja-in">
                     <h2>Raíz prepara y presenta tu expediente</h2>
                     <div class="puntos">
-                        <div><h3>Todo online</h3><p>Sin citas presenciales. Presentamos tu expediente de forma telemática ante la Administración.</p></div>
+                        <div><h3>Trámite telemático</h3><p>Presentamos tu expediente de forma telemática ante la Administración, con seguimiento online.</p></div>
                         <div><h3>Con la fuente delante</h3><p>El asistente separa lo que dice la normativa de lo que es práctica de la oficina, e indica de dónde sale cada cosa.</p></div>
                         <div><h3>Tu expediente a la vista</h3><p>En el Área de clientes subes tus documentos y ves en qué punto está tu trámite.</p></div>
+                    </div>
+                    <div class="acciones-franja">
+                        <a href="#inicio" onclick="navigateTo('home', 'inicio'); setTimeout(() => document.getElementById('ask-input').focus(), 700); return false;" class="btn-cta-web">Hacer mi pregunta</a>
+                        <a href="https://app.raizextranjeria.es/?crear=1" class="enlace-sec">Crear cuenta gratis</a>
                     </div>
                     <p class="aviso-legal">Raíz es una agencia de representación administrativa (Ley 39/2015). No somos un despacho de abogados colegiados ni gestionamos recursos judiciales.</p>
                 </div>
@@ -202,10 +224,10 @@
                 
                 <!-- Cabecera del Blog -->
                 <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
-                    <span class="font-stamp text-xs text-[#B8874B] uppercase tracking-[0.2em]">Recursos Legales e Informativos</span>
-                    <h1 class="font-serif-editorial text-4xl md:text-6xl font-bold text-[#1C3B30]">Artículos de Extranjería</h1>
+                    <span class="font-stamp text-xs text-[#B8874B] uppercase tracking-[0.2em]">Recursos informativos</span>
+                    <h2 class="font-serif-editorial text-4xl md:text-6xl font-bold text-[#1C3B30]">Artículos de Extranjería</h2>
                     <p class="text-[#4A4032] leading-relaxed text-sm md:text-base">
-                        Guías explicadas en un lenguaje claro, diseñadas para ayudarte a entender la normativa migratoria de España con total seguridad.
+                        Guías explicadas en un lenguaje claro, diseñadas para ayudarte a entender la normativa migratoria de España.
                     </p>
                 </div>
 
@@ -232,41 +254,6 @@
         </div>
 
     </main>
-
-    <!-- LECTOR DE ARTÍCULO MODAL -->
-    <div id="article-modal" class="fixed inset-0 bg-black/50 z-50 flex justify-end transition-opacity duration-300 opacity-0 pointer-events-none">
-        <div class="w-full max-w-2xl bg-white h-full overflow-y-auto shadow-2xl p-6 md:p-10 transform translate-x-full transition-transform duration-300 flex flex-col justify-between" id="article-modal-body">
-            
-            <div class="space-y-6">
-                <div class="flex justify-between items-center border-b border-[#C7B78E] pb-4">
-                    <span id="modal-article-tag" class="font-stamp text-[10px] text-[#B8874B] uppercase tracking-wider">Categoría</span>
-                    <button onclick="closeArticle()" class="text-2xl text-[#1C3B30] hover:text-[#B8874B] transition-colors">
-                        <i class="fa-solid fa-times"></i>
-                    </button>
-                </div>
-                
-                <span id="modal-article-date" class="text-xs font-medium text-[#4A4032]">Fecha de publicación</span>
-                <h2 id="modal-article-title" class="font-serif-editorial text-3xl md:text-4xl text-[#1C3B30] font-bold leading-tight">Título del artículo</h2>
-                
-                <!-- Separador ornamental -->
-                <div class="h-0.5 bg-[#B8874B]/30"></div>
-
-                <!-- Contenido Principal -->
-                <div id="modal-article-content" class="text-sm md:text-base text-[#1C3B30] leading-relaxed space-y-4 font-sans">
-                    <!-- Contenido enriquecido -->
-                </div>
-            </div>
-
-            <!-- Footer del Lector con CTA -->
-            <div class="mt-12 bg-[#fcfbf9] border border-[#C7B78E] p-6 rounded-xl space-y-4">
-                <h4 class="font-serif-editorial text-lg font-bold text-[#1C3B30]">¿Tienes una duda sobre tu caso?</h4>
-                <p class="text-xs text-[#4A4032]">Pregúntale a Raíz: te responde con la normativa vigente y, si quieres avanzar, creas tu cuenta y seguimos con tu expediente.</p>
-                <a id="modal-cta-reservar" href="#inicio" onclick="closeArticle(); navigateTo('home', 'inicio'); setTimeout(() => document.getElementById('ask-input') && document.getElementById('ask-input').focus(), 700); return false;" class="w-full bg-[#1C3B30] hover:bg-[#2F5C4C] text-white py-3 rounded-lg text-center font-semibold text-sm flex items-center justify-center gap-2">
-                    Preguntar a Raíz
-                </a>
-            </div>
-        </div>
-    </div>
 
     <!-- PIE DE PÁGINA -->
     <footer class="bg-[#1C3B30] text-[#fbfaf7] py-12">
@@ -393,7 +380,7 @@
                 const articulos = await Promise.all(nombresArchivos.map(async (nombreArchivo, index) => {
                     const respuesta = await fetch(`blog-posts/${nombreArchivo}`);
                     const texto = await respuesta.text();
-                    return { id: index + 1, ...parseArticuloTexto(texto) };
+                    return { id: index + 1, slug: nombreArchivo.replace(/\.txt$/, ''), ...parseArticuloTexto(texto) };
                 }));
 
                 articlesDB = articulos;
@@ -455,10 +442,8 @@
                 navigateTo('blog');
             } else if (hash && hash.startsWith('#article-')) {
                 const id = parseInt(hash.replace('#article-', ''));
-                if (id) {
-                    navigateTo('blog');
-                    setTimeout(() => { openArticle(id); }, 150);
-                }
+                const post = articlesDB.find(p => p.id === id);
+                if (post) window.location.replace('guias/' + post.slug + '.html');
             } else if (hash === '#diagnostico-gratis' || hash === '#servicios' || hash === '#metodologia' || hash === '#inicio') {
                 navigateTo('home', 'inicio');
             }
@@ -475,9 +460,9 @@
                             <h3 class="font-serif-editorial text-xl font-bold text-[#1C3B30] leading-tight">${post.title}</h3>
                             <p class="text-xs text-[#4A4032] leading-relaxed">${post.excerpt}</p>
                         </div>
-                        <button onclick="openArticle(${post.id})" class="text-xs font-bold text-[#1C3B30] hover:text-[#B8874B] text-left mt-6 pt-4 border-t border-[#C7B78E]/50 flex items-center gap-1.5 w-full">
+                        <a href="guias/${post.slug}.html" aria-label="Leer: ${post.title}" class="text-xs font-bold text-[#1C3B30] hover:text-[#B8874B] text-left mt-6 pt-4 border-t border-[#C7B78E]/50 flex items-center gap-1.5 w-full">
                             Leer artículo completo →
-                        </button>
+                        </a>
                     </article>
                 `).join('');
             }
@@ -495,9 +480,9 @@
                             <h3 class="font-serif-editorial text-xl font-bold text-[#1C3B30] leading-tight">${post.title}</h3>
                             <p class="text-xs text-[#4A4032] leading-relaxed">${post.excerpt}</p>
                         </div>
-                        <button onclick="openArticle(${post.id})" class="text-xs font-bold text-[#1C3B30] hover:text-[#B8874B] text-left mt-6 pt-4 border-t border-[#C7B78E]/50 flex items-center gap-1.5 w-full">
+                        <a href="guias/${post.slug}.html" aria-label="Leer: ${post.title}" class="text-xs font-bold text-[#1C3B30] hover:text-[#B8874B] text-left mt-6 pt-4 border-t border-[#C7B78E]/50 flex items-center gap-1.5 w-full">
                             Leer artículo completo →
-                        </button>
+                        </a>
                     </article>
                 `).join('');
             }
@@ -537,35 +522,6 @@
                     card.classList.add('hidden');
                 }
             });
-        }
-
-        function openArticle(id) {
-            const post = articlesDB.find(p => p.id === id);
-            if (!post) return;
-
-            document.getElementById('modal-article-tag').textContent = post.tagLabel;
-            document.getElementById('modal-article-date').textContent = `Publicado: ${post.date}`;
-            document.getElementById('modal-article-title').textContent = post.title;
-            document.getElementById('modal-article-content').innerHTML = post.content;
-            
-
-            const modal = document.getElementById('article-modal');
-            const modalBody = document.getElementById('article-modal-body');
-            
-            modal.classList.remove('pointer-events-none', 'opacity-0');
-            modalBody.classList.remove('translate-x-full');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeArticle() {
-            const modal = document.getElementById('article-modal');
-            const modalBody = document.getElementById('article-modal-body');
-            
-            modalBody.classList.add('translate-x-full');
-            setTimeout(() => {
-                modal.classList.add('pointer-events-none', 'opacity-0');
-                document.body.style.overflow = '';
-            }, 300);
         }
 
         // Muestra los enlaces de WhatsApp del footer solo si hay un número real
@@ -608,6 +564,9 @@
         const $ = (id) => document.getElementById(id);
         let conversacionId = "";
         let ocupado = false;
+        let leyendaMostrada = false;
+        const LEYENDA = '<div class="leyenda"><b>Normativa</b> = lo que dice la ley · <b>Criterio de oficina</b> = cómo se suele aplicar · <b>Sin verificar</b> = no lo he podido comprobar.</div>';
+        const SIGUIENTE = '<p class="siguiente">¿Quieres que Raíz lleve tu caso? <a href="https://app.raizextranjeria.es/?crear=1">Crea tu cuenta gratis</a> y guarda esta conversación.</p>';
 
         const escapar = (t) => String(t == null ? "" : t).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
         const inline = (t) => escapar(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
@@ -675,11 +634,13 @@
                 conversacionId = r.conversacionId;
                 if (r.respuesta == null) { espera.remove(); pedirCuenta(); return; }
                 let html = formatear(r.respuesta);
-                if (r.urgente) html = '<div class="urgente-web"><b>Esto parece urgente.</b> Escribe al equipo de Raíz ahora, sin esperar: contacto@raizextranjeria.es</div>' + html;
+                if (r.urgente) html = '<div class="urgente-web"><b>Esto parece urgente.</b> Escribe al equipo de Raíz ahora, sin esperar: <a href="https://wa.me/34665112314" target="_blank" rel="noopener">WhatsApp</a> o contacto@raizextranjeria.es</div>' + html;
+                if (!leyendaMostrada && /class="afirma /.test(html)) { html += LEYENDA; leyendaMostrada = true; }
+                html += SIGUIENTE;
                 espera.querySelector(".cuerpo").innerHTML = html;
                 if (r.restantes != null) {
                     $("ask-pie").textContent = r.restantes > 0
-                        ? `Te quedan ${r.restantes} ${r.restantes === 1 ? "pregunta gratis" : "preguntas gratis"} · después, crea una cuenta para seguir. Orientación informativa: no sustituye a un abogado.`
+                        ? `Te quedan ${r.restantes} de 5 preguntas gratis · después, crea una cuenta para seguir. Orientación informativa: no sustituye a un abogado.`
                         : "Has usado tus preguntas gratis.";
                 }
                 if (r.requiereCuenta) pedirCuenta();
