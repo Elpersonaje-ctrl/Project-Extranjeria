@@ -29,6 +29,7 @@
             --forest-pale: #E7EEE8;
             --gold: #B8874B;
             --gold-light: #D9AE72;
+            --gold-texto: #8F6630; /* dorado para textos pequeños sobre fondo claro (contraste 4,9:1) */
             --sand: #fbfaf7;
             --sand-dark: #f3efe6;
             --surface: #ffffff;
@@ -78,7 +79,7 @@
         /* ---- Portada: caja de pregunta ---- */
         .hero { padding: 3.5rem 1rem 2.5rem; }
         .hero-col { max-width: 720px; margin: 0 auto; text-align: center; }
-        .kicker { font-family: var(--font-utility); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+        .kicker { font-family: var(--font-utility); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-texto); }
         .hero h1 { font-size: clamp(2rem, 6vw, 3.1rem); line-height: 1.08; font-weight: 700; color: var(--forest); margin: .7rem 0 .8rem; }
         .hero h1 em { display: block; font-style: italic; font-weight: 400; color: var(--gold); }
         .hero .lead { color: var(--ink-soft); max-width: 58ch; margin: 0 auto 1.6rem; font-size: 1.02rem; line-height: 1.6; }
@@ -104,7 +105,7 @@
         .msg { display: flex; flex-direction: column; gap: .5rem; }
         .msg.yo { align-items: flex-end; }
         .msg.yo .burbuja { background: var(--forest); color: #fff; padding: .6rem .95rem; border-radius: 16px 16px 4px 16px; max-width: 88%; white-space: pre-wrap; overflow-wrap: anywhere; }
-        .msg.ia .quien { font-family: var(--font-utility); font-size: .74rem; letter-spacing: .12em; color: var(--gold); }
+        .msg.ia .quien { font-family: var(--font-utility); font-size: .74rem; letter-spacing: .12em; color: var(--gold-texto); }
         .msg.ia .cuerpo { display: flex; flex-direction: column; gap: .8rem; max-width: 64ch; }
         .msg.ia p { margin: 0; font-size: 1rem; line-height: 1.6; color: var(--ink); }
         .msg.ia ul { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: .3rem; }
@@ -133,7 +134,7 @@
         /* ---- Precios ---- */
         .bloque-precios { padding: 3.2rem 1rem; background: var(--sand-dark); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
         .precios-in { max-width: 960px; margin: 0 auto; }
-        .etiqueta { font-family: var(--font-utility); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: .4rem; }
+        .etiqueta { font-family: var(--font-utility); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-texto); display: block; margin-bottom: .4rem; }
         .bloque-precios h2 { font-size: 1.75rem; font-weight: 700; color: var(--forest); margin: 0 0 .6rem; }
         .precios-intro { color: var(--ink-soft); max-width: 44rem; margin: 0 0 1.6rem; line-height: 1.6; }
         .precios-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
@@ -158,14 +159,17 @@
         @media (max-width: 720px) { .puntos { grid-template-columns: 1fr; gap: 1.2rem; } .hero { padding-top: 2.4rem; } .top-nav { gap: .9rem; } .btn-area { padding: .45rem .7rem; font-size: .68rem; } }
     </style>
     <script data-goatcounter="https://raizextranjeria.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body class="grain-bg flex flex-col min-h-screen">
 
     <header class="sticky top-0 z-40 bg-[#fbfaf7]/90 backdrop-blur-md border-b border-[#C7B78E]">
         <div class="max-w-6xl mx-auto px-4 md:px-6 h-16 flex justify-between items-center">
-            <a href="#" onclick="navigateTo('home'); return false;" class="flex flex-col" aria-label="Raíz, inicio">
+            <a href="#" onclick="navigateTo('home'); return false;" class="flex flex-col" aria-label="Raíz Asesores de Extranjería, inicio">
                 <span class="font-serif-editorial text-2xl font-bold tracking-tight text-[#1C3B30]">Raíz</span>
-                <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#B8874B] -mt-1">Asesores de Extranjería</span>
+                <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#8F6630] -mt-1">Asesores de Extranjería</span>
             </a>
             <nav class="top-nav" aria-label="Principal">
                 <a href="#precios" onclick="navigateTo('home', 'precios'); return false;" class="nav-link">Precios</a>
@@ -268,7 +272,7 @@
                 
                 <!-- Cabecera del Blog -->
                 <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
-                    <span class="font-stamp text-xs text-[#B8874B] uppercase tracking-[0.2em]">Recursos informativos</span>
+                    <span class="font-stamp text-xs text-[#8F6630] uppercase tracking-[0.2em]">Recursos informativos</span>
                     <h2 class="font-serif-editorial text-4xl md:text-6xl font-bold text-[#1C3B30]">Artículos de Extranjería</h2>
                     <p class="text-[#4A4032] leading-relaxed text-sm md:text-base">
                         Guías explicadas en un lenguaje claro, diseñadas para ayudarte a entender la normativa migratoria de España.
@@ -305,15 +309,13 @@
             <div class="md:col-span-5 space-y-3">
                 <a href="#" onclick="navigateTo('home'); return false;" class="flex flex-col w-max">
                     <span class="font-serif-editorial text-2xl font-bold tracking-tight text-white">Raíz</span>
-                    <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#B8874B] -mt-1">Asesores de Extranjería</span>
+                    <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#D9AE72] -mt-1">Asesores de Extranjería</span>
                 </a>
                 <p class="text-xs text-gray-300 leading-relaxed max-w-sm">
                     Trámites administrativos de extranjería, telemáticos y con seguimiento online. Agencia de representación administrativa (Ley 39/2015); no somos un despacho de abogados.
                 </p>
                 <div class="flex gap-4 pt-1">
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors text-lg"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors text-lg"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" id="footer-whatsapp-icon" target="_blank" rel="noopener" class="text-gray-300 hover:text-white transition-colors text-lg" hidden><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" id="footer-whatsapp-icon" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp" class="text-gray-300 hover:text-white transition-colors text-lg" hidden><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="md:col-span-3 space-y-3">
@@ -503,11 +505,11 @@
                 homeContainer.innerHTML = articlesDB.slice(0, 3).map(post => `
                     <article class="bg-white border border-[#C7B78E] p-8 rounded-xl flex flex-col justify-between hover:border-[#B8874B] transition-all">
                         <div class="space-y-4">
-                            <span class="font-stamp text-[10px] text-[#B8874B] uppercase tracking-wider">${post.tagLabel}</span>
+                            <span class="font-stamp text-[10px] text-[#8F6630] uppercase tracking-wider">${post.tagLabel}</span>
                             <h3 class="font-serif-editorial text-xl font-bold text-[#1C3B30] leading-tight">${post.title}</h3>
                             <p class="text-xs text-[#4A4032] leading-relaxed">${post.excerpt}</p>
                         </div>
-                        <a href="guias/${post.slug}.html" aria-label="Leer: ${post.title}" class="text-xs font-bold text-[#1C3B30] hover:text-[#B8874B] text-left mt-6 pt-4 border-t border-[#C7B78E]/50 flex items-center gap-1.5 w-full">
+                        <a href="guias/${post.slug}.html" aria-label="Leer artículo completo: ${post.title}" class="text-xs font-bold text-[#1C3B30] hover:text-[#B8874B] text-left mt-6 pt-4 border-t border-[#C7B78E]/50 flex items-center gap-1.5 w-full">
                             Leer artículo completo →
                         </a>
                     </article>
@@ -520,14 +522,14 @@
                 gridContainer.innerHTML = articlesDB.map(post => `
                     <article class="bg-white border border-[#C7B78E] p-8 rounded-xl flex flex-col justify-between hover:shadow-sm transition-all post-card-item" data-tag="${post.tag}" data-title="${post.title.toLowerCase()}" data-excerpt="${post.excerpt.toLowerCase()}">
                         <div class="space-y-4">
-                            <div class="flex justify-between items-center text-[10px] font-stamp text-[#B8874B]">
+                            <div class="flex justify-between items-center text-[10px] font-stamp text-[#8F6630]">
                                 <span class="uppercase tracking-wider">${post.tagLabel}</span>
                                 <span>${post.date}</span>
                             </div>
                             <h3 class="font-serif-editorial text-xl font-bold text-[#1C3B30] leading-tight">${post.title}</h3>
                             <p class="text-xs text-[#4A4032] leading-relaxed">${post.excerpt}</p>
                         </div>
-                        <a href="guias/${post.slug}.html" aria-label="Leer: ${post.title}" class="text-xs font-bold text-[#1C3B30] hover:text-[#B8874B] text-left mt-6 pt-4 border-t border-[#C7B78E]/50 flex items-center gap-1.5 w-full">
+                        <a href="guias/${post.slug}.html" aria-label="Leer artículo completo: ${post.title}" class="text-xs font-bold text-[#1C3B30] hover:text-[#B8874B] text-left mt-6 pt-4 border-t border-[#C7B78E]/50 flex items-center gap-1.5 w-full">
                             Leer artículo completo →
                         </a>
                     </article>

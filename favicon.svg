@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <rect width="60" height="60" rx="12" fill="#1C3B30"/>
+  <circle cx="30" cy="30" r="25" fill="none" stroke="#fbfaf7" stroke-width="2" stroke-dasharray="3.5 3"/>
+  <circle cx="30" cy="30" r="19" fill="none" stroke="#fbfaf7" stroke-width="1.5"/>
+  <text x="30" y="37" text-anchor="middle" font-family="'Special Elite', 'Courier New', monospace" font-size="21" font-weight="bold" fill="#fbfaf7">R</text>
+</svg>
