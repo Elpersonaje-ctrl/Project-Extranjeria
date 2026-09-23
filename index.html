@@ -183,16 +183,16 @@
             <section id="inicio" class="hero">
                 <div class="hero-col">
                     <div id="ask-saludo">
-                        <span class="kicker">Asesoría de extranjería · España</span>
+                        <span class="kicker">Pregúntale a Raíz · gratis, sin cuenta</span>
                         <h1>¿Qué duda tienes <em>sobre tu trámite?</em></h1>
-                        <p class="lead">Pregunta con tus palabras. Respondo con la normativa vigente y te digo qué parte es ley y qué parte es práctica de la oficina.</p>
+                        <p class="lead">Pregunta con tus palabras. Te iré preguntando lo necesario para orientarte, con la normativa vigente y diciéndote qué parte es ley y qué parte es práctica de la oficina.</p>
                     </div>
 
                     <div id="ask-conv" class="conv-web" aria-live="polite" hidden></div>
 
                     <div id="ask-tope" class="cta-web" hidden>
-                        <div><b>Has usado tus preguntas gratis</b><p>Si quieres preguntar algo más, crea una cuenta y continúa con tu proceso.</p></div>
-                        <a class="btn-cuenta" href="https://app.raizextranjeria.es/?crear=1">Crear mi cuenta</a>
+                        <div><b>Has usado tus 3 preguntas gratis</b><p>Crea tu cuenta gratis y sigue esta misma conversación: tienes 10 preguntas más y, después, 5 cada semana.</p></div>
+                        <a class="btn-cuenta" id="ask-tope-btn" href="https://app.raizextranjeria.es/?crear=1">Crear mi cuenta y seguir</a>
                     </div>
 
                     <form id="ask-form">
@@ -201,7 +201,7 @@
                             <button class="env" id="ask-env" type="submit" aria-label="Preguntar a Raíz"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
                         </div>
                     </form>
-                    <p class="mini" id="ask-pie">5 preguntas gratis, sin cuenta. Después, crea una cuenta para seguir. Orientación informativa: no sustituye a un abogado.</p>
+                    <p class="mini" id="ask-pie">3 preguntas gratis, sin cuenta. Con tu cuenta gratis, 10 más. Orientación informativa: no sustituye a un abogado.</p>
                     <p class="mini priv">Guardamos tus preguntas para mejorar el servicio. No escribas tu DNI ni datos de salud. <a href="politica-privacidad.html">Política de privacidad</a>.</p>
                     <a href="#" id="cta-reservar-hero" target="_blank" rel="noopener" class="otro">Prefiero una videollamada con un experto</a>
                 </div>
@@ -594,8 +594,9 @@
 
     <script type="module">
         // Chat de IA de la portada. Habla con la misma Cloud Function que la
-        // plataforma (chatAsistente): 5 preguntas gratis sin cuenta, tope por
+        // plataforma (chatAsistente): 3 preguntas gratis sin cuenta, tope por
         // conversación, por red y por día — todo se controla en el servidor.
+        // Al crear la cuenta, el enlace lleva la conversación (?conv=) y la app la recupera.
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
         import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-functions.js";
 
@@ -613,7 +614,8 @@
         let ocupado = false;
         let leyendaMostrada = false;
         const LEYENDA = '<div class="leyenda"><b>Normativa</b> = lo que dice la ley · <b>Criterio de oficina</b> = cómo se suele aplicar · <b>Sin verificar</b> = no lo he podido comprobar.</div>';
-        const SIGUIENTE = '<p class="siguiente">¿Quieres que Raíz lleve tu caso? <a href="https://app.raizextranjeria.es/?crear=1">Crea tu cuenta gratis</a> y guarda esta conversación.</p>';
+        const enlaceCuenta = () => "https://app.raizextranjeria.es/?crear=1" + (conversacionId ? "&conv=" + encodeURIComponent(conversacionId) : "");
+        const siguiente = () => `<p class="siguiente">¿Quieres seguir o que Raíz lleve tu caso? <a href="${enlaceCuenta()}">Crea tu cuenta gratis</a>: guardas esta conversación y tienes 10 preguntas más.</p>`;
 
         const escapar = (t) => String(t == null ? "" : t).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
         const inline = (t) => escapar(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
@@ -667,7 +669,7 @@
             conv.appendChild(d);
             return d;
         }
-        function pedirCuenta() { $("ask-form").hidden = true; $("ask-tope").hidden = false; $("ask-pie").hidden = true; }
+        function pedirCuenta() { $("ask-tope-btn").href = enlaceCuenta(); $("ask-form").hidden = true; $("ask-tope").hidden = false; $("ask-pie").hidden = true; }
 
         async function enviar(texto) {
             texto = (texto || "").trim();
@@ -683,11 +685,11 @@
                 let html = formatear(r.respuesta);
                 if (r.urgente) html = '<div class="urgente-web"><b>Esto parece urgente.</b> Escribe al equipo de Raíz ahora, sin esperar: <a href="https://wa.me/34665112314" target="_blank" rel="noopener">WhatsApp</a> o contacto@raizextranjeria.es</div>' + html;
                 if (!leyendaMostrada && /class="afirma /.test(html)) { html += LEYENDA; leyendaMostrada = true; }
-                html += SIGUIENTE;
+                html += siguiente();
                 espera.querySelector(".cuerpo").innerHTML = html;
                 if (r.restantes != null) {
                     $("ask-pie").textContent = r.restantes > 0
-                        ? `Te quedan ${r.restantes} de 5 preguntas gratis · después, crea una cuenta para seguir. Orientación informativa: no sustituye a un abogado.`
+                        ? `Te quedan ${r.restantes} de 3 preguntas gratis · con tu cuenta gratis, 10 más. Orientación informativa: no sustituye a un abogado.`
                         : "Has usado tus preguntas gratis.";
                 }
                 if (r.requiereCuenta) pedirCuenta();
