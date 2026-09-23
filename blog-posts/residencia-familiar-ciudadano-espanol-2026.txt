@@ -3,6 +3,7 @@ CATEGORIA: familiar-espanol
 CATEGORIA_VISIBLE: Familiar de Español
 FECHA: 3 SEP 2026
 RESUMEN: Desde 2025 los familiares de españoles tienen un régimen propio, distinto del comunitario: autorización de 5 años y trabajo automático, pero con un requisito de dependencia económica para ascendientes e hijos mayores de 26 que conviene entender bien.
+RELACIONADAS: nacionalidad-espanola-residencia-guia-2026, reagrupacion-familiar-requisitos-2026, residencia-larga-duracion-guia-2026
 ---CONTENIDO---
 <p class="font-bold">Hasta 2025, el familiar extranjero de un español se tramitaba como si fuera familiar de cualquier ciudadano de la Unión Europea. El nuevo Reglamento de Extranjería creó un régimen propio y separado para los familiares de españoles, con ventajas claras pero también con requisitos económicos nuevos.</p>
 

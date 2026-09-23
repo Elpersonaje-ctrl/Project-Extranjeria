@@ -3,6 +3,7 @@ CATEGORIA: reagrupacion
 CATEGORIA_VISIBLE: Reagrupación Familiar
 FECHA: 3 SEP 2026
 RESUMEN: Quién puede reagrupar, la lista de familiares reagrupables uno por uno, los ingresos según IPREM, el informe de vivienda adecuada, los plazos reales y qué pasa en caso de separación.
+RELACIONADAS: residencia-familiar-ciudadano-espanol-2026, renovaciones-modificaciones-residencia-guia-2026, residencia-larga-duracion-guia-2026
 ---CONTENIDO---
 <p class="font-bold">La reagrupación familiar es el derecho de una persona extranjera con residencia legal en España a traer a determinados familiares para que vivan con ella. No sirve para traer a cualquiera: la ley define una lista cerrada y exige requisitos de ingresos y de vivienda.</p>
 

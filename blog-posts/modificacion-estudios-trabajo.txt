@@ -3,6 +3,7 @@ CATEGORIA: estudiantes
 CATEGORIA_VISIBLE: Estudiantes
 FECHA: 25 JUN 2026
 RESUMEN: Si has completado tu carrera o máster recientemente en un centro de estudios de España, te explicamos cómo regularizar tu residencia laboral.
+RELACIONADAS: visado-estudios-espana-guia-2026, residencia-trabajo-cuenta-ajena-2026, renovaciones-modificaciones-residencia-guia-2026
 ---CONTENIDO---
 <p class="font-bold">¿Has concluido tus estudios universitarios en España? No es estrictamente obligatorio retornar a tu país de origen para ejercer tu profesión de forma legal.</p>
 

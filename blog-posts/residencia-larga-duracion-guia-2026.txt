@@ -1,0 +1,59 @@
+TITULO: Residencia de larga duración en 2026: nacional o UE, requisitos y ausencias permitidas
+CATEGORIA: larga-duracion
+CATEGORIA_VISIBLE: Residencia de Larga Duración
+FECHA: 23 SEP 2026
+RESUMEN: Los cinco años de residencia legal, cuánto tiempo puedes pasar fuera sin romper la continuidad, la diferencia entre larga duración nacional y larga duración-UE, la documentación y el plazo de tres meses con silencio positivo.
+RELACIONADAS: nacionalidad-espanola-residencia-guia-2026, renovaciones-modificaciones-residencia-guia-2026, recurso-denegacion-extranjeria-guia-2026
+---CONTENIDO---
+<p class="font-bold">La residencia de larga duración te autoriza a vivir y trabajar en España indefinidamente, en las mismas condiciones que las personas españolas. Se acabaron las renovaciones de autorización cada uno o cuatro años: solo tendrás que renovar la tarjeta. Es el paso natural tras cinco años de residencia legal.</p>
+
+<p>Hay dos modalidades, reguladas en el Reglamento de Extranjería (Real Decreto 1155/2024): la <strong>larga duración nacional</strong> (artículos 182 a 185) y la <strong>larga duración-UE</strong> (artículos 175 a 178), que además facilita mudarse a otro país de la Unión Europea.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">El requisito central: cinco años de residencia legal y continuada</h4>
+
+<p>Hay que haber residido en España <strong>de forma legal y continuada durante los cinco años anteriores</strong> a la solicitud. El tiempo sin papeles no cuenta. Si te regularizaste por arraigo, los cinco años empiezan a contar desde que obtuviste esa autorización.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Cuánto tiempo puedes haber estado fuera</h4>
+
+<p>La continuidad no se rompe por ausencias de <strong>hasta seis meses seguidos</strong>, siempre que en total no sumen más de <strong>diez meses</strong> en los cinco años. Si las ausencias fueron por motivos laborales, el total puede llegar a <strong>dieciocho meses</strong> (con el mismo máximo de seis meses seguidos). En la larga duración nacional, tampoco rompen la continuidad las ausencias por fuerza mayor debidamente justificadas, que se valoran caso a caso (artículos 176.a y 183.2).</p>
+
+<p>El tiempo que estuviste con una estancia por estudios cuenta, pero solo al 50 %, siempre que al pedir la larga duración estés ya en situación de residencia.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Larga duración nacional o larga duración-UE</h4>
+
+<ul>
+<li><strong>Nacional</strong>: exige los cinco años de residencia legal y continuada. El reglamento no pide acreditar ingresos ni seguro médico para esta modalidad.</li>
+<li><strong>UE</strong>: además de los cinco años, exige <strong>recursos fijos y regulares</strong> suficientes para ti y tu familia (con las mismas cuantías que la reagrupación familiar) y un <strong>seguro de enfermedad</strong>. A cambio, facilita trasladarte a vivir a otro Estado de la Unión Europea.</li>
+</ul>
+
+<p>Si no tienes previsto irte a otro país europeo o no puedes acreditar ingresos estables, la nacional suele ser la vía más sencilla.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Otros casos en los que se concede la larga duración nacional</h4>
+
+<p>El artículo 183.3 permite obtenerla sin esperar los cinco años en algunos supuestos: pensionistas de jubilación contributiva o de incapacidad permanente absoluta o gran invalidez; personas nacidas en España que al cumplir 18 años lleven al menos tres años seguidos de residencia legal; personas que fueron españolas de origen y perdieron la nacionalidad; quienes estuvieron cinco años bajo tutela de una entidad pública española al llegar a la mayoría de edad; y personas apátridas, refugiadas o con protección subsidiaria.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Cuándo y cómo se pide</h4>
+
+<p>La solicitud se presenta en la Oficina de Extranjería de tu provincia. Si tu autorización actual está a punto de caducar, preséntala <strong>en los dos meses anteriores</strong> a la caducidad (o, como mucho, en los tres meses posteriores, con posible sanción leve): así tu autorización se prorroga mientras se resuelve. Si ya cumples los cinco años con la autorización en vigor, puedes pedirla sin esperar a que caduque.</p>
+
+<p><strong>Documentación</strong>: pasaporte completo en vigor, justificante de la tasa, y en su caso el certificado de antecedentes penales de los países donde hayas residido en los últimos cinco años. Si tienes hijos en edad de escolarización obligatoria, un informe que acredite que están escolarizados. Para la larga duración-UE, además, prueba de los recursos económicos y del seguro de enfermedad. Los antecedentes penales en España y el informe policial los pide de oficio la Oficina de Extranjería.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Plazo: tres meses con silencio positivo</h4>
+
+<p>La Administración tiene <strong>tres meses</strong> para resolver y notificar. Si no contesta en ese plazo, la solicitud se entiende <strong>concedida</strong> (artículos 177.6 y 184.6). Una vez concedida, tienes un mes para pedir la tarjeta en persona.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Cómo no perderla</h4>
+
+<p>La larga duración se extingue si pasas <strong>12 meses seguidos fuera de la Unión Europea</strong>. La larga duración-UE se extingue también tras seis años fuera de España, salvo decisión excepcional (artículo 201). La tarjeta de larga duración nacional se renueva cada cinco años hasta los 30 años de edad y cada diez a partir de entonces; no renovarla a tiempo no hace perder la autorización, pero sí conviene hacerlo en plazo (artículo 185).</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Preguntas frecuentes</h4>
+
+<p><strong>¿Cuenta el tiempo que estuve sin papeles?</strong><br>No. Solo cuenta la residencia legal. Si te regularizaste por arraigo hace tres años, a efectos de larga duración llevas tres.</p>
+
+<p><strong>Estuve fuera cuatro meses un año y cinco meses otro. ¿Rompí la continuidad?</strong><br>Ninguna ausencia superó los seis meses seguidos, pero suman nueve meses: por debajo del límite general de diez. Si alguna ausencia fue por trabajo, el límite total sube a dieciocho meses. Hay que sumar con cuidado todas las salidas.</p>
+
+<p><strong>¿Tengo que demostrar ingresos?</strong><br>Para la larga duración-UE, sí. Para la larga duración nacional, el reglamento no lo exige.</p>
+
+<p><strong>¿Y si la Oficina no me contesta en tres meses?</strong><br>La solicitud se entiende concedida por silencio positivo. Guarda el justificante de presentación y la fecha de entrada.</p>
+
+<p><strong>¿Es mejor pedir la larga duración o la nacionalidad?</strong><br>Son cosas distintas. Si eres de un país iberoamericano, puedes pedir la nacionalidad con dos años de residencia legal, antes de llegar a los cinco. Muchas personas piden la larga duración mientras esperan la nacionalidad, porque la nacionalidad tarda más en resolverse.</p>

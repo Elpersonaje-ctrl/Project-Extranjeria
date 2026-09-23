@@ -3,6 +3,7 @@ CATEGORIA: arraigo-familiar
 CATEGORIA_VISIBLE: Arraigo Familiar
 FECHA: 19 JUL 2026
 RESUMEN: Si cuidas a un menor o a una persona con discapacidad con nacionalidad de la Unión Europea, puedes optar a la residencia sin esperar los 2 años que exigen los demás arraigos.
+RELACIONADAS: arraigo-social-guia-2026, renovaciones-modificaciones-residencia-guia-2026, residencia-larga-duracion-guia-2026
 ---CONTENIDO---
 <p class="font-bold">Casi todo el mundo que investiga sobre regularización en España da por hecho que hacen falta 2 años de permanencia. Es la regla general de los arraigos — pero no la única.</p>
 

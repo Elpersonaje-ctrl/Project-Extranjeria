@@ -3,6 +3,7 @@ CATEGORIA: arraigo
 CATEGORIA_VISIBLE: Arraigo Social
 FECHA: 3 SEP 2026
 RESUMEN: Los 2 años de permanencia, las dos vías (vínculo familiar o Informe de Integración Social), los medios de vida, la documentación y los errores que retrasan o tumban el expediente.
+RELACIONADAS: arraigo-sociolaboral-guia-2026, arraigo-socioformativo-guia-2026, renovaciones-modificaciones-residencia-guia-2026
 ---CONTENIDO---
 <p class="font-bold">El Arraigo Social es la vía de regularización pensada para quien ya lleva tiempo viviendo en España de forma irregular y ha echado raíces aquí. Concede una autorización de residencia y trabajo de un año, renovable, y abre el camino a la residencia de larga duración y a la nacionalidad.</p>
 

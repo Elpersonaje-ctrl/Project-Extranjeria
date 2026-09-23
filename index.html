@@ -157,6 +157,7 @@
         .blog-franja-in { max-width: 960px; margin: 0 auto; }
         @media (max-width: 720px) { .puntos { grid-template-columns: 1fr; gap: 1.2rem; } .hero { padding-top: 2.4rem; } .top-nav { gap: .9rem; } .btn-area { padding: .45rem .7rem; font-size: .68rem; } }
     </style>
+    <script data-goatcounter="https://raizextranjeria.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body class="grain-bg flex flex-col min-h-screen">
 
@@ -168,7 +169,7 @@
             </a>
             <nav class="top-nav" aria-label="Principal">
                 <a href="#precios" onclick="navigateTo('home', 'precios'); return false;" class="nav-link">Precios</a>
-                <a href="#blog" onclick="navigateTo('blog'); return false;" class="nav-link">Blog</a>
+                <a href="/guias/" class="nav-link">Blog</a>
                 <a href="https://app.raizextranjeria.es" class="btn-area">Área de clientes</a>
             </nav>
         </div>
@@ -252,7 +253,7 @@
                 <div class="blog-franja-in">
                     <div class="flex flex-wrap justify-between items-end gap-3 mb-6">
                         <h2 class="font-serif-editorial text-2xl font-bold">Guías del blog</h2>
-                        <button onclick="navigateTo('blog')" class="text-sm font-semibold text-[#1C3B30] border-b border-[#B8874B] hover:text-[#B8874B] transition-all pb-0.5">Ver todas las guías →</button>
+                        <a href="/guias/" class="text-sm font-semibold text-[#1C3B30] border-b border-[#B8874B] hover:text-[#B8874B] transition-all pb-0.5">Ver todas las guías →</a>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="home-blog-container">
                         <!-- Insertado dinámicamente con JS -->
@@ -320,7 +321,7 @@
                 <ul class="space-y-2 text-xs text-gray-300">
                     <li><a href="#inicio" onclick="navigateTo('home', 'inicio'); return false;" class="hover:text-white transition-colors">Pregúntale a Raíz</a></li>
                     <li><a href="#precios" onclick="navigateTo('home', 'precios'); return false;" class="hover:text-white transition-colors">Precios</a></li>
-                    <li><a href="#blog" onclick="navigateTo('blog'); return false;" class="hover:text-white transition-colors">Blog de extranjería</a></li>
+                    <li><a href="/guias/" class="hover:text-white transition-colors">Blog de extranjería</a></li>
                     <li><a href="https://app.raizextranjeria.es" class="hover:text-white transition-colors">Área de clientes</a></li>
                     <li><a href="politica-privacidad.html" class="hover:text-white transition-colors">Política de privacidad</a></li>
                 </ul>
@@ -483,7 +484,7 @@
         function checkUrlHash() {
             const hash = window.location.hash;
             if (hash === '#blog') {
-                navigateTo('blog');
+                window.location.replace('/guias/');
             } else if (hash && hash.startsWith('#article-')) {
                 const id = parseInt(hash.replace('#article-', ''));
                 const post = articlesDB.find(p => p.id === id);

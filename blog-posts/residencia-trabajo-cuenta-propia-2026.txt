@@ -3,6 +3,7 @@ CATEGORIA: trabajo
 CATEGORIA_VISIBLE: Residencia y Trabajo
 FECHA: 3 SEP 2026
 RESUMEN: Los cuatro requisitos, qué tiene que demostrar el plan de negocio, la inversión, el alta en autónomos y los plazos de la autorización de residencia por cuenta propia.
+RELACIONADAS: residencia-trabajo-cuenta-ajena-2026, renovaciones-modificaciones-residencia-guia-2026, residencia-larga-duracion-guia-2026
 ---CONTENIDO---
 <p class="font-bold">La residencia y trabajo por cuenta propia es la autorización para venir a España a desarrollar tu propia actividad económica: abrir un negocio, ejercer una profesión como autónomo o trabajar como freelance.</p>
 

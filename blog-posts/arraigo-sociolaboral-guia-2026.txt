@@ -3,6 +3,7 @@ CATEGORIA: arraigo-sociolaboral
 CATEGORIA_VISIBLE: Arraigo Sociolaboral
 FECHA: 3 SEP 2026
 RESUMEN: En qué se diferencia del Arraigo Social, cómo tiene que ser el contrato (20 horas y SMI proporcional), qué debe cumplir el empleador y la novedad de poder trabajar desde la admisión a trámite.
+RELACIONADAS: arraigo-social-guia-2026, residencia-trabajo-cuenta-ajena-2026, renovaciones-modificaciones-residencia-guia-2026
 ---CONTENIDO---
 <p class="font-bold">El Arraigo Sociolaboral es la modalidad de arraigo para quien lleva dos años en España y puede acreditar trabajo, normalmente informal, que se va a formalizar mediante un contrato. Comparte casi todo con el Arraigo Social, pero cambia el requisito central.</p>
 

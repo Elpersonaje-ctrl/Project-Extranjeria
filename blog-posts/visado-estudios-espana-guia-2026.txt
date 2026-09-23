@@ -3,6 +3,7 @@ CATEGORIA: estudiantes
 CATEGORIA_VISIBLE: Estudiantes
 FECHA: 3 SEP 2026
 RESUMEN: Qué puedes estudiar y dónde, cuánto dinero tienes que demostrar, los plazos legales y el calendario académico, y los errores que hacen que te denieguen el visado de estudiante.
+RELACIONADAS: modificacion-estudios-trabajo, renovaciones-modificaciones-residencia-guia-2026, residencia-larga-duracion-guia-2026
 ---CONTENIDO---
 <p class="font-bold">Venir a España a estudiar es una de las vías legales de entrada más utilizadas, y bien planificada abre la puerta a trabajar durante los estudios y a cambiar después a una residencia por trabajo sin volver a tu país. Pero tiene requisitos concretos que conviene conocer antes de mover el primer papel.</p>
 

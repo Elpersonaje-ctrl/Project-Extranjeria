@@ -1,0 +1,52 @@
+TITULO: Me denegaron el permiso de residencia: cómo recurrir y en qué plazos (2026)
+CATEGORIA: recursos
+CATEGORIA_VISIBLE: Recursos Administrativos
+FECHA: 23 SEP 2026
+RESUMEN: Qué hacer si Extranjería deniega tu solicitud: el recurso de reposición en un mes, el contencioso-administrativo en dos meses, qué hacer si no te contestan y cuándo conviene volver a presentar en lugar de recurrir.
+RELACIONADAS: renovaciones-modificaciones-residencia-guia-2026, arraigo-social-guia-2026, reagrupacion-familiar-requisitos-2026
+---CONTENIDO---
+<p class="font-bold">Recibir una denegación asusta, pero no siempre es el final. Lo primero es no dejar pasar los plazos: el reloj empieza a correr el día siguiente a la notificación. Esta guía explica tus opciones.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Lee bien la resolución</h4>
+
+<p>Toda denegación debe explicar el motivo y decir qué recursos caben, ante quién y en qué plazo. Antes de decidir nada, identifica <strong>por qué</strong> te la denegaron: no es lo mismo que falte un documento que no pudiste aportar a tiempo que un requisito que de verdad no cumplías. Y anota la <strong>fecha exacta de notificación</strong>: de ella dependen todos los plazos.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Las resoluciones de extranjería agotan la vía administrativa</h4>
+
+<p>Las resoluciones sobre autorizaciones de residencia y trabajo de las Delegaciones y Subdelegaciones del Gobierno <strong>ponen fin a la vía administrativa</strong> (disposición adicional novena del Real Decreto 1155/2024). En la práctica, eso significa que contra ellas no cabe recurso de alzada: tienes dos caminos, y puedes elegir.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Opción 1: recurso potestativo de reposición (un mes)</h4>
+
+<p>Se presenta ante el mismo órgano que dictó la denegación, en el plazo de <strong>un mes</strong> desde la notificación (Ley 39/2015, artículos 123 y 124). Es un escrito en el que explicas por qué la resolución es incorrecta y aportas las pruebas que lo demuestran. La Administración tiene un mes para resolverlo; si no contesta, se entiende desestimado y puedes acudir a los tribunales.</p>
+
+<p>Es la vía adecuada cuando el error se puede demostrar con documentos: un requisito que sí cumplías, un documento que la Administración no valoró, un cálculo de plazos equivocado. No requiere abogado.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Opción 2: recurso contencioso-administrativo (dos meses)</h4>
+
+<p>Puedes ir directamente a los tribunales, sin pasar por la reposición, en el plazo de <strong>dos meses</strong> desde la notificación (Ley 29/1998, artículo 46.1). Si presentaste reposición, no puedes ir a los tribunales hasta que se resuelva o se entienda desestimada. Esta vía requiere abogado. Si no tienes recursos económicos, puedes pedir asistencia jurídica gratuita en las mismas condiciones que las personas españolas.</p>
+
+<p>Raíz es una agencia de representación administrativa: podemos preparar y presentar el recurso de reposición, pero la vía judicial la debe llevar un abogado colegiado.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Si pasa el mes: ya solo queda la vía judicial</h4>
+
+<p>Pasado el mes desde la notificación ya no se puede presentar reposición: solo queda el contencioso-administrativo, mientras no hayan pasado los dos meses. Por eso lo primero es calcular la fecha límite.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">¿Recurrir o volver a presentar?</h4>
+
+<p>A veces lo más rápido no es recurrir, sino corregir el problema y <strong>presentar una solicitud nueva</strong>: por ejemplo, si te denegaron porque faltaba un documento que ahora ya tienes, o porque presentaste antes de cumplir un plazo que ahora sí cumples. Una solicitud nueva no discute la denegación anterior, empieza de cero. Tiene riesgos si mientras tanto tu situación empeora (por ejemplo, si pierdes el tiempo de permanencia o si caduca tu autorización actual), así que conviene valorarlo caso por caso.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Si nunca te contestaron</h4>
+
+<p>Si la Administración no resolvió en plazo y el silencio es negativo (por ejemplo, en la reagrupación familiar inicial), puedes recurrir <strong>en cualquier momento</strong> a partir del día siguiente a que se produzca el silencio (Ley 39/2015, artículo 124.1). Ojo: en otros trámites, como la renovación de residencia y trabajo o la residencia de larga duración, el silencio es positivo y la solicitud se entiende concedida.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Preguntas frecuentes</h4>
+
+<p><strong>¿Cuánto tiempo tengo para recurrir una denegación de extranjería?</strong><br>Un mes desde la notificación para el recurso de reposición, o dos meses para el recurso contencioso-administrativo ante los tribunales.</p>
+
+<p><strong>¿Puedo presentar un recurso de alzada?</strong><br>En general, no. Las resoluciones de extranjería de las Delegaciones y Subdelegaciones del Gobierno ponen fin a la vía administrativa, así que el recurso administrativo que cabe es el de reposición.</p>
+
+<p><strong>¿Necesito abogado para recurrir?</strong><br>Para el recurso de reposición, no. Para el contencioso-administrativo ante los tribunales, sí. Si no tienes recursos, puedes pedir asistencia jurídica gratuita.</p>
+
+<p><strong>¿Mientras recurro puedo seguir en España?</strong><br>Recurrir no te da por sí mismo una autorización. Tu situación depende de lo que tuvieras antes de la denegación. Si te notifican también una orden de salida o un expediente sancionador, consulta con un abogado cuanto antes.</p>
+
+<p><strong>¿Me conviene recurrir o empezar de nuevo?</strong><br>Si la Administración se equivocó y puedes demostrarlo, recurrir. Si el problema era tuyo (faltaba un documento o no cumplías aún un plazo) y ya está resuelto, una solicitud nueva suele ser más rápida. Revisa el motivo concreto de la denegación antes de decidir.</p>
