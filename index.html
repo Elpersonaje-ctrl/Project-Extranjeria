@@ -144,6 +144,9 @@
         .precio p { margin: 0; font-size: .9rem; line-height: 1.55; color: var(--ink-soft); }
         .precios-notas { list-style: none; margin: 1.6rem 0 0; padding: 0; display: flex; flex-direction: column; gap: .7rem; font-size: .92rem; line-height: 1.6; color: var(--ink-soft); }
         .precios-notas b { color: var(--forest); }
+        .precios-cta { display: inline-block; margin-top: 1.4rem; font-weight: 600; font-size: .95rem; color: var(--forest); border-bottom: 1px solid #B8874B; padding-bottom: 2px; text-decoration: none; }
+        .precios-cta:hover { color: #8F6630; }
+        @media (max-width: 480px) { .top-nav a.nav-precios { display: none; } }
         @media (max-width: 720px) { .precios-grid { grid-template-columns: 1fr; } }
 
         /* ---- Franja "quiénes somos" ---- */
@@ -172,7 +175,8 @@
                 <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#8F6630] -mt-1">Asesores de Extranjería</span>
             </a>
             <nav class="top-nav" aria-label="Principal">
-                <a href="#precios" onclick="navigateTo('home', 'precios'); return false;" class="nav-link">Precios</a>
+                <a href="#precios" onclick="navigateTo('home', 'precios'); return false;" class="nav-link nav-precios">Precios</a>
+                <a href="https://app.raizextranjeria.es/planes" class="nav-link">Planes</a>
                 <a href="/guias/" class="nav-link">Blog</a>
                 <a href="https://app.raizextranjeria.es" class="btn-area">Área de clientes</a>
             </nav>
@@ -250,6 +254,7 @@
                         <li><b>No incluye:</b> las tasas oficiales (se pagan aparte a la Administración), traducciones y apostillas, certificados de tu país de origen ni la vía judicial.</li>
                         <li><b>Videollamada opcional</b> de 30 minutos con un asesor: 39 €.</li>
                     </ul>
+                    <a href="https://app.raizextranjeria.es/planes" class="precios-cta">Compara todos los planes, desde el gratuito →</a>
                 </div>
             </section>
 
@@ -323,6 +328,7 @@
                 <ul class="space-y-2 text-xs text-gray-300">
                     <li><a href="#inicio" onclick="navigateTo('home', 'inicio'); return false;" class="hover:text-white transition-colors">Pregúntale a Raíz</a></li>
                     <li><a href="#precios" onclick="navigateTo('home', 'precios'); return false;" class="hover:text-white transition-colors">Precios</a></li>
+                    <li><a href="https://app.raizextranjeria.es/planes" class="hover:text-white transition-colors">Planes</a></li>
                     <li><a href="/guias/" class="hover:text-white transition-colors">Blog de extranjería</a></li>
                     <li><a href="https://app.raizextranjeria.es" class="hover:text-white transition-colors">Área de clientes</a></li>
                     <li><a href="politica-privacidad.html" class="hover:text-white transition-colors">Política de privacidad</a></li>
