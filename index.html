@@ -80,7 +80,7 @@
         .hero { padding: 3.5rem 1rem 2.5rem; }
         .hero-col { max-width: 720px; margin: 0 auto; text-align: center; }
         .kicker { font-family: var(--font-utility); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-texto); }
-        .hero h1 { font-size: clamp(2rem, 6vw, 3.1rem); line-height: 1.08; font-weight: 700; color: var(--forest); margin: .7rem 0 .8rem; }
+        .hero h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); line-height: 1.08; font-weight: 700; color: var(--forest); margin: .7rem 0 .8rem; }
         .hero h1 em { display: block; font-style: italic; font-weight: 400; color: var(--gold); }
         .hero .lead { color: var(--ink-soft); max-width: 58ch; margin: 0 auto 1.6rem; font-size: 1.02rem; line-height: 1.6; }
         .comp-caja { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: .6rem .6rem .6rem 1rem; display: flex; align-items: flex-end; gap: .6rem; box-shadow: var(--shadow-lift); text-align: left; }
@@ -96,6 +96,11 @@
         .enlace-sec { font-size: .9rem; font-weight: 600; color: var(--forest); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 1px; }
         .leyenda { font-size: .82rem; color: var(--ink-soft); padding: .6rem .8rem; border-radius: 10px; background: var(--sand-dark); }
         .siguiente { font-size: .9rem; color: var(--ink-soft); } .siguiente a { color: var(--forest); font-weight: 600; text-decoration: underline; }
+        .btn-empezar { display: inline-block; background: var(--forest); color: #fff; padding: .85rem 1.8rem; border-radius: 999px; font-weight: 600; font-size: 1rem; text-decoration: none; box-shadow: var(--shadow-lift); }
+        .btn-empezar:hover { background: var(--forest-light); }
+        .nota-hero { margin: .8rem 0 0; font-size: .82rem; color: var(--ink-faint); }
+        .nota-hero span { color: var(--gold); margin: 0 .3rem; }
+        .pregunta-aqui { margin: 2.2rem 0 .7rem; font-size: .9rem; font-weight: 500; color: var(--ink-soft); }
         .hero .otro { display: inline-block; margin-top: .9rem; font-size: .86rem; font-weight: 500; color: var(--forest); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 1px; }
         .hero .otro:hover { color: var(--gold); }
 
@@ -130,6 +135,34 @@
         .btn-cuenta:hover { background: var(--forest-light); }
         .comp-caja .env:disabled { opacity: .5; cursor: default; }
 
+
+        /* ---- Servicios en carrusel ---- */
+        .bloque-servicios { padding: 3.4rem 1rem 3rem; background: var(--sand-dark); border-top: 1px solid var(--rule-soft); }
+        .serv-in { max-width: 960px; margin: 0 auto; }
+        .serv-cab { text-align: center; margin-bottom: 1.8rem; }
+        .serv-cab h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 700; color: var(--forest); margin: 0; }
+        .serv-cab h2 em { font-style: italic; font-weight: 400; color: var(--gold-texto); }
+        .carrusel { position: relative; display: flex; align-items: center; gap: .8rem; }
+        .car-pista { flex: 1; min-width: 0; overflow: hidden; padding: 4px 3px 16px; }
+        .car-tira { display: flex; transition: transform .6s cubic-bezier(.4, 0, .2, 1); }
+        .car-tarjeta { flex: 0 0 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; background: var(--surface); border: 1px solid var(--rule); border-radius: 20px; padding: 1.4rem; box-shadow: var(--shadow-lift); }
+        .car-dibujo { aspect-ratio: 4 / 3; border-radius: 14px; overflow: hidden; background: var(--sand); }
+        .car-dibujo img, .car-dibujo svg { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .car-texto .num { font-family: var(--font-utility); font-size: .72rem; letter-spacing: .14em; color: var(--gold-texto); }
+        .car-texto h3 { font-size: 1.6rem; font-weight: 700; color: var(--forest); margin: .4rem 0 .6rem; line-height: 1.15; }
+        .car-texto p { color: var(--ink-soft); font-size: 1rem; line-height: 1.6; margin: 0 0 1.3rem; }
+        .car-texto .precio-serv { display: block; font-size: .85rem; color: var(--ink-faint); margin: -.6rem 0 1.2rem; }
+        .car-flecha { flex: none; width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--rule); background: var(--surface); color: var(--forest); font-size: 1.5rem; line-height: 1; cursor: pointer; }
+        .car-flecha:hover { border-color: var(--forest); }
+        .car-puntos { display: flex; justify-content: center; flex-wrap: wrap; gap: .45rem; margin-top: 1.3rem; }
+        .car-puntos button { width: 9px; height: 9px; border-radius: 50%; border: 0; padding: 0; background: var(--rule); cursor: pointer; }
+        .car-puntos button[aria-selected="true"] { background: var(--forest); width: 24px; border-radius: 99px; }
+        @media (max-width: 720px) {
+            .car-tarjeta { grid-template-columns: 1fr; gap: 1.1rem; padding: 1rem; }
+            .car-flecha { display: none; }
+            .car-texto h3 { font-size: 1.35rem; }
+        }
+        @media (prefers-reduced-motion: reduce) { .car-tira { transition: none; } }
 
         /* ---- La IA de Raíz ---- */
         .etiqueta { font-family: var(--font-utility); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-texto); display: block; margin-bottom: .5rem; }
@@ -191,9 +224,12 @@
             <section id="inicio" class="hero">
                 <div class="hero-col">
                     <div id="ask-saludo">
-                        <span class="kicker">Pregúntale a Raíz · gratis, sin cuenta</span>
-                        <h1>¿Qué duda tienes <em>sobre tu trámite?</em></h1>
-                        <p class="lead">Pregunta con tus palabras. Te iré preguntando lo necesario para orientarte, con la normativa vigente y diciéndote qué parte es ley y qué parte es práctica de la oficina.</p>
+                        <span class="kicker">Asesoría de extranjería con inteligencia artificial</span>
+                        <h1>Tus papeles en España, <em>con una IA a tu lado</em></h1>
+                        <p class="lead">Nuestra IA estudia tu caso con la normativa de extranjería vigente y te dice qué trámite te corresponde. Cuando quieras, el equipo de Raíz prepara y presenta tu expediente.</p>
+                        <a href="#ask-form" class="btn-empezar" onclick="document.getElementById('ask-input').focus(); return false;">Empieza gratis</a>
+                        <p class="nota-hero">Sin tarjeta <span aria-hidden="true">✦</span> 3 preguntas gratis sin crear cuenta</p>
+                        <p class="pregunta-aqui">Escribe tu duda aquí abajo, con tus palabras:</p>
                     </div>
 
                     <div id="ask-conv" class="conv-web" aria-live="polite" hidden></div>
@@ -211,6 +247,23 @@
                     </form>
                     <p class="mini" id="ask-pie">3 preguntas gratis, sin cuenta. Con tu cuenta gratis, 10 más. Orientación informativa: no sustituye a un abogado.</p>
                     <p class="mini priv">Guardamos tus preguntas para mejorar el servicio. No escribas tu DNI ni datos de salud. <a href="politica-privacidad.html">Política de privacidad</a>.</p>
+                </div>
+            </section>
+
+            <!-- Servicios en carrusel (2026-09-24). Cada trámite con una ilustración; si la imagen
+                 aún no existe (img/servicios/<id>.webp), se ve un dibujo de respaldo con la paleta de marca. -->
+            <section id="servicios" class="bloque-servicios" aria-roledescription="carrusel" aria-label="Trámites que llevamos">
+                <div class="serv-in">
+                    <div class="serv-cab">
+                        <span class="etiqueta">Lo que hacemos por ti</span>
+                        <h2>Trámites que llevamos <em>de principio a fin</em></h2>
+                    </div>
+                    <div class="carrusel" id="carrusel">
+                        <button class="car-flecha prev" type="button" aria-label="Trámite anterior">‹</button>
+                        <div class="car-pista" id="car-pista"></div>
+                        <button class="car-flecha next" type="button" aria-label="Trámite siguiente">›</button>
+                    </div>
+                    <div class="car-puntos" id="car-puntos" role="tablist" aria-label="Elegir trámite"></div>
                 </div>
             </section>
 
@@ -353,6 +406,97 @@
         function urlWhatsapp(mensaje) {
             return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(mensaje);
         }
+
+        // === Carrusel de servicios ===
+        // Un trámite por tarjeta, rota solo cada 6 s (se para al pasar el ratón o al tocarlo).
+        // Ilustración: img/servicios/<id>.webp. Al subir una, añade su id a CON_ILUSTRACION;
+        // mientras no esté, se dibuja un paisaje abstracto de respaldo (sin pedir archivos que no existen).
+        const CON_ILUSTRACION = new Set([]);
+        const SERVICIOS = [
+            { id: 'arraigo-social', t: 'Arraigo social', d: 'Si llevas dos años en España y tienes familia aquí o un informe de integración social.', p: 250 },
+            { id: 'arraigo-sociolaboral', t: 'Arraigo sociolaboral', d: 'Si llevas dos años en España y una empresa quiere contratarte.', p: 250 },
+            { id: 'arraigo-formacion', t: 'Arraigo para la formación', d: 'Si llevas dos años en España y quieres formarte para trabajar.', p: 250 },
+            { id: 'arraigo-familiar', t: 'Arraigo familiar', d: 'Si eres madre o padre de un menor de la UE, o apoyas a una persona con discapacidad.', p: 250 },
+            { id: 'familiares-espanol', t: 'Familiares de español', d: 'Si tu pareja, tu hija o hijo, o tu madre o padre tiene la nacionalidad española.', p: 350 },
+            { id: 'reagrupacion', t: 'Reagrupación familiar', d: 'Si vives legalmente en España y quieres que tu familia viva contigo.', p: 350 },
+            { id: 'renovaciones', t: 'Renovaciones y modificaciones', d: 'Para renovar tu autorización o pasar a otro tipo de permiso.', p: 350 },
+            { id: 'larga-duracion', t: 'Residencia de larga duración', d: 'Si llevas cinco años de residencia legal y quieres un permiso estable.', p: 350 },
+            { id: 'cuenta-ajena', t: 'Trabajo por cuenta ajena', d: 'Autorización de residencia y trabajo con el contrato de una empresa.', p: 350 },
+            { id: 'cuenta-propia', t: 'Trabajo por cuenta propia', d: 'Si quieres trabajar como autónomo o poner en marcha tu negocio.', p: 350 },
+            { id: 'estudios', t: 'Estancia por estudios', d: 'Tu estancia por estudios: la solicitud, la prórroga y el trabajo compatible.', p: 350 },
+            { id: 'nacionalidad', t: 'Nacionalidad española', d: 'Si ya cumples los años de residencia legal que pide la ley.', p: 250 },
+            { id: 'recursos', t: 'Recurso de reposición', d: 'Si te han denegado una solicitud y quieres recurrir ante la Administración.', p: 350 }
+        ];
+        function dibujoRespaldo(i) {
+            // Paisaje abstracto con la paleta de marca (verde, dorado, arena): sol, colinas y un camino.
+            const verdes = ['#1C3B30', '#2F5C4C', '#3E6B58'], dorados = ['#B8874B', '#D9AE72', '#C99A5B'];
+            const v = verdes[i % 3], g = dorados[(i + 1) % 3], x = 90 + (i * 37) % 220;
+            return '<svg viewBox="0 0 400 300" role="img" aria-hidden="true"><rect width="400" height="300" fill="#F3EFE6"/>' +
+                '<circle cx="' + x + '" cy="' + (95 + (i % 4) * 8) + '" r="' + (38 + (i % 3) * 8) + '" fill="' + g + '" opacity=".85"/>' +
+                '<path d="M0 205 Q ' + (80 + i * 9) + ' ' + (150 + (i % 5) * 6) + ' 200 195 T 400 180 V300 H0Z" fill="' + v + '" opacity=".35"/>' +
+                '<path d="M0 240 Q 140 ' + (205 + (i % 4) * 5) + ' 260 238 T 400 225 V300 H0Z" fill="' + v + '"/>' +
+                '<path d="M' + (170 + (i % 3) * 20) + ' 300 C 200 270, 215 255, 230 240" stroke="' + g + '" stroke-width="7" fill="none" stroke-linecap="round" opacity=".9"/></svg>';
+        }
+        (function () {
+            const pista = document.getElementById('car-pista'), puntos = document.getElementById('car-puntos');
+            if (!pista) return;
+            const tira = document.createElement('div');
+            tira.className = 'car-tira';
+            SERVICIOS.forEach((sv, i) => {
+                const art = document.createElement('article');
+                art.className = 'car-tarjeta';
+                art.setAttribute('aria-roledescription', 'diapositiva');
+                art.setAttribute('aria-label', (i + 1) + ' de ' + SERVICIOS.length + ': ' + sv.t);
+                art.innerHTML =
+                    '<div class="car-dibujo">' + (CON_ILUSTRACION.has(sv.id) ? '<img src="img/servicios/' + sv.id + '.webp" alt="" loading="lazy">' : dibujoRespaldo(i)) + '</div>' +
+                    '<div class="car-texto"><span class="num">' + String(i + 1).padStart(2, '0') + ' / ' + SERVICIOS.length + '</span>' +
+                    '<h3>' + sv.t + '</h3><p>' + sv.d + '</p>' +
+                    '<span class="precio-serv">Servicio completo: ' + sv.p + ' € + IVA · tasas aparte</span>' +
+                    '<a href="#inicio" class="btn-cta-web">Preguntar a la IA por este trámite</a></div>';
+                const img = art.querySelector('img');
+                if (img) img.onerror = () => { img.parentElement.innerHTML = dibujoRespaldo(i); };
+                art.querySelector('a').onclick = (e) => {
+                    e.preventDefault();
+                    const ta = document.getElementById('ask-input');
+                    ta.value = 'Quiero saber si puedo pedir: ' + sv.t.toLowerCase() + '. ';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    setTimeout(() => { ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length); ta.dispatchEvent(new Event('input')); }, 500);
+                };
+                tira.appendChild(art);
+                const b = document.createElement('button');
+                b.type = 'button'; b.setAttribute('role', 'tab'); b.setAttribute('aria-label', sv.t);
+                b.onclick = () => { ir(i); reiniciar(); };
+                puntos.appendChild(b);
+            });
+            pista.appendChild(tira);
+            let actual = 0, temporizador = null;
+            const quieto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            function ir(i) {
+                actual = (i + SERVICIOS.length) % SERVICIOS.length;
+                tira.style.transform = 'translateX(' + (-100 * actual) + '%)';
+                [...puntos.children].forEach((p, k) => p.setAttribute('aria-selected', k === actual ? 'true' : 'false'));
+            }
+            function reiniciar() {
+                clearInterval(temporizador);
+                if (!quieto) temporizador = setInterval(() => ir(actual + 1), 6000);
+            }
+            document.querySelector('.car-flecha.prev').onclick = () => { ir(actual - 1); reiniciar(); };
+            document.querySelector('.car-flecha.next').onclick = () => { ir(actual + 1); reiniciar(); };
+            const car = document.getElementById('carrusel');
+            car.addEventListener('mouseenter', () => clearInterval(temporizador));
+            car.addEventListener('mouseleave', reiniciar);
+            car.addEventListener('focusin', () => clearInterval(temporizador));
+            // Deslizar con el dedo en el móvil
+            let x0 = null;
+            pista.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; clearInterval(temporizador); }, { passive: true });
+            pista.addEventListener('touchend', (e) => {
+                if (x0 === null) return;
+                const dx = e.changedTouches[0].clientX - x0; x0 = null;
+                if (Math.abs(dx) > 40) ir(actual + (dx < 0 ? 1 : -1));
+                reiniciar();
+            });
+            ir(0); reiniciar();
+        })();
 
         // === Vídeo de TikTok en «La IA de Raíz» ===
         // Pega aquí el enlace del vídeo (el que da TikTok al pulsar «Compartir → Copiar enlace»),
