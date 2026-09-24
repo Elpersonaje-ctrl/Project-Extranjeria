@@ -211,7 +211,6 @@
                     </form>
                     <p class="mini" id="ask-pie">3 preguntas gratis, sin cuenta. Con tu cuenta gratis, 10 más. Orientación informativa: no sustituye a un abogado.</p>
                     <p class="mini priv">Guardamos tus preguntas para mejorar el servicio. No escribas tu DNI ni datos de salud. <a href="politica-privacidad.html">Política de privacidad</a>.</p>
-                    <a href="#" id="cta-reservar-hero" target="_blank" rel="noopener" class="otro">Prefiero una videollamada con un experto</a>
                 </div>
             </section>
 
@@ -341,12 +340,9 @@
         // de la portada (script de módulo al final del archivo), que habla con
         // la misma Cloud Function que la plataforma. El formulario de
         // diagnóstico gratuito se retiró (2026-09-21): lo sustituye el chat.
-        // La videollamada con una persona (BOOKING_URL) es un producto
-        // aparte y opcional: solo la usa el botón "Prefiero hablar con un
-        // experto".
+        // La videollamada suelta de 39 € (Cal.com) se retiró el 2026-09-24: la
+        // cita con un asesor va incluida en el plan Medio.
         // ============================================================
-        const BOOKING_URL = "https://cal.com/sen-j2f5bj/30min";
-        const BOOKING_READY = !BOOKING_URL.includes("PEGA_AQUI");
 
         // Plataforma de clientes y chat del asistente.
         const URL_PLATAFORMA = "https://app.raizextranjeria.es/";
@@ -357,13 +353,6 @@
         function urlWhatsapp(mensaje) {
             return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(mensaje);
         }
-
-        // "Prefiero hablar con un experto" → Cal.com; sin enlace válido, se oculta.
-        (function () {
-            const el = document.getElementById('cta-reservar-hero');
-            if (!el) return;
-            if (BOOKING_READY) el.href = BOOKING_URL; else el.hidden = true;
-        })();
 
         // === Vídeo de TikTok en «La IA de Raíz» ===
         // Pega aquí el enlace del vídeo (el que da TikTok al pulsar «Compartir → Copiar enlace»),
