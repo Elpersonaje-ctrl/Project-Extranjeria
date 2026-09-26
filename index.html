@@ -426,7 +426,7 @@
         // no tenga salto se pintan dos veces seguidas; la segunda copia se oculta a lectores de pantalla.
         // Ilustración: img/servicios/<id>.webp. Al subir una, añade su id a CON_ILUSTRACION;
         // mientras no esté, se dibuja el respaldo (sin pedir archivos que no existen).
-        const CON_ILUSTRACION = new Set([]);
+        const CON_ILUSTRACION = new Set(['arraigo-social', 'arraigo-sociolaboral', 'arraigo-formacion', 'arraigo-familiar', 'familiares-espanol', 'reagrupacion', 'renovaciones', 'larga-duracion', 'cuenta-ajena', 'cuenta-propia', 'estudios', 'nacionalidad', 'recursos']);
         const SERVICIOS = [
             { id: 'arraigo-social', t: 'Arraigo social', d: 'Si llevas dos años en España y tienes familia aquí o un informe de integración social.' },
             { id: 'arraigo-sociolaboral', t: 'Arraigo sociolaboral', d: 'Si llevas dos años en España y una empresa quiere contratarte.' },
