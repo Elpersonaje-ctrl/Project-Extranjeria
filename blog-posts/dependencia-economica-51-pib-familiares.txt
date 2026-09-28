@@ -1,0 +1,30 @@
+TITULO: La regla del 51 % del PIB para traer a tus padres: qué es y qué pasa si no llegas
+CATEGORIA: familiar-espanol
+CATEGORIA_VISIBLE: Familiar de Español
+FECHA: 28 SEP 2026
+RESUMEN: Para traer a tus padres o a un hijo mayor de 26 hay que demostrar que dependen de ti. El 51 % del PIB per cápita de su país es una presunción que lo facilita, no un requisito cerrado. Qué dice el Reglamento, qué pasa si no llegas y qué cambió el Tribunal Supremo en 2026.
+RELACIONADAS: residencia-familiar-ciudadano-espanol-2026, reagrupacion-familiar-requisitos-2026, recurso-denegacion-extranjeria-guia-2026
+---CONTENIDO---
+<p class="font-bold">Si quieres traer a tus padres a España, o a un hijo mayor de 26 años, tienes que demostrar que están "a cargo": que dependen de ti económicamente. El Reglamento de Extranjería da una forma sencilla de probarlo, la regla del 51 % del PIB per cápita. Pero no es la única forma, y conviene entender bien cómo funciona.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Qué dice el Reglamento</h4>
+
+<p>El artículo 196 del Real Decreto 1155/2024 define cuándo una persona está a cargo de otra. La dependencia tiene que ser real, estable y existir antes de la solicitud, y se valora de forma individual, caso por caso.</p>
+
+<p>Para facilitar la prueba, el artículo 196.3.c establece una presunción: se presume que el familiar está a cargo cuando, durante al menos el año anterior a la solicitud, ha recibido fondos que representen, por cada persona, como mínimo el 51 % del producto interior bruto per cápita anual de su país según los datos del Banco Mundial.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Presunción no significa requisito</h4>
+
+<p>Si llegas a esa cantidad durante un año y lo puedes justificar, la dependencia se da por probada. Si no llegas, la solicitud no se deniega solo por eso: la oficina tiene que valorar la situación personal, familiar, económica y patrimonial de tu familiar (artículo 196.3.a). Por ejemplo, si no tiene ingresos ni bienes propios, o si tú le pagas directamente gastos como el alquiler o las medicinas.</p>
+
+<p>Hay un requisito que se olvida a menudo: quien mantiene al familiar tiene que tener medios económicos suficientes (artículo 196.3.d). No basta con enviar dinero; hay que poder sostenerlo.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Qué cambió el Tribunal Supremo en 2026</h4>
+
+<p>El Reglamento exigía que la dependencia se hubiera producido en el país de origen. La sentencia del Tribunal Supremo 868/2026, de 8 de julio, publicada en el BOE el 22 de septiembre de 2026, anuló esa exigencia en la medida en que impedía demostrar la dependencia cuando el padre o la madre ya estaba en España. Desde entonces, si tu familiar ya vive contigo aquí y lo mantienes, la dependencia se puede acreditar en España.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Cómo prepararlo</h4>
+
+<p>Guarda todos los justificantes de envío de dinero (de la remesadora o del banco) a nombre de tu familiar, durante al menos un año. Si tu familiar ya vive contigo, guarda las pruebas de los gastos que pagas por él y de la convivencia. Y reúne la documentación de tus propios ingresos. Para calcular el 51 %, se usa el PIB per cápita del país de tu familiar publicado por el Banco Mundial; la cifra cambia cada año y con el tipo de cambio, así que conviene calcularla con los datos del momento en que vayas a presentar.</p>
+
+<p>Este artículo es información general y no sustituye el análisis individual de tu caso. Si quieres saber cómo se vería el tuyo, puedes preguntarle a Raíz. Raíz es una agencia de representación administrativa conforme a la Ley 39/2015; no es un despacho de abogados y no interviene en recursos judiciales.</p>

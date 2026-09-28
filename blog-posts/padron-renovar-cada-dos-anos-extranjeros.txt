@@ -1,0 +1,30 @@
+TITULO: Empadronamiento de extranjeros: por qué caduca cada dos años y cómo renovarlo
+CATEGORIA: arraigo
+CATEGORIA_VISIBLE: Empadronamiento
+FECHA: 28 SEP 2026
+RESUMEN: Si no eres comunitario y no tienes residencia de larga duración, tu inscripción en el padrón caduca a los dos años aunque tengas papeles. Qué dice la ley, qué pasa si caduca y cómo evitar un hueco que complique tu arraigo o tu nacionalidad.
+RELACIONADAS: arraigo-social-guia-2026, arraigo-socioformativo-guia-2026, nacionalidad-espanola-residencia-guia-2026
+---CONTENIDO---
+<p class="font-bold">El padrón es la prueba más usada para demostrar cuánto tiempo llevas viviendo en España. Pero si eres extranjero de fuera de la Unión Europea y no tienes una residencia de larga duración, tu inscripción no es para siempre: hay que renovarla cada dos años. Si no lo haces, el ayuntamiento puede darte de baja sin avisarte antes.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Qué dice la ley</h4>
+
+<p>El artículo 16.1 de la Ley 7/1985, de Bases del Régimen Local, obliga a renovar la inscripción en el padrón cada dos años a los extranjeros que no pertenecen a la Unión Europea, al Espacio Económico Europeo o a Suiza y que no tienen autorización de residencia de larga duración. Si pasan los dos años sin renovar, la inscripción caduca y el ayuntamiento puede declararlo sin audiencia previa del interesado.</p>
+
+<p>Eso incluye a quien está en situación irregular y también a quien tiene una residencia temporal (un arraigo, una residencia y trabajo, una residencia de familiar). Solo quedan fuera de esta renovación periódica quienes ya tienen la residencia de larga duración y los ciudadanos de la Unión Europea.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Por qué importa tanto</h4>
+
+<p>Para el arraigo social, sociolaboral o para la formación hay que demostrar dos años de permanencia continuada en España, y el certificado de empadronamiento histórico es la prueba principal. Si tu inscripción caducó y te dieron de baja, en tu historial aparece un hueco. Un hueco de padrón es uno de los motivos más habituales de denegación de un arraigo.</p>
+
+<p>Lo mismo ocurre, más adelante, con la nacionalidad por residencia: el padrón ayuda a demostrar la residencia continuada, y las discrepancias entre el padrón y la realidad son un motivo frecuente de problemas.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Cómo renovarlo</h4>
+
+<p>La renovación se pide en tu ayuntamiento, normalmente con cita previa y con tu documento de identidad en vigor. Muchos ayuntamientos avisan antes de que venza el plazo, pero no cuentes con ello: apunta la fecha en que te empadronaste o renovaste por última vez y pide la renovación con margen, antes de los dos años. Si cambias de domicilio, empadrónate en la nueva dirección cuanto antes.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Si ya te dieron de baja</h4>
+
+<p>Vuelve a empadronarte cuanto antes. El hueco no se borra, pero puedes demostrar que seguiste en España durante ese tiempo con otros documentos con tu nombre y fecha: tarjeta sanitaria, informes médicos, matrículas, contratos, recibos o envíos de dinero. Cuanto antes cierres el hueco, más fácil será justificarlo.</p>
+
+<p>Este artículo es información general y no sustituye el análisis individual de tu caso. Si tienes dudas sobre tu empadronamiento o sobre cómo afecta a tu trámite, puedes preguntarle a Raíz. Raíz es una agencia de representación administrativa conforme a la Ley 39/2015; no es un despacho de abogados y no interviene en recursos judiciales.</p>
