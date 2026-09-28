@@ -1,7 +1,7 @@
 TITULO: Visado de estudios en España 2026: guía completa paso a paso
 CATEGORIA: estudiantes
 CATEGORIA_VISIBLE: Estudiantes
-FECHA: 3 SEP 2026
+FECHA: 28 SEP 2026
 RESUMEN: Qué puedes estudiar y dónde, cuánto dinero tienes que demostrar, los plazos legales y el calendario académico, y los errores que hacen que te denieguen el visado de estudiante.
 RELACIONADAS: modificacion-estudios-trabajo, renovaciones-modificaciones-residencia-guia-2026, residencia-larga-duracion-guia-2026
 ---CONTENIDO---
@@ -26,6 +26,8 @@ RELACIONADAS: modificacion-estudios-trabajo, renovaciones-modificaciones-residen
 <h4 class="font-bold text-[#1c352d] mt-4">Plazos legales y calendario académico</h4>
 
 <p>La solicitud del visado o de la autorización se presenta como mínimo dos meses antes del inicio del curso. En la práctica conviene empezar seis meses antes, porque hay que buscar centro, pagar matrícula, homologar el bachillerato y hacer la prueba de acceso si vas a un grado, apostillar documentos y pedir los antecedentes penales con margen para que lleguen vigentes. Como los cursos universitarios empiezan a mediados de septiembre y la preinscripción de grado en la universidad pública suele ser en junio y julio, esa cuenta atrás arranca en primavera.</p>
+
+<p><strong>Si ya estás en España como turista:</strong> solo puedes pedirla desde aquí si vas a cursar estudios superiores (o formación sanitaria especializada), eres mayor de edad y estás en situación regular. Además, hay que presentarla con al menos dos meses de antelación a que se acabe tu situación legal: con los 90 días de turista, en la práctica, dentro de tu primer mes en España. Mientras se resuelve, tu estancia queda prorrogada. La Administración tiene dos meses para contestar y, si no lo hace, la solicitud se entiende denegada (artículo 54 del Real Decreto 1155/2024). Para otros estudios, como cursos de idiomas o bachillerato, hay que pedir el visado desde tu país.</p>
 
 <h4 class="font-bold text-[#1c352d] mt-4">Trabajar mientras estudias</h4>
 
