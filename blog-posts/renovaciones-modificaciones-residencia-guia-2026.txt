@@ -1,11 +1,11 @@
 TITULO: Renovar o modificar tu autorización de residencia en 2026: plazos y requisitos
 CATEGORIA: renovaciones
 CATEGORIA_VISIBLE: Renovaciones y Modificaciones
-FECHA: 23 SEP 2026
-RESUMEN: Cuándo pedir la renovación para no quedarte sin papeles, qué pasa si se te pasa la fecha, cómo se prorroga un arraigo y cómo pasar del arraigo a una autorización de residencia y trabajo de cuatro años.
+FECHA: 29 SEP 2026
+RESUMEN: Cuándo pedir la renovación para no quedarte sin papeles, qué pasa si se te pasa la fecha, cómo se prorroga un arraigo, cómo pasar del arraigo a una autorización de residencia y trabajo de cuatro años y qué hacer al año si tus papeles vienen de la regularización extraordinaria de 2026.
 RELACIONADAS: residencia-larga-duracion-guia-2026, nacionalidad-espanola-residencia-guia-2026, recurso-denegacion-extranjeria-guia-2026
 ---CONTENIDO---
-<p class="font-bold">Conseguir la primera autorización de residencia es solo el principio: casi todas hay que renovarlas o cambiarlas a otro tipo con los años. El error más caro en esta etapa es dejar pasar la fecha. Esta guía explica los plazos y los dos caminos más habituales para quien se regularizó por arraigo.</p>
+<p class="font-bold">Conseguir la primera autorización de residencia es solo el principio: casi todas hay que renovarlas o cambiarlas a otro tipo con los años. El error más caro en esta etapa es dejar pasar la fecha. Esta guía explica los plazos y los dos caminos más habituales para quien se regularizó por arraigo o en la regularización extraordinaria de 2026.</p>
 
 <p>Las reglas están en el Reglamento de Extranjería (Real Decreto 1155/2024): artículo 132 para prorrogar los arraigos, artículo 80 para renovar la residencia y trabajo por cuenta ajena, y artículo 191 para pasar de una autorización a otra.</p>
 
@@ -29,6 +29,19 @@ RELACIONADAS: residencia-larga-duracion-guia-2026, nacionalidad-espanola-residen
 </ul>
 
 <p>La solicitud la puede presentar tanto tu empleador como tú.</p>
+
+<h4 class="font-bold text-[#1C3B30] mt-4">Si tus papeles vienen de la regularización extraordinaria de 2026</h4>
+
+<p>La autorización de la regularización extraordinaria (disposiciones adicionales vigésima y vigesimoprimera del Reglamento, añadidas por el Real Decreto 316/2026) dura <strong>un año</strong>. Al terminar ese año no se "renueva": en los <strong>dos meses anteriores</strong> a que caduque hay que pedir una <strong>modificación</strong> conforme al artículo 191, la misma que se explica en el apartado anterior.</p>
+
+<ul>
+<li>Como ya llevarás un año con residencia legal y esa autorización te permitía trabajar, se te piden los requisitos de renovación del artículo 80 (por cuenta ajena) o del 86 (por cuenta propia), y la nueva autorización dura <strong>cuatro años</strong>.</li>
+<li>Si la presentas dentro de plazo, tu autorización sigue valiendo hasta que te contesten. Si se te pasa, tienes los mismos tres meses de margen que en cualquier renovación, con el riesgo de una sanción leve.</li>
+<li>Si no cumples los requisitos para modificarla, puedes pedir una <strong>prórroga de un año</strong> si estás en búsqueda activa de empleo e inscrito en el servicio público de empleo, o si tu comunidad autónoma emite un informe de esfuerzo de integración que la recomiende.</li>
+<li>Si tienes una enfermedad grave o una discapacidad (tú, tu cónyuge, tus hijos menores o tus hijos mayores que no puedan valerse por sí mismos por su salud), o has llegado a la edad de jubilación, la prórroga puede ser de <strong>cuatro años</strong> sin esos requisitos.</li>
+</ul>
+
+<p>Consejo práctico: apunta hoy la fecha de caducidad que figura en tu resolución o en tu tarjeta y réstale dos meses. Ese es el primer día en que puedes presentar la modificación.</p>
 
 <h4 class="font-bold text-[#1C3B30] mt-4">Renovar la residencia y trabajo por cuenta ajena</h4>
 
@@ -60,5 +73,7 @@ RELACIONADAS: residencia-larga-duracion-guia-2026, nacionalidad-espanola-residen
 <p><strong>¿Puedo seguir trabajando mientras espero la renovación?</strong><br>Si la presentaste dentro de plazo (dos meses antes o hasta tres meses después), tu autorización anterior sigue vigente hasta que resuelvan, con los mismos derechos.</p>
 
 <p><strong>Me quedé sin trabajo. ¿Puedo renovar?</strong><br>Depende del caso. El artículo 80 permite renovar, por ejemplo, si trabajaste al menos tres meses por año y te has mantenido inscrito como demandante de empleo desde que perdiste el trabajo, o si un familiar cumple los requisitos para reagruparte. Hay que revisar tu situación concreta.</p>
+
+<p><strong>Pedí la regularización extraordinaria y han pasado más de tres meses sin respuesta. ¿Puedo seguir trabajando?</strong><br>La norma dice que, pasados tres meses sin respuesta, la solicitud se entiende desestimada por silencio. Pero la Dirección General de Gestión Migratoria aclaró el 22 de julio de 2026 que ese silencio no te quita la habilitación provisional para residir y trabajar: la mantienes hasta que te notifiquen una resolución por escrito. Es un criterio de la Administración, no una ley, pero es el que aplica hoy. Si te notifican una denegación, la habilitación se pierde en ese momento y, si trabajas por cuenta ajena, tienes que comunicárselo a tu empresa.</p>
 
 <p><strong>¿Es mejor prorrogar el arraigo o pasar a residencia y trabajo?</strong><br>Si ya llevas un año y tienes empleo, pasar a residencia y trabajo te da cuatro años en lugar de uno. Si no tienes empleo, la prórroga del arraigo con búsqueda activa de empleo puede ser la única opción. Depende de tu situación laboral.</p>
