@@ -153,8 +153,8 @@
                     <li>No se ceden a terceros salvo a la Administración competente, por mandato de la persona interesada, y solo lo estrictamente necesario para el trámite.</li>
                 </ul>
 
-                <h3>3.4 Reserva de cita y pago de la consulta</h3>
-                <p>Si el usuario reserva y paga una cita a través del enlace de reserva del sitio web, se recogen su nombre, correo electrónico y los datos necesarios para procesar el pago. Los datos de pago (tarjeta u otro medio) son introducidos y procesados directamente por la pasarela de pago Stripe; <strong>Raíz - Asesores Expertos en Extranjería no accede ni almacena en ningún momento los datos completos de la tarjeta de pago</strong>. La gestión de la cita se realiza a través de la plataforma de agenda Cal.com.</p>
+                <h3>3.4 Pago de servicios (revisión de expediente) y reserva de cita</h3>
+                <p>La <strong>revisión de expediente</strong> se paga en línea a través de la pasarela de pago Stripe; el enlace de pago identifica la cuenta de la plataforma para poder activar el servicio. Si el usuario reserva y paga una cita a través del enlace de reserva del sitio web, se recogen su nombre, correo electrónico y los datos necesarios para procesar el pago. Los datos de pago (tarjeta u otro medio) son introducidos y procesados directamente por la pasarela de pago Stripe; <strong>Raíz - Asesores Expertos en Extranjería no accede ni almacena en ningún momento los datos completos de la tarjeta de pago</strong>. La gestión de la cita se realiza a través de la plataforma de agenda Cal.com.</p>
                 <p><strong>Finalidad:</strong> gestión de la reserva, cobro del servicio contratado y ejecución del contrato de prestación de servicios.</p>
                 <p><strong>Base legal:</strong> ejecución de un contrato (art. 6.1.b RGPD).</p>
 
@@ -169,13 +169,36 @@
                 <p><strong>Datos tratados:</strong> los de identificación y contacto de la cuenta (nombre, correo, teléfono, dirección), la documentación del expediente antes indicada, el estado y el historial del trámite, y los datos técnicos de uso de la plataforma (fechas de acceso).</p>
                 <p><strong>Finalidad:</strong> ejecutar el contrato de servicio de trámite completo (preparación, presentación y seguimiento del expediente).</p>
                 <p><strong>Base legal:</strong> ejecución del contrato (art. 6.1.b RGPD). Para los datos de categoría especial incluidos en la documentación (antecedentes penales, salud), el consentimiento explícito prestado conforme a los apartados 3.2 y 3.3.</p>
-                <p><strong>Registro e inicio de sesión:</strong> la autenticación se realiza mediante Firebase Authentication (Google). Es obligatorio verificar la dirección de correo electrónico. La persona puede usar una contraseña propia o el inicio de sesión con una cuenta de Google.</p>
+                <p><strong>Registro e inicio de sesión:</strong> la autenticación se realiza mediante Firebase Authentication (Google). Para crear la cuenta y usar el asistente basta con un correo y una contraseña (o una cuenta de Google); para subir documentos o pagar un servicio es necesario haber confirmado la dirección de correo electrónico.</p>
                 <p><strong>Seguridad de los documentos:</strong> los ficheros se almacenan en un espacio de almacenamiento privado, cifrado y alojado en la Unión Europea, sin acceso público. El acceso a cada expediente está restringido a la persona titular de la cuenta y al personal de Raíz asignado al caso.</p>
+
+                <h3>3.6 Asistente de inteligencia artificial y cuenta gratuita</h3>
+                <p>Cualquier persona puede usar el asistente de Raíz: unas pocas preguntas sin cuenta en el sitio web y, con una cuenta gratuita, más preguntas cada semana. Se tratan los datos de la cuenta (nombre, correo, teléfono), el contenido de las conversaciones con el asistente y los datos técnicos necesarios para limitar el uso (un identificador cifrado de la red desde la que se conecta; no guardamos la dirección IP).</p>
+                <p><strong>Finalidad:</strong> prestar el servicio de orientación del asistente, guardar las conversaciones en la cuenta, preparar la ficha del caso y evitar abusos. <strong>Base legal:</strong> ejecución del servicio solicitado por la persona (art. 6.1.b RGPD) y, para el control de abusos, interés legítimo (art. 6.1.f RGPD).</p>
+                <p>Pedimos expresamente que no se escriban en el chat números de documento ni datos de salud. Las respuestas del asistente son orientativas y no sustituyen la revisión de un profesional.</p>
+
+                <h3>3.7 Mejora del asistente con las conversaciones</h3>
+                <p>Raíz está empezando y el asistente aprende de casos reales: revisamos las conversaciones para corregir errores y mejorar sus instrucciones, sus reglas comprobadas, sus preguntas de prueba y las listas de documentos de cada trámite.</p>
+                <ul>
+                    <li><strong>Base legal:</strong> interés legítimo de Raíz en que el asistente responda de forma correcta y segura (art. 6.1.f RGPD), tras una evaluación documentada que pondera ese interés con los derechos de las personas.</li>
+                    <li><strong>Derecho de oposición:</strong> está activado por defecto y se puede desactivar en cualquier momento, al crear la cuenta o después en «Mi cuenta → Privacidad y llamadas», o escribiendo a contacto@raizextranjeria.es (art. 21 RGPD). Las conversaciones de quien lo desactiva no se usan para este fin.</li>
+                    <li><strong>Garantías:</strong> antes de usar un caso se eliminan los datos que identifican a la persona (nombre, contacto, números de documento). <strong>Nunca</strong> se usan para este fin datos de categoría especial (salud, violencia de género, protección internacional u otros del art. 9 RGPD) ni datos penales.</li>
+                    <li>Las conversaciones <strong>no</strong> se usan para entrenar modelos de inteligencia artificial de terceros: el proveedor (Google Cloud, Vertex AI) no utiliza los datos de sus clientes para entrenar sus modelos.</li>
+                </ul>
+
+                <h3>3.8 Llamadas de un asesor</h3>
+                <p>Si la persona lo pide («Quiero que me llamen») o marca la casilla correspondiente, un asesor de Raíz puede llamarla por teléfono para hablar de su caso y de los servicios de Raíz. Se tratan el teléfono, la franja horaria elegida y la fecha y el texto del permiso.</p>
+                <p><strong>Base legal:</strong> consentimiento previo y expreso (art. 6.1.a RGPD y art. 66.1.b de la Ley 11/2022, General de Telecomunicaciones). La casilla nunca viene marcada de antemano y el permiso se puede retirar en cualquier momento desde «Mi cuenta» o escribiendo a contacto@raizextranjeria.es.</p>
+
+                <h3>3.9 Medición de las campañas</h3>
+                <p>Cuando alguien llega desde un anuncio o un enlace de Raíz, el enlace puede llevar etiquetas de campaña (por ejemplo, «utm_source=instagram»). Si la persona crea una cuenta, se guarda de qué campaña llegó, para saber qué anuncios funcionan. No se usan cookies publicitarias ni píxeles de seguimiento de redes sociales; las visitas se cuentan con una herramienta de estadística sin cookies (GoatCounter). <strong>Base legal:</strong> interés legítimo en medir la eficacia de la publicidad propia (art. 6.1.f RGPD).</p>
 
                 <h2>4. Plazo de conservación</h2>
                 <ul>
                     <li><strong>Diagnósticos que no derivan en la contratación de un servicio:</strong> los datos del formulario de diagnóstico se conservan un máximo de <strong>3 meses</strong> desde su recogida, transcurridos los cuales se suprimen. Si en ese plazo la persona no verifica su correo, la supresión es inmediata.</li>
                     <li><strong>Expedientes contratados:</strong> la documentación y los datos del expediente se conservan mientras dura la relación de servicio y, una vez finalizado o cerrado el expediente, durante <strong>5 años</strong>, en cumplimiento de las obligaciones legales de conservación aplicables a la actividad. Transcurrido ese plazo se suprimen de forma definitiva.</li>
+                    <li><strong>Cuentas gratuitas y conversaciones del asistente:</strong> mientras la cuenta esté activa y hasta <strong>12 meses</strong> después del último uso; transcurrido ese plazo se suprimen. Los extractos ya anonimizados para la mejora del asistente (apartado 3.7) dejan de ser datos personales.</li>
+                    <li><strong>Permisos de llamada:</strong> la constancia del permiso (fecha y texto) se conserva mientras esté vigente y hasta 3 años después de retirarlo, para poder acreditarlo.</li>
                     <li><strong>Datos de facturación:</strong> se conservan durante los plazos exigidos por la normativa mercantil y fiscal.</li>
                     <li>Finalizados los plazos, los datos se suprimen de forma segura, salvo obligación legal de conservación adicional.</li>
                 </ul>
@@ -186,7 +209,8 @@
                     <li><strong>Google Ireland Ltd. / Google LLC</strong> — infraestructura de la plataforma de cliente (Firebase Authentication, Cloud Firestore, Cloud Storage, Cloud Functions y Hosting), con los datos alojados en centros de datos de la Unión Europea; y Google Workspace para el envío de los correos electrónicos del servicio. Tratamiento amparado en el Acuerdo de Tratamiento de Datos de Google Cloud (art. 28 RGPD).</li>
                     <li><strong>Google LLC (Gemini API)</strong> — asistencia en la redacción del texto del correo de diagnóstico. A este servicio solo se le facilita el resultado ya calculado del diagnóstico y el nombre de pila; <strong>no</strong> se le facilita documentación, dirección, número de pasaporte ni datos de salud.</li>
                     <li><strong>Cal.com</strong> — gestión de la agenda de citas de la consulta de videollamada.</li>
-                    <li><strong>Stripe</strong> — procesamiento de pagos de la consulta de videollamada, bajo estándar PCI-DSS. Raíz no accede ni almacena los datos completos de la tarjeta.</li>
+                    <li><strong>Google Cloud (Vertex AI)</strong> — modelo de lenguaje y buscador de normativa del asistente, en la región de la Unión Europea, como encargado del tratamiento; no usa los datos para entrenar sus modelos.</li>
+                    <li><strong>Stripe</strong> — procesamiento de pagos (revisión de expediente y, en su caso, otros servicios), bajo estándar PCI-DSS. Raíz no accede ni almacena los datos completos de la tarjeta.</li>
                     <li><strong>Meta Platforms (WhatsApp)</strong> — únicamente como medio de comunicación para el seguimiento comercial descrito en el apartado 3.1, cuando la persona interesada lo haya consentido expresamente. No se comparten con Meta más datos que los inherentes al uso de la aplicación de mensajería (número de teléfono y contenido de la conversación).</li>
                 </ul>
                 <p><em>El almacenamiento en Google Sheets / Google Apps Script se mantiene mientras conviva con la plataforma durante la transición; una vez completada la migración, se retira de esta lista.</em></p>

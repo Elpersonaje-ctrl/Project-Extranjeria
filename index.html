@@ -255,7 +255,7 @@
                     <div id="ask-conv" class="conv-web" aria-live="polite" hidden></div>
 
                     <div id="ask-tope" class="cta-web" hidden>
-                        <div><b>Has usado tus 3 preguntas gratis</b><p>Crea tu cuenta gratis y sigue esta misma conversación: tienes 10 preguntas más y, después, 5 cada semana.</p></div>
+                        <div><b>Has usado tus 3 preguntas gratis</b><p>Crea tu cuenta gratis (solo correo y contraseña) y sigue esta misma conversación: tienes 20 preguntas más y, después, 5 cada semana.</p></div>
                         <a class="btn-cuenta" id="ask-tope-btn" href="https://app.raizextranjeria.es/?crear=1">Crear mi cuenta y seguir</a>
                     </div>
 
@@ -373,8 +373,8 @@
         // de la portada (script de módulo al final del archivo), que habla con
         // la misma Cloud Function que la plataforma. El formulario de
         // diagnóstico gratuito se retiró (2026-09-21): lo sustituye el chat.
-        // La videollamada suelta de 39 € (Cal.com) se retiró el 2026-09-24: la
-        // cita con un asesor va incluida en el plan Medio.
+        // La videollamada suelta de 39 € (Cal.com) se retiró el 2026-09-24. Desde el
+        // 2026-10-06 quien quiere hablar pide «Quiero que me llamen» en su cuenta.
         // ============================================================
 
         // Plataforma de clientes y chat del asistente.
@@ -650,8 +650,18 @@
         let ocupado = false;
         let leyendaMostrada = false;
         const LEYENDA = '<div class="leyenda"><b>Normativa</b> = lo que dice la ley · <b>Criterio de oficina</b> = cómo se suele aplicar · <b>Sin verificar</b> = no lo he podido comprobar.</div>';
-        const enlaceCuenta = () => "https://app.raizextranjeria.es/?crear=1" + (conversacionId ? "&conv=" + encodeURIComponent(conversacionId) : "");
-        const siguiente = () => `<p class="siguiente">¿Quieres seguir o que Raíz lleve tu caso? <a href="${enlaceCuenta()}">Crea tu cuenta gratis</a>: guardas esta conversación y tienes 10 preguntas más.</p>`;
+        // Campaña de origen (utm_* del enlace del anuncio): se envía con la conversación y pasa a la cuenta al crearla.
+        const UTM = (() => {
+            const p = new URLSearchParams(location.search); const o = {};
+            for (const k of ["utm_source", "utm_medium", "utm_campaign", "utm_content"]) { const v = p.get(k); if (v) o[k] = v.slice(0, 80); }
+            try {
+                if (Object.keys(o).length) sessionStorage.setItem("raiz_utm", JSON.stringify(o));
+                return Object.keys(o).length ? o : JSON.parse(sessionStorage.getItem("raiz_utm") || "null");
+            } catch (_) { return Object.keys(o).length ? o : null; }
+        })();
+        const enlaceCuenta = () => "https://app.raizextranjeria.es/?crear=1" + (conversacionId ? "&conv=" + encodeURIComponent(conversacionId) : "") +
+            (UTM ? "&" + new URLSearchParams(UTM).toString() : "");
+        const siguiente = () => `<p class="siguiente">¿Quieres seguir o que Raíz lleve tu caso? <a href="${enlaceCuenta()}">Crea tu cuenta gratis</a>, solo con correo y contraseña: guardas esta conversación y tienes 20 preguntas más.</p>`;
 
         const escapar = (t) => String(t == null ? "" : t).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
         const inline = (t) => escapar(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
@@ -715,7 +725,7 @@
             const espera = pintarAsistente('<div class="pensando" aria-label="Escribiendo"><i></i><i></i><i></i></div>');
             bajar();
             try {
-                const r = (await chat({ mensaje: texto, conversacionId })).data;
+                const r = (await chat({ mensaje: texto, conversacionId, utm: UTM })).data;
                 conversacionId = r.conversacionId;
                 if (r.respuesta == null) { espera.remove(); pedirCuenta(); return; }
                 let html = formatear(r.respuesta);
