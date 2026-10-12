@@ -73,6 +73,8 @@
         .top-nav { display: flex; align-items: center; gap: 1.4rem; font-size: .88rem; }
         .top-nav a { color: var(--ink-soft); text-decoration: none; font-weight: 500; }
         .top-nav a:hover { color: var(--forest); }
+        .top-nav a.nav-planes { color: var(--forest); font-weight: 600; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
+        .top-nav a.nav-planes:hover { color: var(--gold-texto); }
         .btn-area { white-space: nowrap; border: 1px solid var(--forest); background: transparent; border-radius: 4px; font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; padding: .5rem .9rem; color: var(--ink) !important; }
         .btn-area:hover { background: var(--forest); color: var(--sand) !important; }
 
@@ -100,6 +102,7 @@
         .btn-empezar:hover { background: var(--forest-light); }
         .nota-hero { margin: .8rem 0 0; font-size: .82rem; color: var(--ink-faint); }
         .nota-hero span { color: var(--gold); margin: 0 .3rem; }
+        .nota-hero b { font-weight: inherit; white-space: nowrap; }
         .pregunta-aqui { margin: 2.2rem 0 .7rem; font-size: .9rem; font-weight: 500; color: var(--ink-soft); }
         .hero .otro { display: inline-block; margin-top: .9rem; font-size: .86rem; font-weight: 500; color: var(--forest); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 1px; }
         .hero .otro:hover { color: var(--gold); }
@@ -136,16 +139,25 @@
         .comp-caja .env:disabled { opacity: .5; cursor: default; }
 
 
-        /* ---- Servicios: cinta continua ---- */
+        /* ---- Servicios: carrusel que se puede arrastrar, con flechas y puntos de página (2026-10-12) ---- */
         .bloque-servicios { padding: 3.6rem 0 3.2rem; background: var(--sand-dark); border-top: 1px solid var(--rule-soft); overflow: hidden; }
         .serv-cab { text-align: center; margin: 0 auto 2.2rem; padding: 0 1rem; }
         .serv-cab h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 500; letter-spacing: -.015em; color: var(--forest); margin: 0; }
         .serv-cab h2 em { font-style: italic; font-weight: 300; color: var(--gold-texto); }
-        .cinta { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
-        .cinta-pista { display: flex; gap: 1.4rem; width: max-content; padding: 0 .7rem; animation: cinta 120s linear infinite; }
-        .cinta:hover .cinta-pista, .cinta:focus-within .cinta-pista { animation-play-state: paused; }
-        @keyframes cinta { from { transform: translateX(0); } to { transform: translateX(calc(-50% - .7rem)); } }
-        .serv-tarjeta { flex: none; width: 300px; background: var(--surface); border: 1px solid #C7B78E; display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: border-color .3s, transform .3s; }
+        .cinta { max-width: 1240px; margin: 0 auto; }
+        .cinta-pista { position: relative; display: flex; gap: 1.4rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scroll-padding: 0 1.5rem; padding: .5rem 1.5rem 1rem; scrollbar-width: none; cursor: grab; }
+        .cinta-pista::-webkit-scrollbar { display: none; }
+        .cinta-pista.arrastrando { cursor: grabbing; scroll-snap-type: none; scroll-behavior: auto; user-select: none; }
+        .cinta-nav { display: flex; align-items: center; justify-content: center; gap: 1.1rem; margin-top: 1.1rem; padding: 0 1rem; }
+        .cinta-flecha { width: 38px; height: 38px; flex: none; border: 1px solid #C7B78E; background: transparent; color: var(--forest); display: grid; place-items: center; cursor: pointer; transition: background .2s, color .2s; }
+        .cinta-flecha:hover, .cinta-flecha:focus-visible { background: var(--forest); color: #fff; border-color: var(--forest); outline: none; }
+        .cinta-flecha svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+        .cinta-puntos { display: flex; flex-wrap: wrap; justify-content: center; gap: .1rem; max-width: 70vw; }
+        .cinta-puntos button { width: 22px; height: 22px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
+        .cinta-puntos button::before { content: ""; width: 8px; height: 8px; border-radius: 50%; border: 1px solid var(--gold); transition: background .2s, transform .2s; }
+        .cinta-puntos button[aria-current="true"]::before { background: var(--gold); transform: scale(1.15); }
+        .cinta-puntos button:focus-visible { outline: 1px solid var(--forest); }
+        .serv-tarjeta { flex: none; width: 300px; scroll-snap-align: start; background: var(--surface); border: 1px solid #C7B78E; display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: border-color .3s, transform .3s; }
         .serv-tarjeta:hover, .serv-tarjeta:focus-visible { border-color: var(--forest); transform: translateY(-3px); outline: none; }
         .serv-dibujo { aspect-ratio: 4 / 3; overflow: hidden; background: var(--forest); }
         .serv-dibujo img, .serv-dibujo svg { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -154,11 +166,8 @@
         .serv-texto h3 span { flex: none; width: 28px; height: 28px; border: 1px solid #C7B78E; display: grid; place-items: center; font-family: var(--font-sans); font-weight: 300; font-size: 1.1rem; color: var(--gold-texto); }
         .serv-tarjeta:hover h3 span { background: var(--forest); color: #fff; border-color: var(--forest); }
         .serv-texto p { margin: 0; font-size: .86rem; line-height: 1.55; color: var(--ink-soft); }
-        @media (max-width: 720px) { .serv-tarjeta { width: 250px; } .cinta-pista { gap: 1rem; } }
-        @media (prefers-reduced-motion: reduce) {
-            .cinta { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
-            .cinta-pista { animation: none; }
-        }
+        @media (max-width: 720px) { .serv-tarjeta { width: 250px; } .cinta-pista { gap: 1rem; padding: .5rem 1rem 1rem; scroll-padding: 0 1rem; } .cinta-nav { gap: .5rem; } .cinta-puntos { max-width: none; flex-wrap: nowrap; gap: 0; } .cinta-puntos button { width: 17px; } .cinta-puntos button::before { width: 7px; height: 7px; } }
+        @media (prefers-reduced-motion: reduce) { .cinta-pista { scroll-behavior: auto; } }
 
         /* ---- La IA de Raíz ---- */
         .etiqueta { font-family: var(--font-utility); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-texto); display: block; margin-bottom: .5rem; }
@@ -229,7 +238,7 @@
                 <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#8F6630] -mt-1">Asesores de Extranjería</span>
             </a>
             <nav class="top-nav" aria-label="Principal">
-                <a href="https://app.raizextranjeria.es/planes" class="nav-link">Planes</a>
+                <a href="https://app.raizextranjeria.es/planes" class="nav-link nav-planes">Planes</a>
                 <a href="/guias/" class="nav-link">Blog</a>
                 <a href="https://app.raizextranjeria.es" class="btn-area">Área de clientes</a>
             </nav>
@@ -244,11 +253,11 @@
             <section id="inicio" class="hero">
                 <div class="hero-col">
                     <div id="ask-saludo">
-                        <span class="kicker">Asesoría de extranjería con inteligencia artificial</span>
-                        <h1>Tus papeles en España, <em>con una IA a tu lado</em></h1>
-                        <p class="lead">Nuestra IA estudia tu caso con la normativa de extranjería vigente y te dice qué trámite te corresponde. Cuando quieras, el equipo de Raíz prepara y presenta tu expediente.</p>
-                        <a href="#ask-form" class="btn-empezar" onclick="document.getElementById('ask-input').focus(); return false;">Empieza gratis</a>
-                        <p class="nota-hero">Sin tarjeta <span aria-hidden="true">✦</span> 3 preguntas gratis sin crear cuenta</p>
+                        <span class="kicker">Asistente de extranjería con inteligencia artificial</span>
+                        <h1>Tus papeles en España, <em>primero te respondemos</em></h1>
+                        <p class="lead">Sabemos lo difícil que es, cuando llegas a otro país, encontrar a alguien que responda tus dudas sin cobrarte antes. Nuestro asistente especializado en extranjería estudia tu caso con la normativa vigente y te responde gratis. Si después lo necesitas, el equipo de Raíz prepara y presenta tu expediente.</p>
+                        <a href="#ask-form" class="btn-empezar" onclick="document.getElementById('ask-input').focus(); return false;">Consulta gratuita</a>
+                        <p class="nota-hero"><b>Sin pagar nada</b> <span aria-hidden="true">✦</span> <b>3 preguntas sin crear cuenta</b> <span aria-hidden="true">✦</span> <b>20 más con tu cuenta gratis</b></p>
                         <p class="pregunta-aqui">Escribe tu duda aquí abajo, con tus palabras:</p>
                     </div>
 
@@ -265,20 +274,27 @@
                             <button class="env" id="ask-env" type="submit" aria-label="Preguntar a Raíz"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
                         </div>
                     </form>
-                    <p class="mini" id="ask-pie">3 preguntas gratis, sin cuenta. Con tu cuenta gratis, 10 más. Orientación informativa: no sustituye a un abogado.</p>
+                    <p class="mini" id="ask-pie">3 preguntas gratis, sin cuenta. Con tu cuenta gratis, 20 más. Orientación informativa: no sustituye a un abogado.</p>
                     <p class="mini priv">Guardamos tus preguntas para mejorar el servicio. No escribas tu DNI ni datos de salud. <a href="politica-privacidad.html">Política de privacidad</a>.</p>
                 </div>
             </section>
 
-            <!-- Servicios en cinta continua (2026-09-24): las tarjetas se deslizan despacio de derecha a
-                 izquierda sin parar (se detienen al pasar el ratón). Ilustración: img/servicios/<id>.webp;
-                 si aún no existe, se ve el dibujo de respaldo con la paleta de marca. -->
+            <!-- Servicios en carrusel (2026-10-12, a petición de la socia): avanza solo cada pocos segundos,
+                 pero se puede arrastrar con el ratón, deslizar con el dedo o mover con las flechas, y los puntos
+                 indican la página. Ilustración: img/servicios/<id>.webp; si aún no existe, se ve el dibujo de respaldo. -->
             <section id="servicios" class="bloque-servicios" aria-label="Trámites que llevamos">
                 <div class="serv-cab">
                     <span class="etiqueta">Lo que hacemos por ti</span>
                     <h2>Trámites que llevamos <em>de principio a fin</em></h2>
                 </div>
-                <div class="cinta" id="cinta"><div class="cinta-pista" id="cinta-pista"></div></div>
+                <div class="cinta" id="cinta">
+                    <div class="cinta-pista" id="cinta-pista" tabindex="-1"></div>
+                    <div class="cinta-nav">
+                        <button type="button" class="cinta-flecha" id="cinta-ant" aria-label="Trámites anteriores"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+                        <div class="cinta-puntos" id="cinta-puntos" role="group" aria-label="Páginas de trámites"></div>
+                        <button type="button" class="cinta-flecha" id="cinta-sig" aria-label="Más trámites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+                    </div>
+                </div>
             </section>
 
             <!-- La IA de Raíz (2026-09-24): sustituye a «Raíz prepara y presenta tu expediente» y a «Cuánto cuesta»
@@ -286,17 +302,17 @@
             <section id="ia" class="bloque-ia">
                 <div class="ia-in">
                     <div class="ia-texto">
-                        <span class="etiqueta">La IA de Raíz</span>
-                        <h2>Una inteligencia artificial que <em>trabaja en tu caso</em></h2>
-                        <p class="ia-intro">No es un buscador ni un chat genérico: consulta la normativa de extranjería vigente cada vez que le preguntas y te va guiando hasta saber qué trámite te corresponde.</p>
+                        <span class="etiqueta">El asistente de Raíz</span>
+                        <h2>Una IA especializada <em>en trámites de extranjería</em></h2>
+                        <p class="ia-intro">La hemos desarrollado para una sola cosa: la extranjería en España. Trabaja con la normativa vigente y, cada vez que le preguntas, la consulta antes de responderte. No es un buscador ni un chat genérico: te va guiando hasta saber qué trámite te corresponde.</p>
                         <ul class="ia-puntos">
-                            <li><b>Con la ley delante.</b> Antes de responder busca en el Reglamento de Extranjería vigente y en las instrucciones oficiales, y te dice de dónde sale cada cosa.</li>
+                            <li><b>Con la ley delante.</b> Busca en el Reglamento de Extranjería y en las instrucciones oficiales, y te dice de qué artículo sale cada cosa.</li>
                             <li><b>Ley y práctica, por separado.</b> Distingue lo que dice la norma de cómo lo aplican las oficinas, para que no te lleves sorpresas.</li>
                             <li><b>Honesta con lo que no sabe.</b> Si no puede comprobar algo en la normativa, lo marca como «sin verificar».</li>
                             <li><b>Arma tu expediente contigo.</b> Con tu cuenta, cada conversación queda guardada en tu expediente y, cuando quieras, un asesor de Raíz revisa tus papeles y lo presenta por ti.</li>
                         </ul>
                         <div class="acciones-franja">
-                            <a href="#inicio" onclick="navigateTo('home', 'inicio'); setTimeout(() => document.getElementById('ask-input').focus(), 700); return false;" class="btn-cta-web">Pregúntale a la IA, es gratis</a>
+                            <a href="#inicio" onclick="navigateTo('home', 'inicio'); setTimeout(() => document.getElementById('ask-input').focus(), 700); return false;" class="btn-cta-web">Consulta gratuita</a>
                             <a href="https://app.raizextranjeria.es/planes" class="enlace-sec">Ver planes y precios</a>
                         </div>
                     </div>
@@ -387,9 +403,9 @@
             return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(mensaje);
         }
 
-        // === Servicios: cinta continua ===
-        // Las tarjetas se deslizan solas de derecha a izquierda (CSS: .cinta-pista). Para que el bucle
-        // no tenga salto se pintan dos veces seguidas; la segunda copia se oculta a lectores de pantalla.
+        // === Servicios: carrusel ===
+        // Avanza una página cada 5 s (se detiene al pasar el ratón, al tocarlo o si el sistema pide reducir
+        // animaciones). Se puede arrastrar con el ratón, deslizar con el dedo o usar flechas y puntos.
         // Ilustración: img/servicios/<id>.webp. Al subir una, añade su id a CON_ILUSTRACION;
         // mientras no esté, se dibuja el respaldo (sin pedir archivos que no existen).
         const CON_ILUSTRACION = new Set(['arraigo-social', 'arraigo-sociolaboral', 'arraigo-formacion', 'arraigo-familiar', 'familiares-espanol', 'reagrupacion', 'renovaciones', 'larga-duracion', 'cuenta-ajena', 'cuenta-propia', 'estudios', 'nacionalidad', 'recursos']);
@@ -428,22 +444,107 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 setTimeout(() => { ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length); ta.dispatchEvent(new Event('input')); }, 500);
             };
-            [false, true].forEach((copia) => {
-                SERVICIOS.forEach((sv, i) => {
-                    const a = document.createElement('a');
-                    a.className = 'serv-tarjeta';
-                    a.href = '#inicio';
-                    a.setAttribute('aria-label', sv.t + ': preguntar a la IA por este trámite');
-                    if (copia) { a.setAttribute('aria-hidden', 'true'); a.tabIndex = -1; }
-                    a.innerHTML = '<div class="serv-dibujo">' +
-                        (CON_ILUSTRACION.has(sv.id) ? '<img src="img/servicios/' + sv.id + '.webp" alt="" loading="lazy">' : dibujoRespaldo(i)) +
-                        '</div><div class="serv-texto"><h3>' + sv.t + '<span aria-hidden="true">+</span></h3><p>' + sv.d + '</p></div>';
-                    const img = a.querySelector('img');
-                    if (img) img.onerror = () => { img.parentElement.innerHTML = dibujoRespaldo(i); };
-                    a.onclick = (e) => { e.preventDefault(); preguntar(sv); };
-                    pista.appendChild(a);
-                });
+            let arrastro = false;
+            SERVICIOS.forEach((sv, i) => {
+                const a = document.createElement('a');
+                a.className = 'serv-tarjeta';
+                a.href = '#inicio';
+                a.draggable = false;
+                a.setAttribute('aria-label', sv.t + ': preguntar al asistente por este trámite');
+                a.innerHTML = '<div class="serv-dibujo">' +
+                    (CON_ILUSTRACION.has(sv.id) ? '<img src="img/servicios/' + sv.id + '.webp" alt="" loading="lazy" draggable="false">' : dibujoRespaldo(i)) +
+                    '</div><div class="serv-texto"><h3>' + sv.t + '<span aria-hidden="true">+</span></h3><p>' + sv.d + '</p></div>';
+                const img = a.querySelector('img');
+                if (img) img.onerror = () => { img.parentElement.innerHTML = dibujoRespaldo(i); };
+                a.onclick = (e) => { e.preventDefault(); if (arrastro) return; preguntar(sv); };
+                pista.appendChild(a);
             });
+
+            // Páginas: una página = las tarjetas enteras que caben a la vista (en móvil, una). Los puntos
+            // se recalculan al cambiar el tamaño de la ventana.
+            const puntos = document.getElementById('cinta-puntos');
+            const maxScroll = () => pista.scrollWidth - pista.clientWidth;
+            const paso = () => {
+                const t = pista.children;
+                const unaTarjeta = t.length > 1 ? t[1].offsetLeft - t[0].offsetLeft : pista.clientWidth;
+                return Math.max(1, Math.floor(pista.clientWidth / unaTarjeta)) * unaTarjeta;
+            };
+            const numPaginas = () => maxScroll() <= 4 ? 1 : Math.ceil(maxScroll() / paso() - 0.05) + 1;
+            const paginaActual = () => pista.scrollLeft >= maxScroll() - 4 ? numPaginas() - 1 : Math.round(pista.scrollLeft / paso());
+            const irA = (n) => {
+                const total = numPaginas();
+                n = (n + total) % total;
+                pista.scrollTo({ left: Math.min(n * paso(), maxScroll()), behavior: 'smooth' });
+            };
+            function pintarPuntos() {
+                const total = numPaginas();
+                puntos.innerHTML = '';
+                for (let n = 0; n < total; n++) {
+                    const b = document.createElement('button');
+                    b.type = 'button';
+                    b.setAttribute('aria-label', 'Página ' + (n + 1) + ' de ' + total);
+                    b.onclick = () => { irA(n); reiniciar(); };
+                    puntos.appendChild(b);
+                }
+                marcarPunto();
+                puntos.parentElement.hidden = total < 2;
+            }
+            function marcarPunto() {
+                const actual = paginaActual();
+                [...puntos.children].forEach((b, n) => b.setAttribute('aria-current', n === actual ? 'true' : 'false'));
+            }
+            let espera;
+            pista.addEventListener('scroll', () => { clearTimeout(espera); espera = setTimeout(marcarPunto, 60); }, { passive: true });
+            let ancho = window.innerWidth;
+            window.addEventListener('resize', () => { if (window.innerWidth !== ancho) { ancho = window.innerWidth; pintarPuntos(); } });
+            document.getElementById('cinta-ant').onclick = () => { irA(paginaActual() - 1); reiniciar(); };
+            document.getElementById('cinta-sig').onclick = () => { irA(paginaActual() + 1); reiniciar(); };
+
+            // Arrastrar con el ratón (en móvil el dedo ya desliza solo).
+            let inicioX = 0, inicioScroll = 0, pulsado = false;
+            pista.addEventListener('pointerdown', (e) => {
+                if (e.pointerType !== 'mouse' || e.button !== 0) return;
+                pulsado = true; arrastro = false; inicioX = e.clientX; inicioScroll = pista.scrollLeft;
+            });
+            window.addEventListener('pointermove', (e) => {
+                if (!pulsado) return;
+                const dx = e.clientX - inicioX;
+                if (!arrastro && Math.abs(dx) > 6) { arrastro = true; pista.classList.add('arrastrando'); }
+                if (arrastro) pista.scrollLeft = inicioScroll - dx;
+            });
+            window.addEventListener('pointerup', () => {
+                if (!pulsado) return;
+                pulsado = false;
+                if (!arrastro) return;
+                pista.classList.remove('arrastrando');
+                // Encaja en la tarjeta más cercana y deja pasar el clic que cierra el arrastre sin abrir nada.
+                const margen = parseFloat(getComputedStyle(pista).paddingLeft) || 0;
+                const dist = (t) => Math.abs(t.offsetLeft - margen - pista.scrollLeft);
+                const cerca = [...pista.children].reduce((m, t) => dist(t) < dist(m) ? t : m);
+                pista.scrollTo({ left: Math.min(Math.max(cerca.offsetLeft - margen, 0), maxScroll()), behavior: 'smooth' });
+                setTimeout(() => { arrastro = false; }, 0);
+                reiniciar();
+            });
+
+            // Avance automático: solo si se ve en pantalla y nadie lo está usando.
+            const quieto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            let reloj = null, visible = false, encima = false;
+            function reiniciar() {
+                clearInterval(reloj); reloj = null;
+                if (quieto || !visible || encima) return;
+                reloj = setInterval(() => irA(paginaActual() + 1), 5000);
+            }
+            const zona = document.getElementById('cinta');
+            zona.addEventListener('mouseenter', () => { encima = true; reiniciar(); });
+            zona.addEventListener('mouseleave', () => { encima = false; reiniciar(); });
+            zona.addEventListener('focusin', () => { encima = true; reiniciar(); });
+            zona.addEventListener('focusout', () => { encima = false; reiniciar(); });
+            pista.addEventListener('touchstart', () => reiniciar(), { passive: true });
+            if ('IntersectionObserver' in window) {
+                new IntersectionObserver((ent) => { visible = ent[0].isIntersecting; reiniciar(); }, { threshold: 0.4 }).observe(zona);
+            } else { visible = true; }
+            pintarPuntos();
+            reiniciar();
         })();
 
         // === Vídeo de TikTok en «La IA de Raíz» ===
@@ -735,7 +836,7 @@
                 espera.querySelector(".cuerpo").innerHTML = html;
                 if (r.restantes != null) {
                     $("ask-pie").textContent = r.restantes > 0
-                        ? `Te quedan ${r.restantes} de 3 preguntas gratis · con tu cuenta gratis, 10 más. Orientación informativa: no sustituye a un abogado.`
+                        ? `Te quedan ${r.restantes} de 3 preguntas gratis · con tu cuenta gratis, 20 más. Orientación informativa: no sustituye a un abogado.`
                         : "Has usado tus preguntas gratis.";
                 }
                 if (r.requiereCuenta) pedirCuenta();
