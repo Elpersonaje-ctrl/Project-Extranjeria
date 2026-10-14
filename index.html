@@ -104,6 +104,10 @@
         .nota-hero span { color: var(--gold); margin: 0 .3rem; }
         .nota-hero b { font-weight: inherit; white-space: nowrap; }
         .pregunta-aqui { margin: 2.2rem 0 .7rem; font-size: .9rem; font-weight: 500; color: var(--ink-soft); }
+        /* Preguntas guía (2026-10-14): para quien no sabe por dónde empezar. Esquinas rectas, filete dorado al pasar. */
+        .sugs-web { display: flex; flex-wrap: wrap; justify-content: center; gap: .45rem; margin: 0 0 .9rem; }
+        .sugs-web button { padding: .55rem .85rem; min-height: 44px; border: 1px solid var(--rule); border-radius: 2px; background: var(--surface); font: inherit; font-size: .85rem; color: var(--ink-soft); cursor: pointer; text-align: left; }
+        .sugs-web button:hover, .sugs-web button:focus-visible { border-color: var(--gold); color: var(--forest); }
         .hero .otro { display: inline-block; margin-top: .9rem; font-size: .86rem; font-weight: 500; color: var(--forest); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 1px; }
         .hero .otro:hover { color: var(--gold); }
 
@@ -257,14 +261,19 @@
                         <h1>Tus papeles en España, <em>primero te respondemos</em></h1>
                         <p class="lead">Sabemos lo difícil que es, cuando llegas a otro país, encontrar a alguien que responda tus dudas sin cobrarte antes. Nuestro asistente especializado en extranjería estudia tu caso con la normativa vigente y te responde gratis. Si después lo necesitas, el equipo de Raíz prepara y presenta tu expediente.</p>
                         <a href="#ask-form" class="btn-empezar" onclick="document.getElementById('ask-input').focus(); return false;">Consulta gratuita</a>
-                        <p class="nota-hero"><b>Sin pagar nada</b> <span aria-hidden="true">✦</span> <b>3 preguntas sin crear cuenta</b> <span aria-hidden="true">✦</span> <b>20 más con tu cuenta gratis</b></p>
-                        <p class="pregunta-aqui">Escribe tu duda aquí abajo, con tus palabras:</p>
+                        <p class="nota-hero"><b>Gratis</b> <span aria-hidden="true">✦</span> <b>Sin esperas ni citas</b> <span aria-hidden="true">✦</span> <b>Tus trámites, plazos y requisitos, a mano</b></p>
+                        <p class="pregunta-aqui">Escribe tu duda aquí abajo, con tus palabras, o empieza por una de estas:</p>
+                        <div class="sugs-web" id="ask-sugs">
+                            <button type="button">¿Qué trámite me corresponde según mi situación?</button>
+                            <button type="button">¿Cuándo tengo que renovar mi permiso y qué necesito?</button>
+                            <button type="button">Llevo tiempo en España sin papeles, ¿qué opciones tengo?</button>
+                        </div>
                     </div>
 
                     <div id="ask-conv" class="conv-web" aria-live="polite" hidden></div>
 
                     <div id="ask-tope" class="cta-web" hidden>
-                        <div><b>Has usado tus 3 preguntas gratis</b><p>Crea tu cuenta gratis (solo correo y contraseña) y sigue esta misma conversación: tienes 20 preguntas más y, después, 5 cada semana.</p></div>
+                        <div><b>Para seguir, crea tu cuenta gratis</b><p>Solo correo y contraseña. Sigues esta misma conversación y tu asistente guarda tu caso para que tengas a mano tus trámites, plazos y requisitos.</p></div>
                         <a class="btn-cuenta" id="ask-tope-btn" href="https://app.raizextranjeria.es/?crear=1">Crear mi cuenta y seguir</a>
                     </div>
 
@@ -274,7 +283,7 @@
                             <button class="env" id="ask-env" type="submit" aria-label="Preguntar a Raíz"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
                         </div>
                     </form>
-                    <p class="mini" id="ask-pie">3 preguntas gratis, sin cuenta. Con tu cuenta gratis, 20 más. Orientación informativa: no sustituye a un abogado.</p>
+                    <p class="mini" id="ask-pie">Orientación informativa: no sustituye a un abogado.</p>
                     <p class="mini priv">Guardamos tus preguntas para mejorar el servicio. No escribas tu DNI ni datos de salud. <a href="politica-privacidad.html">Política de privacidad</a>.</p>
                 </div>
             </section>
@@ -731,7 +740,8 @@
 
     <script type="module">
         // Chat de IA de la portada. Habla con la misma Cloud Function que la
-        // plataforma (chatAsistente): 3 preguntas gratis sin cuenta, tope por
+        // plataforma (chatAsistente): 3 preguntas gratis sin cuenta (la web no anuncia la cifra
+        // desde el 2026-10-14; solo avisa cuando queda 1), tope por
         // conversación, por red y por día — todo se controla en el servidor.
         // Al crear la cuenta, el enlace lleva la conversación (?conv=) y la app la recupera.
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
@@ -762,7 +772,7 @@
         })();
         const enlaceCuenta = () => "https://app.raizextranjeria.es/?crear=1" + (conversacionId ? "&conv=" + encodeURIComponent(conversacionId) : "") +
             (UTM ? "&" + new URLSearchParams(UTM).toString() : "");
-        const siguiente = () => `<p class="siguiente">¿Quieres seguir o que Raíz lleve tu caso? <a href="${enlaceCuenta()}">Crea tu cuenta gratis</a>, solo con correo y contraseña: guardas esta conversación y tienes 20 preguntas más.</p>`;
+        const siguiente = () => `<p class="siguiente">¿Quieres seguir o que Raíz lleve tu caso? <a href="${enlaceCuenta()}">Crea tu cuenta gratis</a>, solo con correo y contraseña: guardas esta conversación y tu caso queda en tu expediente.</p>`;
 
         const escapar = (t) => String(t == null ? "" : t).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
         const inline = (t) => escapar(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
@@ -835,9 +845,9 @@
                 html += siguiente();
                 espera.querySelector(".cuerpo").innerHTML = html;
                 if (r.restantes != null) {
-                    $("ask-pie").textContent = r.restantes > 0
-                        ? `Te quedan ${r.restantes} de 3 preguntas gratis · con tu cuenta gratis, 20 más. Orientación informativa: no sustituye a un abogado.`
-                        : "Has usado tus preguntas gratis.";
+                    $("ask-pie").textContent = r.restantes === 1
+                        ? "Te queda 1 pregunta sin cuenta; con tu cuenta gratis sigues esta conversación. Orientación informativa: no sustituye a un abogado."
+                        : r.restantes > 1 ? "Orientación informativa: no sustituye a un abogado." : "Para seguir, crea tu cuenta gratis.";
                 }
                 if (r.requiereCuenta) pedirCuenta();
             } catch (e) {
@@ -849,6 +859,7 @@
         }
 
         $("ask-form").addEventListener("submit", (e) => { e.preventDefault(); enviar(ta.value); });
+        $("ask-sugs").querySelectorAll("button").forEach((b) => b.addEventListener("click", () => enviar(b.textContent)));
         ta.addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); enviar(ta.value); } });
         ta.addEventListener("input", () => { ta.style.height = "auto"; ta.style.height = Math.min(ta.scrollHeight, 120) + "px"; });
     </script>
