@@ -11,7 +11,7 @@ RELACIONADAS: arraigo-sociolaboral-guia-2026, arraigo-socioformativo-guia-2026, 
 
 <h4 class="font-bold text-[#1c352d] mt-4">Los dos años de permanencia continuada</h4>
 
-<p>El primer requisito es acreditar <strong>2 años de permanencia continuada</strong> en España (no 3, como exigía el reglamento anterior). "Continuada" no significa no haber salido nunca, sino no haber tenido ausencias prolongadas que rompan esa continuidad. La prueba principal es el <strong>certificado de empadronamiento histórico</strong>, y se refuerza con todo documento que lleve tu nombre y una fecha: tarjeta sanitaria, informes médicos, matrículas, cursos, recibos. Un vacío de padrón en medio de esos dos años es el problema más frecuente de este trámite, por eso conviene empadronarse desde el primer día y en cada domicilio.</p>
+<p>El primer requisito es acreditar <strong>2 años de permanencia continuada</strong> en España (no 3, como exigía el reglamento anterior). "Continuada" no significa no haber salido nunca: las salidas de España no pueden sumar más de 90 días en esos dos años (Instrucciones SEM 1/2025). La prueba principal es el <strong>certificado de empadronamiento histórico</strong>, y se refuerza con todo documento que lleve tu nombre y una fecha: tarjeta sanitaria, informes médicos, matrículas, cursos, recibos. Un vacío de padrón en medio de esos dos años es el problema más frecuente de este trámite, por eso conviene empadronarse desde el primer día y en cada domicilio.</p>
 
 <h4 class="font-bold text-[#1c352d] mt-4">Las dos vías: vínculo familiar o Informe de Integración Social</h4>
 
@@ -21,7 +21,7 @@ RELACIONADAS: arraigo-sociolaboral-guia-2026, arraigo-socioformativo-guia-2026, 
 
 <h4 class="font-bold text-[#1c352d] mt-4">Los medios de vida</h4>
 
-<p>Hay que demostrar medios de vida equivalentes al 100% del IPREM, que en 2026 son 600 euros al mes. A diferencia del Arraigo Sociolaboral, aquí <strong>no es obligatorio un contrato de trabajo</strong>: los medios pueden acreditarse con un contrato, con recursos económicos propios o con el compromiso de un tercero solvente. Si acudes a la vía del vínculo familiar con un extranjero residente, ese familiar debe acreditar su propio 100% del IPREM más otro 100% por ti. Los ingresos deben ser estables y verificables, no un movimiento puntual poco antes de presentar.</p>
+<p>Hay que demostrar medios de vida equivalentes al 100% del IPREM, que en 2026 son 600 euros al mes. A diferencia del Arraigo Sociolaboral, aquí <strong>no es obligatorio un contrato de trabajo</strong>: los medios pueden acreditarse con un contrato de trabajo o con recursos económicos propios disponibles en España. Si acudes a la vía del vínculo familiar con un extranjero residente, ese familiar debe acreditar su propio 100% del IPREM más otro 100% por ti. Los ingresos deben ser estables y verificables, no un movimiento puntual poco antes de presentar.</p>
 
 <h4 class="font-bold text-[#1c352d] mt-4">Documentación</h4>
 
