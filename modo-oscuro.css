@@ -1,0 +1,84 @@
+/* ============================================
+   RAÍZ — Modo oscuro «Raíz de noche» (2026-10-21)
+   Se activa solo cuando el móvil u ordenador está en modo oscuro.
+   Misma paleta que la plataforma (app.raizextranjeria.es):
+   papel #F1EBD8 sobre verde bosque #14211B, dorado #D9AE72, salvia #A8CDB8.
+   Contraste mínimo 4,5:1 en todos los textos.
+   Se carga DESPUÉS de los estilos de cada página; las reglas llevan
+   «:root» delante para ganar a las clases de Tailwind.
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+        /* Variables de index.html, guías y páginas legales */
+        --forest: #F1EBD8;          /* en oscuro, el "verde" de los textos pasa a papel */
+        --forest-light: #A8CDB8;
+        --forest-pale: #24392F;
+        --gold: #D9AE72;
+        --gold-light: #E6C48E;
+        --gold-texto: #D9AE72;
+        --sand: #14211B;
+        --sand-dark: #1B2C24;
+        --surface: #1B2C24;
+        --ink: #F1EBD8;
+        --ink-soft: #CDC4AC;
+        --ink-faint: #ABA28A;
+        --rule: #7D6A47;            /* filetes dorados apagados */
+        --rule-soft: #2C4137;
+        --shadow-lift: 0 10px 30px -12px rgba(0, 0, 0, .6);
+        /* Variables de style.css (entradas del blog) */
+        --paper: #14211B;
+        --paper-card: #1B2C24;
+        --red-stamp: #F0A397;
+        --green-stamp: #8FD0A8;
+        --shadow: rgba(0, 0, 0, .4);
+    }
+
+    /* ---- Clases de color de Tailwind usadas en las páginas ---- */
+    :root .text-\[\#1C3B30\] { color: #F1EBD8; }
+    :root .text-\[\#8F6630\] { color: #D9AE72; }
+    :root .text-\[\#4A4032\] { color: #CDC4AC; }
+    :root .border-\[\#C7B78E\] { border-color: #7D6A47; }
+    :root .border-\[\#C7B78E\]\/50 { border-color: rgba(125, 106, 71, .5); }
+    :root .border-\[\#1C3B30\] { border-color: #F1EBD8; }
+    :root .bg-white { background-color: #1B2C24; }
+    :root .bg-\[\#fbfaf7\] { background-color: #14211B; }
+    :root .bg-\[\#fbfaf7\]\/90 { background-color: rgba(20, 33, 27, .9); }
+    :root .bg-\[\#1C3B30\] { background-color: #0E1813; }  /* pies de página: un punto más oscuros que el fondo */
+    :root .hover\:border-\[\#B8874B\]:hover { border-color: #D9AE72; }
+    :root .hover\:text-\[\#1C3B30\]:hover { color: #F1EBD8; }
+    /* Botones verdes → botón papel con texto verde (la marca, invertida) */
+    :root a.bg-\[\#1C3B30\], :root button.bg-\[\#1C3B30\] { background-color: #F1EBD8; color: #14211B; }
+    :root a.bg-\[\#1C3B30\]:hover, :root button.bg-\[\#1C3B30\]:hover { background-color: #A8CDB8; }
+    :root .hover\:bg-\[\#1C3B30\]:hover { background-color: #F1EBD8; }
+    :root .hover\:text-\[\#fbfaf7\]:hover { color: #14211B; }
+
+    /* ---- Portada (index.html) ---- */
+    :root .comp-caja .env, :root .msg.yo .burbuja,
+    :root .btn-empezar, :root .btn-cta-web, :root .btn-cuenta { color: #14211B; }
+    :root .btn-empezar:hover, :root .btn-cta-web:hover, :root .btn-cuenta:hover,
+    :root .comp-caja .env:hover { background: #A8CDB8; border-color: #A8CDB8; }
+    :root .comp-caja, :root .cinta-flecha, :root .serv-tarjeta,
+    :root .serv-texto h3 span { border-color: var(--rule); }
+    :root .comp-caja { box-shadow: 0 24px 60px -30px rgba(0, 0, 0, .7); }
+    :root .cinta-flecha:hover, :root .cinta-flecha:focus-visible,
+    :root .serv-tarjeta:hover h3 span { color: #14211B; }
+    :root .serv-dibujo { background: #0E1813; }
+    :root .aviso-legal { border-top-color: var(--rule); }
+    :root .afirma.n { border-color: #8FD0A8; } :root .afirma.n .tag { color: #8FD0A8; }
+    :root .afirma.o { border-color: #E8C170; } :root .afirma.o .tag { color: #E8C170; }
+    :root .afirma.v { border-color: #F0A397; } :root .afirma.v .tag { color: #F0A397; }
+    :root .error-web { background: #3D2422; color: #F0A397; }
+    :root .urgente-web { background: #3A3020; color: #E8C170; }
+    :root .triaje-input:focus { box-shadow: 0 0 0 3px rgba(168, 205, 184, .2); }
+
+    /* ---- Entradas del blog (style.css) ---- */
+    :root .btn-primary { color: #14211B !important; }
+    :root .btn-primary:hover { background: #A8CDB8; }
+    :root .btn-secondary:hover { color: #14211B !important; }
+    :root header { background: rgba(20, 33, 27, .92); }
+    :root .form-row input, :root .form-row select, :root .form-row textarea { background: #1F3129; }
+    :root footer { background: #0E1813; }
+    :root .methodology p { color: #CDC4AC; }
+}
