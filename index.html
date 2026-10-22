@@ -221,6 +221,25 @@
         .comp-caja .env { border-radius: 0; }
         .msg.yo .burbuja { border-radius: 0; }
         .leyenda, .error-web, .urgente-web, .cta-web { border-radius: 0; }
+        /* Crear la cuenta dentro del chat (2026-10-22): mismo acabado sobrio, esquinas rectas */
+        .alta-web { flex-direction: column; align-items: stretch; gap: .7rem; }
+        .alta-web .btn-google { background: var(--surface); color: var(--ink); border: 1px solid #C7B78E; padding: .9rem 1rem; font: inherit; font-weight: 600; cursor: pointer; border-radius: 0; }
+        .alta-web .btn-google:hover { border-color: var(--forest); }
+        .alta-web .alta-o, .alta-web .alta-interno { text-align: center; font-size: .82rem; color: var(--ink-faint); margin: 0; }
+        .alta-web .alta-interno { text-align: left; color: var(--ink-soft); }
+        .alta-web form { display: flex; flex-direction: column; gap: .55rem; }
+        .alta-web input { width: 100%; border: 1px solid #C7B78E; background: var(--surface); padding: .8rem .9rem; font: inherit; color: var(--ink); border-radius: 0; }
+        .alta-web input:focus { outline: 1px solid var(--forest); border-color: var(--forest); }
+        .alta-web .alta-pass { display: flex; }
+        .alta-web .alta-pass input { flex: 1; border-right: 0; }
+        .alta-web .alta-pass button { border: 1px solid #C7B78E; background: var(--surface); padding: 0 .9rem; font: inherit; font-size: .82rem; color: var(--forest); cursor: pointer; }
+        .alta-web .btn-cuenta { width: 100%; cursor: pointer; }
+        .alta-web .btn-cuenta:disabled { opacity: .6; cursor: default; }
+        .alta-web .alta-letra { font-size: .78rem; color: var(--ink-faint); margin: 0; }
+        .alta-web .alta-letra a { color: var(--forest); text-decoration: underline; }
+        .fin-web { margin: 0; }
+        .fin-web .fin-botones { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+        .fin-web .enlace-fin { color: var(--forest); text-decoration: underline; font-size: .88rem; }
         .aviso-legal { border-radius: 0; background: transparent; border-top: 1px solid #C7B78E; padding: 1rem 0 0; }
         .serv-cab h2, .bloque-ia h2 { font-weight: 500; letter-spacing: -.015em; }
         .serv-cab h2 em, .bloque-ia h2 em { font-weight: 300; }
@@ -273,9 +292,18 @@
 
                     <div id="ask-conv" class="conv-web" aria-live="polite" hidden></div>
 
-                    <div id="ask-tope" class="cta-web" hidden>
-                        <div><b>Tu caso queda guardado. Sigue donde lo dejaste</b><p>Crea tu cuenta gratis, con Google o con tu correo, y continúa esta misma conversación con tu asistente: tendrás a mano tus trámites, plazos y requisitos.</p></div>
-                        <a class="btn-cuenta" id="ask-tope-btn" href="https://app.raizextranjeria.es/?crear=1">Crear mi cuenta y seguir</a>
+                    <div id="ask-tope" class="cta-web alta-web" hidden>
+                        <div><b>Tu caso queda guardado. Sigue donde lo dejaste</b><p>Crea tu cuenta gratis y continúa esta misma conversación aquí mismo: tendrás a mano tus trámites, plazos y requisitos.</p></div>
+                        <button type="button" class="btn-google" id="alta-google">Continuar con Google</button>
+                        <p class="alta-o" id="alta-o">o con tu correo</p>
+                        <p class="alta-interno" id="alta-interno" hidden>Para entrar con Google, abre esta página en tu navegador (Chrome o Safari). Aquí puedes crear la cuenta con tu correo:</p>
+                        <form id="alta-form">
+                            <input type="email" id="alta-email" placeholder="Tu correo" autocomplete="email" required aria-label="Tu correo">
+                            <div class="alta-pass"><input type="password" id="alta-pass" placeholder="Contraseña (mín. 6)" autocomplete="new-password" minlength="6" required aria-label="Contraseña"><button type="button" id="alta-ver" aria-pressed="false">Ver</button></div>
+                            <button type="submit" class="btn-cuenta" id="alta-enviar">Crear mi cuenta y seguir</button>
+                        </form>
+                        <p class="error-web" id="alta-error" hidden></p>
+                        <p class="alta-letra">Al crear tu cuenta aceptas la <a href="politica-privacidad.html">política de privacidad</a>. Usamos tus conversaciones, sin datos que te identifiquen, para que el asistente responda mejor; puedes oponerte desde tu panel. <a href="#" id="alta-cambiar">Ya tengo cuenta: entrar</a></p>
                     </div>
 
                     <form id="ask-form">
@@ -285,7 +313,7 @@
                         </div>
                     </form>
                     <p class="mini" id="ask-pie">Orientación informativa: no sustituye a un abogado.</p>
-                    <p class="mini priv">Guardamos tus preguntas para mejorar el servicio. No escribas tu DNI ni datos de salud. <a href="politica-privacidad.html">Política de privacidad</a>.</p>
+                    <p class="mini priv">Guardamos tus preguntas para mejorar el servicio y este navegador recuerda tu conversación para que puedas seguirla. No escribas tu DNI ni datos de salud. <a href="politica-privacidad.html">Política de privacidad</a>.</p>
                 </div>
             </section>
 
@@ -740,13 +768,20 @@
     </script>
 
     <script type="module">
-        // Chat de IA de la portada. Habla con la misma Cloud Function que la
-        // plataforma (chatAsistente): 10 preguntas gratis sin cuenta (3 hasta el 2026-10-22) (la web no anuncia la cifra
-        // desde el 2026-10-14; la invitación a crear cuenta solo sale al agotarlas), tope por
-        // conversación, por red y por día — todo se controla en el servidor.
-        // Al crear la cuenta, el enlace lleva la conversación (?conv=) y la app la recupera.
+        // Chat de IA de la portada. Habla con la misma Cloud Function que la plataforma (chatAsistente).
+        // Sin cuenta: 10 preguntas gratis POR NAVEGADOR (2026-10-22; antes 3 por conversación). Cada navegador
+        // recibe una sesión anónima de Firebase al hacer su primera pregunta: el servidor cuenta con ella, así que
+        // abrir otra conversación o recargar no da preguntas nuevas. La conversación se recuerda en este navegador.
+        // La web no anuncia la cifra (2026-10-14); al agotarlas sale el recuadro para crear la cuenta AQUÍ MISMO
+        // (Google o correo): la sesión anónima se convierte en cuenta y la conversación sigue sin saltar de página.
+        // Tope por red y por día y tope de coste: en el servidor.
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
         import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-functions.js";
+        import {
+            getAuth, onAuthStateChanged, signInAnonymously, GoogleAuthProvider, EmailAuthProvider,
+            linkWithPopup, linkWithCredential, signInWithPopup, signInWithCredential,
+            signInWithEmailAndPassword, createUserWithEmailAndPassword, sendEmailVerification
+        } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 
         const app = initializeApp({
             apiKey: "AIzaSyBEtYO3lVwFLJhUUN0ZWkEn5qdk8A6dVjQ",
@@ -755,10 +790,16 @@
             messagingSenderId: "1064590022311",
             appId: "1:1064590022311:web:11a206ac186a73ce342d82"
         });
-        const chat = httpsCallable(getFunctions(app, "europe-west1"), "chatAsistente");
+        const fns = getFunctions(app, "europe-west1");
+        const llamar = (nombre, datos) => httpsCallable(fns, nombre)(datos).then((r) => r.data);
+        const auth = getAuth(app);
+        const APP = "https://app.raizextranjeria.es";
 
         const $ = (id) => document.getElementById(id);
-        let conversacionId = "";
+        const leerLocal = (k) => { try { return localStorage.getItem(k) || ""; } catch (_) { return ""; } };
+        const guardarLocal = (k, v) => { try { v ? localStorage.setItem(k, v) : localStorage.removeItem(k); } catch (_) { /* sin almacenamiento: no se recuerda */ } };
+        const CLAVE_CONV = "raiz_conv_web";
+        let conversacionId = leerLocal(CLAVE_CONV);
         let ocupado = false;
         let leyendaMostrada = false;
         const LEYENDA = '<div class="leyenda"><b>Normativa</b> = lo que dice la ley · <b>Criterio de oficina</b> = cómo se suele aplicar · <b>Sin verificar</b> = no lo he podido comprobar.</div>';
@@ -771,8 +812,15 @@
                 return Object.keys(o).length ? o : JSON.parse(sessionStorage.getItem("raiz_utm") || "null");
             } catch (_) { return Object.keys(o).length ? o : null; }
         })();
-        const enlaceCuenta = () => "https://app.raizextranjeria.es/?crear=1" + (conversacionId ? "&conv=" + encodeURIComponent(conversacionId) : "") +
-            (UTM ? "&" + new URLSearchParams(UTM).toString() : "");
+
+        // ---- Sesión: anónima para contar las preguntas; cuenta de verdad tras registrarse ----
+        const sesionLista = new Promise((listo) => { const quitar = onAuthStateChanged(auth, (u) => { quitar(); listo(u); }); });
+        const esCuenta = () => !!auth.currentUser && !auth.currentUser.isAnonymous;
+        async function asegurarSesion() {
+            await sesionLista;
+            if (auth.currentUser) return;
+            try { await signInAnonymously(auth); } catch (_) { /* sin sesión anónima: el servidor cuenta por conversación */ }
+        }
 
         const escapar = (t) => String(t == null ? "" : t).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
         const inline = (t) => escapar(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
@@ -820,13 +868,39 @@
             conv.appendChild(d);
         }
         function pintarAsistente(html) {
+            $("ask-saludo").hidden = true; conv.hidden = false;
             const d = document.createElement("div");
             d.className = "msg ia";
             d.innerHTML = '<div class="quien">RAÍZ · IA</div><div class="cuerpo">' + html + "</div>";
             conv.appendChild(d);
             return d;
         }
-        function pedirCuenta() { $("ask-tope-btn").href = enlaceCuenta(); $("ask-form").hidden = true; $("ask-tope").hidden = false; $("ask-pie").hidden = true; }
+        function htmlRespuesta(texto) {
+            let html = formatear(texto);
+            if (!leyendaMostrada && /class="afirma /.test(html)) { html += LEYENDA; leyendaMostrada = true; }
+            return html;
+        }
+        function pintarSesion() {
+            if (esCuenta()) $("ask-pie").textContent = "Has entrado como " + (auth.currentUser.email || "tu cuenta") + ". Orientación informativa: no sustituye a un abogado.";
+        }
+        function pedirCuenta() { $("ask-form").hidden = true; $("ask-tope").hidden = false; $("ask-pie").hidden = true; }
+        // Cuenta sin preguntas libres: la revisión y «Quiero que me llamen» están en el área de clientes.
+        function finCuenta() {
+            pintarAsistente('<div class="cta-web fin-web"><div><b>Has usado tus preguntas gratis por ahora</b><p>En tu área de clientes puedes pedir la revisión de tu expediente o que te llame alguien del equipo.</p></div>' +
+                '<div class="fin-botones"><a class="btn-cuenta" href="' + APP + '/planes">Ver planes</a><a class="enlace-fin" href="' + APP + '/asistente">Quiero que me llamen</a></div></div>');
+        }
+
+        // ---- Al volver a la página: la misma conversación, donde se dejó ----
+        (async () => {
+            const u = await sesionLista;
+            if (!conversacionId || !u) return;
+            try {
+                const r = await llamar("verConversacion", { conversacionId });
+                for (const m of r.mensajes) { if (m.rol === "usuario") pintarUsuario(m.texto); else pintarAsistente(htmlRespuesta(m.texto)); }
+                pintarSesion();
+                if (!esCuenta() && r.restantes === 0) pedirCuenta();
+            } catch (_) { conversacionId = ""; guardarLocal(CLAVE_CONV, ""); }
+        })();
 
         async function enviar(texto) {
             texto = (texto || "").trim();
@@ -836,18 +910,16 @@
             const espera = pintarAsistente('<div class="pensando" aria-label="Escribiendo"><i></i><i></i><i></i></div>');
             bajar();
             try {
-                const r = (await chat({ mensaje: texto, conversacionId, utm: UTM })).data;
-                conversacionId = r.conversacionId;
+                await asegurarSesion();
+                const r = await llamar("chatAsistente", { mensaje: texto, conversacionId, utm: UTM });
+                if (r.conversacionId) { conversacionId = r.conversacionId; guardarLocal(CLAVE_CONV, conversacionId); }
+                if (r.sinPreguntas) { espera.remove(); finCuenta(); return; }
                 if (r.respuesta == null) { espera.remove(); pedirCuenta(); return; }
-                let html = formatear(r.respuesta);
+                let html = htmlRespuesta(r.respuesta);
                 if (r.urgente) html = '<div class="urgente-web"><b>Esto parece urgente.</b> Escribe al equipo de Raíz ahora, sin esperar: <a href="https://wa.me/34665112314" target="_blank" rel="noopener">WhatsApp</a> o contacto@raizextranjeria.es</div>' + html;
-                if (!leyendaMostrada && /class="afirma /.test(html)) { html += LEYENDA; leyendaMostrada = true; }
                 espera.querySelector(".cuerpo").innerHTML = html;
-                if (r.restantes != null) {
-                    // La invitación a crear cuenta solo aparece al agotar las preguntas (decisión del dueño 2026-10-14).
-                    $("ask-pie").textContent = "Orientación informativa: no sustituye a un abogado.";
-                }
                 if (r.requiereCuenta) pedirCuenta();
+                else if (esCuenta() && r.cuota && r.cuota.restantes === 0) finCuenta();
             } catch (e) {
                 const msg = (e && e.message ? e.message : "Algo ha fallado. Inténtalo de nuevo.").replace(/^FirebaseError:\s*/, "");
                 espera.querySelector(".cuerpo").innerHTML = `<div class="error-web">${escapar(msg)}</div>`;
@@ -860,6 +932,88 @@
         $("ask-sugs").querySelectorAll("button").forEach((b) => b.addEventListener("click", () => enviar(b.textContent)));
         ta.addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); enviar(ta.value); } });
         ta.addEventListener("input", () => { ta.style.height = "auto"; ta.style.height = Math.min(ta.scrollHeight, 120) + "px"; });
+
+        // ---- Crear la cuenta sin salir del chat (2026-10-22) ----
+        // TikTok, Instagram y Facebook abren los enlaces en su navegador interno, donde Google no deja entrar:
+        // ahí se ofrece solo el correo y se explica cómo usar Google.
+        const navegadorInterno = /FBAN|FBAV|Instagram|TikTok|musical_ly|Bytedance|Line\//i.test(navigator.userAgent);
+        if (navegadorInterno) { $("alta-google").hidden = true; $("alta-o").hidden = true; $("alta-interno").hidden = false; }
+        let modoEntrar = false;
+        function errorAlta(t) { $("alta-error").textContent = t || ""; $("alta-error").hidden = !t; }
+        function cambiarModo(entrar) {
+            modoEntrar = entrar;
+            $("alta-enviar").textContent = entrar ? "Entrar y seguir" : "Crear mi cuenta y seguir";
+            $("alta-pass").placeholder = entrar ? "Tu contraseña" : "Contraseña (mín. 6)";
+            $("alta-pass").autocomplete = entrar ? "current-password" : "new-password";
+            $("alta-cambiar").textContent = entrar ? "No tengo cuenta: crearla" : "Ya tengo cuenta: entrar";
+        }
+        function traducir(e) {
+            const t = {
+                "auth/invalid-email": "Ese correo no parece válido. Revísalo.",
+                "auth/invalid-credential": "Correo o contraseña incorrectos.",
+                "auth/wrong-password": "Correo o contraseña incorrectos.",
+                "auth/user-not-found": "No hay ninguna cuenta con ese correo.",
+                "auth/weak-password": "La contraseña es demasiado corta (mínimo 6 caracteres).",
+                "auth/too-many-requests": "Demasiados intentos. Espera unos minutos.",
+                "auth/popup-closed-by-user": "Se cerró la ventana de Google antes de terminar.",
+                "auth/popup-blocked": "Tu navegador bloqueó la ventana de Google. Permítela o usa tu correo.",
+                "auth/network-request-failed": "Sin conexión. Revisa tu internet e inténtalo de nuevo."
+            };
+            return t[e && e.code] || "No hemos podido crear la cuenta. Inténtalo de nuevo o escríbenos a contacto@raizextranjeria.es.";
+        }
+        function avisarIntento() { if (conversacionId) llamar("llegadaCuenta", { conversacionId }).catch(() => {}); }
+        async function trasEntrar() {
+            await auth.currentUser.getIdToken(true); // el servidor ya ve la cuenta, no la sesión anónima
+            try { await llamar("altaDesdeWeb", { utm: UTM }); } catch (_) { /* el perfil se completa al entrar en el área de clientes */ }
+            $("ask-tope").hidden = true; $("ask-form").hidden = false; $("ask-pie").hidden = false;
+            const sinConfirmar = !auth.currentUser.emailVerified;
+            pintarAsistente('<p><b>Listo, ya tienes tu cuenta.</b> Sigue preguntando aquí mismo: tu conversación continúa. También la tienes en tu <a href="' + APP + '/asistente">área de clientes</a>.</p>' +
+                (sinConfirmar ? '<p>Te hemos enviado un correo para confirmar tu dirección. Hace falta para subir documentos y pagar, no para seguir preguntando.</p>' : ""));
+            pintarSesion(); bajar(); ta.focus();
+        }
+        $("alta-google").addEventListener("click", async () => {
+            errorAlta(""); avisarIntento();
+            const proveedor = new GoogleAuthProvider();
+            try {
+                await asegurarSesion();
+                if (auth.currentUser && auth.currentUser.isAnonymous) {
+                    try { await linkWithPopup(auth.currentUser, proveedor); }
+                    catch (e) {
+                        if (e.code !== "auth/credential-already-in-use") throw e;
+                        await signInWithCredential(auth, GoogleAuthProvider.credentialFromError(e)); // ya tenía cuenta con Google
+                    }
+                } else {
+                    await signInWithPopup(auth, proveedor);
+                }
+                await trasEntrar();
+            } catch (e) { errorAlta(traducir(e)); }
+        });
+        $("alta-cambiar").addEventListener("click", (e) => { e.preventDefault(); errorAlta(""); cambiarModo(!modoEntrar); });
+        $("alta-ver").addEventListener("click", () => {
+            const p = $("alta-pass"), ver = p.type === "password";
+            p.type = ver ? "text" : "password"; $("alta-ver").textContent = ver ? "Ocultar" : "Ver";
+            $("alta-ver").setAttribute("aria-pressed", String(ver));
+        });
+        $("alta-form").addEventListener("submit", async (ev) => {
+            ev.preventDefault(); errorAlta(""); avisarIntento();
+            const email = $("alta-email").value.trim(), pass = $("alta-pass").value;
+            $("alta-enviar").disabled = true;
+            try {
+                await asegurarSesion();
+                if (modoEntrar) {
+                    await signInWithEmailAndPassword(auth, email, pass); // la conversación pasa a su cuenta en la siguiente pregunta
+                } else {
+                    if (auth.currentUser && auth.currentUser.isAnonymous) await linkWithCredential(auth.currentUser, EmailAuthProvider.credential(email, pass));
+                    else await createUserWithEmailAndPassword(auth, email, pass);
+                    try { await sendEmailVerification(auth.currentUser); } catch (_) { /* no impide seguir */ }
+                }
+                await trasEntrar();
+            } catch (e) {
+                if (!modoEntrar && (e.code === "auth/email-already-in-use" || e.code === "auth/credential-already-in-use")) {
+                    cambiarModo(true); errorAlta("Ya tienes una cuenta con ese correo. Escribe tu contraseña y pulsa «Entrar y seguir».");
+                } else errorAlta(traducir(e));
+            } finally { $("alta-enviar").disabled = false; }
+        });
     </script>
 </body>
 </html>
