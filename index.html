@@ -268,7 +268,7 @@
                 <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#8F6630] -mt-1">Asesores de Extranjería</span>
             </a>
             <nav class="top-nav" aria-label="Principal">
-                <a href="https://app.raizextranjeria.es/planes" class="nav-link nav-planes">Nuestros servicios</a>
+                <a href="#servicios" onclick="navigateTo('home', 'servicios'); return false;" class="nav-link nav-planes">Nuestros servicios</a>
                 <a href="/guias/" class="nav-link">Blog</a>
                 <a href="https://app.raizextranjeria.es" class="btn-area">Área de clientes</a>
             </nav>
@@ -351,7 +351,7 @@
                         </ul>
                         <div class="acciones-franja">
                             <a href="#inicio" onclick="navigateTo('home', 'inicio'); setTimeout(() => document.getElementById('ask-input').focus(), 700); return false;" class="btn-cta-web">Consulta gratuita</a>
-                            <a href="https://app.raizextranjeria.es/planes" class="btn-cta-web">Nuestros servicios</a>
+                            <a href="#servicios" onclick="navigateTo('home', 'servicios'); return false;" class="btn-cta-web">Nuestros servicios</a>
                         </div>
                     </div>
                     <!-- Vídeo de TikTok: pega el enlace del vídeo en VIDEO_TIKTOK (más abajo, en el script).
@@ -395,7 +395,7 @@
                 <h4 class="font-serif-editorial text-base text-[#D9AE72] font-semibold">Enlaces</h4>
                 <ul class="space-y-2 text-xs text-gray-300">
                     <li><a href="#inicio" onclick="navigateTo('home', 'inicio'); return false;" class="hover:text-white transition-colors">Pregúntale a Raíz</a></li>
-                    <li><a href="https://app.raizextranjeria.es/planes" class="hover:text-white transition-colors">Nuestros servicios</a></li>
+                    <li><a href="#servicios" onclick="navigateTo('home', 'servicios'); return false;" class="hover:text-white transition-colors">Nuestros servicios</a></li>
                     <li><a href="/guias/" class="hover:text-white transition-colors">Blog de extranjería</a></li>
                     <li><a href="https://app.raizextranjeria.es" class="hover:text-white transition-colors">Área de clientes</a></li>
                     <li><a href="aviso-legal.html" class="hover:text-white transition-colors">Aviso legal</a></li>
@@ -722,7 +722,9 @@
                 if (post) window.location.replace('guias/' + post.slug + '.html');
             } else if (hash === '#precios') {
                 window.location.replace('https://app.raizextranjeria.es/planes');
-            } else if (hash === '#diagnostico-gratis' || hash === '#servicios' || hash === '#metodologia' || hash === '#inicio') {
+            } else if (hash === '#servicios') {
+                navigateTo('home', 'servicios');
+            } else if (hash === '#diagnostico-gratis' || hash === '#metodologia' || hash === '#inicio') {
                 navigateTo('home', 'inicio');
             }
         }
