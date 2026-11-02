@@ -246,6 +246,12 @@
         .ia-puntos li::before { width: 14px; height: 1px; border-radius: 0; box-shadow: none; top: .8rem; }
         .ia-puntos li { padding-left: 1.9rem; }
         .ia-video, .ia-video .hueco { border-radius: 0; }
+        /* Portada del lienzo (2026-11-02): botón de WhatsApp con el mismo acabado que los demás y tamaños que eligió el dueño */
+        .btn-empezar.btn-wa { display: inline-flex; align-items: center; gap: .7rem; min-height: 44px; }
+        .btn-wa svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+        #ask-saludo { margin-bottom: 2.4rem; }
+        @media (min-width: 721px) { .hero .kicker { font-size: 17.5px; } }
+        @media (max-width: 720px) { .hero h1 { font-size: 33.2px; } .hero .lead { font-size: 14px; line-height: 1.25; } .btn-empezar.btn-wa { padding-left: 1.6rem; padding-right: 1.6rem; } }
     </style>
     <link rel="stylesheet" href="/modo-oscuro.css">
     <script data-goatcounter="https://raizextranjeria.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
@@ -262,7 +268,7 @@
                 <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#8F6630] -mt-1">Asesores de Extranjería</span>
             </a>
             <nav class="top-nav" aria-label="Principal">
-                <a href="https://app.raizextranjeria.es/planes" class="nav-link nav-planes">Planes</a>
+                <a href="https://app.raizextranjeria.es/planes" class="nav-link nav-planes">Nuestros servicios</a>
                 <a href="/guias/" class="nav-link">Blog</a>
                 <a href="https://app.raizextranjeria.es" class="btn-area">Área de clientes</a>
             </nav>
@@ -277,17 +283,11 @@
             <section id="inicio" class="hero">
                 <div class="hero-col">
                     <div id="ask-saludo">
-                        <span class="kicker">Asistente de extranjería con inteligencia artificial</span>
-                        <h1>Tus papeles en España, <em>primero te respondemos</em></h1>
-                        <p class="lead">Sabemos lo difícil que es, cuando llegas a otro país, encontrar a alguien que responda tus dudas sin cobrarte antes. Nuestro asistente especializado en extranjería estudia tu caso con la normativa vigente y te responde gratis. Si después lo necesitas, el equipo de Raíz prepara y presenta tu expediente.</p>
-                        <a href="#ask-form" class="btn-empezar" onclick="document.getElementById('ask-input').focus(); return false;">Consulta gratuita</a>
-                        <p class="nota-hero"><b>Gratis</b> <span aria-hidden="true">✦</span> <b>Sin esperas ni citas</b> <span aria-hidden="true">✦</span> <b>Tus trámites, plazos y requisitos, a mano</b></p>
-                        <p class="pregunta-aqui">Escribe tu duda aquí abajo, con tus palabras, o empieza por una de estas:</p>
-                        <div class="sugs-web" id="ask-sugs">
-                            <button type="button">¿Qué trámite me corresponde según mi situación?</button>
-                            <button type="button">¿Cuándo tengo que renovar mi permiso y qué necesito?</button>
-                            <button type="button">Llevo tiempo en España sin papeles, ¿qué opciones tengo?</button>
-                        </div>
+                        <span class="kicker">Asistente de extranjería</span>
+                        <h1>Encuentra una respuesta <em>a tus dudas de extranjería</em></h1>
+                        <p class="lead">Sabemos lo difícil que es llegar a otro país y no entender por dónde empezar. Nuestro asistente especializado en extranjería responde tus preguntas con la normativa actual.</p>
+                        <!-- 2026-11-02 (lienzo de la web): el botón principal pasa a ser WhatsApp; fuera la línea «Gratis ✦…», la frase «Escribe tu duda…» y las 3 preguntas guía. -->
+                        <a href="https://wa.me/34665112314?text=Hola%2C%20tengo%20una%20duda%20de%20extranjer%C3%ADa" class="btn-empezar btn-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.4-4.1A8.5 8.5 0 1 1 8.2 19.4z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1.1-1.4-1.9-1-.9.8c-1.2-.5-2.2-1.5-2.7-2.7l.8-.9-1-1.9z"/></svg>Escríbenos por WhatsApp</a>
                     </div>
 
                     <div id="ask-conv" class="conv-web" aria-live="polite" hidden></div>
@@ -351,7 +351,7 @@
                         </ul>
                         <div class="acciones-franja">
                             <a href="#inicio" onclick="navigateTo('home', 'inicio'); setTimeout(() => document.getElementById('ask-input').focus(), 700); return false;" class="btn-cta-web">Consulta gratuita</a>
-                            <a href="https://app.raizextranjeria.es/planes" class="enlace-sec">Ver planes y precios</a>
+                            <a href="https://app.raizextranjeria.es/planes" class="btn-cta-web">Nuestros servicios</a>
                         </div>
                     </div>
                     <!-- Vídeo de TikTok: pega el enlace del vídeo en VIDEO_TIKTOK (más abajo, en el script).
@@ -395,7 +395,7 @@
                 <h4 class="font-serif-editorial text-base text-[#D9AE72] font-semibold">Enlaces</h4>
                 <ul class="space-y-2 text-xs text-gray-300">
                     <li><a href="#inicio" onclick="navigateTo('home', 'inicio'); return false;" class="hover:text-white transition-colors">Pregúntale a Raíz</a></li>
-                    <li><a href="https://app.raizextranjeria.es/planes" class="hover:text-white transition-colors">Planes</a></li>
+                    <li><a href="https://app.raizextranjeria.es/planes" class="hover:text-white transition-colors">Nuestros servicios</a></li>
                     <li><a href="/guias/" class="hover:text-white transition-colors">Blog de extranjería</a></li>
                     <li><a href="https://app.raizextranjeria.es" class="hover:text-white transition-colors">Área de clientes</a></li>
                     <li><a href="aviso-legal.html" class="hover:text-white transition-colors">Aviso legal</a></li>
@@ -408,7 +408,7 @@
                     <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-[#D9AE72]"></i><span>contacto@raizextranjeria.es</span></li>
                     <li id="footer-whatsapp-contacto" class="flex items-center gap-2" hidden>
                         <i class="fa-brands fa-whatsapp text-[#D9AE72]"></i>
-                        <a href="#" id="footer-whatsapp-link" target="_blank" rel="noopener" class="hover:text-white transition-colors">Escríbenos por WhatsApp</a>
+                        <a href="#" id="footer-whatsapp-link" target="_blank" rel="noopener" class="hover:text-white transition-colors">Contáctanos - +34 665112314</a>
                     </li>
                     <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-[#D9AE72]"></i><span>Lunes a viernes · 09:00 - 18:00 (hábiles)</span></li>
                 </ul>
@@ -887,7 +887,7 @@
         // Cuenta sin preguntas libres: la revisión y «Quiero que me llamen» están en el área de clientes.
         function finCuenta() {
             pintarAsistente('<div class="cta-web fin-web"><div><b>Has usado tus preguntas gratis por ahora</b><p>En tu área de clientes puedes pedir la revisión de tu expediente o que te llame alguien del equipo.</p></div>' +
-                '<div class="fin-botones"><a class="btn-cuenta" href="' + APP + '/planes">Ver planes</a><a class="enlace-fin" href="' + APP + '/asistente">Quiero que me llamen</a></div></div>');
+                '<div class="fin-botones"><a class="btn-cuenta" href="' + APP + '/planes">Ver nuestros servicios</a><a class="enlace-fin" href="' + APP + '/asistente">Quiero que me llamen</a></div></div>');
         }
 
         // ---- Al volver a la página: la misma conversación, donde se dejó ----
@@ -929,7 +929,6 @@
         }
 
         $("ask-form").addEventListener("submit", (e) => { e.preventDefault(); enviar(ta.value); });
-        $("ask-sugs").querySelectorAll("button").forEach((b) => b.addEventListener("click", () => enviar(b.textContent)));
         ta.addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); enviar(ta.value); } });
         ta.addEventListener("input", () => { ta.style.height = "auto"; ta.style.height = Math.min(ta.scrollHeight, 120) + "px"; });
 
