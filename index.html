@@ -223,6 +223,8 @@
         .leyenda, .error-web, .urgente-web, .cta-web { border-radius: 0; }
         /* Crear la cuenta dentro del chat (2026-10-22): mismo acabado sobrio, esquinas rectas */
         .alta-web { flex-direction: column; align-items: stretch; gap: .7rem; }
+        .cita-web { display: flex; flex-direction: column; gap: .5rem; padding-bottom: .9rem; border-bottom: 1px solid var(--rule); }
+        .cita-web .btn-cita { align-self: flex-start; }
         .alta-web .btn-google { background: var(--surface); color: var(--ink); border: 1px solid #C7B78E; padding: .9rem 1rem; font: inherit; font-weight: 600; cursor: pointer; border-radius: 0; }
         .alta-web .btn-google:hover { border-color: var(--forest); }
         .alta-web .alta-o, .alta-web .alta-interno { text-align: center; font-size: .82rem; color: var(--ink-faint); margin: 0; }
@@ -293,6 +295,9 @@
                     <div id="ask-conv" class="conv-web" aria-live="polite" hidden></div>
 
                     <div id="ask-tope" class="cta-web alta-web" hidden>
+                        <!-- 2026-11-07 (decisión del dueño): al acabar las preguntas, lo primero es la cita gratuita; la cuenta queda como segunda opción. -->
+                        <div class="cita-web"><b>Habla gratis de tu caso con un experto</b><p>Primera cita gratuita: 20 minutos por llamada de WhatsApp con un experto en migración. Te decimos qué trámite te corresponde y cuánto cuesta. De lunes a viernes, de 10:00 a 14:00 (hora de España).</p>
+                            <a class="btn-cuenta btn-cita" href="https://wa.me/34665112314?text=Hola%2C%20quiero%20mi%20cita%20gratuita%20de%2020%20minutos%20con%20un%20experto%20en%20migraci%C3%B3n.%20Mi%20consulta%20es%20sobre%3A%20" target="_blank" rel="noopener">Pedir mi cita gratuita por WhatsApp</a></div>
                         <div><b>Tu caso queda guardado. Sigue donde lo dejaste</b><p>Crea tu cuenta gratis y continúa esta misma conversación aquí mismo: tendrás a mano tus trámites, plazos y requisitos.</p></div>
                         <button type="button" class="btn-google" id="alta-google">Continuar con Google</button>
                         <p class="alta-o" id="alta-o">o con tu correo</p>
@@ -886,10 +891,10 @@
             if (esCuenta()) $("ask-pie").textContent = "Has entrado como " + (auth.currentUser.email || "tu cuenta") + ". Orientación informativa: no sustituye a un abogado.";
         }
         function pedirCuenta() { $("ask-form").hidden = true; $("ask-tope").hidden = false; $("ask-pie").hidden = true; }
-        // Cuenta sin preguntas libres: la revisión y «Quiero que me llamen» están en el área de clientes.
+        // Cuenta sin preguntas libres (2026-11-07): primero la cita gratuita por WhatsApp; los servicios, después.
         function finCuenta() {
-            pintarAsistente('<div class="cta-web fin-web"><div><b>Has usado tus preguntas gratis por ahora</b><p>En tu área de clientes puedes pedir la revisión de tu expediente o que te llame alguien del equipo.</p></div>' +
-                '<div class="fin-botones"><a class="btn-cuenta" href="' + APP + '/planes">Ver nuestros servicios</a><a class="enlace-fin" href="' + APP + '/asistente">Quiero que me llamen</a></div></div>');
+            pintarAsistente('<div class="cta-web fin-web"><div><b>Has usado tus preguntas gratis por ahora</b><p>Habla gratis de tu caso con un experto en migración: primera cita de 20 minutos por llamada de WhatsApp, de lunes a viernes de 10:00 a 14:00 (hora de España).</p></div>' +
+                '<div class="fin-botones"><a class="btn-cuenta" href="https://wa.me/34665112314?text=Hola%2C%20quiero%20mi%20cita%20gratuita%20de%2020%20minutos%20con%20un%20experto%20en%20migraci%C3%B3n.%20Mi%20consulta%20es%20sobre%3A%20" target="_blank" rel="noopener">Pedir mi cita gratuita</a><a class="enlace-fin" href="' + APP + '/planes">Ver nuestros servicios</a></div></div>');
         }
 
         // ---- Al volver a la página: la misma conversación, donde se dejó ----
