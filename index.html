@@ -317,7 +317,7 @@
                             <button class="env" id="ask-env" type="submit" aria-label="Preguntar a Raíz"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
                         </div>
                     </form>
-                    <p class="mini" id="ask-pie">Orientación informativa: no sustituye a un abogado.</p>
+                    <p class="mini" id="ask-pie">Asistente virtual con inteligencia artificial. Orientación informativa: no sustituye a un abogado.</p>
                     <p class="mini priv">Guardamos tus preguntas para mejorar el servicio y este navegador recuerda tu conversación para que puedas seguirla. No escribas tu DNI ni datos de salud. <a href="politica-privacidad.html">Política de privacidad</a>.</p>
                 </div>
             </section>
@@ -888,7 +888,7 @@
             return html;
         }
         function pintarSesion() {
-            if (esCuenta()) $("ask-pie").textContent = "Has entrado como " + (auth.currentUser.email || "tu cuenta") + ". Orientación informativa: no sustituye a un abogado.";
+            if (esCuenta()) $("ask-pie").textContent = "Has entrado como " + (auth.currentUser.email || "tu cuenta") + ". Asistente virtual con inteligencia artificial. Orientación informativa: no sustituye a un abogado.";
         }
         function pedirCuenta() { $("ask-form").hidden = true; $("ask-tope").hidden = false; $("ask-pie").hidden = true; }
         // Cuenta sin preguntas libres (2026-11-07): primero la cita gratuita por WhatsApp; los servicios, después.
