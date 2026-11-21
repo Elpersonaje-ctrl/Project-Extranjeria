@@ -296,8 +296,8 @@
 
                     <div id="ask-tope" class="cta-web alta-web" hidden>
                         <!-- 2026-11-07 (decisión del dueño): al acabar las preguntas, lo primero es la cita gratuita; la cuenta queda como segunda opción. -->
-                        <div class="cita-web"><b>Habla gratis de tu caso con un experto</b><p>Primera cita gratuita: 20 minutos por llamada de WhatsApp con un experto en migración. Te decimos qué trámite te corresponde y cuánto cuesta. De lunes a viernes, de 10:00 a 14:00 (hora de España).</p>
-                            <a class="btn-cuenta btn-cita" href="https://wa.me/34665112314?text=Hola%2C%20quiero%20mi%20cita%20gratuita%20de%2020%20minutos%20con%20un%20experto%20en%20migraci%C3%B3n.%20Mi%20consulta%20es%20sobre%3A%20" target="_blank" rel="noopener">Pedir mi cita gratuita por WhatsApp</a></div>
+                        <div class="cita-web"><b>Habla gratis de tu caso con un experto</b><p>Primera cita gratuita por llamada de WhatsApp con un experto en migración: te ayudamos a ver por dónde empezar. De lunes a viernes, de 14:00 a 20:00 (hora de España).</p>
+                            <a class="btn-cuenta btn-cita" href="https://wa.me/34665112314?text=Hola%2C%20quiero%20mi%20cita%20gratuita%20con%20un%20experto%20en%20migraci%C3%B3n.%20Mi%20consulta%20es%20sobre%3A%20" target="_blank" rel="noopener">Pedir mi cita gratuita por WhatsApp</a></div>
                         <div><b>Tu caso queda guardado. Sigue donde lo dejaste</b><p>Crea tu cuenta gratis y continúa esta misma conversación aquí mismo: tendrás a mano tus trámites, plazos y requisitos.</p></div>
                         <button type="button" class="btn-google" id="alta-google">Continuar con Google</button>
                         <p class="alta-o" id="alta-o">o con tu correo</p>
@@ -415,7 +415,7 @@
                         <i class="fa-brands fa-whatsapp text-[#D9AE72]"></i>
                         <a href="#" id="footer-whatsapp-link" target="_blank" rel="noopener" class="hover:text-white transition-colors">Contáctanos - +34 665112314</a>
                     </li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-[#D9AE72]"></i><span>Lunes a viernes · 09:00 - 18:00 (hábiles)</span></li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-[#D9AE72]"></i><span>Lunes a viernes · 14:00 - 20:00 (hora de España)</span></li>
                 </ul>
             </div>
         </div>
@@ -893,8 +893,8 @@
         function pedirCuenta() { $("ask-form").hidden = true; $("ask-tope").hidden = false; $("ask-pie").hidden = true; }
         // Cuenta sin preguntas libres (2026-11-07): primero la cita gratuita por WhatsApp; los servicios, después.
         function finCuenta() {
-            pintarAsistente('<div class="cta-web fin-web"><div><b>Has usado tus preguntas gratis por ahora</b><p>Habla gratis de tu caso con un experto en migración: primera cita de 20 minutos por llamada de WhatsApp, de lunes a viernes de 10:00 a 14:00 (hora de España).</p></div>' +
-                '<div class="fin-botones"><a class="btn-cuenta" href="https://wa.me/34665112314?text=Hola%2C%20quiero%20mi%20cita%20gratuita%20de%2020%20minutos%20con%20un%20experto%20en%20migraci%C3%B3n.%20Mi%20consulta%20es%20sobre%3A%20" target="_blank" rel="noopener">Pedir mi cita gratuita</a><a class="enlace-fin" href="' + APP + '/planes">Ver nuestros servicios</a></div></div>');
+            pintarAsistente('<div class="cta-web fin-web"><div><b>Has usado tus preguntas gratis por ahora</b><p>Habla gratis de tu caso con un experto en migración: primera cita por llamada de WhatsApp para ayudarte a ver por dónde empezar, de lunes a viernes de 14:00 a 20:00 (hora de España).</p></div>' +
+                '<div class="fin-botones"><a class="btn-cuenta" href="https://wa.me/34665112314?text=Hola%2C%20quiero%20mi%20cita%20gratuita%20con%20un%20experto%20en%20migraci%C3%B3n.%20Mi%20consulta%20es%20sobre%3A%20" target="_blank" rel="noopener">Pedir mi cita gratuita</a><a class="enlace-fin" href="' + APP + '/planes">Ver nuestros servicios</a></div></div>');
         }
 
         // ---- Al volver a la página: la misma conversación, donde se dejó ----
