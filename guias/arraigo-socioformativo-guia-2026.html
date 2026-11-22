@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="color-scheme" content="light dark">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arraigo para la formación (socioformativo) en 2026: requisitos y cómo funciona | Raíz - Asesores Expertos en Extranjería</title>
-    <meta name="description" content="Qué formaciones sirven, cuándo presentar la solicitud si la matrícula tiene plazo, el informe de integración social, las 30 horas de trabajo permitidas y cómo se prorroga.">
+    <title>Arraigo socioformativo 2026: requisitos y formación | Raíz</title>
+    <meta name="description" content="Qué formaciones sirven, cuándo presentar si la matrícula tiene plazo, el informe de integración social, las 30 horas de trabajo y la prórroga.">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -14,12 +14,12 @@
     <meta property="og:locale" content="es_ES">
     <meta property="og:site_name" content="Raíz - Asesores Expertos en Extranjería">
     <meta property="og:title" content="Arraigo para la formación (socioformativo) en 2026: requisitos y cómo funciona">
-    <meta property="og:description" content="Qué formaciones sirven, cuándo presentar la solicitud si la matrícula tiene plazo, el informe de integración social, las 30 horas de trabajo permitidas y cómo se prorroga.">
+    <meta property="og:description" content="Qué formaciones sirven, cuándo presentar si la matrícula tiene plazo, el informe de integración social, las 30 horas de trabajo y la prórroga.">
     <meta property="og:url" content="https://raizextranjeria.es/guias/arraigo-socioformativo-guia-2026.html">
     <meta property="og:image" content="https://raizextranjeria.es/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="preload" href="/fuentes/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fuentes/inter.woff2" as="font" type="font/woff2" crossorigin>
     <style>
         :root { --forest:#1C3B30; --forest-light:#2F5C4C; --gold:#B8874B; --sand:#fbfaf7; --sand-dark:#f3efe6; --ink:#211B14; --ink-soft:#4A4032; --rule:#C7B78E; }
         body { font-family:'Inter',system-ui,sans-serif; color:var(--ink); background:var(--sand); -webkit-font-smoothing:antialiased; }
@@ -30,54 +30,91 @@
         .cuerpo ul { list-style:disc; padding-left:1.4rem; }
         .cuerpo a { color:var(--forest); text-decoration:underline; }
         .cuerpo h2 { font-size:1.2rem; }
+        /* Listas de las guías (2026-11-22); el índice «En esta guía» está en /comun.css */
+        .cuerpo ul.lista-guia { list-style:none; padding:0; border-top:1px solid var(--rule); }
+        .cuerpo ul.lista-guia li { position:relative; padding:.55rem 0 .55rem 1.6rem; border-bottom:1px solid rgba(199,183,142,.45); line-height:1.6; }
+        .cuerpo ul.lista-guia li::before { content:""; position:absolute; left:.1rem; top:1.05rem; width:.7rem; height:1px; background:var(--gold); }
+        .cuerpo h2[id] { scroll-margin-top:84px; }
         /* WhatsApp (2026-11-21): botón flotante en todas las guías + botón del recuadro final. Igual en index.html. */
         .wa-ico svg, .wa-flota svg { width:20px; height:20px; stroke:currentColor; fill:none; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; flex:none; }
         .btn-wa-guia { display:inline-flex; align-items:center; gap:.6rem; min-height:48px; background:#1F7A4A; color:#fff; padding:.75rem 1.4rem; border-radius:999px; font-weight:600; font-size:.95rem; text-decoration:none; }
         .btn-wa-guia:hover { background:#18613B; }
-        .enlace-sec { display:inline-block; padding:.6rem 0; color:var(--forest); font-weight:500; font-size:.95rem; text-decoration:underline; text-underline-offset:3px; }
+        .enlace-sec { display:inline-flex; align-items:center; min-height:44px; color:var(--forest); font-weight:500; font-size:.95rem; text-decoration:underline; text-underline-offset:3px; }
         .wa-flota { position:fixed; z-index:50; right:max(16px, env(safe-area-inset-right)); bottom:max(16px, env(safe-area-inset-bottom)); display:inline-flex; align-items:center; justify-content:center; gap:.5rem; width:56px; height:56px; border-radius:999px; background:#1F7A4A; color:#fff; text-decoration:none; font-weight:600; font-size:.95rem; box-shadow:0 8px 24px -8px rgba(0,0,0,.45); }
         .wa-flota:hover { background:#18613B; }
         .wa-flota svg { width:26px; height:26px; }
         .wa-flota span { display:none; }
         @media (min-width:768px) { .wa-flota { width:auto; padding:0 1.3rem 0 1.1rem; height:52px; } .wa-flota svg { width:22px; height:22px; } .wa-flota span { display:inline; } }
-        footer { padding-bottom:calc(2rem + 72px) !important; } /* que el botón flotante no tape el pie */
     </style>
+    <link rel="stylesheet" href="/comun.css">
     <link rel="stylesheet" href="/modo-oscuro.css">
+    <link rel="stylesheet" href="/estilos.css">
     <script data-goatcounter="https://raizextranjeria.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body class="flex flex-col min-h-screen">
-    <header class="border-b border-[#C7B78E] bg-[#fbfaf7]">
-        <div class="max-w-4xl mx-auto px-5 h-16 flex justify-between items-center">
-            <a href="/" class="flex flex-col" aria-label="Raíz Asesores de Extranjería, inicio">
-                <span class="font-bold text-2xl tracking-tight text-[#1C3B30]" style="font-family:'Fraunces',Georgia,serif">Raíz</span>
-                <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#8F6630] -mt-1">Asesores de Extranjería</span>
-            </a>
-            <nav class="flex items-center gap-5 text-sm">
-                <a href="/guias/" class="text-[#4A4032] font-medium hover:text-[#1C3B30]">Blog</a>
-                <a href="https://app.raizextranjeria.es" class="border border-[#1C3B30] text-[#1C3B30] hover:bg-[#1C3B30] hover:text-[#fbfaf7] px-3 py-1.5 rounded text-xs font-semibold uppercase tracking-wider whitespace-nowrap">Área de clientes</a>
+    <!-- CABECERA-COMUN: la escribe Herramientas-Internas/generar_guias.py; cámbiala allí, no aquí -->
+    <header class="cab">
+        <div class="cab-in">
+            <a href="/" class="cab-logo" aria-label="Raíz, Asesores de Extranjería: ir al inicio"><span class="cab-raiz">Raíz</span><span class="cab-lema">Asesores de Extranjería</span></a>
+            <nav class="cab-nav" aria-label="Principal">
+                <a href="/#servicios">Servicios</a>
+                <a href="/guias/" aria-current="page">Guías</a>
+                <a href="https://app.raizextranjeria.es" class="cab-area">Área de clientes</a>
             </nav>
+            <details class="cab-menu">
+                <summary><svg class="ico-abrir" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="ico-cerrar" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Menú</summary>
+                <nav class="cab-panel" aria-label="Menú">
+                    <a href="/#servicios">Servicios</a>
+                    <a href="/guias/" aria-current="page">Guías</a>
+                    <a href="https://app.raizextranjeria.es">Área de clientes</a>
+                    <a href="https://wa.me/34665112314?text=Hola%2C%20he%20le%C3%ADdo%20vuestra%20gu%C3%ADa%20sobre%20Arraigo%20para%20la%20Formaci%C3%B3n%20y%20tengo%20una%20duda%20sobre%20mi%20caso." class="cab-panel-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.4-4.1A8.5 8.5 0 1 1 8.2 19.4z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1.1-1.4-1.9-1-.9.8c-1.2-.5-2.2-1.5-2.7-2.7l.8-.9-1-1.9z"/></svg>Escríbenos por WhatsApp</a>
+                </nav>
+            </details>
         </div>
     </header>
+    <script>
+        // Menú del móvil: se cierra al elegir una opción, al tocar fuera o con Escape.
+        (function () {
+            var m = document.querySelector('.cab-menu'); if (!m) return;
+            document.addEventListener('click', function (e) { if (m.open && (!m.contains(e.target) || e.target.closest('.cab-panel a'))) m.open = false; });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && m.open) { m.open = false; m.querySelector('summary').focus(); } });
+        })();
+    </script>
+    <!-- /CABECERA-COMUN -->
 
     <main class="flex-grow">
         <article class="max-w-3xl mx-auto px-5 py-10 md:py-14">
-            <a href="/guias/" class="text-sm font-medium text-[#4A4032] hover:text-[#1C3B30]">← Todas las guías</a>
-            <div class="flex flex-wrap gap-x-4 gap-y-1 mt-8 font-stamp text-xs text-[#8F6630] uppercase tracking-wider">
+            <a href="/guias/" class="inline-flex items-center min-h-[44px] text-sm font-medium text-[#4A4032] hover:text-[#1C3B30]">← Todas las guías</a>
+            <div class="flex flex-wrap gap-x-4 gap-y-1 mt-6 font-stamp text-xs text-[#8F6630] uppercase tracking-wider">
                 <span>Arraigo para la Formación</span><span>23 SEP 2026</span>
             </div>
             <h1 class="text-3xl md:text-5xl font-bold text-[#1C3B30] leading-tight mt-3">Arraigo para la formación (socioformativo) en 2026: requisitos y cómo funciona</h1>
             <div class="h-0.5 bg-[#B8874B]/30 my-7"></div>
+            <details class="indice-guia" id="indice-guia">
+                <summary>En esta guía <span>· 8 apartados</span></summary>
+                <ol>
+                    <li><a href="#requisitos-generales">Requisitos generales</a></li>
+                    <li><a href="#que-formaciones-sirven">Qué formaciones sirven</a></li>
+                    <li><a href="#cuando-presentar-el-detalle-de-la-matricula">Cuándo presentar: el detalle de la matrícula</a></li>
+                    <li><a href="#el-informe-de-integracion-social">El informe de integración social</a></li>
+                    <li><a href="#documentacion">Documentación</a></li>
+                    <li><a href="#trabajar-mientras-estudias">Trabajar mientras estudias</a></li>
+                    <li><a href="#duracion-y-prorroga">Duración y prórroga</a></li>
+                    <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
+                </ol>
+            </details>
+            <script>if (matchMedia('(min-width: 768px)').matches) document.getElementById('indice-guia').open = true;</script>
             <div class="cuerpo text-base text-[#1C3B30] space-y-4">
 <p class="font-bold">El arraigo para la formación, que el reglamento llama "arraigo socioformativo", es la vía de regularización para quien lleva al menos dos años en España sin papeles y quiere estudiar una formación profesional o reglada. Da una autorización de residencia de un año que además permite trabajar hasta 30 horas a la semana mientras estudias.</p>
 <p>Está regulado en los artículos 126, 127.d), 131 y 132 del Reglamento de Extranjería (Real Decreto 1155/2024). No exige contrato de trabajo ni demostrar ingresos, pero sí una formación concreta y un informe de integración social.</p>
-<h2 class="font-bold text-[#1C3B30] mt-4">Requisitos generales</h2>
+<h2 id="requisitos-generales" class="font-bold text-[#1C3B30] mt-4">Requisitos generales</h2>
 <ul>
 <li><strong>2 años de permanencia continuada</strong> en España justo antes de presentar la solicitud. Las ausencias no pueden superar 90 días en esos dos años (Instrucciones SEM 1/2025). Si pediste asilo, el tiempo en que la solicitud estuvo en trámite no cuenta.</li>
 <li><strong>No tener antecedentes penales</strong> en España ni en los países donde viviste los cinco años anteriores a llegar a España.</li>
 <li>No ser solicitante de protección internacional al presentar ni mientras se tramita, y no tener ya otra autorización de estancia o residencia ni un procedimiento de ese tipo abierto.</li>
 <li>No figurar como rechazable en el espacio Schengen, no estar dentro de un plazo de compromiso de no retorno y pagar la tasa.</li>
 </ul>
-<h2 class="font-bold text-[#1C3B30] mt-4">Qué formaciones sirven</h2>
+<h2 id="que-formaciones-sirven" class="font-bold text-[#1C3B30] mt-4">Qué formaciones sirven</h2>
 <p>El artículo 127.d) admite tres tipos de formación:</p>
 <ul>
 <li><strong>Formación reglada</strong>: estudios de secundaria postobligatoria en un centro autorizado (por ejemplo, Formación Profesional de grado básico, medio o superior) y las enseñanzas obligatorias presenciales para personas adultas.</li>
@@ -85,18 +122,19 @@
 <li><strong>Formación de los Servicios Públicos de Empleo</strong> (en Galicia, a través de los servicios de empleo de la Xunta) orientada a ocupaciones del Catálogo de Ocupaciones de Difícil Cobertura. En este caso basta con comprometerse a realizarla, pero si luego no la haces, la autorización se extingue.</li>
 </ul>
 <p>Un curso cualquiera de una academia privada no sirve si no entra en estas categorías. Antes de matricularte, conviene comprobar que la formación es una de las admitidas.</p>
-<h2 class="font-bold text-[#1C3B30] mt-4">Cuándo presentar: el detalle de la matrícula</h2>
+<h2 id="cuando-presentar-el-detalle-de-la-matricula" class="font-bold text-[#1C3B30] mt-4">Cuándo presentar: el detalle de la matrícula</h2>
 <p>Si la formación tiene un plazo oficial de matrícula, la solicitud de arraigo debe presentarse en los <strong>dos meses anteriores al inicio de ese plazo</strong>. Una vez concedida la autorización, tienes <strong>tres meses</strong> desde la notificación para acreditar la matrícula ante la Oficina de Extranjería. Si no lo haces, la autorización se extingue. Por causa justificada puedes matricularte en una formación distinta de la prevista, siempre que también esté admitida.</p>
-<h2 class="font-bold text-[#1C3B30] mt-4">El informe de integración social</h2>
+<h2 id="el-informe-de-integracion-social" class="font-bold text-[#1C3B30] mt-4">El informe de integración social</h2>
 <p>A diferencia del arraigo social, aquí el informe de integración social es obligatorio en todo caso. Lo emite la comunidad autónoma o, si esta lo ha delegado, el ayuntamiento donde vives (en Galicia, los servicios sociales del concello). Tiene que emitirse en <strong>un mes</strong> desde que lo pides. Si no llega en ese plazo y puedes acreditar el retraso, puedes demostrar tu integración con cualquier otro medio de prueba.</p>
-<h2 class="font-bold text-[#1C3B30] mt-4">Documentación</h2>
-<p>Pasaporte completo y en vigor; certificado de antecedentes penales de tu país y de los países donde residiste los cinco años anteriores a entrar en España, apostillado o legalizado y traducido; pruebas de los dos años de permanencia (el padrón histórico es la principal, reforzada con cualquier documento con tu nombre y una fecha); la matrícula, la preinscripción o el compromiso de formación; el informe de integración social (o la prueba de que no se emitió a tiempo); y el justificante de la tasa. Los antecedentes penales en España y el informe policial los pide de oficio la propia Administración.</p>
-<h2 class="font-bold text-[#1C3B30] mt-4">Trabajar mientras estudias</h2>
+<h2 id="documentacion" class="font-bold text-[#1C3B30] mt-4">Documentación</h2>
+<ul class="lista-guia"><li>Pasaporte completo y en vigor</li><li>Certificado de antecedentes penales de tu país y de los países donde residiste los cinco años anteriores a entrar en España, apostillado o legalizado y traducido</li><li>Pruebas de los dos años de permanencia (el padrón histórico es la principal, reforzada con cualquier documento con tu nombre y una fecha)</li><li>La matrícula, la preinscripción o el compromiso de formación</li><li>El informe de integración social (o la prueba de que no se emitió a tiempo)</li><li>El justificante de la tasa</li></ul>
+<p>Los antecedentes penales en España y el informe policial los pide de oficio la propia Administración.</p>
+<h2 id="trabajar-mientras-estudias" class="font-bold text-[#1C3B30] mt-4">Trabajar mientras estudias</h2>
 <p>La autorización permite trabajar por cuenta ajena <strong>hasta 30 horas semanales</strong> en total, cobrando al menos el salario mínimo o el del convenio, en proporción a las horas (artículo 131.b). No permite trabajar por cuenta propia ni superar ese tope.</p>
-<h2 class="font-bold text-[#1C3B30] mt-4">Duración y prórroga</h2>
+<h2 id="duracion-y-prorroga" class="font-bold text-[#1C3B30] mt-4">Duración y prórroga</h2>
 <p>La autorización dura <strong>un año</strong>. Se puede prorrogar otro año presentando un informe del centro que certifique que pasas a segundo curso (en ciclos de grado básico o medio). Si terminaste la formación antes de que acabe el año, la prórroga exige presentar el título o certificado y estar inscrito como demandante de empleo en búsqueda activa (artículo 132). La prórroga se pide en los dos meses anteriores a que caduque la autorización.</p>
 <p>Con el título o con un contrato de trabajo, el siguiente paso suele ser pasar a una autorización de residencia y trabajo ordinaria. Tenemos una guía sobre renovaciones y modificaciones que lo explica.</p>
-<h2 class="font-bold text-[#1C3B30] mt-4">Preguntas frecuentes</h2>
+<h2 id="preguntas-frecuentes" class="font-bold text-[#1C3B30] mt-4">Preguntas frecuentes</h2>
 <p><strong>¿Necesito demostrar ingresos o tener contrato?</strong><br>No. El arraigo para la formación no exige medios económicos ni contrato. Lo que exige es la formación y el informe de integración social.</p>
 <p><strong>¿Me sirve un curso online o de una academia privada?</strong><br>Solo si es una de las formaciones admitidas: formación reglada o certificados profesionales en un centro autorizado, o formación de los Servicios Públicos de Empleo para ocupaciones de difícil cobertura. Un curso cualquiera no sirve.</p>
 <p><strong>¿Puedo trabajar a jornada completa?</strong><br>No. El máximo son 30 horas semanales en cómputo global, por cuenta ajena.</p>
@@ -108,15 +146,15 @@
                 <h2 class="text-lg font-bold text-[#1C3B30]">Sigue leyendo</h2>
                 <ul class="mt-4 grid gap-3 md:grid-cols-3">
                     <li><a href="/guias/arraigo-social-guia-2026.html" class="block h-full bg-white border border-[#C7B78E] hover:border-[#B8874B] rounded-xl p-4">
-                        <span class="font-stamp text-[10px] text-[#8F6630] uppercase tracking-wider">Arraigo Social</span>
+                        <span class="font-stamp text-xs text-[#8F6630] uppercase tracking-wider">Arraigo Social</span>
                         <span class="block mt-1 text-sm font-semibold text-[#1C3B30] leading-snug">Arraigo Social en 2026: guía completa de requisitos y procedimiento</span>
                     </a></li>
                     <li><a href="/guias/arraigo-sociolaboral-guia-2026.html" class="block h-full bg-white border border-[#C7B78E] hover:border-[#B8874B] rounded-xl p-4">
-                        <span class="font-stamp text-[10px] text-[#8F6630] uppercase tracking-wider">Arraigo Sociolaboral</span>
+                        <span class="font-stamp text-xs text-[#8F6630] uppercase tracking-wider">Arraigo Sociolaboral</span>
                         <span class="block mt-1 text-sm font-semibold text-[#1C3B30] leading-snug">Arraigo Sociolaboral en 2026: el arraigo con contrato de trabajo</span>
                     </a></li>
                     <li><a href="/guias/renovaciones-modificaciones-residencia-guia-2026.html" class="block h-full bg-white border border-[#C7B78E] hover:border-[#B8874B] rounded-xl p-4">
-                        <span class="font-stamp text-[10px] text-[#8F6630] uppercase tracking-wider">Renovaciones y Modificaciones</span>
+                        <span class="font-stamp text-xs text-[#8F6630] uppercase tracking-wider">Renovaciones y Modificaciones</span>
                         <span class="block mt-1 text-sm font-semibold text-[#1C3B30] leading-snug">Renovar o modificar tu autorización de residencia en 2026: plazos y requisitos</span>
                     </a></li>
                 </ul>
@@ -130,16 +168,40 @@
                     <a href="/#inicio" class="enlace-sec">o pregúntale al asistente</a>
                 </div>
             </div>
-            <p class="mt-8 text-xs text-[#4A4032] leading-relaxed">Esta guía es informativa y no sustituye el asesoramiento de un abogado. Raíz es una agencia de representación administrativa (Ley 39/2015) y no gestiona recursos judiciales. Consulta siempre la normativa vigente antes de presentar una solicitud.</p>
+            <p class="mt-8 text-sm text-[#4A4032] leading-relaxed">Esta guía es informativa y no sustituye el asesoramiento de un abogado. Raíz es una agencia de representación administrativa (Ley 39/2015) y no gestiona recursos judiciales. Consulta siempre la normativa vigente antes de presentar una solicitud.</p>
         </article>
     </main>
 
-    <footer class="bg-[#1C3B30] text-[#fbfaf7] py-8">
-        <div class="max-w-4xl mx-auto px-5 flex flex-col md:flex-row justify-between gap-3 text-xs text-gray-300">
-            <p>&copy; 2026 Raíz - Asesores Expertos en Extranjería.</p>
-            <p><a href="/aviso-legal.html" class="underline hover:text-white">Aviso legal</a> · <a href="/politica-privacidad.html" class="underline hover:text-white">Política de privacidad</a> · contacto@raizextranjeria.es</p>
+    <!-- PIE-COMUN: lo escribe Herramientas-Internas/generar_guias.py; cámbialo allí, no aquí -->
+    <footer class="pie">
+        <div class="pie-in">
+            <div>
+                <a href="/" class="cab-logo" aria-label="Raíz, Asesores de Extranjería: ir al inicio"><span class="cab-raiz">Raíz</span><span class="cab-lema">Asesores de Extranjería</span></a>
+                <p class="pie-desc">Trámites administrativos de extranjería, telemáticos y con seguimiento online. Agencia de representación administrativa (Ley 39/2015); no somos un despacho de abogados.</p>
+            </div>
+            <nav aria-label="Enlaces del pie">
+                <p class="pie-tit">Enlaces</p>
+                <ul>
+                    <li><a href="/#inicio">Pregúntale a Raíz</a></li>
+                    <li><a href="/#servicios">Servicios</a></li>
+                    <li><a href="/guias/">Guías de extranjería</a></li>
+                    <li><a href="https://app.raizextranjeria.es">Área de clientes</a></li>
+                    <li><a href="/aviso-legal.html">Aviso legal</a></li>
+                    <li><a href="/politica-privacidad.html">Política de privacidad</a></li>
+                </ul>
+            </nav>
+            <div>
+                <p class="pie-tit">Contacto</p>
+                <ul>
+                    <li><a href="https://wa.me/34665112314?text=Hola%2C%20vengo%20de%20la%20web%20de%20Ra%C3%ADz%20y%20quiero%20informaci%C3%B3n%20sobre%20mi%20caso." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.4-4.1A8.5 8.5 0 1 1 8.2 19.4z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1.1-1.4-1.9-1-.9.8c-1.2-.5-2.2-1.5-2.7-2.7l.8-.9-1-1.9z"/></svg>WhatsApp: +34 665 11 23 14</a></li>
+                    <li><a href="mailto:contacto@raizextranjeria.es"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>contacto@raizextranjeria.es</a></li>
+                    <li><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Lunes a viernes, de 14:00 a 20:00 (hora de España)</span></li>
+                </ul>
+            </div>
         </div>
+        <div class="pie-legal"><p>&copy; 2026 Raíz - Asesores Expertos en Extranjería. Todos los derechos reservados.</p></div>
     </footer>
+    <!-- /PIE-COMUN -->
     <a class="wa-flota" href="https://wa.me/34665112314?text=Hola%2C%20he%20le%C3%ADdo%20vuestra%20gu%C3%ADa%20sobre%20Arraigo%20para%20la%20Formaci%C3%B3n%20y%20tengo%20una%20duda%20sobre%20mi%20caso." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.4-4.1A8.5 8.5 0 1 1 8.2 19.4z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1.1-1.4-1.9-1-.9.8c-1.2-.5-2.2-1.5-2.7-2.7l.8-.9-1-1.9z"/></svg><span>WhatsApp</span></a>
 </body>
 </html>

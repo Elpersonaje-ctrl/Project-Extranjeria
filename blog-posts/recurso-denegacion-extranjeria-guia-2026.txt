@@ -3,6 +3,8 @@ CATEGORIA: recursos
 CATEGORIA_VISIBLE: Recursos Administrativos
 FECHA: 23 SEP 2026
 RESUMEN: Qué hacer si Extranjería deniega tu solicitud: el recurso de reposición en un mes, el contencioso-administrativo en dos meses, qué hacer si no te contestan y cuándo conviene volver a presentar en lugar de recurrir.
+TITULO_SEO: Me denegaron la residencia: cómo recurrir en 2026
+DESCRIPCION: Si Extranjería deniega tu solicitud: recurso de reposición en un mes, contencioso en dos, qué hacer si no contestan y cuándo volver a presentar.
 RELACIONADAS: renovaciones-modificaciones-residencia-guia-2026, arraigo-social-guia-2026, reagrupacion-familiar-requisitos-2026
 ---CONTENIDO---
 <p class="font-bold">Recibir una denegación asusta, pero no siempre es el final. Lo primero es no dejar pasar los plazos: el reloj empieza a correr el día siguiente a la notificación. Esta guía explica tus opciones.</p>

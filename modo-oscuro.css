@@ -59,11 +59,9 @@
     :root .btn-empezar, :root .btn-cta-web, :root .btn-cuenta { color: #14211B; }
     :root .btn-empezar:hover, :root .btn-cta-web:hover, :root .btn-cuenta:hover,
     :root .comp-caja .env:hover { background: #A8CDB8; border-color: #A8CDB8; }
-    :root .comp-caja, :root .cinta-flecha, :root .serv-tarjeta,
-    :root .serv-texto h3 span { border-color: var(--rule); }
+    :root .comp-caja, :root .cinta-flecha, :root .serv-tarjeta { border-color: var(--rule); }
     :root .comp-caja { box-shadow: 0 24px 60px -30px rgba(0, 0, 0, .7); }
-    :root .cinta-flecha:hover, :root .cinta-flecha:focus-visible,
-    :root .serv-tarjeta:hover h3 span { color: #14211B; }
+    :root .cinta-flecha:hover, :root .cinta-flecha:focus-visible { color: #14211B; }
     :root .serv-dibujo { background: #0E1813; }
     :root .aviso-legal { border-top-color: var(--rule); }
     :root .afirma.n { border-color: #8FD0A8; } :root .afirma.n .tag { color: #8FD0A8; }

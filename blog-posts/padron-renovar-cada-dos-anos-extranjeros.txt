@@ -3,6 +3,8 @@ CATEGORIA: arraigo
 CATEGORIA_VISIBLE: Empadronamiento
 FECHA: 28 SEP 2026
 RESUMEN: Si no eres comunitario y no tienes residencia de larga duración, tu inscripción en el padrón caduca a los dos años aunque tengas papeles. Qué dice la ley, qué pasa si caduca y cómo evitar un hueco que complique tu arraigo o tu nacionalidad.
+TITULO_SEO: Padrón de extranjeros: por qué caduca a los 2 años
+DESCRIPCION: Si no eres comunitario ni tienes larga duración, tu padrón caduca a los dos años aunque tengas papeles. Qué pasa si caduca y cómo evitar el hueco.
 RELACIONADAS: arraigo-social-guia-2026, arraigo-socioformativo-guia-2026, nacionalidad-espanola-residencia-guia-2026
 ---CONTENIDO---
 <p class="font-bold">El padrón es la prueba más usada para demostrar cuánto tiempo llevas viviendo en España. Pero si eres extranjero de fuera de la Unión Europea y no tienes una residencia de larga duración, tu inscripción no es para siempre: hay que renovarla cada dos años. Si no lo haces, el ayuntamiento puede darte de baja sin avisarte antes.</p>

@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta name="color-scheme" content="light dark">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad | Raíz - Asesores Expertos en Extranjería</title>
+    <title>Política de privacidad | Raíz Extranjería</title>
+    <meta name="description" content="Qué datos trata Raíz (chat, WhatsApp, cuenta de cliente y pagos), para qué, durante cuánto tiempo y cómo ejercer tus derechos.">
+    <link rel="canonical" href="https://raizextranjeria.es/politica-privacidad.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Raíz - Asesores Expertos en Extranjería">
+    <meta property="og:title" content="Política de privacidad de Raíz">
+    <meta property="og:url" content="https://raizextranjeria.es/politica-privacidad.html">
+    <meta property="og:image" content="https://raizextranjeria.es/og-image.png">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Special+Elite&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="/fuentes/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fuentes/inter.woff2" as="font" type="font/woff2" crossorigin>
 
     <style>
         :root {
@@ -79,7 +86,9 @@
             font-weight: 600;
         }
     </style>
+    <link rel="stylesheet" href="/comun.css">
     <link rel="stylesheet" href="/modo-oscuro.css">
+    <link rel="stylesheet" href="/estilos.css"> <!-- Tailwind ya preparado (generar_guias.py); va el último, como iba el de cdn.tailwindcss.com -->
     <script data-goatcounter="https://raizextranjeria.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -87,24 +96,42 @@
 </head>
 <body class="flex flex-col min-h-screen">
 
-    <header class="sticky top-0 z-40 bg-[#fbfaf7]/90 backdrop-blur-md border-b border-[#C7B78E]">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="index.html" class="flex flex-col">
-                <span class="font-serif-editorial text-2xl font-bold tracking-tight text-[#1C3B30]">Raíz</span>
-                <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#8F6630] -mt-1">Asesores de Extranjería</span>
-            </a>
-            <a href="index.html" class="text-sm font-medium text-[#4A4032] hover:text-[#1C3B30] transition-colors flex items-center gap-2">
-                <i class="fa-solid fa-arrow-left"></i> Volver a la página principal
-            </a>
+    <!-- CABECERA-COMUN: la escribe Herramientas-Internas/generar_guias.py; cámbiala allí, no aquí -->
+    <header class="cab">
+        <div class="cab-in">
+            <a href="/" class="cab-logo" aria-label="Raíz, Asesores de Extranjería: ir al inicio"><span class="cab-raiz">Raíz</span><span class="cab-lema">Asesores de Extranjería</span></a>
+            <nav class="cab-nav" aria-label="Principal">
+                <a href="/#servicios">Servicios</a>
+                <a href="/guias/">Guías</a>
+                <a href="https://app.raizextranjeria.es" class="cab-area">Área de clientes</a>
+            </nav>
+            <details class="cab-menu">
+                <summary><svg class="ico-abrir" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="ico-cerrar" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Menú</summary>
+                <nav class="cab-panel" aria-label="Menú">
+                    <a href="/#servicios">Servicios</a>
+                    <a href="/guias/">Guías</a>
+                    <a href="https://app.raizextranjeria.es">Área de clientes</a>
+                    <a href="https://wa.me/34665112314?text=Hola%2C%20tengo%20una%20duda%20de%20extranjer%C3%ADa" class="cab-panel-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.4-4.1A8.5 8.5 0 1 1 8.2 19.4z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1.1-1.4-1.9-1-.9.8c-1.2-.5-2.2-1.5-2.7-2.7l.8-.9-1-1.9z"/></svg>Escríbenos por WhatsApp</a>
+                </nav>
+            </details>
         </div>
     </header>
+    <script>
+        // Menú del móvil: se cierra al elegir una opción, al tocar fuera o con Escape.
+        (function () {
+            var m = document.querySelector('.cab-menu'); if (!m) return;
+            document.addEventListener('click', function (e) { if (m.open && (!m.contains(e.target) || e.target.closest('.cab-panel a'))) m.open = false; });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && m.open) { m.open = false; m.querySelector('summary').focus(); } });
+        })();
+    </script>
+    <!-- /CABECERA-COMUN -->
 
     <main class="flex-1">
         <section class="py-16 bg-white border-b border-[#C7B78E]">
             <div class="max-w-3xl mx-auto px-6">
                 <span class="font-stamp text-xs text-[#8F6630] uppercase tracking-[0.2em] block mb-2">Legal</span>
                 <h1 class="font-serif-editorial text-3xl md:text-4xl text-[#1C3B30] font-bold">Política de Privacidad y Protección de Datos Personales</h1>
-                <p class="text-xs text-[#4A4032] mt-3">Última actualización: 21 de noviembre de 2026</p>
+                <p class="text-sm text-[#4A4032] mt-3">Última actualización: 22 de noviembre de 2026</p>
             </div>
         </section>
 
@@ -113,7 +140,24 @@
 
                 <p>De conformidad con el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016 (RGPD), y la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD), se informa a los usuarios del sitio web <strong>raizextranjeria.es</strong> (en adelante, "el sitio web") de la política de tratamiento de datos personales aplicada por el Responsable del Tratamiento identificado a continuación.</p>
 
-                <h2>1. Identidad del Responsable del Tratamiento</h2>
+                <details class="indice-guia" id="indice-guia">
+                    <summary>Índice <span>· 10 apartados</span></summary>
+                    <ol>
+                        <li><a href="#apartado-1">Identidad del Responsable del Tratamiento</a></li>
+                        <li><a href="#apartado-2">Marco legal de la actividad</a></li>
+                        <li><a href="#apartado-3">Datos que recogemos y con qué finalidad</a></li>
+                        <li><a href="#apartado-4">Plazo de conservación</a></li>
+                        <li><a href="#apartado-5">Destinatarios y encargados de tratamiento</a></li>
+                        <li><a href="#apartado-6">Transferencias internacionales</a></li>
+                        <li><a href="#apartado-7">Derechos de las personas interesadas</a></li>
+                        <li><a href="#apartado-8">Medidas de seguridad</a></li>
+                        <li><a href="#apartado-9">Menores de edad</a></li>
+                        <li><a href="#apartado-10">Modificaciones de esta política</a></li>
+                    </ol>
+                </details>
+                <script>if (matchMedia('(min-width: 768px)').matches) document.getElementById('indice-guia').open = true;</script>
+
+                <h2 id="apartado-1">1. Identidad del Responsable del Tratamiento</h2>
                 <p>El Responsable del Tratamiento de los datos personales recogidos a través de este sitio web es una <strong>persona física que ejerce su actividad profesional en condición de trabajador autónomo</strong> bajo el nombre comercial "Raíz - Asesores Expertos en Extranjería" — no se trata de una sociedad ni de ninguna otra persona jurídica. Sus datos identificativos son:</p>
                 <ul>
                     <li><strong>Nombre y apellidos:</strong> Juan Sebastián Sierra Fajardo</li>
@@ -124,13 +168,14 @@
                 </ul>
                 <p>Al tratarse de una persona física autónoma y no de una empresa con estructura corporativa, no existen "empresas del grupo" ni encargados de tratamiento internos distintos del propio titular. Dada la escala y naturaleza de la actividad, no resulta legalmente exigible la designación de un Delegado de Protección de Datos (DPO) conforme al artículo 37 RGPD; cualquier consulta relativa a protección de datos debe dirigirse directamente al correo electrónico indicado arriba.</p>
 
-                <h2>2. Marco legal de la actividad</h2>
+                <h2 id="apartado-2">2. Marco legal de la actividad</h2>
                 <p>Raíz - Asesores Expertos en Extranjería presta servicios de <strong>representación administrativa en materia de extranjería</strong> al amparo de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas. No es un despacho de abogados ni un profesional colegiado, y no interviene en procedimientos de vía judicial ni en recursos contencioso-administrativos, que quedan fuera del alcance de los servicios prestados.</p>
 
-                <h2>3. Datos que recogemos y con qué finalidad</h2>
+                <h2 id="apartado-3">3. Datos que recogemos y con qué finalidad</h2>
 
-                <h3>3.1 Formulario de diagnóstico de viabilidad</h3>
-                <p>Al completar el formulario de diagnóstico disponible en el sitio web se recogen: nombre y apellidos, teléfono, correo electrónico, dirección postal, país de origen y nacionalidad, fecha de llegada a España y ausencias del país, situación administrativa actual y vencimiento de la autorización si la hubiera, solicitudes de residencia previas, empadronamiento, situación de estudios, trabajo y medios económicos, vínculos familiares, y <strong>la existencia o no de antecedentes penales</strong> (ver apartado 3.2). De forma <strong>opcional</strong>, la persona puede indicar circunstancias de especial protección —solicitud de protección internacional, enfermedad grave, condición de víctima de un delito grave o de violencia de género— cuando sean relevantes para el trámite consultado (ver apartado 3.3).</p>
+                <h3>3.1 Formulario de diagnóstico de viabilidad (retirado)</h3>
+                <p>Este formulario <strong>dejó de estar disponible en el sitio web el 21 de septiembre de 2026</strong>. Hoy las consultas se hacen con el asistente de inteligencia artificial (apartado 3.6) o por WhatsApp (apartados 3.8 y 3.10). Se mantiene esta información mientras se conserven datos recogidos con él, en los plazos del apartado 4.</p>
+                <p>Mientras estuvo disponible, al completar el formulario se recogían: nombre y apellidos, teléfono, correo electrónico, dirección postal, país de origen y nacionalidad, fecha de llegada a España y ausencias del país, situación administrativa actual y vencimiento de la autorización si la hubiera, solicitudes de residencia previas, empadronamiento, situación de estudios, trabajo y medios económicos, vínculos familiares, y <strong>la existencia o no de antecedentes penales</strong> (ver apartado 3.2). De forma <strong>opcional</strong>, la persona podía indicar circunstancias de especial protección —solicitud de protección internacional, enfermedad grave, condición de víctima de un delito grave o de violencia de género— cuando sean relevantes para el trámite consultado (ver apartado 3.3).</p>
                 <p><strong>Finalidades:</strong> (a) verificar la titularidad de la dirección de correo; (b) generar y enviar por correo un diagnóstico automático, orientativo y no vinculante sobre las posibles vías de residencia o nacionalidad; (c) cuando el diagnóstico identifique una posible vía, el contacto comercial posterior por parte de Raíz en relación con el caso consultado, por correo electrónico, teléfono o WhatsApp.</p>
                 <p><strong>Base legal:</strong> consentimiento explícito del interesado, prestado al marcar las casillas correspondientes y enviar el formulario (art. 6.1.a RGPD), y aplicación de medidas precontractuales a solicitud del interesado (art. 6.1.b RGPD).</p>
                 <p>Los datos de este formulario se almacenan en los sistemas descritos en el apartado 5.</p>
@@ -201,7 +246,7 @@
                 <p><strong>Finalidades y base legal:</strong> (a) contestar la consulta, organizar la primera cita gratuita (apartado 3.8) y, si no hay respuesta, enviar como máximo dos recordatorios sobre esa misma consulta, a petición de la persona interesada (art. 6.1.b RGPD); basta con pedir que no se le escriba más para que no se envíen; (b) usar el código del anuncio para saber qué anuncios funcionan, por interés legítimo en medir la publicidad propia (art. 6.1.f RGPD). Cualquier otra comunicación comercial solo se envía con consentimiento expreso (apartado 3.8).</p>
                 <p><strong>Papel de Meta:</strong> para mostrar los anuncios, Meta Platforms Ireland Ltd. trata los datos de sus usuarios conforme a su propia política de privacidad y bajo su responsabilidad (<a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener">facebook.com/privacy/policy</a>). Raíz solo elige criterios generales (personas que viven en España y franja de edad) y recibe estadísticas sin datos personales (cuántas personas vieron el anuncio y cuántas conversaciones se iniciaron). Raíz no sube listas de clientes a Meta ni usa píxeles de seguimiento. La conversación viaja por WhatsApp (WhatsApp Ireland Ltd.), con cifrado de extremo a extremo.</p>
 
-                <h2>4. Plazo de conservación</h2>
+                <h2 id="apartado-4">4. Plazo de conservación</h2>
                 <ul>
                     <li><strong>Diagnósticos que no derivan en la contratación de un servicio:</strong> los datos del formulario de diagnóstico se conservan un máximo de <strong>3 meses</strong> desde su recogida, transcurridos los cuales se suprimen. Si en ese plazo la persona no verifica su correo, la supresión es inmediata.</li>
                     <li><strong>Expedientes contratados:</strong> la documentación y los datos del expediente se conservan mientras dura la relación de servicio y, una vez finalizado o cerrado el expediente, durante <strong>5 años</strong>, en cumplimiento de las obligaciones legales de conservación aplicables a la actividad. Transcurrido ese plazo se suprimen de forma definitiva.</li>
@@ -213,7 +258,7 @@
                     <li>Finalizados los plazos, los datos se suprimen de forma segura, salvo obligación legal de conservación adicional.</li>
                 </ul>
 
-                <h2>5. Destinatarios y encargados de tratamiento</h2>
+                <h2 id="apartado-5">5. Destinatarios y encargados de tratamiento</h2>
                 <p>No se ceden datos personales a terceros con fines comerciales. Para la correcta prestación del servicio, se recurre a los siguientes proveedores, que actúan como encargados del tratamiento conforme al artículo 28 RGPD:</p>
                 <ul>
                     <li><strong>Google Ireland Ltd. / Google LLC</strong> — infraestructura de la plataforma de cliente (Firebase Authentication, Cloud Firestore, Cloud Storage, Cloud Functions y Hosting), con los datos alojados en centros de datos de la Unión Europea; y Google Workspace para el envío de los correos electrónicos del servicio. Tratamiento amparado en el Acuerdo de Tratamiento de Datos de Google Cloud (art. 28 RGPD).</li>
@@ -225,11 +270,11 @@
                 <p><em>El almacenamiento en Google Sheets / Google Apps Script se mantiene mientras conviva con la plataforma durante la transición; una vez completada la migración, se retira de esta lista.</em></p>
                 <p>Adicionalmente, y únicamente cuando el interesado otorgue su mandato de representación, los datos estrictamente necesarios se comunicarán a la <strong>Administración Pública competente en materia de extranjería</strong>, con el único fin de tramitar el expediente correspondiente.</p>
 
-                <h2>6. Transferencias internacionales</h2>
+                <h2 id="apartado-6">6. Transferencias internacionales</h2>
                 <p>Algunos de los proveedores citados en el apartado anterior (Google, Stripe, Meta Platforms) pueden realizar tratamientos de datos fuera del Espacio Económico Europeo, en particular en Estados Unidos. En estos casos, dichas transferencias se realizan amparadas en las garantías previstas por el RGPD, tales como las Cláusulas Contractuales Tipo aprobadas por la Comisión Europea u otros mecanismos de adecuación reconocidos.</p>
                 <p>Los datos de la plataforma de cliente (documentación de expedientes, incluidos los datos de categoría especial) se alojan en centros de datos de Google situados en la <strong>Unión Europea</strong>. Google puede realizar tratamientos accesorios de soporte desde fuera del Espacio Económico Europeo, amparados en las Cláusulas Contractuales Tipo aprobadas por la Comisión Europea y en las medidas complementarias previstas en su Acuerdo de Tratamiento de Datos.</p>
 
-                <h2>7. Derechos de las personas interesadas</h2>
+                <h2 id="apartado-7">7. Derechos de las personas interesadas</h2>
                 <p>Cualquier persona tiene derecho a obtener confirmación sobre si en Raíz - Asesores Expertos en Extranjería se están tratando datos personales que le conciernan, y en tal caso, a ejercer los siguientes derechos:</p>
                 <ul>
                     <li><strong>Acceso</strong> a sus datos personales.</li>
@@ -242,7 +287,7 @@
                 </ul>
                 <p>Estos derechos pueden ejercerse enviando una solicitud a <strong>contacto@raizextranjeria.es</strong>, indicando el derecho que se desea ejercer y adjuntando copia de un documento identificativo. Asimismo, si considera que sus datos no se están tratando correctamente, tiene derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong>, a través de <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>.</p>
 
-                <h2>8. Medidas de seguridad</h2>
+                <h2 id="apartado-8">8. Medidas de seguridad</h2>
                 <p>Se han adoptado medidas técnicas y organizativas proporcionadas a la naturaleza de los datos tratados y al riesgo, entre ellas:</p>
                 <ul>
                     <li><strong>cifrado</strong> de los datos en tránsito y en reposo;</li>
@@ -254,22 +299,46 @@
                     <li>una <strong>Evaluación de Impacto en Protección de Datos</strong> documentada para el tratamiento de la plataforma.</li>
                 </ul>
 
-                <h2>9. Menores de edad</h2>
+                <h2 id="apartado-9">9. Menores de edad</h2>
                 <p>Los servicios ofrecidos a través de este sitio web no están dirigidos a menores de edad. En el caso de trámites que afecten a menores, la interacción y el consentimiento deberán ser prestados por su representante legal, que será quien abra y gestione la cuenta de cliente en la plataforma.</p>
 
-                <h2>10. Modificaciones de esta política</h2>
+                <h2 id="apartado-10">10. Modificaciones de esta política</h2>
                 <p>Esta Política de Privacidad puede ser actualizada para adaptarse a novedades legislativas o cambios en los servicios ofrecidos. Se recomienda revisar esta página periódicamente. La fecha de la última actualización figura al inicio de este documento.</p>
 
             </div>
         </section>
     </main>
 
-    <footer class="bg-[#1C3B30] text-[#fbfaf7] border-t border-[#B8874B]/20 py-10">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-gray-400">
-            <p>&copy; 2026 Raíz - Asesores Expertos en Extranjería. Todos los derechos reservados.</p>
-            <div class="flex gap-4"><a href="aviso-legal.html" class="hover:text-white transition-colors">Aviso legal</a><a href="index.html" class="hover:text-white transition-colors">Volver a la página principal</a></div>
+    <!-- PIE-COMUN: lo escribe Herramientas-Internas/generar_guias.py; cámbialo allí, no aquí -->
+    <footer class="pie">
+        <div class="pie-in">
+            <div>
+                <a href="/" class="cab-logo" aria-label="Raíz, Asesores de Extranjería: ir al inicio"><span class="cab-raiz">Raíz</span><span class="cab-lema">Asesores de Extranjería</span></a>
+                <p class="pie-desc">Trámites administrativos de extranjería, telemáticos y con seguimiento online. Agencia de representación administrativa (Ley 39/2015); no somos un despacho de abogados.</p>
+            </div>
+            <nav aria-label="Enlaces del pie">
+                <p class="pie-tit">Enlaces</p>
+                <ul>
+                    <li><a href="/#inicio">Pregúntale a Raíz</a></li>
+                    <li><a href="/#servicios">Servicios</a></li>
+                    <li><a href="/guias/">Guías de extranjería</a></li>
+                    <li><a href="https://app.raizextranjeria.es">Área de clientes</a></li>
+                    <li><a href="/aviso-legal.html">Aviso legal</a></li>
+                    <li><a href="/politica-privacidad.html">Política de privacidad</a></li>
+                </ul>
+            </nav>
+            <div>
+                <p class="pie-tit">Contacto</p>
+                <ul>
+                    <li><a href="https://wa.me/34665112314?text=Hola%2C%20vengo%20de%20la%20web%20de%20Ra%C3%ADz%20y%20quiero%20informaci%C3%B3n%20sobre%20mi%20caso." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.4-4.1A8.5 8.5 0 1 1 8.2 19.4z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1.1-1.4-1.9-1-.9.8c-1.2-.5-2.2-1.5-2.7-2.7l.8-.9-1-1.9z"/></svg>WhatsApp: +34 665 11 23 14</a></li>
+                    <li><a href="mailto:contacto@raizextranjeria.es"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>contacto@raizextranjeria.es</a></li>
+                    <li><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Lunes a viernes, de 14:00 a 20:00 (hora de España)</span></li>
+                </ul>
+            </div>
         </div>
+        <div class="pie-legal"><p>&copy; 2026 Raíz - Asesores Expertos en Extranjería. Todos los derechos reservados.</p></div>
     </footer>
+    <!-- /PIE-COMUN -->
 
 </body>
 </html>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="color-scheme" content="light dark">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arraigo Familiar: la vía para quien cuida a un menor o persona con discapacidad de la UE | Raíz - Asesores Expertos en Extranjería</title>
-    <meta name="description" content="Si cuidas a un menor o a una persona con discapacidad con nacionalidad de la Unión Europea, puedes optar a la residencia sin esperar los 2 años que exigen los demás arraigos.">
+    <title>Arraigo familiar: menor o persona con discapacidad UE | Raíz</title>
+    <meta name="description" content="Si cuidas a un menor o a una persona con discapacidad con nacionalidad de la UE, puedes pedir la residencia sin esperar los 2 años de otros arraigos.">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -14,12 +14,12 @@
     <meta property="og:locale" content="es_ES">
     <meta property="og:site_name" content="Raíz - Asesores Expertos en Extranjería">
     <meta property="og:title" content="Arraigo Familiar: la vía para quien cuida a un menor o persona con discapacidad de la UE">
-    <meta property="og:description" content="Si cuidas a un menor o a una persona con discapacidad con nacionalidad de la Unión Europea, puedes optar a la residencia sin esperar los 2 años que exigen los demás arraigos.">
+    <meta property="og:description" content="Si cuidas a un menor o a una persona con discapacidad con nacionalidad de la UE, puedes pedir la residencia sin esperar los 2 años de otros arraigos.">
     <meta property="og:url" content="https://raizextranjeria.es/guias/arraigo-familiar-menor-discapacidad-ue.html">
     <meta property="og:image" content="https://raizextranjeria.es/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="preload" href="/fuentes/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fuentes/inter.woff2" as="font" type="font/woff2" crossorigin>
     <style>
         :root { --forest:#1C3B30; --forest-light:#2F5C4C; --gold:#B8874B; --sand:#fbfaf7; --sand-dark:#f3efe6; --ink:#211B14; --ink-soft:#4A4032; --rule:#C7B78E; }
         body { font-family:'Inter',system-ui,sans-serif; color:var(--ink); background:var(--sand); -webkit-font-smoothing:antialiased; }
@@ -30,63 +30,97 @@
         .cuerpo ul { list-style:disc; padding-left:1.4rem; }
         .cuerpo a { color:var(--forest); text-decoration:underline; }
         .cuerpo h2 { font-size:1.2rem; }
+        /* Listas de las guías (2026-11-22); el índice «En esta guía» está en /comun.css */
+        .cuerpo ul.lista-guia { list-style:none; padding:0; border-top:1px solid var(--rule); }
+        .cuerpo ul.lista-guia li { position:relative; padding:.55rem 0 .55rem 1.6rem; border-bottom:1px solid rgba(199,183,142,.45); line-height:1.6; }
+        .cuerpo ul.lista-guia li::before { content:""; position:absolute; left:.1rem; top:1.05rem; width:.7rem; height:1px; background:var(--gold); }
+        .cuerpo h2[id] { scroll-margin-top:84px; }
         /* WhatsApp (2026-11-21): botón flotante en todas las guías + botón del recuadro final. Igual en index.html. */
         .wa-ico svg, .wa-flota svg { width:20px; height:20px; stroke:currentColor; fill:none; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; flex:none; }
         .btn-wa-guia { display:inline-flex; align-items:center; gap:.6rem; min-height:48px; background:#1F7A4A; color:#fff; padding:.75rem 1.4rem; border-radius:999px; font-weight:600; font-size:.95rem; text-decoration:none; }
         .btn-wa-guia:hover { background:#18613B; }
-        .enlace-sec { display:inline-block; padding:.6rem 0; color:var(--forest); font-weight:500; font-size:.95rem; text-decoration:underline; text-underline-offset:3px; }
+        .enlace-sec { display:inline-flex; align-items:center; min-height:44px; color:var(--forest); font-weight:500; font-size:.95rem; text-decoration:underline; text-underline-offset:3px; }
         .wa-flota { position:fixed; z-index:50; right:max(16px, env(safe-area-inset-right)); bottom:max(16px, env(safe-area-inset-bottom)); display:inline-flex; align-items:center; justify-content:center; gap:.5rem; width:56px; height:56px; border-radius:999px; background:#1F7A4A; color:#fff; text-decoration:none; font-weight:600; font-size:.95rem; box-shadow:0 8px 24px -8px rgba(0,0,0,.45); }
         .wa-flota:hover { background:#18613B; }
         .wa-flota svg { width:26px; height:26px; }
         .wa-flota span { display:none; }
         @media (min-width:768px) { .wa-flota { width:auto; padding:0 1.3rem 0 1.1rem; height:52px; } .wa-flota svg { width:22px; height:22px; } .wa-flota span { display:inline; } }
-        footer { padding-bottom:calc(2rem + 72px) !important; } /* que el botón flotante no tape el pie */
     </style>
+    <link rel="stylesheet" href="/comun.css">
     <link rel="stylesheet" href="/modo-oscuro.css">
+    <link rel="stylesheet" href="/estilos.css">
     <script data-goatcounter="https://raizextranjeria.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body class="flex flex-col min-h-screen">
-    <header class="border-b border-[#C7B78E] bg-[#fbfaf7]">
-        <div class="max-w-4xl mx-auto px-5 h-16 flex justify-between items-center">
-            <a href="/" class="flex flex-col" aria-label="Raíz Asesores de Extranjería, inicio">
-                <span class="font-bold text-2xl tracking-tight text-[#1C3B30]" style="font-family:'Fraunces',Georgia,serif">Raíz</span>
-                <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#8F6630] -mt-1">Asesores de Extranjería</span>
-            </a>
-            <nav class="flex items-center gap-5 text-sm">
-                <a href="/guias/" class="text-[#4A4032] font-medium hover:text-[#1C3B30]">Blog</a>
-                <a href="https://app.raizextranjeria.es" class="border border-[#1C3B30] text-[#1C3B30] hover:bg-[#1C3B30] hover:text-[#fbfaf7] px-3 py-1.5 rounded text-xs font-semibold uppercase tracking-wider whitespace-nowrap">Área de clientes</a>
+    <!-- CABECERA-COMUN: la escribe Herramientas-Internas/generar_guias.py; cámbiala allí, no aquí -->
+    <header class="cab">
+        <div class="cab-in">
+            <a href="/" class="cab-logo" aria-label="Raíz, Asesores de Extranjería: ir al inicio"><span class="cab-raiz">Raíz</span><span class="cab-lema">Asesores de Extranjería</span></a>
+            <nav class="cab-nav" aria-label="Principal">
+                <a href="/#servicios">Servicios</a>
+                <a href="/guias/" aria-current="page">Guías</a>
+                <a href="https://app.raizextranjeria.es" class="cab-area">Área de clientes</a>
             </nav>
+            <details class="cab-menu">
+                <summary><svg class="ico-abrir" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="ico-cerrar" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Menú</summary>
+                <nav class="cab-panel" aria-label="Menú">
+                    <a href="/#servicios">Servicios</a>
+                    <a href="/guias/" aria-current="page">Guías</a>
+                    <a href="https://app.raizextranjeria.es">Área de clientes</a>
+                    <a href="https://wa.me/34665112314?text=Hola%2C%20he%20le%C3%ADdo%20vuestra%20gu%C3%ADa%20sobre%20Arraigo%20Familiar%20y%20tengo%20una%20duda%20sobre%20mi%20caso." class="cab-panel-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.4-4.1A8.5 8.5 0 1 1 8.2 19.4z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1.1-1.4-1.9-1-.9.8c-1.2-.5-2.2-1.5-2.7-2.7l.8-.9-1-1.9z"/></svg>Escríbenos por WhatsApp</a>
+                </nav>
+            </details>
         </div>
     </header>
+    <script>
+        // Menú del móvil: se cierra al elegir una opción, al tocar fuera o con Escape.
+        (function () {
+            var m = document.querySelector('.cab-menu'); if (!m) return;
+            document.addEventListener('click', function (e) { if (m.open && (!m.contains(e.target) || e.target.closest('.cab-panel a'))) m.open = false; });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && m.open) { m.open = false; m.querySelector('summary').focus(); } });
+        })();
+    </script>
+    <!-- /CABECERA-COMUN -->
 
     <main class="flex-grow">
         <article class="max-w-3xl mx-auto px-5 py-10 md:py-14">
-            <a href="/guias/" class="text-sm font-medium text-[#4A4032] hover:text-[#1C3B30]">← Todas las guías</a>
-            <div class="flex flex-wrap gap-x-4 gap-y-1 mt-8 font-stamp text-xs text-[#8F6630] uppercase tracking-wider">
+            <a href="/guias/" class="inline-flex items-center min-h-[44px] text-sm font-medium text-[#4A4032] hover:text-[#1C3B30]">← Todas las guías</a>
+            <div class="flex flex-wrap gap-x-4 gap-y-1 mt-6 font-stamp text-xs text-[#8F6630] uppercase tracking-wider">
                 <span>Arraigo Familiar</span><span>19 JUL 2026</span>
             </div>
             <h1 class="text-3xl md:text-5xl font-bold text-[#1C3B30] leading-tight mt-3">Arraigo Familiar: la vía para quien cuida a un menor o persona con discapacidad de la UE</h1>
             <div class="h-0.5 bg-[#B8874B]/30 my-7"></div>
+            <details class="indice-guia" id="indice-guia">
+                <summary>En esta guía <span>· 5 apartados</span></summary>
+                <ol>
+                    <li><a href="#a-quien-va-dirigido">¿A quién va dirigido?</a></li>
+                    <li><a href="#lo-que-lo-diferencia-de-los-demas-arraigos">Lo que lo diferencia de los demás arraigos</a></li>
+                    <li><a href="#que-hay-que-acreditar">Qué hay que acreditar</a></li>
+                    <li><a href="#documentos-necesarios">Documentos necesarios</a></li>
+                    <li><a href="#motivo-frecuente-de-denegacion">Motivo frecuente de denegación</a></li>
+                </ol>
+            </details>
+            <script>if (matchMedia('(min-width: 768px)').matches) document.getElementById('indice-guia').open = true;</script>
             <div class="cuerpo text-base text-[#1C3B30] space-y-4">
 <p class="font-bold">Casi todo el mundo que investiga sobre regularización en España da por hecho que hacen falta 2 años de permanencia. Es la regla general de los arraigos — pero no la única.</p>
 <p>El Arraigo Familiar es una vía menos conocida, pensada específicamente para quien convive con un menor o una persona con discapacidad que tiene nacionalidad de la Unión Europea, el Espacio Económico Europeo o Suiza, y se ocupa de su cuidado.</p>
-<h2 class="font-bold text-[#1C3B30] mt-4">¿A quién va dirigido?</h2>
+<h2 id="a-quien-va-dirigido" class="font-bold text-[#1C3B30] mt-4">¿A quién va dirigido?</h2>
 <p>A progenitores, tutores o cuidadores de un menor, o de una persona con discapacidad, que tenga nacionalidad de la UE/EEE/Suiza y resida en España. Es habitual, por ejemplo, en madres o padres extranjeros de un hijo nacido en España con doble nacionalidad, o en quien tiene a su cargo a un familiar con discapacidad reconocida.</p>
-<h2 class="font-bold text-[#1C3B30] mt-4">Lo que lo diferencia de los demás arraigos</h2>
+<h2 id="lo-que-lo-diferencia-de-los-demas-arraigos" class="font-bold text-[#1C3B30] mt-4">Lo que lo diferencia de los demás arraigos</h2>
 <ul class="list-disc pl-5 space-y-2">
 <li><strong>No exige los 2 años de permanencia previa</strong> que sí piden el Arraigo Social, el Arraigo para la Formación o el Arraigo Sociolaboral.</li>
 <li>Su vigencia es de <strong>5 años</strong> — el resto de arraigos conceden autorizaciones de solo 1 año, que hay que renovar con mucha más frecuencia.</li>
 </ul>
 <p>Es, en la práctica, el arraigo con menos exigencia de tiempo previo y con la autorización más estable de todo el catálogo.</p>
-<h2 class="font-bold text-[#1C3B30] mt-4">Qué hay que acreditar</h2>
+<h2 id="que-hay-que-acreditar" class="font-bold text-[#1C3B30] mt-4">Qué hay que acreditar</h2>
 <p>El requisito central no es el tiempo, es la relación real: hay que demostrar <strong>convivencia efectiva</strong> con el menor o la persona con discapacidad, y el <strong>cumplimiento real de las obligaciones parentales o de cuidado</strong> — no basta con el vínculo legal sobre el papel.</p>
-<h2 class="font-bold text-[#1C3B30] mt-4">Documentos necesarios</h2>
+<h2 id="documentos-necesarios" class="font-bold text-[#1C3B30] mt-4">Documentos necesarios</h2>
 <ul class="list-disc pl-5 space-y-2">
 <li>Prueba del vínculo familiar o de la relación de cuidado.</li>
 <li>Certificado de nacimiento del menor, o resolución de reconocimiento de discapacidad de la persona a tu cargo.</li>
 <li>Empadronamiento conjunto que acredite la convivencia.</li>
 </ul>
-<h2 class="font-bold text-[#1C3B30] mt-4">Motivo frecuente de denegación</h2>
+<h2 id="motivo-frecuente-de-denegacion" class="font-bold text-[#1C3B30] mt-4">Motivo frecuente de denegación</h2>
 <p>El más habitual es no lograr acreditar la convivencia efectiva ni el ejercicio real de la patria potestad o del cuidado — por ejemplo, un empadronamiento conjunto reciente sin más respaldo detrás. Cuanta más prueba consistente de la vida en común (escolarización, citas médicas, gestiones conjuntas), más sólido queda el expediente.</p>
 <p>Contenido informativo, no sustituye una asesoría individualizada. Raíz es una agencia de representación administrativa (Ley 39/2015), no un despacho de abogados colegiado. Cada caso es distinto: si cuidas a un menor o persona con discapacidad de la UE, cuéntale tu situación concreta a Raíz.</p>
             </div>
@@ -95,15 +129,15 @@
                 <h2 class="text-lg font-bold text-[#1C3B30]">Sigue leyendo</h2>
                 <ul class="mt-4 grid gap-3 md:grid-cols-3">
                     <li><a href="/guias/arraigo-social-guia-2026.html" class="block h-full bg-white border border-[#C7B78E] hover:border-[#B8874B] rounded-xl p-4">
-                        <span class="font-stamp text-[10px] text-[#8F6630] uppercase tracking-wider">Arraigo Social</span>
+                        <span class="font-stamp text-xs text-[#8F6630] uppercase tracking-wider">Arraigo Social</span>
                         <span class="block mt-1 text-sm font-semibold text-[#1C3B30] leading-snug">Arraigo Social en 2026: guía completa de requisitos y procedimiento</span>
                     </a></li>
                     <li><a href="/guias/renovaciones-modificaciones-residencia-guia-2026.html" class="block h-full bg-white border border-[#C7B78E] hover:border-[#B8874B] rounded-xl p-4">
-                        <span class="font-stamp text-[10px] text-[#8F6630] uppercase tracking-wider">Renovaciones y Modificaciones</span>
+                        <span class="font-stamp text-xs text-[#8F6630] uppercase tracking-wider">Renovaciones y Modificaciones</span>
                         <span class="block mt-1 text-sm font-semibold text-[#1C3B30] leading-snug">Renovar o modificar tu autorización de residencia en 2026: plazos y requisitos</span>
                     </a></li>
                     <li><a href="/guias/residencia-larga-duracion-guia-2026.html" class="block h-full bg-white border border-[#C7B78E] hover:border-[#B8874B] rounded-xl p-4">
-                        <span class="font-stamp text-[10px] text-[#8F6630] uppercase tracking-wider">Residencia de Larga Duración</span>
+                        <span class="font-stamp text-xs text-[#8F6630] uppercase tracking-wider">Residencia de Larga Duración</span>
                         <span class="block mt-1 text-sm font-semibold text-[#1C3B30] leading-snug">Residencia de larga duración en 2026: nacional o UE, requisitos y ausencias permitidas</span>
                     </a></li>
                 </ul>
@@ -117,16 +151,40 @@
                     <a href="/#inicio" class="enlace-sec">o pregúntale al asistente</a>
                 </div>
             </div>
-            <p class="mt-8 text-xs text-[#4A4032] leading-relaxed">Esta guía es informativa y no sustituye el asesoramiento de un abogado. Raíz es una agencia de representación administrativa (Ley 39/2015) y no gestiona recursos judiciales. Consulta siempre la normativa vigente antes de presentar una solicitud.</p>
+            <p class="mt-8 text-sm text-[#4A4032] leading-relaxed">Esta guía es informativa y no sustituye el asesoramiento de un abogado. Raíz es una agencia de representación administrativa (Ley 39/2015) y no gestiona recursos judiciales. Consulta siempre la normativa vigente antes de presentar una solicitud.</p>
         </article>
     </main>
 
-    <footer class="bg-[#1C3B30] text-[#fbfaf7] py-8">
-        <div class="max-w-4xl mx-auto px-5 flex flex-col md:flex-row justify-between gap-3 text-xs text-gray-300">
-            <p>&copy; 2026 Raíz - Asesores Expertos en Extranjería.</p>
-            <p><a href="/aviso-legal.html" class="underline hover:text-white">Aviso legal</a> · <a href="/politica-privacidad.html" class="underline hover:text-white">Política de privacidad</a> · contacto@raizextranjeria.es</p>
+    <!-- PIE-COMUN: lo escribe Herramientas-Internas/generar_guias.py; cámbialo allí, no aquí -->
+    <footer class="pie">
+        <div class="pie-in">
+            <div>
+                <a href="/" class="cab-logo" aria-label="Raíz, Asesores de Extranjería: ir al inicio"><span class="cab-raiz">Raíz</span><span class="cab-lema">Asesores de Extranjería</span></a>
+                <p class="pie-desc">Trámites administrativos de extranjería, telemáticos y con seguimiento online. Agencia de representación administrativa (Ley 39/2015); no somos un despacho de abogados.</p>
+            </div>
+            <nav aria-label="Enlaces del pie">
+                <p class="pie-tit">Enlaces</p>
+                <ul>
+                    <li><a href="/#inicio">Pregúntale a Raíz</a></li>
+                    <li><a href="/#servicios">Servicios</a></li>
+                    <li><a href="/guias/">Guías de extranjería</a></li>
+                    <li><a href="https://app.raizextranjeria.es">Área de clientes</a></li>
+                    <li><a href="/aviso-legal.html">Aviso legal</a></li>
+                    <li><a href="/politica-privacidad.html">Política de privacidad</a></li>
+                </ul>
+            </nav>
+            <div>
+                <p class="pie-tit">Contacto</p>
+                <ul>
+                    <li><a href="https://wa.me/34665112314?text=Hola%2C%20vengo%20de%20la%20web%20de%20Ra%C3%ADz%20y%20quiero%20informaci%C3%B3n%20sobre%20mi%20caso." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.4-4.1A8.5 8.5 0 1 1 8.2 19.4z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1.1-1.4-1.9-1-.9.8c-1.2-.5-2.2-1.5-2.7-2.7l.8-.9-1-1.9z"/></svg>WhatsApp: +34 665 11 23 14</a></li>
+                    <li><a href="mailto:contacto@raizextranjeria.es"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>contacto@raizextranjeria.es</a></li>
+                    <li><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Lunes a viernes, de 14:00 a 20:00 (hora de España)</span></li>
+                </ul>
+            </div>
         </div>
+        <div class="pie-legal"><p>&copy; 2026 Raíz - Asesores Expertos en Extranjería. Todos los derechos reservados.</p></div>
     </footer>
+    <!-- /PIE-COMUN -->
     <a class="wa-flota" href="https://wa.me/34665112314?text=Hola%2C%20he%20le%C3%ADdo%20vuestra%20gu%C3%ADa%20sobre%20Arraigo%20Familiar%20y%20tengo%20una%20duda%20sobre%20mi%20caso." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.4-4.1A8.5 8.5 0 1 1 8.2 19.4z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1.1-1.4-1.9-1-.9.8c-1.2-.5-2.2-1.5-2.7-2.7l.8-.9-1-1.9z"/></svg><span>WhatsApp</span></a>
 </body>
 </html>

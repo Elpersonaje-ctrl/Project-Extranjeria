@@ -1,0 +1,75 @@
+/* ============================================
+   RAÍZ — Cabecera y pie comunes (2026-11-21)
+   Los usan todas las páginas: portada, guías, índice de guías, aviso legal y privacidad.
+   El HTML de la cabecera y del pie es el mismo en todas (en las guías lo escribe
+   Herramientas-Internas/generar_guias.py). Si cambias uno, cambia todos.
+   Se carga antes de modo-oscuro.css, que redefine las variables de color.
+   Tamaños mínimos: zonas para tocar de 44 px y textos de 14 px o más.
+   ============================================ */
+
+/* ---- Tipografías de la marca, servidas desde la propia web (2026-11-22) ----
+   Antes venían de Google Fonts: el móvil tenía que conectar con dos servidores más antes de mostrar texto.
+   Solo el juego «latin» (español incluido). Inter y Fraunces son variables: un archivo vale para todos los gruesos.
+   Licencia SIL Open Font License: se pueden servir libremente. */
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 300 700; font-display: swap; src: url(/fuentes/inter.woff2) format('woff2'); }
+@font-face { font-family: 'Fraunces'; font-style: normal; font-weight: 500 700; font-display: swap; src: url(/fuentes/fraunces.woff2) format('woff2'); }
+@font-face { font-family: 'Fraunces'; font-style: italic; font-weight: 400; font-display: swap; src: url(/fuentes/fraunces-cursiva.woff2) format('woff2'); }
+@font-face { font-family: 'Special Elite'; font-style: normal; font-weight: 400; font-display: swap; src: url(/fuentes/special-elite.woff2) format('woff2'); }
+
+[id] { scroll-margin-top: 76px; } /* que la cabecera fija no tape el título al saltar a una sección */
+
+/* ---- Cabecera ---- */
+.cab { position: sticky; top: 0; z-index: 40; background: rgba(251, 250, 247, .92); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule, #C7B78E); }
+.cab-in { max-width: 72rem; margin: 0 auto; padding: 0 16px; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.cab-logo { display: flex; flex-direction: column; text-decoration: none; line-height: 1; padding: 6px 0; }
+.cab-raiz { font-family: 'Fraunces', Georgia, serif; font-size: 1.6rem; font-weight: 700; letter-spacing: -.02em; color: var(--forest, #1C3B30); }
+.cab-lema { font-family: 'Special Elite', 'Space Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: .22em; color: var(--gold-texto, #8F6630); margin-top: 3px; white-space: nowrap; }
+.cab-nav { display: flex; align-items: center; gap: .4rem; }
+.cab-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 .7rem; font-size: .95rem; font-weight: 500; color: var(--ink-soft, #4A4032); text-decoration: none; }
+.cab-nav a:hover { color: var(--forest, #1C3B30); }
+.cab-nav a[aria-current="page"] { color: var(--forest, #1C3B30); font-weight: 600; text-decoration: underline; text-decoration-color: var(--gold, #B8874B); text-underline-offset: 6px; }
+.cab-area, .cab-menu > summary { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 44px; padding: 0 1rem; border: 1px solid var(--forest, #1C3B30); background: transparent; color: var(--forest, #1C3B30) !important; font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; white-space: nowrap; text-decoration: none; cursor: pointer; }
+.cab-nav .cab-area { margin-left: .5rem; padding: 0 1rem; font-size: .78rem; font-weight: 600; }
+.cab-area:hover, .cab-menu > summary:hover { background: var(--forest, #1C3B30); color: var(--sand, #fbfaf7) !important; }
+
+/* Menú del móvil: un botón «Menú» que abre la lista (sin cargar nada extra) */
+.cab-menu { display: none; }
+.cab-menu > summary { list-style: none; }
+.cab-menu > summary::-webkit-details-marker { display: none; }
+.cab-menu > summary svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; }
+.cab-menu[open] > summary .ico-abrir, .cab-menu:not([open]) > summary .ico-cerrar { display: none; }
+.cab-panel { position: absolute; left: 0; right: 0; top: 100%; background: var(--sand, #fbfaf7); border-bottom: 1px solid var(--rule, #C7B78E); box-shadow: 0 18px 30px -18px rgba(0, 0, 0, .35); padding: .5rem 16px 1.2rem; display: flex; flex-direction: column; }
+.cab-panel a { display: flex; align-items: center; min-height: 52px; font-size: 1.05rem; font-weight: 500; color: var(--forest, #1C3B30); text-decoration: none; border-bottom: 1px solid var(--rule-soft, #E4DCC5); }
+.cab-panel a.cab-panel-wa { justify-content: center; gap: .6rem; margin-top: 1rem; border: 0; border-radius: 999px; background: #1F7A4A; color: #fff; font-weight: 600; }
+.cab-panel-wa svg, .pie svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+@media (max-width: 640px) {
+    .cab-nav { display: none; }
+    .cab-menu { display: block; }
+}
+
+/* ---- Índice desplegable «En esta guía» (guías y política de privacidad, 2026-11-22) ---- */
+.indice-guia { margin:0 0 2rem; border:1px solid var(--rule); background:var(--surface, #fff); }
+.indice-guia summary { display:flex; align-items:center; gap:.4rem; min-height:48px; padding:0 1rem; cursor:pointer; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:1.05rem; color:var(--forest); }
+.indice-guia summary span { font-family:'Inter',system-ui,sans-serif; font-weight:400; font-size:.875rem; color:var(--ink-soft); }
+.indice-guia summary::after { content:"+"; margin-left:auto; font-family:'Inter',system-ui,sans-serif; font-weight:300; font-size:1.3rem; color:var(--gold); }
+.indice-guia[open] summary::after { content:"–"; }
+.indice-guia ol { margin:0; padding:0 1rem .6rem 2.4rem; list-style:decimal; color:var(--gold); }
+.indice-guia li a { display:flex; font-weight:500; align-items:center; min-height:44px; color:var(--forest); text-decoration:none; font-size:.95rem; }
+.indice-guia li a:hover { text-decoration:underline; text-decoration-color:var(--gold); }
+
+/* ---- Pie ---- */
+.pie { background: #1C3B30; color: #E6E1D3; padding: 3rem 0 calc(2rem + 72px); } /* 72 px de más: que el botón flotante de WhatsApp no tape el pie */
+.pie-in { max-width: 72rem; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: 5fr 3fr 4fr; gap: 2.5rem; }
+.pie .cab-raiz { color: #fff; }
+.pie .cab-lema { color: #D9AE72; }
+.pie-desc { margin: .9rem 0 0; max-width: 26rem; font-size: .9rem; line-height: 1.6; color: #D4CFC1; }
+.pie-tit { margin: 0 0 .4rem; font-family: 'Fraunces', Georgia, serif; font-size: 1.05rem; font-weight: 600; color: #D9AE72; }
+.pie ul { list-style: none; margin: 0; padding: 0; }
+.pie li a, .pie li > span { display: flex; align-items: center; gap: .65rem; min-height: 44px; font-size: .95rem; color: #E6E1D3; text-decoration: none; }
+.pie li a:hover { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
+.pie li svg { color: #D9AE72; }
+.pie-legal { max-width: 72rem; margin: 2.2rem auto 0; padding: 1.4rem 20px 0; border-top: 1px solid rgba(255, 255, 255, .12); font-size: .875rem; color: #BDB6A4; }
+.pie-legal p { margin: 0; }
+@media (max-width: 760px) {
+    .pie-in { grid-template-columns: 1fr; gap: 1.8rem; }
+}

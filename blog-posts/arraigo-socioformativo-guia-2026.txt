@@ -3,6 +3,8 @@ CATEGORIA: arraigo
 CATEGORIA_VISIBLE: Arraigo para la Formación
 FECHA: 23 SEP 2026
 RESUMEN: Qué formaciones sirven, cuándo presentar la solicitud si la matrícula tiene plazo, el informe de integración social, las 30 horas de trabajo permitidas y cómo se prorroga.
+TITULO_SEO: Arraigo socioformativo 2026: requisitos y formación
+DESCRIPCION: Qué formaciones sirven, cuándo presentar si la matrícula tiene plazo, el informe de integración social, las 30 horas de trabajo y la prórroga.
 RELACIONADAS: arraigo-social-guia-2026, arraigo-sociolaboral-guia-2026, renovaciones-modificaciones-residencia-guia-2026
 ---CONTENIDO---
 <p class="font-bold">El arraigo para la formación, que el reglamento llama "arraigo socioformativo", es la vía de regularización para quien lleva al menos dos años en España sin papeles y quiere estudiar una formación profesional o reglada. Da una autorización de residencia de un año que además permite trabajar hasta 30 horas a la semana mientras estudias.</p>

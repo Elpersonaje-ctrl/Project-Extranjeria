@@ -3,6 +3,8 @@ CATEGORIA: familiar-espanol
 CATEGORIA_VISIBLE: Familiar de Español
 FECHA: 28 SEP 2026
 RESUMEN: Para traer a tus padres o a un hijo mayor de 26 hay que demostrar que dependen de ti. El 51 % del PIB per cápita de su país es una presunción que lo facilita, no un requisito cerrado. Qué dice el Reglamento, qué pasa si no llegas y qué cambió el Tribunal Supremo en 2026.
+TITULO_SEO: Regla del 51 % del PIB: traer a tus padres a España
+DESCRIPCION: Para traer a tus padres o a un hijo mayor de 26 hay que probar que dependen de ti. Qué es el 51 % del PIB, qué pasa si no llegas y qué cambió en 2026.
 RELACIONADAS: residencia-familiar-ciudadano-espanol-2026, reagrupacion-familiar-requisitos-2026, recurso-denegacion-extranjeria-guia-2026
 ---CONTENIDO---
 <p class="font-bold">Si quieres traer a tus padres a España, o a un hijo mayor de 26 años, tienes que demostrar que están "a cargo": que dependen de ti económicamente. El Reglamento de Extranjería da una forma sencilla de probarlo, la regla del 51 % del PIB per cápita. Pero no es la única forma, y conviene entender bien cómo funciona.</p>

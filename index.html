@@ -16,12 +16,8 @@
     <meta property="og:image" content="https://raizextranjeria.es/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     
-    <!-- Tailwind CSS para el diseño ágil y responsivo -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Fuentes de Google: Fraunces (Serif Editorial), Inter (Legibilidad), Special Elite (Sello Retro) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Special+Elite&display=swap" rel="stylesheet">
-    <!-- FontAwesome para iconos limpios de interfaz -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="/fuentes/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fuentes/inter.woff2" as="font" type="font/woff2" crossorigin>
 
     <style>
         :root {
@@ -70,28 +66,21 @@
         ::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
 
-        /* ---- Marca y cabecera ---- */
-        .top-nav { display: flex; align-items: center; gap: 1.4rem; font-size: .88rem; }
-        .top-nav a { color: var(--ink-soft); text-decoration: none; font-weight: 500; }
-        .top-nav a:hover { color: var(--forest); }
-        .top-nav a.nav-planes { color: var(--forest); font-weight: 600; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
-        .top-nav a.nav-planes:hover { color: var(--gold-texto); }
-        .btn-area { white-space: nowrap; border: 1px solid var(--forest); background: transparent; border-radius: 4px; font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; padding: .5rem .9rem; color: var(--ink) !important; }
-        .btn-area:hover { background: var(--forest); color: var(--sand) !important; }
+        /* Cabecera y pie: en /comun.css (iguales en todas las páginas) */
 
         /* ---- Portada: caja de pregunta ---- */
         .hero { padding: 3.5rem 1rem 2.5rem; }
         .hero-col { max-width: 720px; margin: 0 auto; text-align: center; }
-        .kicker { font-family: var(--font-utility); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-texto); }
+        .kicker { font-family: var(--font-utility); font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-texto); }
         .hero h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); line-height: 1.08; font-weight: 700; color: var(--forest); margin: .7rem 0 .8rem; }
         .hero h1 em { display: block; font-style: italic; font-weight: 400; color: var(--gold); }
         .hero .lead { color: var(--ink-soft); max-width: 58ch; margin: 0 auto 1.6rem; font-size: 1.02rem; line-height: 1.6; }
         .comp-caja { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: .6rem .6rem .6rem 1rem; display: flex; align-items: flex-end; gap: .6rem; box-shadow: var(--shadow-lift); text-align: left; }
-        .comp-caja textarea { flex: 1; border: 0; outline: 0; background: none; resize: none; padding: .4rem 0; min-height: 24px; max-height: 120px; font: inherit; color: var(--ink); }
-        .comp-caja .env { width: 40px; height: 40px; border-radius: 11px; background: var(--forest); color: #fff; display: grid; place-items: center; border: 0; cursor: pointer; flex: none; }
+        .comp-caja textarea { flex: 1; border: 0; outline: 0; background: none; resize: none; padding: .55rem 0; min-height: 44px; max-height: 120px; font: inherit; color: var(--ink); }
+        .comp-caja .env { width: 44px; height: 44px; border-radius: 11px; background: var(--forest); color: #fff; display: grid; place-items: center; border: 0; cursor: pointer; flex: none; }
         .comp-caja .env:hover { background: var(--forest-light); }
         .comp-caja .env svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
-        .hero .mini { margin-top: 1.1rem; font-size: .82rem; color: var(--ink-faint); }
+        .hero .mini { margin-top: 1.1rem; font-size: .875rem; color: var(--ink-faint); }
         .hero .mini.priv { margin-top: .3rem; } .hero .mini a { color: var(--forest); text-decoration: underline; }
         .acciones-franja { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; margin-top: 1.8rem; }
         .btn-cta-web { background: var(--forest); color: #fff; padding: .8rem 1.4rem; border-radius: 8px; font-weight: 600; text-decoration: none; }
@@ -137,7 +126,7 @@
         .urgente-web { padding: .8rem 1rem; border-radius: 10px; background: #F6EBD3; color: #8a6420; font-size: .9rem; }
         .cta-web { border: 1px solid var(--rule); border-radius: 14px; background: var(--surface); padding: 1rem 1.1rem; display: flex; gap: 1rem; align-items: center; justify-content: space-between; flex-wrap: wrap; text-align: left; margin-bottom: 1rem; }
         .cta-web b { font-family: var(--font-display); font-size: 1.05rem; }
-        .cta-web p { margin: 0; font-size: .86rem; color: var(--ink-soft); }
+        .cta-web p { margin: 0; font-size: .9rem; color: var(--ink-soft); }
         .btn-cuenta { background: var(--forest); color: #fff; padding: .6rem 1.1rem; border-radius: 8px; font-weight: 600; font-size: .88rem; text-decoration: none; }
         .btn-cuenta:hover { background: var(--forest-light); }
         .comp-caja .env:disabled { opacity: .5; cursor: default; }
@@ -153,7 +142,7 @@
         .cinta-pista::-webkit-scrollbar { display: none; }
         .cinta-pista.arrastrando { cursor: grabbing; scroll-snap-type: none; scroll-behavior: auto; user-select: none; }
         .cinta-nav { display: flex; align-items: center; justify-content: center; gap: 1.1rem; margin-top: 1.1rem; padding: 0 1rem; }
-        .cinta-flecha { width: 38px; height: 38px; flex: none; border: 1px solid #C7B78E; background: transparent; color: var(--forest); display: grid; place-items: center; cursor: pointer; transition: background .2s, color .2s; }
+        .cinta-flecha { width: 44px; height: 44px; flex: none; border: 1px solid #C7B78E; background: transparent; color: var(--forest); display: grid; place-items: center; cursor: pointer; transition: background .2s, color .2s; }
         .cinta-flecha:hover, .cinta-flecha:focus-visible { background: var(--forest); color: #fff; border-color: var(--forest); outline: none; }
         .cinta-flecha svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
         .cinta-puntos { display: flex; flex-wrap: wrap; justify-content: center; gap: .1rem; max-width: 70vw; }
@@ -167,14 +156,14 @@
         .serv-dibujo img, .serv-dibujo svg { width: 100%; height: 100%; object-fit: cover; display: block; }
         .serv-texto { padding: 1.2rem 1.3rem 1.3rem; display: flex; flex-direction: column; gap: .55rem; flex: 1; }
         .serv-texto h3 { font-size: 1.25rem; font-weight: 500; color: var(--forest); margin: 0; letter-spacing: -.01em; display: flex; justify-content: space-between; align-items: flex-start; gap: .8rem; }
-        .serv-texto h3 span { flex: none; width: 28px; height: 28px; border: 1px solid #C7B78E; display: grid; place-items: center; font-family: var(--font-sans); font-weight: 300; font-size: 1.1rem; color: var(--gold-texto); }
-        .serv-tarjeta:hover h3 span { background: var(--forest); color: #fff; border-color: var(--forest); }
-        .serv-texto p { margin: 0; font-size: .86rem; line-height: 1.55; color: var(--ink-soft); }
-        @media (max-width: 720px) { .serv-tarjeta { width: 250px; } .cinta-pista { gap: 1rem; padding: .5rem 1rem 1rem; scroll-padding: 0 1rem; } .cinta-nav { gap: .5rem; } .cinta-puntos { max-width: none; flex-wrap: nowrap; gap: 0; } .cinta-puntos button { width: 17px; } .cinta-puntos button::before { width: 7px; height: 7px; } }
+        .serv-ver { margin-top: auto; padding-top: .6rem; font-size: .9rem; font-weight: 600; color: var(--forest); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 4px; }
+        .serv-tarjeta:hover .serv-ver { color: var(--gold-texto); }
+        .serv-texto p { margin: 0; font-size: .95rem; line-height: 1.55; color: var(--ink-soft); }
+        @media (max-width: 720px) { .serv-tarjeta { width: 250px; } .cinta-pista { gap: 1rem; padding: .5rem 1rem 1rem; scroll-padding: 0 1rem; } .cinta-nav { gap: .5rem; } .cinta-puntos { max-width: none; flex-wrap: nowrap; gap: 0; } .cinta-cuenta { min-width: 5.5rem; text-align: center; font-family: var(--font-utility); font-size: .9rem; letter-spacing: .08em; color: var(--ink-soft); } }
         @media (prefers-reduced-motion: reduce) { .cinta-pista { scroll-behavior: auto; } }
 
         /* ---- La IA de Raíz ---- */
-        .etiqueta { font-family: var(--font-utility); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-texto); display: block; margin-bottom: .5rem; }
+        .etiqueta { font-family: var(--font-utility); font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-texto); display: block; margin-bottom: .5rem; }
         .bloque-ia { padding: 3.6rem 1rem 3.2rem; background: var(--surface); border-top: 1px solid var(--rule-soft); border-bottom: 1px solid var(--rule-soft); }
         .ia-in { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) 325px; gap: 3rem; align-items: center; }
         .ia-in.sin-video { grid-template-columns: minmax(0, 1fr); max-width: 760px; }
@@ -199,14 +188,13 @@
         .puntos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.6rem; }
         .puntos h3 { font-family: var(--font-sans); font-size: .95rem; font-weight: 600; letter-spacing: 0; margin: 0 0 .3rem; color: var(--forest); }
         .puntos p { font-size: .9rem; color: var(--ink-soft); line-height: 1.55; margin: 0; }
-        .aviso-legal { margin-top: 1.8rem; padding: .85rem 1rem; border-radius: 10px; background: var(--sand-dark); color: var(--ink-soft); font-size: .82rem; line-height: 1.55; }
+        .aviso-legal { margin-top: 1.8rem; padding: .85rem 1rem; border-radius: 10px; background: var(--sand-dark); color: var(--ink-soft); font-size: .875rem; line-height: 1.55; }
         .blog-franja { padding: 3rem 1rem 3.5rem; }
         .blog-franja-in { max-width: 960px; margin: 0 auto; }
-        @media (max-width: 720px) { .puntos { grid-template-columns: 1fr; gap: 1.2rem; } .hero { padding-top: 2.4rem; } .top-nav { gap: .9rem; } .btn-area { padding: .45rem .7rem; font-size: .68rem; } }
+        @media (max-width: 720px) { .puntos { grid-template-columns: 1fr; gap: 1.2rem; } .hero { padding-top: 2.4rem; } }
 
         /* ---- Acabado sobrio y elegante (2026-09-24, la dueña: «menos redondeado, más luxury») ----
            Esquinas rectas, líneas finas doradas, tipografía con más aire y botones en versalitas. */
-        .btn-area { border-radius: 0; }
         .btn-empezar, .btn-cta-web, .btn-cuenta { display: inline-block; }
         .hero { padding-top: 4.5rem; }
         .hero h1 { font-weight: 500; letter-spacing: -.02em; }
@@ -227,7 +215,7 @@
         .cita-web .btn-cita { align-self: flex-start; }
         .alta-web .btn-google { background: var(--surface); color: var(--ink); border: 1px solid #C7B78E; padding: .9rem 1rem; font: inherit; font-weight: 600; cursor: pointer; border-radius: 0; }
         .alta-web .btn-google:hover { border-color: var(--forest); }
-        .alta-web .alta-o, .alta-web .alta-interno { text-align: center; font-size: .82rem; color: var(--ink-faint); margin: 0; }
+        .alta-web .alta-o, .alta-web .alta-interno { text-align: center; font-size: .875rem; color: var(--ink-faint); margin: 0; }
         .alta-web .alta-interno { text-align: left; color: var(--ink-soft); }
         .alta-web form { display: flex; flex-direction: column; gap: .55rem; }
         .alta-web input { width: 100%; border: 1px solid #C7B78E; background: var(--surface); padding: .8rem .9rem; font: inherit; color: var(--ink); border-radius: 0; }
@@ -237,7 +225,7 @@
         .alta-web .alta-pass button { border: 1px solid #C7B78E; background: var(--surface); padding: 0 .9rem; font: inherit; font-size: .82rem; color: var(--forest); cursor: pointer; }
         .alta-web .btn-cuenta { width: 100%; cursor: pointer; }
         .alta-web .btn-cuenta:disabled { opacity: .6; cursor: default; }
-        .alta-web .alta-letra { font-size: .78rem; color: var(--ink-faint); margin: 0; }
+        .alta-web .alta-letra { font-size: .875rem; color: var(--ink-faint); margin: 0; }
         .alta-web .alta-letra a { color: var(--forest); text-decoration: underline; }
         .fin-web { margin: 0; }
         .fin-web .fin-botones { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
@@ -254,6 +242,38 @@
         #ask-saludo { margin-bottom: 2.4rem; }
         @media (min-width: 721px) { .hero .kicker { font-size: 17.5px; } }
         @media (max-width: 720px) { .hero h1 { font-size: 33.2px; } .hero .lead { font-size: 14px; line-height: 1.25; } .btn-empezar.btn-wa { padding-left: 1.6rem; padding-right: 1.6rem; } }
+        /* ---- Cómo funciona: 3 pasos con precio (2026-11-22) ---- */
+        .bloque-pasos { padding: 3.4rem 1rem 3.2rem; background: var(--surface); border-top: 1px solid var(--rule-soft); }
+        .bloque-pasos h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 500; letter-spacing: -.015em; line-height: 1.15; color: var(--forest); margin: 0 0 1.8rem; }
+        .bloque-pasos h2 em { font-style: italic; font-weight: 300; color: var(--gold-texto); }
+        .pasos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--rule); }
+        .pasos li { position: relative; padding: 1.4rem 1.6rem 1.4rem 0; display: flex; flex-direction: column; gap: .35rem; }
+        .pasos li + li { padding-left: 1.6rem; border-left: 1px solid var(--rule-soft); }
+        .paso-num { font-family: var(--font-display); font-size: 2.4rem; line-height: 1; font-weight: 500; color: var(--gold); }
+        .pasos h3 { margin: .5rem 0 0; font-size: 1.2rem; font-weight: 600; color: var(--forest); }
+        .paso-precio { margin: 0; font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; color: var(--gold-texto); }
+        .pasos p:not(.paso-precio) { margin: .2rem 0 0; font-size: .95rem; line-height: 1.55; color: var(--ink-soft); }
+        .pasos-nota { margin: .4rem 0 1.6rem; padding-top: 1rem; border-top: 1px solid var(--rule-soft); font-size: .875rem; line-height: 1.55; color: var(--ink-faint); }
+        @media (max-width: 760px) {
+            .pasos { grid-template-columns: 1fr; }
+            .pasos li, .pasos li + li { padding: 1.2rem 0 1.2rem 3.4rem; border-left: 0; }
+            .pasos li + li { border-top: 1px solid var(--rule-soft); }
+            .paso-num { position: absolute; left: 0; top: 1.15rem; font-size: 2rem; }
+            .pasos h3 { margin-top: 0; }
+        }
+        /* La portada (hero) explica que la caja es del asistente: WhatsApp primero, el chat como segunda opción. */
+        #ask-saludo { margin-bottom: 0; }
+        .hero .o-asistente { margin: 1.9rem 0 .8rem; font-size: .9rem; color: var(--ink-soft); }
+
+        /* ---- Mismo ancho que la cabecera y el pie en todas las secciones (2026-11-22) ----
+           Antes cada bloque tenía su ancho (960, 1240, 760 px) y en el ordenador los bordes no casaban. */
+        .pasos-in, .ia-in, .ia-in.sin-video, .ia-aviso, .blog-franja-in, .serv-cab { max-width: calc(72rem - 32px); margin-left: auto; margin-right: auto; }
+        .ia-in.sin-video .ia-texto { max-width: 760px; }
+        .serv-cab { text-align: left; padding: 0 1rem; box-sizing: content-box; }
+        /* El carrusel sigue de borde a borde, pero la primera tarjeta empieza donde empieza el resto del contenido. */
+        .cinta { max-width: none; }
+        .cinta-pista, .cinta-pista.arrastrando { --borde: max(1rem, calc((100% - 72rem) / 2 + 16px)); padding-left: var(--borde); padding-right: var(--borde); scroll-padding: 0 var(--borde); }
+
         /* WhatsApp flotante (2026-11-21): aparece al bajar, cuando ya no se ve el botón de la portada. Igual en las guías (generar_guias.py). */
         .wa-flota { position: fixed; z-index: 50; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); display: inline-flex; align-items: center; justify-content: center; gap: .5rem; width: 56px; height: 56px; border-radius: 999px; background: #1F7A4A; color: #fff; text-decoration: none; font-weight: 600; font-size: .95rem; box-shadow: 0 8px 24px -8px rgba(0,0,0,.45); transition: opacity .25s, transform .25s; }
         .wa-flota:hover { background: #18613B; }
@@ -261,9 +281,10 @@
         .wa-flota span { display: none; }
         .wa-flota.oculto { opacity: 0; transform: translateY(12px); pointer-events: none; }
         @media (min-width: 768px) { .wa-flota { width: auto; padding: 0 1.3rem 0 1.1rem; height: 52px; } .wa-flota svg { width: 22px; height: 22px; } .wa-flota span { display: inline; } }
-        footer { padding-bottom: calc(3rem + 72px) !important; } /* que el botón flotante no tape el pie */
     </style>
+    <link rel="stylesheet" href="/comun.css">
     <link rel="stylesheet" href="/modo-oscuro.css">
+    <link rel="stylesheet" href="/estilos.css"> <!-- Tailwind ya preparado (generar_guias.py); va el último, como iba el de cdn.tailwindcss.com -->
     <script data-goatcounter="https://raizextranjeria.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -271,19 +292,35 @@
 </head>
 <body class="grain-bg flex flex-col min-h-screen">
 
-    <header class="sticky top-0 z-40 bg-[#fbfaf7]/90 backdrop-blur-md border-b border-[#C7B78E]">
-        <div class="max-w-6xl mx-auto px-4 md:px-6 h-16 flex justify-between items-center">
-            <a href="#" onclick="navigateTo('home'); return false;" class="flex flex-col" aria-label="Raíz Asesores de Extranjería, inicio">
-                <span class="font-serif-editorial text-2xl font-bold tracking-tight text-[#1C3B30]">Raíz</span>
-                <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#8F6630] -mt-1">Asesores de Extranjería</span>
-            </a>
-            <nav class="top-nav" aria-label="Principal">
-                <a href="#servicios" onclick="navigateTo('home', 'servicios'); return false;" class="nav-link nav-planes">Nuestros servicios</a>
-                <a href="/guias/" class="nav-link">Blog</a>
-                <a href="https://app.raizextranjeria.es" class="btn-area">Área de clientes</a>
+    <!-- CABECERA-COMUN: la escribe Herramientas-Internas/generar_guias.py; cámbiala allí, no aquí -->
+    <header class="cab">
+        <div class="cab-in">
+            <a href="/" class="cab-logo" aria-label="Raíz, Asesores de Extranjería: ir al inicio"><span class="cab-raiz">Raíz</span><span class="cab-lema">Asesores de Extranjería</span></a>
+            <nav class="cab-nav" aria-label="Principal">
+                <a href="/#servicios">Servicios</a>
+                <a href="/guias/">Guías</a>
+                <a href="https://app.raizextranjeria.es" class="cab-area">Área de clientes</a>
             </nav>
+            <details class="cab-menu">
+                <summary><svg class="ico-abrir" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="ico-cerrar" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Menú</summary>
+                <nav class="cab-panel" aria-label="Menú">
+                    <a href="/#servicios">Servicios</a>
+                    <a href="/guias/">Guías</a>
+                    <a href="https://app.raizextranjeria.es">Área de clientes</a>
+                    <a href="https://wa.me/34665112314?text=Hola%2C%20tengo%20una%20duda%20de%20extranjer%C3%ADa" class="cab-panel-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.4-4.1A8.5 8.5 0 1 1 8.2 19.4z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1.1-1.4-1.9-1-.9.8c-1.2-.5-2.2-1.5-2.7-2.7l.8-.9-1-1.9z"/></svg>Escríbenos por WhatsApp</a>
+                </nav>
+            </details>
         </div>
     </header>
+    <script>
+        // Menú del móvil: se cierra al elegir una opción, al tocar fuera o con Escape.
+        (function () {
+            var m = document.querySelector('.cab-menu'); if (!m) return;
+            document.addEventListener('click', function (e) { if (m.open && (!m.contains(e.target) || e.target.closest('.cab-panel a'))) m.open = false; });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && m.open) { m.open = false; m.querySelector('summary').focus(); } });
+        })();
+    </script>
+    <!-- /CABECERA-COMUN -->
 
     <main class="flex-grow">
         
@@ -298,6 +335,7 @@
                         <p class="lead">Sabemos lo difícil que es llegar a otro país y no entender por dónde empezar. Nuestro asistente especializado en extranjería responde tus preguntas con la normativa actual.</p>
                         <!-- 2026-11-02 (lienzo de la web): el botón principal pasa a ser WhatsApp; fuera la línea «Gratis ✦…», la frase «Escribe tu duda…» y las 3 preguntas guía. -->
                         <a href="https://wa.me/34665112314?text=Hola%2C%20tengo%20una%20duda%20de%20extranjer%C3%ADa" class="btn-empezar btn-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.4-4.1A8.5 8.5 0 1 1 8.2 19.4z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1.1-1.4-1.9-1-.9.8c-1.2-.5-2.2-1.5-2.7-2.7l.8-.9-1-1.9z"/></svg>Escríbenos por WhatsApp</a>
+                        <p class="o-asistente">o pregúntale a nuestro asistente:</p>
                     </div>
 
                     <div id="ask-conv" class="conv-web" aria-live="polite" hidden></div>
@@ -330,9 +368,40 @@
                 </div>
             </section>
 
-            <!-- Servicios en carrusel (2026-10-12, a petición de la socia): avanza solo cada pocos segundos,
-                 pero se puede arrastrar con el ratón, deslizar con el dedo o mover con las flechas, y los puntos
-                 indican la página. Ilustración: img/servicios/<id>.webp; si aún no existe, se ve el dibujo de respaldo. -->
+            <!-- Cómo funciona (2026-11-22): los 3 pasos del embudo con sus precios (ESTRATEGIA_VIGENTE.md §2-3).
+                 Si cambian los precios o el horario, cámbialos aquí también. -->
+            <section id="como-funciona" class="bloque-pasos" aria-labelledby="pasos-tit">
+                <div class="pasos-in">
+                    <span class="etiqueta">Cómo funciona</span>
+                    <h2 id="pasos-tit">Tres pasos, <em>con el precio delante</em></h2>
+                    <ol class="pasos">
+                        <li>
+                            <span class="paso-num" aria-hidden="true">1</span>
+                            <h3>Escríbenos por WhatsApp</h3>
+                            <p class="paso-precio">Gratis</p>
+                            <p>Te ayudamos a ver por dónde empezar. De lunes a viernes, de 14:00 a 20:00 (hora de España).</p>
+                        </li>
+                        <li>
+                            <span class="paso-num" aria-hidden="true">2</span>
+                            <h3>Revisamos tus documentos</h3>
+                            <p class="paso-precio">29 €</p>
+                            <p>Subes tus papeles a tu área de clientes y los revisamos. Si contratas el trámite en los 30 días siguientes, te descontamos estos 29 €.</p>
+                        </li>
+                        <li>
+                            <span class="paso-num" aria-hidden="true">3</span>
+                            <h3>Llevamos tu trámite</h3>
+                            <p class="paso-precio">Desde 190 €</p>
+                            <p>Preparamos tu expediente, lo presentamos de forma telemática y lo sigues desde tu área de clientes.</p>
+                        </li>
+                    </ol>
+                    <p class="pasos-nota">Precios con IVA incluido. Las tasas oficiales se pagan aparte. 190 € en arraigos, nacionalidad, renovaciones y modificaciones, y larga duración; 270 € en reagrupación familiar, familiares de español, trabajo y estudios.</p>
+                    <a href="https://wa.me/34665112314?text=Hola%2C%20quiero%20saber%20por%20d%C3%B3nde%20empezar%20con%20mi%20tr%C3%A1mite" class="btn-empezar btn-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.4-4.1A8.5 8.5 0 1 1 8.2 19.4z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1.1-1.4-1.9-1-.9.8c-1.2-.5-2.2-1.5-2.7-2.7l.8-.9-1-1.9z"/></svg>Empezar por WhatsApp</a>
+                </div>
+            </section>
+
+            <!-- Servicios en carrusel (2026-10-12, a petición de la socia; 2026-11-22: sin avance automático y cada
+                 tarjeta lleva a su guía). Se puede arrastrar con el ratón, deslizar con el dedo o mover con las flechas,
+                 y los puntos indican la página. Ilustración: img/servicios/<id>.webp (640 px); si no existe, dibujo de respaldo. -->
             <section id="servicios" class="bloque-servicios" aria-label="Trámites que llevamos">
                 <div class="serv-cab">
                     <span class="etiqueta">Lo que hacemos por ti</span>
@@ -378,7 +447,7 @@
                 <div class="blog-franja-in">
                     <div class="flex flex-wrap justify-between items-end gap-3 mb-6">
                         <h2 class="font-serif-editorial text-2xl font-bold">Guías del blog</h2>
-                        <a href="/guias/" class="text-sm font-semibold text-[#1C3B30] border-b border-[#B8874B] hover:text-[#B8874B] transition-all pb-0.5">Ver todas las guías →</a>
+                        <a href="/guias/" class="inline-flex items-center min-h-[44px] text-sm font-semibold text-[#1C3B30] underline decoration-[#B8874B] underline-offset-4 hover:text-[#B8874B] transition-all">Ver todas las guías →</a>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="home-blog-container">
                         <!-- Insertado dinámicamente con JS -->
@@ -389,48 +458,36 @@
 
     </main>
 
-    <!-- PIE DE PÁGINA -->
-    <footer class="bg-[#1C3B30] text-[#fbfaf7] py-12">
-        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-10">
-            <div class="md:col-span-5 space-y-3">
-                <a href="#" onclick="navigateTo('home'); return false;" class="flex flex-col w-max">
-                    <span class="font-serif-editorial text-2xl font-bold tracking-tight text-white">Raíz</span>
-                    <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#D9AE72] -mt-1">Asesores de Extranjería</span>
-                </a>
-                <p class="text-xs text-gray-300 leading-relaxed max-w-sm">
-                    Trámites administrativos de extranjería, telemáticos y con seguimiento online. Agencia de representación administrativa (Ley 39/2015); no somos un despacho de abogados.
-                </p>
-                <div class="flex gap-4 pt-1">
-                    <a href="#" id="footer-whatsapp-icon" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp" class="text-gray-300 hover:text-white transition-colors text-lg" hidden><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
-                </div>
+    <!-- PIE-COMUN: lo escribe Herramientas-Internas/generar_guias.py; cámbialo allí, no aquí -->
+    <footer class="pie">
+        <div class="pie-in">
+            <div>
+                <a href="/" class="cab-logo" aria-label="Raíz, Asesores de Extranjería: ir al inicio"><span class="cab-raiz">Raíz</span><span class="cab-lema">Asesores de Extranjería</span></a>
+                <p class="pie-desc">Trámites administrativos de extranjería, telemáticos y con seguimiento online. Agencia de representación administrativa (Ley 39/2015); no somos un despacho de abogados.</p>
             </div>
-            <div class="md:col-span-3 space-y-3">
-                <h4 class="font-serif-editorial text-base text-[#D9AE72] font-semibold">Enlaces</h4>
-                <ul class="space-y-2 text-xs text-gray-300">
-                    <li><a href="#inicio" onclick="navigateTo('home', 'inicio'); return false;" class="hover:text-white transition-colors">Pregúntale a Raíz</a></li>
-                    <li><a href="#servicios" onclick="navigateTo('home', 'servicios'); return false;" class="hover:text-white transition-colors">Nuestros servicios</a></li>
-                    <li><a href="/guias/" class="hover:text-white transition-colors">Blog de extranjería</a></li>
-                    <li><a href="https://app.raizextranjeria.es" class="hover:text-white transition-colors">Área de clientes</a></li>
-                    <li><a href="aviso-legal.html" class="hover:text-white transition-colors">Aviso legal</a></li>
-                    <li><a href="politica-privacidad.html" class="hover:text-white transition-colors">Política de privacidad</a></li>
+            <nav aria-label="Enlaces del pie">
+                <p class="pie-tit">Enlaces</p>
+                <ul>
+                    <li><a href="/#inicio">Pregúntale a Raíz</a></li>
+                    <li><a href="/#servicios">Servicios</a></li>
+                    <li><a href="/guias/">Guías de extranjería</a></li>
+                    <li><a href="https://app.raizextranjeria.es">Área de clientes</a></li>
+                    <li><a href="/aviso-legal.html">Aviso legal</a></li>
+                    <li><a href="/politica-privacidad.html">Política de privacidad</a></li>
                 </ul>
-            </div>
-            <div class="md:col-span-4 space-y-3">
-                <h4 class="font-serif-editorial text-base text-[#D9AE72] font-semibold">Contacto</h4>
-                <ul class="space-y-3 text-xs text-gray-300">
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-[#D9AE72]"></i><span>contacto@raizextranjeria.es</span></li>
-                    <li id="footer-whatsapp-contacto" class="flex items-center gap-2" hidden>
-                        <i class="fa-brands fa-whatsapp text-[#D9AE72]"></i>
-                        <a href="#" id="footer-whatsapp-link" target="_blank" rel="noopener" class="hover:text-white transition-colors">Contáctanos - +34 665112314</a>
-                    </li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-[#D9AE72]"></i><span>Lunes a viernes · 14:00 - 20:00 (hora de España)</span></li>
+            </nav>
+            <div>
+                <p class="pie-tit">Contacto</p>
+                <ul>
+                    <li><a href="https://wa.me/34665112314?text=Hola%2C%20vengo%20de%20la%20web%20de%20Ra%C3%ADz%20y%20quiero%20informaci%C3%B3n%20sobre%20mi%20caso." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.4-4.1A8.5 8.5 0 1 1 8.2 19.4z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1.1-1.4-1.9-1-.9.8c-1.2-.5-2.2-1.5-2.7-2.7l.8-.9-1-1.9z"/></svg>WhatsApp: +34 665 11 23 14</a></li>
+                    <li><a href="mailto:contacto@raizextranjeria.es"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>contacto@raizextranjeria.es</a></li>
+                    <li><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Lunes a viernes, de 14:00 a 20:00 (hora de España)</span></li>
                 </ul>
             </div>
         </div>
-        <div class="max-w-6xl mx-auto px-6 mt-10 pt-6 border-t border-white/10 text-[11px] text-gray-400">
-            <p>&copy; 2026 Raíz - Asesores Expertos en Extranjería. Todos los derechos reservados.</p>
-        </div>
+        <div class="pie-legal"><p>&copy; 2026 Raíz - Asesores Expertos en Extranjería. Todos los derechos reservados.</p></div>
     </footer>
+    <!-- /PIE-COMUN -->
 
     <a class="wa-flota oculto" id="wa-flota" href="https://wa.me/34665112314?text=Hola%2C%20tengo%20una%20duda%20de%20extranjer%C3%ADa" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.4-4.1A8.5 8.5 0 1 1 8.2 19.4z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1.1-1.4-1.9-1-.9.8c-1.2-.5-2.2-1.5-2.7-2.7l.8-.9-1-1.9z"/></svg><span>WhatsApp</span></a>
     <script>
@@ -441,7 +498,13 @@
             const portada = document.getElementById('inicio');
             const mostrar = (si) => { flota.classList.toggle('oculto', !si); flota.tabIndex = si ? 0 : -1; flota.setAttribute('aria-hidden', si ? 'false' : 'true'); };
             if (!portada || !('IntersectionObserver' in window)) { mostrar(true); return; }
-            new IntersectionObserver(([e]) => mostrar(!e.isIntersecting)).observe(portada);
+            // En el móvil también se aparta mientras se ven las flechas del carrusel, que quedan debajo (2026-11-22).
+            const flechas = document.querySelector('.cinta-nav');
+            const movil = window.matchMedia('(max-width: 767px)');
+            let enPortada = true, enFlechas = false;
+            const decidir = () => mostrar(!enPortada && !(enFlechas && movil.matches));
+            new IntersectionObserver(([e]) => { enPortada = e.isIntersecting; decidir(); }).observe(portada);
+            if (flechas) new IntersectionObserver(([e]) => { enFlechas = e.isIntersecting; decidir(); }).observe(flechas);
         })();
     </script>
 
@@ -460,33 +523,27 @@
         // Plataforma de clientes y chat del asistente.
         const URL_PLATAFORMA = "https://app.raizextranjeria.es/";
 
-        // Canal de WhatsApp (solo se muestra en el pie si hay un número real).
-        const WHATSAPP_NUMBER = "34665112314";
-        const WHATSAPP_READY = !WHATSAPP_NUMBER.includes("PEGA_AQUI");
-        function urlWhatsapp(mensaje) {
-            return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(mensaje);
-        }
-
         // === Servicios: carrusel ===
-        // Avanza una página cada 5 s (se detiene al pasar el ratón, al tocarlo o si el sistema pide reducir
-        // animaciones). Se puede arrastrar con el ratón, deslizar con el dedo o usar flechas y puntos.
+        // Cada tarjeta lleva a la guía de su trámite (2026-11-22; antes rellenaba el chat y tenía un «+» que
+        // parecía desplegar algo). Ya no avanza solo: en el móvil se movía mientras alguien leía.
+        // Se puede arrastrar con el ratón, deslizar con el dedo o usar flechas y puntos.
         // Ilustración: img/servicios/<id>.webp. Al subir una, añade su id a CON_ILUSTRACION;
         // mientras no esté, se dibuja el respaldo (sin pedir archivos que no existen).
         const CON_ILUSTRACION = new Set(['arraigo-social', 'arraigo-sociolaboral', 'arraigo-formacion', 'arraigo-familiar', 'familiares-espanol', 'reagrupacion', 'renovaciones', 'larga-duracion', 'cuenta-ajena', 'cuenta-propia', 'estudios', 'nacionalidad', 'recursos']);
         const SERVICIOS = [
-            { id: 'arraigo-social', t: 'Arraigo social', d: 'Si llevas dos años en España y tienes familia aquí o un informe de integración social.' },
-            { id: 'arraigo-sociolaboral', t: 'Arraigo sociolaboral', d: 'Si llevas dos años en España y una empresa quiere contratarte.' },
-            { id: 'arraigo-formacion', t: 'Arraigo para la formación', d: 'Si llevas dos años en España y quieres formarte para trabajar.' },
-            { id: 'arraigo-familiar', t: 'Arraigo familiar', d: 'Si eres madre o padre de un menor de la UE, o apoyas a una persona con discapacidad.' },
-            { id: 'familiares-espanol', t: 'Familiares de español', d: 'Si tu pareja, tu hija o hijo, o tu madre o padre tiene la nacionalidad española.' },
-            { id: 'reagrupacion', t: 'Reagrupación familiar', d: 'Si vives legalmente en España y quieres que tu familia viva contigo.' },
-            { id: 'renovaciones', t: 'Renovaciones y modificaciones', d: 'Para renovar tu autorización o pasar a otro tipo de permiso.' },
-            { id: 'larga-duracion', t: 'Residencia de larga duración', d: 'Si llevas cinco años de residencia legal y quieres un permiso estable.' },
-            { id: 'cuenta-ajena', t: 'Trabajo por cuenta ajena', d: 'Autorización de residencia y trabajo con el contrato de una empresa.' },
-            { id: 'cuenta-propia', t: 'Trabajo por cuenta propia', d: 'Si quieres trabajar como autónomo o poner en marcha tu negocio.' },
-            { id: 'estudios', t: 'Estancia por estudios', d: 'Tu estancia por estudios: la solicitud, la prórroga y el trabajo compatible.' },
-            { id: 'nacionalidad', t: 'Nacionalidad española', d: 'Si ya cumples los años de residencia legal que pide la ley.' },
-            { id: 'recursos', t: 'Recurso de reposición', d: 'Si te han denegado una solicitud y quieres recurrir ante la Administración.' }
+            { id: 'arraigo-social', guia: 'arraigo-social-guia-2026', t: 'Arraigo social', d: 'Si llevas dos años en España y tienes familia aquí o un informe de integración social.' },
+            { id: 'arraigo-sociolaboral', guia: 'arraigo-sociolaboral-guia-2026', t: 'Arraigo sociolaboral', d: 'Si llevas dos años en España y una empresa quiere contratarte.' },
+            { id: 'arraigo-formacion', guia: 'arraigo-socioformativo-guia-2026', t: 'Arraigo para la formación', d: 'Si llevas dos años en España y quieres formarte para trabajar.' },
+            { id: 'arraigo-familiar', guia: 'arraigo-familiar-menor-discapacidad-ue', t: 'Arraigo familiar', d: 'Si eres madre o padre de un menor de la UE, o apoyas a una persona con discapacidad.' },
+            { id: 'familiares-espanol', guia: 'residencia-familiar-ciudadano-espanol-2026', t: 'Familiares de español', d: 'Si tu pareja, tu hija o hijo, o tu madre o padre tiene la nacionalidad española.' },
+            { id: 'reagrupacion', guia: 'reagrupacion-familiar-requisitos-2026', t: 'Reagrupación familiar', d: 'Si vives legalmente en España y quieres que tu familia viva contigo.' },
+            { id: 'renovaciones', guia: 'renovaciones-modificaciones-residencia-guia-2026', t: 'Renovaciones y modificaciones', d: 'Para renovar tu autorización o pasar a otro tipo de permiso.' },
+            { id: 'larga-duracion', guia: 'residencia-larga-duracion-guia-2026', t: 'Residencia de larga duración', d: 'Si llevas cinco años de residencia legal y quieres un permiso estable.' },
+            { id: 'cuenta-ajena', guia: 'residencia-trabajo-cuenta-ajena-2026', t: 'Trabajo por cuenta ajena', d: 'Autorización de residencia y trabajo con el contrato de una empresa.' },
+            { id: 'cuenta-propia', guia: 'residencia-trabajo-cuenta-propia-2026', t: 'Trabajo por cuenta propia', d: 'Si quieres trabajar como autónomo o poner en marcha tu negocio.' },
+            { id: 'estudios', guia: 'visado-estudios-espana-guia-2026', t: 'Estancia por estudios', d: 'Tu estancia por estudios: la solicitud, la prórroga y el trabajo compatible.' },
+            { id: 'nacionalidad', guia: 'nacionalidad-espanola-residencia-guia-2026', t: 'Nacionalidad española', d: 'Si ya cumples los años de residencia legal que pide la ley.' },
+            { id: 'recursos', guia: 'recurso-denegacion-extranjeria-guia-2026', t: 'Recurso de reposición', d: 'Si te han denegado una solicitud y quieres recurrir ante la Administración.' }
         ];
         function dibujoRespaldo(i) {
             // Respaldo sobrio mientras falta la ilustración: fondo verde bosque con una arcada de líneas doradas finas.
@@ -502,25 +559,18 @@
         (function () {
             const pista = document.getElementById('cinta-pista');
             if (!pista) return;
-            const preguntar = (sv) => {
-                const ta = document.getElementById('ask-input');
-                ta.value = 'Quiero saber si puedo pedir: ' + sv.t.toLowerCase() + '. ';
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                setTimeout(() => { ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length); ta.dispatchEvent(new Event('input')); }, 500);
-            };
             let arrastro = false;
             SERVICIOS.forEach((sv, i) => {
                 const a = document.createElement('a');
                 a.className = 'serv-tarjeta';
-                a.href = '#inicio';
+                a.href = '/guias/' + sv.guia + '.html';
                 a.draggable = false;
-                a.setAttribute('aria-label', sv.t + ': preguntar al asistente por este trámite');
                 a.innerHTML = '<div class="serv-dibujo">' +
-                    (CON_ILUSTRACION.has(sv.id) ? '<img src="img/servicios/' + sv.id + '.webp" alt="" loading="lazy" draggable="false">' : dibujoRespaldo(i)) +
-                    '</div><div class="serv-texto"><h3>' + sv.t + '<span aria-hidden="true">+</span></h3><p>' + sv.d + '</p></div>';
+                    (CON_ILUSTRACION.has(sv.id) ? '<img src="img/servicios/' + sv.id + '.webp" alt="" width="640" height="480" loading="lazy" decoding="async" draggable="false">' : dibujoRespaldo(i)) +
+                    '</div><div class="serv-texto"><h3>' + sv.t + '</h3><p>' + sv.d + '</p><span class="serv-ver">Ver la guía <span aria-hidden="true">→</span></span></div>';
                 const img = a.querySelector('img');
                 if (img) img.onerror = () => { img.parentElement.innerHTML = dibujoRespaldo(i); };
-                a.onclick = (e) => { e.preventDefault(); if (arrastro) return; preguntar(sv); };
+                a.onclick = (e) => { if (arrastro) e.preventDefault(); }; // el clic que cierra un arrastre no abre la guía
                 pista.appendChild(a);
             });
 
@@ -536,18 +586,25 @@
             const numPaginas = () => maxScroll() <= 4 ? 1 : Math.ceil(maxScroll() / paso() - 0.05) + 1;
             const paginaActual = () => pista.scrollLeft >= maxScroll() - 4 ? numPaginas() - 1 : Math.round(pista.scrollLeft / paso());
             const irA = (n) => {
-                const total = numPaginas();
-                n = (n + total) % total;
+                n = Math.max(0, Math.min(n, numPaginas() - 1));
                 pista.scrollTo({ left: Math.min(n * paso(), maxScroll()), behavior: 'smooth' });
             };
+            const enMovil = window.matchMedia('(max-width: 720px)');
             function pintarPuntos() {
                 const total = numPaginas();
                 puntos.innerHTML = '';
+                // En el móvil, «3 / 13» en vez de 13 puntos: los puntos eran demasiado pequeños para el dedo (2026-11-22).
+                if (enMovil.matches) {
+                    puntos.innerHTML = '<span class="cinta-cuenta" aria-live="polite"></span>';
+                    marcarPunto();
+                    puntos.parentElement.hidden = total < 2;
+                    return;
+                }
                 for (let n = 0; n < total; n++) {
                     const b = document.createElement('button');
                     b.type = 'button';
                     b.setAttribute('aria-label', 'Página ' + (n + 1) + ' de ' + total);
-                    b.onclick = () => { irA(n); reiniciar(); };
+                    b.onclick = () => irA(n);
                     puntos.appendChild(b);
                 }
                 marcarPunto();
@@ -555,14 +612,16 @@
             }
             function marcarPunto() {
                 const actual = paginaActual();
+                const cuenta = puntos.querySelector('.cinta-cuenta');
+                if (cuenta) { cuenta.textContent = (actual + 1) + ' / ' + numPaginas(); return; }
                 [...puntos.children].forEach((b, n) => b.setAttribute('aria-current', n === actual ? 'true' : 'false'));
             }
             let espera;
             pista.addEventListener('scroll', () => { clearTimeout(espera); espera = setTimeout(marcarPunto, 60); }, { passive: true });
             let ancho = window.innerWidth;
             window.addEventListener('resize', () => { if (window.innerWidth !== ancho) { ancho = window.innerWidth; pintarPuntos(); } });
-            document.getElementById('cinta-ant').onclick = () => { irA(paginaActual() - 1); reiniciar(); };
-            document.getElementById('cinta-sig').onclick = () => { irA(paginaActual() + 1); reiniciar(); };
+            document.getElementById('cinta-ant').onclick = () => irA(paginaActual() - 1);
+            document.getElementById('cinta-sig').onclick = () => irA(paginaActual() + 1);
 
             // Arrastrar con el ratón (en móvil el dedo ya desliza solo).
             let inicioX = 0, inicioScroll = 0, pulsado = false;
@@ -587,28 +646,9 @@
                 const cerca = [...pista.children].reduce((m, t) => dist(t) < dist(m) ? t : m);
                 pista.scrollTo({ left: Math.min(Math.max(cerca.offsetLeft - margen, 0), maxScroll()), behavior: 'smooth' });
                 setTimeout(() => { arrastro = false; }, 0);
-                reiniciar();
             });
 
-            // Avance automático: solo si se ve en pantalla y nadie lo está usando.
-            const quieto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            let reloj = null, visible = false, encima = false;
-            function reiniciar() {
-                clearInterval(reloj); reloj = null;
-                if (quieto || !visible || encima) return;
-                reloj = setInterval(() => irA(paginaActual() + 1), 5000);
-            }
-            const zona = document.getElementById('cinta');
-            zona.addEventListener('mouseenter', () => { encima = true; reiniciar(); });
-            zona.addEventListener('mouseleave', () => { encima = false; reiniciar(); });
-            zona.addEventListener('focusin', () => { encima = true; reiniciar(); });
-            zona.addEventListener('focusout', () => { encima = false; reiniciar(); });
-            pista.addEventListener('touchstart', () => reiniciar(), { passive: true });
-            if ('IntersectionObserver' in window) {
-                new IntersectionObserver((ent) => { visible = ent[0].isIntersecting; reiniciar(); }, { threshold: 0.4 }).observe(zona);
-            } else { visible = true; }
             pintarPuntos();
-            reiniciar();
         })();
 
         // === Vídeo de TikTok en «La IA de Raíz» ===
@@ -678,8 +718,12 @@
                 const nombresArchivos = textoLista.split('\n')
                     .map(linea => linea.trim())
                     .filter(linea => linea.length > 0 && !linea.startsWith('#'));
+                // La portada solo enseña 3: descarga esas 3 (antes las 16). Todas solo si llega un enlace
+                // antiguo #article-N, que necesita saber a qué guía corresponde cada número.
+                const todos = window.location.hash.startsWith('#article-');
+                const aCargar = todos ? nombresArchivos : nombresArchivos.slice(0, 3);
 
-                const articulos = await Promise.all(nombresArchivos.map(async (nombreArchivo, index) => {
+                const articulos = await Promise.all(aCargar.map(async (nombreArchivo, index) => {
                     const respuesta = await fetch(`blog-posts/${nombreArchivo}`);
                     const texto = await respuesta.text();
                     return { id: index + 1, slug: nombreArchivo.replace(/\.txt$/, ''), ...parseArticuloTexto(texto) };
@@ -706,11 +750,6 @@
                 targetView.classList.remove('hidden');
             }
 
-            // Actualizar estado del menú activo en navegación
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('text-[#1C3B30]', 'border-b-2', 'border-[#B8874B]');
-                link.classList.add('text-[#4A4032]');
-            });
 
             // Si hay sección específica, hacer scroll
             if (sectionId) {
@@ -762,11 +801,11 @@
                 homeContainer.innerHTML = articlesDB.slice(0, 3).map(post => `
                     <article class="bg-white border border-[#C7B78E] p-8 rounded-xl flex flex-col justify-between hover:border-[#B8874B] transition-all">
                         <div class="space-y-4">
-                            <span class="font-stamp text-[10px] text-[#8F6630] uppercase tracking-wider">${post.tagLabel}</span>
+                            <span class="font-stamp text-xs text-[#8F6630] uppercase tracking-wider">${post.tagLabel}</span>
                             <h3 class="font-serif-editorial text-xl font-bold text-[#1C3B30] leading-tight">${post.title}</h3>
-                            <p class="text-xs text-[#4A4032] leading-relaxed">${post.excerpt}</p>
+                            <p class="text-sm text-[#4A4032] leading-relaxed">${post.excerpt}</p>
                         </div>
-                        <a href="guias/${post.slug}.html" aria-label="Leer artículo completo: ${post.title}" class="text-xs font-bold text-[#1C3B30] hover:text-[#B8874B] text-left mt-6 pt-4 border-t border-[#C7B78E]/50 flex items-center gap-1.5 w-full">
+                        <a href="guias/${post.slug}.html" aria-label="Leer artículo completo: ${post.title}" class="text-sm font-bold text-[#1C3B30] hover:text-[#B8874B] text-left mt-6 pt-3 min-h-[44px] border-t border-[#C7B78E]/50 flex items-center gap-1.5 w-full">
                             Leer artículo completo →
                         </a>
                     </article>
@@ -774,23 +813,8 @@
             }
         }
 
-        // Muestra los enlaces de WhatsApp del footer solo si hay un número real
-        // configurado (WHATSAPP_READY) — mientras esté el placeholder, se
-        // quedan ocultos en vez de enlazar a un número inventado.
-        function initWhatsappFooter() {
-            if (!WHATSAPP_READY) return;
-            const mensaje = 'Hola, vengo de la web de Raíz y quiero información sobre mi caso.';
-            const icon = document.getElementById('footer-whatsapp-icon');
-            const contacto = document.getElementById('footer-whatsapp-contacto');
-            const link = document.getElementById('footer-whatsapp-link');
-            if (icon) { icon.href = urlWhatsapp(mensaje); icon.hidden = false; }
-            if (link) { link.href = urlWhatsapp(mensaje); }
-            if (contacto) { contacto.hidden = false; }
-        }
-
         document.addEventListener('DOMContentLoaded', () => {
             cargarArticulosBlog();
-            initWhatsappFooter();
             window.addEventListener('hashchange', checkUrlHash);
         });
     </script>
@@ -803,24 +827,31 @@
         // La web no anuncia la cifra (2026-10-14); al agotarlas sale el recuadro para crear la cuenta AQUÍ MISMO
         // (Google o correo): la sesión anónima se convierte en cuenta y la conversación sigue sin saltar de página.
         // Tope por red y por día y tope de coste: en el servidor.
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-        import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-functions.js";
-        import {
-            getAuth, onAuthStateChanged, signInAnonymously, GoogleAuthProvider, EmailAuthProvider,
-            linkWithPopup, linkWithCredential, signInWithPopup, signInWithCredential,
-            signInWithEmailAndPassword, createUserWithEmailAndPassword, sendEmailVerification
-        } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
-
-        const app = initializeApp({
-            apiKey: "AIzaSyBEtYO3lVwFLJhUUN0ZWkEn5qdk8A6dVjQ",
-            authDomain: "gen-lang-client-0072014192.firebaseapp.com",
-            projectId: "gen-lang-client-0072014192",
-            messagingSenderId: "1064590022311",
-            appId: "1:1064590022311:web:11a206ac186a73ce342d82"
-        });
-        const fns = getFunctions(app, "europe-west1");
-        const llamar = (nombre, datos) => httpsCallable(fns, nombre)(datos).then((r) => r.data);
-        const auth = getAuth(app);
+        //
+        // Firebase solo cuando hace falta (2026-11-22): son ~95 KB que antes descargaba todo el que entraba.
+        // Ahora se piden al tocar la caja del chat, al enviar o al crear la cuenta; o nada más entrar si este
+        // navegador ya tenía una conversación o una cuenta (para pintarla). El resto de visitantes no los descarga.
+        const FB = "https://www.gstatic.com/firebasejs/10.14.1/";
+        let fb = null, auth = null, fns = null, cargando = null;
+        function cargarFirebase() {
+            if (!cargando) cargando = Promise.all([
+                import(FB + "firebase-app.js"), import(FB + "firebase-functions.js"), import(FB + "firebase-auth.js")
+            ]).then(([appMod, fnMod, authMod]) => {
+                const app = appMod.initializeApp({
+                    apiKey: "AIzaSyBEtYO3lVwFLJhUUN0ZWkEn5qdk8A6dVjQ",
+                    authDomain: "gen-lang-client-0072014192.firebaseapp.com",
+                    projectId: "gen-lang-client-0072014192",
+                    messagingSenderId: "1064590022311",
+                    appId: "1:1064590022311:web:11a206ac186a73ce342d82"
+                });
+                fb = { ...fnMod, ...authMod };
+                fns = fnMod.getFunctions(app, "europe-west1");
+                auth = authMod.getAuth(app);
+                return new Promise((listo) => { const quitar = authMod.onAuthStateChanged(auth, (u) => { quitar(); listo(u); }); });
+            });
+            return cargando;
+        }
+        const llamar = async (nombre, datos) => { await cargarFirebase(); return fb.httpsCallable(fns, nombre)(datos).then((r) => r.data); };
         const APP = "https://app.raizextranjeria.es";
 
         const $ = (id) => document.getElementById(id);
@@ -828,6 +859,10 @@
         const guardarLocal = (k, v) => { try { v ? localStorage.setItem(k, v) : localStorage.removeItem(k); } catch (_) { /* sin almacenamiento: no se recuerda */ } };
         const CLAVE_CONV = "raiz_conv_web";
         let conversacionId = leerLocal(CLAVE_CONV);
+        // ¿Hay ya una sesión de Firebase guardada en este navegador? (Firebase la guarda en IndexedDB.)
+        // Se nota porque al crear una cuenta o una sesión anónima siempre se guarda también la conversación.
+        const habiaSesion = !!conversacionId;
+        ["focus", "pointerdown"].forEach((ev) => $("ask-input").addEventListener(ev, () => cargarFirebase(), { once: true, passive: true }));
         let ocupado = false;
         let leyendaMostrada = false;
         const LEYENDA = '<div class="leyenda"><b>Normativa</b> = lo que dice la ley · <b>Criterio de oficina</b> = cómo se suele aplicar · <b>Sin verificar</b> = no lo he podido comprobar.</div>';
@@ -842,12 +877,11 @@
         })();
 
         // ---- Sesión: anónima para contar las preguntas; cuenta de verdad tras registrarse ----
-        const sesionLista = new Promise((listo) => { const quitar = onAuthStateChanged(auth, (u) => { quitar(); listo(u); }); });
-        const esCuenta = () => !!auth.currentUser && !auth.currentUser.isAnonymous;
+        const esCuenta = () => !!auth && !!auth.currentUser && !auth.currentUser.isAnonymous;
         async function asegurarSesion() {
-            await sesionLista;
+            await cargarFirebase();
             if (auth.currentUser) return;
-            try { await signInAnonymously(auth); } catch (_) { /* sin sesión anónima: el servidor cuenta por conversación */ }
+            try { await fb.signInAnonymously(auth); } catch (_) { /* sin sesión anónima: el servidor cuenta por conversación */ }
         }
 
         const escapar = (t) => String(t == null ? "" : t).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -920,7 +954,8 @@
 
         // ---- Al volver a la página: la misma conversación, donde se dejó ----
         (async () => {
-            const u = await sesionLista;
+            if (!habiaSesion) return; // visitante nuevo: Firebase espera a que toque el chat
+            const u = await cargarFirebase();
             if (!conversacionId || !u) return;
             try {
                 const r = await llamar("verConversacion", { conversacionId });
@@ -1000,17 +1035,17 @@
         }
         $("alta-google").addEventListener("click", async () => {
             errorAlta(""); avisarIntento();
-            const proveedor = new GoogleAuthProvider();
             try {
                 await asegurarSesion();
+                const proveedor = new fb.GoogleAuthProvider();
                 if (auth.currentUser && auth.currentUser.isAnonymous) {
-                    try { await linkWithPopup(auth.currentUser, proveedor); }
+                    try { await fb.linkWithPopup(auth.currentUser, proveedor); }
                     catch (e) {
                         if (e.code !== "auth/credential-already-in-use") throw e;
-                        await signInWithCredential(auth, GoogleAuthProvider.credentialFromError(e)); // ya tenía cuenta con Google
+                        await fb.signInWithCredential(auth, fb.GoogleAuthProvider.credentialFromError(e)); // ya tenía cuenta con Google
                     }
                 } else {
-                    await signInWithPopup(auth, proveedor);
+                    await fb.signInWithPopup(auth, proveedor);
                 }
                 await trasEntrar();
             } catch (e) { errorAlta(traducir(e)); }
@@ -1028,11 +1063,11 @@
             try {
                 await asegurarSesion();
                 if (modoEntrar) {
-                    await signInWithEmailAndPassword(auth, email, pass); // la conversación pasa a su cuenta en la siguiente pregunta
+                    await fb.signInWithEmailAndPassword(auth, email, pass); // la conversación pasa a su cuenta en la siguiente pregunta
                 } else {
-                    if (auth.currentUser && auth.currentUser.isAnonymous) await linkWithCredential(auth.currentUser, EmailAuthProvider.credential(email, pass));
-                    else await createUserWithEmailAndPassword(auth, email, pass);
-                    try { await sendEmailVerification(auth.currentUser); } catch (_) { /* no impide seguir */ }
+                    if (auth.currentUser && auth.currentUser.isAnonymous) await fb.linkWithCredential(auth.currentUser, fb.EmailAuthProvider.credential(email, pass));
+                    else await fb.createUserWithEmailAndPassword(auth, email, pass);
+                    try { await fb.sendEmailVerification(auth.currentUser); } catch (_) { /* no impide seguir */ }
                 }
                 await trasEntrar();
             } catch (e) {

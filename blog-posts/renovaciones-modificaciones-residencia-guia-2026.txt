@@ -3,6 +3,8 @@ CATEGORIA: renovaciones
 CATEGORIA_VISIBLE: Renovaciones y Modificaciones
 FECHA: 29 SEP 2026
 RESUMEN: Cuándo pedir la renovación para no quedarte sin papeles, qué pasa si se te pasa la fecha, cómo se prorroga un arraigo, cómo pasar del arraigo a una autorización de residencia y trabajo de cuatro años y qué hacer al año si tus papeles vienen de la regularización extraordinaria de 2026.
+TITULO_SEO: Renovar o modificar tu residencia en 2026: plazos
+DESCRIPCION: Cuándo pedir la renovación, qué pasa si se te pasa la fecha, cómo prorrogar un arraigo y cómo pasar a una autorización de cuatro años.
 RELACIONADAS: residencia-larga-duracion-guia-2026, nacionalidad-espanola-residencia-guia-2026, recurso-denegacion-extranjeria-guia-2026
 ---CONTENIDO---
 <p class="font-bold">Conseguir la primera autorización de residencia es solo el principio: casi todas hay que renovarlas o cambiarlas a otro tipo con los años. El error más caro en esta etapa es dejar pasar la fecha. Esta guía explica los plazos y los dos caminos más habituales para quien se regularizó por arraigo o en la regularización extraordinaria de 2026.</p>

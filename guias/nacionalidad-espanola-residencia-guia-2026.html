@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="color-scheme" content="light dark">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nacionalidad española por residencia en 2026: requisitos, exámenes y plazos | Raíz - Asesores Expertos en Extranjería</title>
-    <meta name="description" content="Cuántos años de residencia legal necesitas según tu país (10, 5, 2 o 1), los exámenes CCSE y DELE y quién está exento, la documentación, el plazo de un año y el paso final de la jura.">
+    <title>Nacionalidad española por residencia 2026: requisitos | Raíz</title>
+    <meta name="description" content="Años de residencia legal según tu país (10, 5, 2 o 1), exámenes CCSE y DELE y quién está exento, documentación, plazos y jura.">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -14,12 +14,12 @@
     <meta property="og:locale" content="es_ES">
     <meta property="og:site_name" content="Raíz - Asesores Expertos en Extranjería">
     <meta property="og:title" content="Nacionalidad española por residencia en 2026: requisitos, exámenes y plazos">
-    <meta property="og:description" content="Cuántos años de residencia legal necesitas según tu país (10, 5, 2 o 1), los exámenes CCSE y DELE y quién está exento, la documentación, el plazo de un año y el paso final de la jura.">
+    <meta property="og:description" content="Años de residencia legal según tu país (10, 5, 2 o 1), exámenes CCSE y DELE y quién está exento, documentación, plazos y jura.">
     <meta property="og:url" content="https://raizextranjeria.es/guias/nacionalidad-espanola-residencia-guia-2026.html">
     <meta property="og:image" content="https://raizextranjeria.es/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="preload" href="/fuentes/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fuentes/inter.woff2" as="font" type="font/woff2" crossorigin>
     <style>
         :root { --forest:#1C3B30; --forest-light:#2F5C4C; --gold:#B8874B; --sand:#fbfaf7; --sand-dark:#f3efe6; --ink:#211B14; --ink-soft:#4A4032; --rule:#C7B78E; }
         body { font-family:'Inter',system-ui,sans-serif; color:var(--ink); background:var(--sand); -webkit-font-smoothing:antialiased; }
@@ -30,47 +30,84 @@
         .cuerpo ul { list-style:disc; padding-left:1.4rem; }
         .cuerpo a { color:var(--forest); text-decoration:underline; }
         .cuerpo h2 { font-size:1.2rem; }
+        /* Listas de las guías (2026-11-22); el índice «En esta guía» está en /comun.css */
+        .cuerpo ul.lista-guia { list-style:none; padding:0; border-top:1px solid var(--rule); }
+        .cuerpo ul.lista-guia li { position:relative; padding:.55rem 0 .55rem 1.6rem; border-bottom:1px solid rgba(199,183,142,.45); line-height:1.6; }
+        .cuerpo ul.lista-guia li::before { content:""; position:absolute; left:.1rem; top:1.05rem; width:.7rem; height:1px; background:var(--gold); }
+        .cuerpo h2[id] { scroll-margin-top:84px; }
         /* WhatsApp (2026-11-21): botón flotante en todas las guías + botón del recuadro final. Igual en index.html. */
         .wa-ico svg, .wa-flota svg { width:20px; height:20px; stroke:currentColor; fill:none; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; flex:none; }
         .btn-wa-guia { display:inline-flex; align-items:center; gap:.6rem; min-height:48px; background:#1F7A4A; color:#fff; padding:.75rem 1.4rem; border-radius:999px; font-weight:600; font-size:.95rem; text-decoration:none; }
         .btn-wa-guia:hover { background:#18613B; }
-        .enlace-sec { display:inline-block; padding:.6rem 0; color:var(--forest); font-weight:500; font-size:.95rem; text-decoration:underline; text-underline-offset:3px; }
+        .enlace-sec { display:inline-flex; align-items:center; min-height:44px; color:var(--forest); font-weight:500; font-size:.95rem; text-decoration:underline; text-underline-offset:3px; }
         .wa-flota { position:fixed; z-index:50; right:max(16px, env(safe-area-inset-right)); bottom:max(16px, env(safe-area-inset-bottom)); display:inline-flex; align-items:center; justify-content:center; gap:.5rem; width:56px; height:56px; border-radius:999px; background:#1F7A4A; color:#fff; text-decoration:none; font-weight:600; font-size:.95rem; box-shadow:0 8px 24px -8px rgba(0,0,0,.45); }
         .wa-flota:hover { background:#18613B; }
         .wa-flota svg { width:26px; height:26px; }
         .wa-flota span { display:none; }
         @media (min-width:768px) { .wa-flota { width:auto; padding:0 1.3rem 0 1.1rem; height:52px; } .wa-flota svg { width:22px; height:22px; } .wa-flota span { display:inline; } }
-        footer { padding-bottom:calc(2rem + 72px) !important; } /* que el botón flotante no tape el pie */
     </style>
+    <link rel="stylesheet" href="/comun.css">
     <link rel="stylesheet" href="/modo-oscuro.css">
+    <link rel="stylesheet" href="/estilos.css">
     <script data-goatcounter="https://raizextranjeria.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body class="flex flex-col min-h-screen">
-    <header class="border-b border-[#C7B78E] bg-[#fbfaf7]">
-        <div class="max-w-4xl mx-auto px-5 h-16 flex justify-between items-center">
-            <a href="/" class="flex flex-col" aria-label="Raíz Asesores de Extranjería, inicio">
-                <span class="font-bold text-2xl tracking-tight text-[#1C3B30]" style="font-family:'Fraunces',Georgia,serif">Raíz</span>
-                <span class="font-stamp text-[9px] uppercase tracking-[0.25em] text-[#8F6630] -mt-1">Asesores de Extranjería</span>
-            </a>
-            <nav class="flex items-center gap-5 text-sm">
-                <a href="/guias/" class="text-[#4A4032] font-medium hover:text-[#1C3B30]">Blog</a>
-                <a href="https://app.raizextranjeria.es" class="border border-[#1C3B30] text-[#1C3B30] hover:bg-[#1C3B30] hover:text-[#fbfaf7] px-3 py-1.5 rounded text-xs font-semibold uppercase tracking-wider whitespace-nowrap">Área de clientes</a>
+    <!-- CABECERA-COMUN: la escribe Herramientas-Internas/generar_guias.py; cámbiala allí, no aquí -->
+    <header class="cab">
+        <div class="cab-in">
+            <a href="/" class="cab-logo" aria-label="Raíz, Asesores de Extranjería: ir al inicio"><span class="cab-raiz">Raíz</span><span class="cab-lema">Asesores de Extranjería</span></a>
+            <nav class="cab-nav" aria-label="Principal">
+                <a href="/#servicios">Servicios</a>
+                <a href="/guias/" aria-current="page">Guías</a>
+                <a href="https://app.raizextranjeria.es" class="cab-area">Área de clientes</a>
             </nav>
+            <details class="cab-menu">
+                <summary><svg class="ico-abrir" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="ico-cerrar" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Menú</summary>
+                <nav class="cab-panel" aria-label="Menú">
+                    <a href="/#servicios">Servicios</a>
+                    <a href="/guias/" aria-current="page">Guías</a>
+                    <a href="https://app.raizextranjeria.es">Área de clientes</a>
+                    <a href="https://wa.me/34665112314?text=Hola%2C%20he%20le%C3%ADdo%20vuestra%20gu%C3%ADa%20sobre%20Nacionalidad%20y%20tengo%20una%20duda%20sobre%20mi%20caso." class="cab-panel-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.4-4.1A8.5 8.5 0 1 1 8.2 19.4z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1.1-1.4-1.9-1-.9.8c-1.2-.5-2.2-1.5-2.7-2.7l.8-.9-1-1.9z"/></svg>Escríbenos por WhatsApp</a>
+                </nav>
+            </details>
         </div>
     </header>
+    <script>
+        // Menú del móvil: se cierra al elegir una opción, al tocar fuera o con Escape.
+        (function () {
+            var m = document.querySelector('.cab-menu'); if (!m) return;
+            document.addEventListener('click', function (e) { if (m.open && (!m.contains(e.target) || e.target.closest('.cab-panel a'))) m.open = false; });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && m.open) { m.open = false; m.querySelector('summary').focus(); } });
+        })();
+    </script>
+    <!-- /CABECERA-COMUN -->
 
     <main class="flex-grow">
         <article class="max-w-3xl mx-auto px-5 py-10 md:py-14">
-            <a href="/guias/" class="text-sm font-medium text-[#4A4032] hover:text-[#1C3B30]">← Todas las guías</a>
-            <div class="flex flex-wrap gap-x-4 gap-y-1 mt-8 font-stamp text-xs text-[#8F6630] uppercase tracking-wider">
+            <a href="/guias/" class="inline-flex items-center min-h-[44px] text-sm font-medium text-[#4A4032] hover:text-[#1C3B30]">← Todas las guías</a>
+            <div class="flex flex-wrap gap-x-4 gap-y-1 mt-6 font-stamp text-xs text-[#8F6630] uppercase tracking-wider">
                 <span>Nacionalidad</span><span>23 SEP 2026</span>
             </div>
             <h1 class="text-3xl md:text-5xl font-bold text-[#1C3B30] leading-tight mt-3">Nacionalidad española por residencia en 2026: requisitos, exámenes y plazos</h1>
             <div class="h-0.5 bg-[#B8874B]/30 my-7"></div>
+            <details class="indice-guia" id="indice-guia">
+                <summary>En esta guía <span>· 8 apartados</span></summary>
+                <ol>
+                    <li><a href="#cuantos-anos-de-residencia-necesitas">Cuántos años de residencia necesitas</a></li>
+                    <li><a href="#el-requisito-que-mas-confusion-genera-residencia-legal">El requisito que más confusión genera: residencia legal</a></li>
+                    <li><a href="#los-examenes-ccse-y-dele-a2">Los exámenes: CCSE y DELE A2</a></li>
+                    <li><a href="#buena-conducta-civica">Buena conducta cívica</a></li>
+                    <li><a href="#documentacion">Documentación</a></li>
+                    <li><a href="#plazo-de-resolucion">Plazo de resolución</a></li>
+                    <li><a href="#el-ultimo-paso-la-jura-y-la-inscripcion">El último paso: la jura y la inscripción</a></li>
+                    <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
+                </ol>
+            </details>
+            <script>if (matchMedia('(min-width: 768px)').matches) document.getElementById('indice-guia').open = true;</script>
             <div class="cuerpo text-base text-[#1C3B30] space-y-4">
 <p class="font-bold">La nacionalidad española por residencia es el paso final para quien lleva años viviendo legalmente en España. Con ella dejas de depender de renovaciones de tarjeta, puedes votar en todas las elecciones y obtienes el pasaporte español. Para buena parte de las personas latinoamericanas el plazo es mucho más corto de lo que suele creerse: dos años de residencia legal.</p>
 <p>Está regulada en los artículos 21 a 23 del Código Civil, y el procedimiento en el Real Decreto 1004/2015. No depende de Extranjería sino del Ministerio de Justicia, y se tramita por vía electrónica.</p>
-<h2 class="font-bold text-[#1C3B30] mt-4">Cuántos años de residencia necesitas</h2>
+<h2 id="cuantos-anos-de-residencia-necesitas" class="font-bold text-[#1C3B30] mt-4">Cuántos años de residencia necesitas</h2>
 <p>El artículo 22 del Código Civil fija el tiempo según tu origen o tu situación:</p>
 <ul>
 <li><strong>10 años</strong>: la regla general.</li>
@@ -78,26 +115,26 @@
 <li><strong>2 años</strong>: si eres nacional de origen de un país iberoamericano, de Andorra, Filipinas, Guinea Ecuatorial o Portugal, o si eres sefardí.</li>
 <li><strong>1 año</strong>: si naciste en España; si llevas un año casado o casada con una persona española sin estar separados legalmente ni de hecho; si eres viudo o viuda de español o española y no estabais separados; si naciste fuera de España pero tu padre, madre, abuelo o abuela eran españoles de origen; si no ejerciste a tiempo el derecho de opción; o si estuviste dos años bajo tutela, guarda o acogimiento de un ciudadano o institución españoles.</li>
 </ul>
-<h2 class="font-bold text-[#1C3B30] mt-4">El requisito que más confusión genera: residencia legal</h2>
+<h2 id="el-requisito-que-mas-confusion-genera-residencia-legal" class="font-bold text-[#1C3B30] mt-4">El requisito que más confusión genera: residencia legal</h2>
 <p>La ley exige que la residencia sea <strong>legal, continuada e inmediatamente anterior</strong> a la solicitud. "Legal" significa con autorización de residencia: el tiempo que viviste en España sin papeles no cuenta. Si te regularizaste por arraigo, los dos años (o los que te correspondan) empiezan a contar desde que obtuviste esa autorización, no desde que llegaste a España.</p>
 <p>"Continuada" significa sin interrupciones: dejar caducar la tarjeta sin renovarla a tiempo, o pasar largas temporadas fuera, puede romper la cuenta. Antes de presentar, conviene revisar que todas tus autorizaciones y renovaciones encadenan sin huecos.</p>
-<h2 class="font-bold text-[#1C3B30] mt-4">Los exámenes: CCSE y DELE A2</h2>
+<h2 id="los-examenes-ccse-y-dele-a2" class="font-bold text-[#1C3B30] mt-4">Los exámenes: CCSE y DELE A2</h2>
 <p>Además del tiempo, hay que demostrar un "suficiente grado de integración en la sociedad española". Se acredita con dos pruebas del Instituto Cervantes (artículo 6 del Real Decreto 1004/2015):</p>
 <ul>
 <li><strong>CCSE</strong> (conocimientos constitucionales y socioculturales de España): preguntas cerradas, un 60 % sobre la Constitución y la organización del Estado y un 40 % sobre cultura, historia y sociedad.</li>
 <li><strong>DELE A2</strong> o superior (español como lengua extranjera).</li>
 </ul>
 <p>Quedan <strong>dispensados del DELE</strong> quienes ya tengan un DELE A2 o superior y los nacionales de Argentina, Bolivia, Chile, Colombia, Costa Rica, Cuba, Ecuador, El Salvador, Guatemala, Guinea Ecuatorial, Honduras, México, Nicaragua, Panamá, Paraguay, Perú, Puerto Rico, República Dominicana, Uruguay y Venezuela. Si vienes de Brasil o de Portugal, por ejemplo, sí tendrás que hacerlo. El CCSE lo hace todo el mundo, salvo los menores de edad y las personas con la capacidad modificada judicialmente, que acreditan su integración con certificados de sus centros de estudio o atención. Las personas con discapacidad pueden pedir al Instituto Cervantes adaptaciones para presentarse a las pruebas.</p>
-<h2 class="font-bold text-[#1C3B30] mt-4">Buena conducta cívica</h2>
+<h2 id="buena-conducta-civica" class="font-bold text-[#1C3B30] mt-4">Buena conducta cívica</h2>
 <p>El Código Civil exige también buena conducta cívica. En la práctica, el Ministerio consulta los antecedentes penales y pide informes policiales y del Centro Nacional de Inteligencia. Tener antecedentes penales sin cancelar en España es un motivo habitual de denegación. Si tienes alguno, primero hay que comprobar si ya se puede cancelar.</p>
-<h2 class="font-bold text-[#1C3B30] mt-4">Documentación</h2>
+<h2 id="documentacion" class="font-bold text-[#1C3B30] mt-4">Documentación</h2>
 <p>El artículo 5 del Real Decreto 1004/2015 enumera lo principal: el modelo de solicitud, el certificado de nacimiento de tu país legalizado o apostillado (y traducido, si no está en español), el pasaporte, los certificados de los exámenes CCSE y DELE (o autorizar al Ministerio a consultarlos al Instituto Cervantes) y el justificante de pago de la tasa (modelo 790, código 026, algo más de 100 euros; confirma el importe vigente en la web del Ministerio de Justicia antes de pagar). Los datos del padrón, de los antecedentes penales en España y de tu tarjeta de residencia puede consultarlos el propio Ministerio si lo autorizas en la solicitud, o puedes aportarlos tú. Si estás casado o casada con una persona española, añade la documentación que lo acredita.</p>
-<h2 class="font-bold text-[#1C3B30] mt-4">Plazo de resolución</h2>
+<h2 id="plazo-de-resolucion" class="font-bold text-[#1C3B30] mt-4">Plazo de resolución</h2>
 <p>El Ministerio tiene <strong>un año</strong> para resolver y notificar desde que la solicitud entra en el órgano competente (artículo 11 del Real Decreto 1004/2015). Si pasa ese año sin respuesta, la ley permite entender la solicitud como denegada ("silencio negativo"). Aun así, el Ministerio sigue resolviendo expedientes después de ese plazo: que pase el año no significa que tu expediente esté perdido. Si te la deniegan, la resolución se puede recurrir; la vía contencioso-administrativa requiere abogado.</p>
-<h2 class="font-bold text-[#1C3B30] mt-4">El último paso: la jura y la inscripción</h2>
+<h2 id="el-ultimo-paso-la-jura-y-la-inscripcion" class="font-bold text-[#1C3B30] mt-4">El último paso: la jura y la inscripción</h2>
 <p>Con la resolución favorable todavía no eres español o española. En los <strong>180 días</strong> siguientes a la notificación tienes que presentarte ante el Registro Civil para jurar o prometer fidelidad al Rey y obediencia a la Constitución y a las leyes, renunciar a tu nacionalidad anterior cuando proceda y pedir la inscripción (artículo 23 del Código Civil y artículo 12 del Real Decreto 1004/2015). Si dejas pasar ese plazo, la concesión caduca.</p>
 <p>No tienen que renunciar a su nacionalidad los nacionales de países iberoamericanos, Andorra, Filipinas, Guinea Ecuatorial o Portugal, ni los sefardíes originarios de España. Si eres de Colombia, Perú o Venezuela, por ejemplo, puedes conservar tu nacionalidad de origen.</p>
-<h2 class="font-bold text-[#1C3B30] mt-4">Preguntas frecuentes</h2>
+<h2 id="preguntas-frecuentes" class="font-bold text-[#1C3B30] mt-4">Preguntas frecuentes</h2>
 <p><strong>¿Cuenta el tiempo que estuve en España sin papeles?</strong><br>No. Solo cuenta la residencia legal. Si llegaste hace cinco años y te regularizaste por arraigo hace dos, a efectos de nacionalidad llevas dos.</p>
 <p><strong>Soy de Colombia (o de otro país iberoamericano). ¿Cuánto tiempo necesito?</strong><br>Dos años de residencia legal, continuada e inmediatamente anterior a la solicitud. Además, estás dispensado del DELE, aunque sí tienes que aprobar el CCSE.</p>
 <p><strong>Estoy casado o casada con una persona española. ¿Cuánto necesito?</strong><br>Un año de residencia legal, siempre que al pedirla lleves al menos un año casado o casada y no estéis separados legalmente ni de hecho.</p>
@@ -110,15 +147,15 @@
                 <h2 class="text-lg font-bold text-[#1C3B30]">Sigue leyendo</h2>
                 <ul class="mt-4 grid gap-3 md:grid-cols-3">
                     <li><a href="/guias/residencia-larga-duracion-guia-2026.html" class="block h-full bg-white border border-[#C7B78E] hover:border-[#B8874B] rounded-xl p-4">
-                        <span class="font-stamp text-[10px] text-[#8F6630] uppercase tracking-wider">Residencia de Larga Duración</span>
+                        <span class="font-stamp text-xs text-[#8F6630] uppercase tracking-wider">Residencia de Larga Duración</span>
                         <span class="block mt-1 text-sm font-semibold text-[#1C3B30] leading-snug">Residencia de larga duración en 2026: nacional o UE, requisitos y ausencias permitidas</span>
                     </a></li>
                     <li><a href="/guias/renovaciones-modificaciones-residencia-guia-2026.html" class="block h-full bg-white border border-[#C7B78E] hover:border-[#B8874B] rounded-xl p-4">
-                        <span class="font-stamp text-[10px] text-[#8F6630] uppercase tracking-wider">Renovaciones y Modificaciones</span>
+                        <span class="font-stamp text-xs text-[#8F6630] uppercase tracking-wider">Renovaciones y Modificaciones</span>
                         <span class="block mt-1 text-sm font-semibold text-[#1C3B30] leading-snug">Renovar o modificar tu autorización de residencia en 2026: plazos y requisitos</span>
                     </a></li>
                     <li><a href="/guias/residencia-familiar-ciudadano-espanol-2026.html" class="block h-full bg-white border border-[#C7B78E] hover:border-[#B8874B] rounded-xl p-4">
-                        <span class="font-stamp text-[10px] text-[#8F6630] uppercase tracking-wider">Familiar de Español</span>
+                        <span class="font-stamp text-xs text-[#8F6630] uppercase tracking-wider">Familiar de Español</span>
                         <span class="block mt-1 text-sm font-semibold text-[#1C3B30] leading-snug">Residencia de familiar de ciudadano español en 2026: el nuevo régimen</span>
                     </a></li>
                 </ul>
@@ -132,16 +169,40 @@
                     <a href="/#inicio" class="enlace-sec">o pregúntale al asistente</a>
                 </div>
             </div>
-            <p class="mt-8 text-xs text-[#4A4032] leading-relaxed">Esta guía es informativa y no sustituye el asesoramiento de un abogado. Raíz es una agencia de representación administrativa (Ley 39/2015) y no gestiona recursos judiciales. Consulta siempre la normativa vigente antes de presentar una solicitud.</p>
+            <p class="mt-8 text-sm text-[#4A4032] leading-relaxed">Esta guía es informativa y no sustituye el asesoramiento de un abogado. Raíz es una agencia de representación administrativa (Ley 39/2015) y no gestiona recursos judiciales. Consulta siempre la normativa vigente antes de presentar una solicitud.</p>
         </article>
     </main>
 
-    <footer class="bg-[#1C3B30] text-[#fbfaf7] py-8">
-        <div class="max-w-4xl mx-auto px-5 flex flex-col md:flex-row justify-between gap-3 text-xs text-gray-300">
-            <p>&copy; 2026 Raíz - Asesores Expertos en Extranjería.</p>
-            <p><a href="/aviso-legal.html" class="underline hover:text-white">Aviso legal</a> · <a href="/politica-privacidad.html" class="underline hover:text-white">Política de privacidad</a> · contacto@raizextranjeria.es</p>
+    <!-- PIE-COMUN: lo escribe Herramientas-Internas/generar_guias.py; cámbialo allí, no aquí -->
+    <footer class="pie">
+        <div class="pie-in">
+            <div>
+                <a href="/" class="cab-logo" aria-label="Raíz, Asesores de Extranjería: ir al inicio"><span class="cab-raiz">Raíz</span><span class="cab-lema">Asesores de Extranjería</span></a>
+                <p class="pie-desc">Trámites administrativos de extranjería, telemáticos y con seguimiento online. Agencia de representación administrativa (Ley 39/2015); no somos un despacho de abogados.</p>
+            </div>
+            <nav aria-label="Enlaces del pie">
+                <p class="pie-tit">Enlaces</p>
+                <ul>
+                    <li><a href="/#inicio">Pregúntale a Raíz</a></li>
+                    <li><a href="/#servicios">Servicios</a></li>
+                    <li><a href="/guias/">Guías de extranjería</a></li>
+                    <li><a href="https://app.raizextranjeria.es">Área de clientes</a></li>
+                    <li><a href="/aviso-legal.html">Aviso legal</a></li>
+                    <li><a href="/politica-privacidad.html">Política de privacidad</a></li>
+                </ul>
+            </nav>
+            <div>
+                <p class="pie-tit">Contacto</p>
+                <ul>
+                    <li><a href="https://wa.me/34665112314?text=Hola%2C%20vengo%20de%20la%20web%20de%20Ra%C3%ADz%20y%20quiero%20informaci%C3%B3n%20sobre%20mi%20caso." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.4-4.1A8.5 8.5 0 1 1 8.2 19.4z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1.1-1.4-1.9-1-.9.8c-1.2-.5-2.2-1.5-2.7-2.7l.8-.9-1-1.9z"/></svg>WhatsApp: +34 665 11 23 14</a></li>
+                    <li><a href="mailto:contacto@raizextranjeria.es"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>contacto@raizextranjeria.es</a></li>
+                    <li><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Lunes a viernes, de 14:00 a 20:00 (hora de España)</span></li>
+                </ul>
+            </div>
         </div>
+        <div class="pie-legal"><p>&copy; 2026 Raíz - Asesores Expertos en Extranjería. Todos los derechos reservados.</p></div>
     </footer>
+    <!-- /PIE-COMUN -->
     <a class="wa-flota" href="https://wa.me/34665112314?text=Hola%2C%20he%20le%C3%ADdo%20vuestra%20gu%C3%ADa%20sobre%20Nacionalidad%20y%20tengo%20una%20duda%20sobre%20mi%20caso." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.4-4.1A8.5 8.5 0 1 1 8.2 19.4z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1.1-1.4-1.9-1-.9.8c-1.2-.5-2.2-1.5-2.7-2.7l.8-.9-1-1.9z"/></svg><span>WhatsApp</span></a>
 </body>
 </html>

@@ -3,6 +3,8 @@ CATEGORIA: nacionalidad
 CATEGORIA_VISIBLE: Nacionalidad
 FECHA: 23 SEP 2026
 RESUMEN: Cuántos años de residencia legal necesitas según tu país (10, 5, 2 o 1), los exámenes CCSE y DELE y quién está exento, la documentación, el plazo de un año y el paso final de la jura.
+TITULO_SEO: Nacionalidad española por residencia 2026: requisitos
+DESCRIPCION: Años de residencia legal según tu país (10, 5, 2 o 1), exámenes CCSE y DELE y quién está exento, documentación, plazos y jura.
 RELACIONADAS: residencia-larga-duracion-guia-2026, renovaciones-modificaciones-residencia-guia-2026, residencia-familiar-ciudadano-espanol-2026
 ---CONTENIDO---
 <p class="font-bold">La nacionalidad española por residencia es el paso final para quien lleva años viviendo legalmente en España. Con ella dejas de depender de renovaciones de tarjeta, puedes votar en todas las elecciones y obtienes el pasaporte español. Para buena parte de las personas latinoamericanas el plazo es mucho más corto de lo que suele creerse: dos años de residencia legal.</p>

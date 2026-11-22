@@ -3,6 +3,8 @@ CATEGORIA: larga-duracion
 CATEGORIA_VISIBLE: Residencia de Larga Duración
 FECHA: 23 SEP 2026
 RESUMEN: Los cinco años de residencia legal, cuánto tiempo puedes pasar fuera sin romper la continuidad, la diferencia entre larga duración nacional y larga duración-UE, la documentación y el plazo de tres meses con silencio positivo.
+TITULO_SEO: Residencia de larga duración 2026: requisitos
+DESCRIPCION: Cinco años de residencia legal, cuánto tiempo puedes pasar fuera, larga duración nacional o UE, documentación y plazo de tres meses con silencio positivo.
 RELACIONADAS: nacionalidad-espanola-residencia-guia-2026, renovaciones-modificaciones-residencia-guia-2026, recurso-denegacion-extranjeria-guia-2026
 ---CONTENIDO---
 <p class="font-bold">La residencia de larga duración te autoriza a vivir y trabajar en España indefinidamente, en las mismas condiciones que las personas españolas. Se acabaron las renovaciones de autorización cada uno o cuatro años: solo tendrás que renovar la tarjeta. Es el paso natural tras cinco años de residencia legal.</p>
